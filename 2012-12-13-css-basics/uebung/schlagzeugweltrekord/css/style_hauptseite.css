@@ -1,11 +1,34 @@
+#teaser figcaption {
+	font-size: 15px;
+}
+#teaser ul {
+	float: right;
+	margin: -16px 0 0 0;
+}
+#teaser ul li {
+	display: inline;
+}
+#teaser ul li a {
+	background-color: #7BB442;
+	color: #FFF;
+	display: inline-block;
+	height: 24px;
+    line-height: 24px;
+	padding: 1px 0 0 0;
+	overflow: hidden;
+	text-align:center;
+	text-decoration: none;
+	width: 24px;
+}
+
 #first_section {
 	width: 960px;
 }
-#first_section div {
+#first_section article {
 	margin: 0 20px 0 0;
 	width: 220px;
 }
-#first_section div, #first_section a {
+#first_section article, #first_section a {
 	float: left;
 }
 #first_section img, #second_section img {
@@ -17,12 +40,12 @@
 	margin: 46px 0 0 0;
 	width: 640px;
 }
-#second_section div {
+#second_section article {
 	float: left;
 	margin: 0 20px 30px 0;
 	width: 300px;
 }
-#second_section div p {
+#second_section article p {
 	margin: 0 0 10px 0;
 }
 
@@ -47,38 +70,38 @@
 .link_mehr_infos {
 	width: 156px;
 }
-#tweetbox {
+aside {
 	float: left;
 	margin: 46px 0 0 0;
 	width: 300px;
 }
-#tweetbox > div {
+aside > div {
 	border: 5px #7BB442 solid;
 	border-radius: 5px;
 	float: left;
 	height: 552px;
 	margin: -1px 0 0 0;
 }
-#tweetbox > img {
+aside > img {
 	float: left;
 	margin: 0px 0 0 20px;
 	padding: 0;
 }
-#tweetbox > h1 {
+aside > h1 {
 	float: left;
 	font-size: 12px;
 	margin: 10px 0 0 10px;
 	padding: 0;
 }
-#tweetbox div div {
+aside article {
 	border-bottom: 1px #7BB442 solid;
 	font-size: 12px;
 	padding: 10px 8px 10px 8px;
 }
-#tweetbox div div:last-child {
+aside article:last-child {
 	border: none;
 }
-#tweetbox .time {
+aside time {
     margin: 2px 0 0 0;
 	color: #4368AB;
 }

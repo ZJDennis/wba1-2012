@@ -12,26 +12,30 @@
 <div id="wrap"> 
     
     <!-- Header -->
-    <div id="header" class="clearfix"> 
+    <header class="clearfix"> 
         
         <!-- Hauptnavigation -->
-        <ul>
-            <li id="selected">Home</li>
-            <li><a href="#">&Uuml;ber den Rekord</a></li>
-            <li><a href="#">Organisatorisch</a></li>
-            <li><a href="#">Location</a></li>
-            <li><a href="#">Kontakt</a></li>
-            <li><a href="#">Weiterer Link</a></li>
-        </ul>
+        <nav>
+            <ul>
+                <li id="selected">Home</li>
+                <li><a href="#">&Uuml;ber den Rekord</a></li>
+                <li><a href="#">Organisatorisch</a></li>
+                <li><a href="#">Location</a></li>
+                <li><a href="#">Kontakt</a></li>
+                <li><a href="#">Weiterer Link</a></li>
+            </ul>
+        </nav>
         <img src="images/logo.jpg" alt="Logo Weltrekordversuch" width="140" height="89" />
-    </div>
+    </header>
     
     <!-- Teaser -->
     <div id="teaser" class="clearfix">
-        <img src="images/teaser.jpg" alt="Teaser-Bild" />
-        <p>
-            Beschreibung des aktuell angezeigten Projektes            
-        </p>
+        <figure>
+            <img src="images/teaser.jpg" alt="Teaser-Bild" />
+            <figcaption>
+                Beschreibung des aktuell angezeigten Projektes            
+            </figcaption>
+        </figure>
         
         <!-- Teaser Navigation -->
         <ul>
@@ -46,94 +50,95 @@
     </div>
     
     <!-- Artikel nebeneinander -->
-    <div id="first_section" class="clearfix"> 
-        <div> 
+    <section id="first_section" class="clearfix"> 
+        <article> 
             <img src="images/objektiv_einer_fotokamera.jpg" alt="Objektiv einer Fotokamera" width="210" height="110"/>
             <h1>&Uuml;ber den Record</h1>
             <p> Ut wisi zzril delenit Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.. </p>
-        </div>
-        <div> 
+        </article>
+        <article> 
             <img src="images/offener_karton.jpg" alt="offener Karton" width="210" height="110"/>
             <h1>Die Idee</h1>
             <p> Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl. </p>
-        </div>
-        <div> 
+        </article>
+        <article> 
             <img src="images/gluehbirne.jpg" alt="Gluehbirne" width="210" height="110"/>
             <h1>Wei&szlig; noch nicht</h1>
             <p> Magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. </p>
-        </div>
-        <div id="last_article"> <img src="images/schlagzeug.jpg" alt="Schlagzeug" width="210" height="110"/>
+        </article>
+        <article id="last_article"> <img src="images/schlagzeug.jpg" alt="Schlagzeug" width="210" height="110"/>
             <h1>Unser Werkzeug</h1>
             <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. </p>
-        </div>
-    </div>
+        </article>
+    </section>
     <div class="clearfix"> 
         
         <!-- Artikel unter und nebeneinander -->
-        <div id="second_section">
-            <div> <img src="images/schlagzeuger_mit_schlagzeug.jpg" alt="Schlagzeuger mit Schlagzeug" width="290" height="182" />
+        <section id="second_section">
+            <article> <img src="images/schlagzeuger_mit_schlagzeug.jpg" alt="Schlagzeuger mit Schlagzeug" width="290" height="182" />
                 <h1>F&uuml;r Teilnehmer</h1>
                 <p>Ut wisi zzril delenit Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat..</p>
                 <a href="#" class="link_sprechblase"><img src="images/sprechblase.png" alt="sprechblase"/>&nbsp;5</a>
                 <a href="#" class="link_mehr_infos">mehr Infos f&uuml;r Teilnehmer&nbsp;<img src="images/pfeil_rechts.png" alt="Pfeil rechts" width="7" height="13" /></a>
-            </div>
-            <div> 
+            </article>
+            <article> 
                 <img src="images/fans_konzert.jpg" alt="Fans eines Konzerts" width="290" height="182" />
                 <h1>F&uuml;r Zuschauer</h1>
                 <p>Magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor</p>
                 <a href="#" class="link_sprechblase"><img src="images/sprechblase.png" alt="sprechblase"/>&nbsp;5</a>
                 <a href="#" class="link_mehr_infos">mehr Infos f&uuml;r Zuschauer&nbsp;<img src="images/pfeil_rechts.png" alt="Pfeil rechts" width="7" height="13" /></a>
-            </div>
-            <div> <img src="images/fachhochschule_gebaeude.jpg" alt="Gebaeude der Fachhochschule" width="290" height="182" />
+            </article>
+            <article> <img src="images/fachhochschule_gebaeude.jpg" alt="Gebaeude der Fachhochschule" width="290" height="182" />
                 <h1>F&uuml;r Mitarbeiter</h1>
                 <p>Ut wisi zzril delenit Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat..</p>
                 <a href="#" class="link_sprechblase"><img src="images/sprechblase.png" alt="sprechblase"/>&nbsp;5</a>
                 <a href="#" class="link_mehr_infos">mehr Infos f&uuml;r Mitarbeiter&nbsp;<img src="images/pfeil_rechts.png" alt="Pfeil rechts" width="7" height="13" />
                 </a>
-            </div>
-            <div> <img src="images/schlagzeug_sonor.jpg" alt="Schlagzeug von Sonor" width="290" height="182" />
+            </article>
+            <article> <img src="images/schlagzeug_sonor.jpg" alt="Schlagzeug von Sonor" width="290" height="182" />
                 <h1>F&uuml;r Sponsoren</h1>
                 <p>Magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor</p>
                 <a href="#" class="link_sprechblase"><img src="images/sprechblase.png" alt="sprechblase"/>&nbsp;5</a>
                 <a href="#" class="link_mehr_infos">mehr Infos f&uuml;r Sponsoren&nbsp;<img src="images/pfeil_rechts.png" alt="Pfeil rechts" width="7" height="13" /></a>
-            </div>
-        </div>
+            </article>
+        </section>
+
         <!-- Tweetbox -->
-        <div id="tweetbox" class="clearfix"> <img src="images/tweet.jpg" width="45" height="31" alt="Piktogramm Tweet">
+        <aside id="tweetbox" class="clearfix"> <img src="images/tweet.jpg" width="45" height="31" alt="Piktogramm Tweet">
             <h1>Tweetbox</h1>
             <div>
-                <div>
+                <article>
                     <p>Auf dem Weg zur #GreenIT: Unser Essener B&uuml;ro verf&uuml;gt ab heute &uuml;ber eine mit #Regenwasser gesp&uuml;lte #Toilette.</p>
-                    <p class="time">21.09.2011 - 16:05:55</p>
-                </div>
-                <div>
+                    <time datetime="2011-09-21T16:05:55">21.09.2011 - 16:05:55</time>
+                </article>
+                <article>
                     <p>#R&auml;tsel gel&ouml;st: Seltsame Vorkommen von 'J' in Mails sind von #WinUsern als Smiley formatierte 'J's in der #Schriftart? Wingdings - :( </p>
-                    <p class="time">22.09.2011 - 12:05:32</p>
-                </div>
-                <div>
+                    <time datetime="2011-09-22T12:05:32">22.09.2011 - 12:05:32</time>
+                </article>
+                <article>
                     <p>Mal ne Runde aussetzen bei #GoogleAnalytics? http://tools.google.com/dlpage/g </p>
-                    <p class="time">22.10.2011 - 12:05:32</p>
-                </div>
-                <div>
+                    <time datetime="2011-10-22T12:05:32">22.10.2011 - 12:05:32</time>
+                </article>
+                <article>
                     <p>#telekom Servicetief: Neue #DSLZugangsdaten werden nach Aktivierung per Post verschickt. Die Aktivierung deaktiviert die alten Daten! Auaah! </p>
-                    <p class="time">12.10.2011 - 12:12:32</p>
-                </div>
-                <div>
+                    <time datetime="2011-10-12T12:12:32">12.10.2011 - 12:12:32</time>
+                </article>
+                <article>
                     <p>#eCommerce Servicetiefpunkt: Man versuche mal einen Feuerwehr-#Dreikantschl&uuml;ssel M12 zu googeln der ohne Mindermengenzuschlag verkauft wird. </p>
-                    <p class="time">14.10.2011 - 09:12:32</p>
-                </div>
-                <div>
+                    <time datetime="2011-10-14T09:12:32">14.10.2011 - 09:12:32</time>
+                </article>
+                <article>
                     <p>#Fotos vom #iPhone #l&ouml;schen? iPhone mit Mac verbinden - Programm "Digitale Bilder" suchen - Bilder ausw&auml;hlen - l&ouml;schen </p>
-                    <p class="time">14.10.2011 - 09:12:32</p>
-                </div>
+                    <time datetime="2011-10-14T09:12:32">14.10.2011 - 09:12:32</time>
+                </article>
             </div>
-        </div>
+        </aside>
     </div>
 
 
 
     <!-- Footer mit Links -->
-    <div id="footer" class="clearfix">
+    <footer class="clearfix">
         <div>
             <ul>
                 <li><a href="#">RSS-Feed</a></li>
@@ -182,7 +187,7 @@
                 <li><a href="#">Pressespiegel</a></li>
             </ul>
         </div>
-    </div>
+    </footer>
 </div>
         
 </body>
