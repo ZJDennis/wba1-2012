@@ -95,71 +95,57 @@
                     </ul>                
                 </section>
 				
-				<!--<section>  Box Modell
-					<section>
-						<h2><strong>1.</strong> Box-Modell</h2>
-						<h3>Zwei wichtige Zweige:</h3>
-							<ul>
-                        		<li>Box-Modell selbst</li>
-                        		<li>Element-Typen</li>
-								<ul class="fragment">
-									<li>block</li>
-									<li>inline</li>
-								</ul>
-                    		</ul>
-					</section>
-					<section>
-						<h1><strong>1.1.</strong> Grundlagen</h1>
-						<h3>alle Elemente im Rahmen von CSS sind entweder:</h3>
-							<ul>
-								<li class="fragment">rechteckige Kästen (Block-Element)</li>
-								<p class="fragment">oder</p>
-								<li class="fragment">eine Art Streifen (Inline-Element)</li>
-							</ul>
-					</section>
-					<section>
-						<h1><strong>1.2</strong> Aufbau einer Box</h1>
-						<ul>
-							<li class="fragment">Breite (<em>width</em>)</li>
-							<li class="fragment">Höhe (<em>height</em>)</li>
-							<li class="fragment">Äußenabstand (<em>margin</em>)</li>
-							<li class="fragment">Rahmen (<em>border</em>)</li>
-							<li class="fragment">Innenabstand (<em>padding</em>)</li>
-						</ul>
-					</section>
-					<section>
-						<h1><strong>1.2.1</strong> Aufbau einer Box (Beispiel)</h1>
-						<img src="images/Box-Modell.png" width="49%" style="float:left; margin-right:6px; margin-top:16px;" />
-						<div style="float:left; margin-top:0px; width:49%">
-<pre><code class="css">#kasten1 {
-	width: 300px;
-	height: 200px;
-	margin: 10px ;
-	border: solid 6px black;
-	padding: 20px;
-}</code></pre>
-<pre><code class="html">&ltp id="kasten"&gt Lorem ipsum ... &lt/p&gt</code></pre>
-						</div>
-					</section>
-					<section>
-						<h1><strong>1.3</strong> Element-Typen</h1>
-						<ul>
-							<li>Block-Element</li>
-							<ul>
-								<li class="fragment">beginnen in einer neuen Zeile</li> 
-								<li class="fragment">darauf folgenden Elemente ebenfalls</li>
-								<li class="fragment">für sie gelten <em>width, height, margin, border und padding</em></li>
-							</ul>
-							<li class="fragment">Inline-Element</li>
-							<ul>
-								<li class="fragment">erzeugen keine neue Zeile sondern stehen im Textfluss</li>
-								<li class="fragment"><em>width, height, margin</em> gelten für sie nicht</li>
-							</ul>
-						</ul>
-					</section>
-				</section>-->
-				
 				<section> <!-- Positionierung -->
+					<h2><strong>1.</strong> Positionierung
+				</section>
+					<section>
+						<h2><strong>1.1</strong> Arten der Positionierung</h2>
+						<h3 class="fragment">Insgesamt <strong>4</strong> Arten der Positionierung</h3>
+						<ul>
+							<li class="fragment">position: static;</li>
+							<li class="fragment">position: relative;</li>
+							<li class="fragment">position: absolute;</li>
+							<li class="fragment">position: fixed;</li>
+						</ul>
+					</section>
+					<section>
+						<h2><strong>1.1.1</strong> Statische Positionierung</h2>
+						<ul>
+							<li class="fragment">Standard, falls nicht anders angegeben</li>
+							<li class="fragment">Angezeige wie sie im HTML vorkommen</li>
+						</ul>
+					</section>
+					<section>
+						<h2><strong>1.1.2</strong> Relative Positionierung</h2>
+						<ul>
+							<li class="fragment">können verschoben werden</li>
+							<li class="fragment">nachfolgende Elemente verhalten sich als wäre das Element noch an der ursprünglichen Stelle</li>
+							<li class="fragment">können andere Elemente überlagern</li>
+						</ul>
+					</section>
+					<section>
+						<h2><strong>1.1.3</strong> Absolute Positionierung</h2>
+						<ul>
+							<li class="fragment">werden aus der normalen Reihenfolge herausgelöst</li>
+							<ul class="fragment">
+								<li>Position wird nicht durch andere Elemente beeinflusst</li>
+								<li>Position beeinflusst andere Elemente nicht</li>
+							</ul>
+							<li class="fragment">Position wird aus der linken, oberen Ecke des Eltern-Elements gemessen</li>
+							<li class="fragment">können andere Elemente überlagern</li>
+						</ul>
+					</section>
+					<section>
+						<h2><strong>1.1.4</strong> Fixe Positionierung</h2>
+						<ul>
+							<li class="fragment">wird im Bezug auf das Browserfenster positioniert</li>
+							<li class="fragment">bewegt sich nicht mit, wenn gescrollt wird</li>
+						</ul>
+					</section>
+					<section>
+						<h2><strong>1.2</strong> Ausrichten von Block-Elementen</h2>
+					</section>
+<!--Auskommentiert wegen Datei Konflikt
 					<section>
 						<h2><strong>1.</strong> Positionierung</h2>
 						<p>
