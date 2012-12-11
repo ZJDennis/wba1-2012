@@ -9,12 +9,14 @@
 }
 
 * {
+	/* Todo: Setzen Sie die Schrift auf Myriad-Pro oder alternativ auf eine seriefenlose Schrift*/
+    
 	padding: 0;
 	margin: 0;
 }
 
 body {
-	background-image: url(../../schlagzeugweltrekord/images/hintergrund.jpg);
+	background-image: url(../../../uebung/schlagzeugweltrekord/images/hintergrund.jpg);
 }
 
 #wrap {
