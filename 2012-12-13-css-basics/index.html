@@ -51,6 +51,14 @@
 					
 					<p style="margin-top:100px;">13. Dezember 2012</p>
 				</section>
+                
+                <section>
+					<h1>CSS - Cascading Style Sheets</h1>
+					<div style="text-align: center;">
+                        <img src="img/waterfall_360x540.jpg" width="360px" height="540px" style="margin: 20px auto;  display: block;">
+                        &copy; by <a href="http://www.everystockphoto.com/photo.php?imageId=19685&searchId=d30550ddfb69dfe8fa61ac44f8333afc&npos=81">Nakae</a>
+                    </div>
+				</section>
             <!-- Inhaltsverzeichnis -->
 				<section>
 					<h2>CSS</h2>
@@ -63,7 +71,6 @@
 						<li>Selektoren</li>
                         <li>In-Line-/Block-Elemente</li>
 						<li>Boxmodell</li>
-                        <li>Aufgabe</li>
                         <li>Links</li>
 					</ul>
 				</section>
@@ -118,24 +125,24 @@
                                         <li>text-align</li>
                                         <li>line-height</li>
                                         <li>height</li>
-                                        <li>width</li>
                                     </ul>
                                 </td>
                                 <td class="spalte">
                                     <ul>
+                                        <li>width</li>
                                         <li>float</li>
                                         <li>clear</li>
-                                        <li>position</li>
                                         <li>left</li>
                                         <li>bottom</li>
-                                        <li>visibility</li>
                                         <li>margin</li>
                                         <li>padding</li>
                                     </ul>
                                 </td>
                             </tr>
                         </table>
-                        <a href="http://media.smashingmagazine.com/wp-content/uploads/images/css3-cheat-sheet/css3-cheat-sheet.pdf">CSS3-Cheatsheet</a>
+                        <br />
+                        <a href="http://media.smashingmagazine.com/wp-content/uploads/images/css3-cheat-sheet/css3-cheat-sheet.pdf">CSS3-Cheatsheet</a> oder
+                        Sammlung verschiedener <a href="http://www.designfloat.com/blog/2011/10/24/css3-cheat-sheets/">CSS-Cheatsheets</a>
                         
                     </section>
 				</section>
@@ -158,7 +165,7 @@
             <!-- Einbindung - Element -->
                     <section>
                         <h2>Element</h2>
-                        <pre><code>
+                        <pre><code contenteditable="true">
 &lt;p style="color: #FF0000;"&gt;
     Das ist ein Absatz in roter Farbe.
 &lt;/p&gt;
@@ -169,10 +176,11 @@
                         </aside>
                     </section>
                     
+                    
             <!-- Einbindung - HEAD -->
                     <section>
                         <h2>HTML (Head-Bereich)</h2>
-                        <pre><code>
+                        <pre><code contenteditable="true">
 &lt;head&gt;
     &lt;style&gt;
         &lt;!--
@@ -188,7 +196,7 @@
             <!-- Einbindung - extern -->
                     <section>
                         <h2>externe Datei</h2>
-                        <pre><code>
+                        <pre><code contenteditable="true">
 &lt;head&gt;
     &lt;link rel="stylesheet" type="text/css" href="../css/reveal.css"&gt;
 &lt;/head&gt;
@@ -196,12 +204,12 @@
                         <p>
                             oder
                         </p>
-                        <pre><code class="examplehtml">
+                        <pre><code contenteditable="true">
 &lt;head&gt;
     &lt;style&gt;
         &lt;!--
             @import "../css/reveal.css";
-            @import url("../css/theme/reveal.css");
+            @import url("../css/theme/wba.css");
             @import url("../css/print/pdf.css") print;
         --&gt;
     &lt;/style&gt;
@@ -217,7 +225,7 @@
                         <h2>Aufgabe</h2>
                         <p>
                             Ladet euch nun die Beispieldateien herunter und bindet das vorhandene CSS-File
-                            "start.css" an der passenden Stelle in der HTML-Seite ein.
+                            "<span class="highlighting">start.css</span>" an der passenden Stelle in der HTML-Seite ein.
                         </p>
 				    </section>
 				</section>
@@ -228,7 +236,7 @@
                     <section>
                         <h2>Selektoren</h2>
                             <ul>
-                                <li>Element</li>
+                                <li>Element (ohne und mit Attribut)</li>
                                 <li>Klasse (.)</li>
                                 <li>ID (#)</li>
                                 <li>Kind (&gt;)</li>
@@ -242,7 +250,7 @@
                     <section>
                         <h2>Element</h2>
                         HTML
-                        <pre><code>
+                        <pre><code contenteditable="true">
 &lt;body&gt;
     &lt;h1&gt;Element&lt;/h1&gt;
 &lt;/body&gt;
@@ -254,12 +262,32 @@ h1 {
 }
                         </code></pre>
                     </section>
+
+        <!-- Selektoren Element - Attribut -->
+                    <section>
+                        <h2>Element - Attribut</h2>
+                        HTML
+                        <pre><code contenteditable="true">
+&lt;body&gt;
+    &lt;form name="anmeldung" action="#" method="post"&gt;
+        &lt;label id="label_vorname" for="vorname"&gt;Vorname&lt;/label&gt;
+        &lt;input type="text" id="vorname" name="vorname"  maxlength="40"/&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+                        </code></pre>
+                        CSS
+                        <pre><code>
+form input[type="text"] {
+    border-color: #77CC00;
+}
+                        </code></pre>
+                    </section>
                     
             <!-- Selektoren Klasse -->
                     <section>
                         <h2>Klasse</h2>
                         HTML
-                        <pre><code>
+                        <pre><code contenteditable="true">
 &lt;body&gt;
     &lt;h1 class="ueberschrift"&gt;Element&lt;/h1&gt;
 &lt;/body&gt;
@@ -276,7 +304,7 @@ h1 {
                     <section>
                         <h2>ID</h2>
                         HTML
-                        <pre><code>
+                        <pre><code contenteditable="true">
 &lt;body&gt;
     &lt;h1 id="ueberschrift"&gt;Element&lt;/h1&gt;
 &lt;/body&gt;
@@ -293,7 +321,7 @@ h1 {
                     <section>
                         <h2>Kind</h2>
                         HTML
-                        <pre><code>
+                        <pre><code contenteditable="true">
 &lt;body&gt;
     &lt;div&gt;
         &lt;h1&gt;Element1&lt;/h1&gt;
@@ -311,88 +339,119 @@ div &gt; h1 {
 }
                         </code></pre>
                     </section>
+                    
+        <!-- Aufgabe 1 -->
                     <section>
                         <h2>Aufgabe</h2>
                         <p>
-                            Bindet nun das CSS-File "aufgabe1.css" ein. 
-                            Dies ist sowohl innerhalb der HTML-Seite möglich als auch in der CSS-Datei "start.css". 
+                            Bindet nun das CSS-File "<span class="highlighting">aufgabe1.css</span>" ein. 
+                            Dies ist sowohl innerhalb der HTML-Seite möglich als auch in der CSS-Datei "start.css".<br />
+                            Und folgt danach den ToDos.
                         </p>
                         <br />
                         <p>Innerhalb der HTML</p>
-                        <pre><code>
+                        <pre><code contenteditable="true">
 &lt;link rel="stylesheet" type="text/css" href="aufgabe1.css"&gt;
                         </code></pre>
                         <p>Innerhalb der CSS oder HTML</p>
-                        <pre><code>
+                        <pre><code contenteditable="true">
 @import url("aufgabe1.css");
                         </code></pre>
 				    </section>
                 </section>
 
         <!-- In-Line- / Block-Element -->
-                <section>
-                    <h2>Inline-/Block-Elemente</h2>
-                    <table>
-                        <tr>
-                            <td class="spalte">Inline</td>
-                            <td class="spalte">Block</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <ul>
-                                    <li>nebeneinander</li>
-                                    <li>keine St&ouml;rung des Textflusses</li>
-                                    <li>Beispiele<br />a, b, br, img, span, etc.</li>
-                                </ul>
-                            </td>
-                            <td>
-                                <ul>
-                                    <li>untereinander</li>
-                                    <li>Textfluss wird gest&ouml;rt</li>
-                                    <li>Beispiele<br />div, form, ul, h1-h6, etc.</li>
-                                </ul>
-                            </td>
-                        </tr>
-                    </table>
-                    <br />
-                    N&auml;here Informationen <a href="http://www.css4you.de/elemente.html#block">hier</a>.
+                <section>    
+                    <section>
+                        <h2>Inline-/Block-Elemente</h2>
+                        <table>
+                            <tr>
+                                <td class="spalte">Inline</td>
+                                <td class="spalte">Block</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <ul>
+                                        <li>nebeneinander</li>
+                                        <li>keine St&ouml;rung des Textflusses</li>
+                                        <li>Beispiele<br />a, b, br, img, span, etc.</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>untereinander</li>
+                                        <li>Textfluss wird gest&ouml;rt</li>
+                                        <li>Beispiele<br />div, form, ul, h1-h6, etc.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                        <br />
+                        N&auml;here Informationen <a href="http://www.css4you.de/elemente.html#block">hier</a>.
+                    </section>
                     
+        <!-- Aufgabe 2 -->
+                    <section>
+                            <h2>Aufgabe</h2>
+                            <p>
+                                Bindet nun das CSS-File "<span class="highlighting">aufgabe2.css</span>" ein. 
+                                Dies ist sowohl innerhalb der HTML-Seite möglich als auch in den CSS-Dateien "<span class="highlighting">start.css</span>" 
+                                oder "<span class="highlighting">aufgabe1.css</span>".<br />
+                                Und folgt danach den ToDos.
+                            </p>
+                            <br />
+                            <p>Innerhalb der HTML</p>
+                            <pre><code contenteditable="true">
+&lt;link rel="stylesheet" type="text/css" href="aufgabe1.css"&gt;
+                            </code></pre>
+                            <p>Innerhalb der CSS oder HTML</p>
+                            <pre><code contenteditable="true">
+@import url("aufgabe1.css");
+                            </code></pre>
+                        </section>
                 </section>
                 
         <!-- Boxmodell -->
                 <section>
-                    <h2>Box-Modell</h2>
+                    <section>
+                        <h2>Box-Modell</h2>
+                        <div style="text-align: center;">
+                            <img src="img/Box01_833x490.jpg" width="833px" height="490px" style="margin: 20px auto;  display: block;">
+                            Quelle: <a href="http://www.galileocomputing.de/katalog/buecher/titel/gp/titelID-2556">Galileo Computing - "CSS - Das umfassende Handbuch"</a> (S. 61)
+                        </div>
+                    </section>
+                    
+        <!-- Boxmodell 2 -->
+                    <section>
+                        <h2>Box-Modell</h2>
+                        <div style="text-align: center;">
+                            <img src="img/Box02_750x490.jpg" width="750px" height="490px" style="margin: 20px auto;  display: block;">
+                            Quelle: <a href="http://www.galileocomputing.de/katalog/buecher/titel/gp/titelID-2556">Galileo Computing - "CSS - Das umfassende Handbuch"</a> (S. 105)
+                        </div>
+                    </section>
+                    
+        <!-- Aufgabe 3 -->
+                    <section>
+                            <h2>Aufgabe</h2>
+                            <p>
+                                Bindet nun das CSS-File "<span class="highlighting">aufgabe2.css</span>" ein. 
+                                Dies ist sowohl innerhalb der HTML-Seite möglich als auch in den CSS-Dateien "<span class="highlighting">start.css</span>", 
+                                "<span class="highlighting">aufgabe1.css</span>" oder "<span class="highlighting">aufgabe2.css</span>".<br />
+                                Und folgt danach den ToDos.
+                            </p>
+                            <br />
+                            <p>Innerhalb der HTML</p>
+                            <pre><code>
+&lt;link rel="stylesheet" type="text/css" href="aufgabe1.css"&gt;
+                            </code></pre>
+                            <p>Innerhalb der CSS oder HTML</p>
+                            <pre><code>
+@import url("aufgabe1.css");
+                            </code></pre>
+                        </section>
                 </section>
-        
-        <!-- Beispiele -->
-                <section class="fullscreen">
-                    <h2>Aufgabe</h2>
-                    <div>
-                        <pre>
-                            <code contenteditable="true">&lt;body&gt;
-   &lt;h1 id="title"&gt;Layout CSS&lt;/h1&gt;
-    
-    &lt;div id="border"&gt;&lt;/div&gt;
-    
-    &lt;ul id="navi"&gt;
-        &lt;li class="active"&gt;&lt;a href="#" title="Home"&gt;Home&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a class="ownlink" href="#" title="Impressum"&gt;Impressum&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-    
-    &lt;div id="content"&gt;
-        &lt;h2&gt;Home&lt;/h2&gt;
-    
-        &lt;p&gt;
-            Hallo, sie befinden sich hier auf der Startseite einer ansprechenden
-            Seite mit CSS Layout.
-        &lt;/p&gt;
-        &lt;p&gt;Schick, oder?!&lt;/p&gt;
-    &lt;/div&gt;
-&lt;/body&gt;</code>
-                        </pre>
-                    </div>
-                </section>
-        
+                
+        <!-- Links -->
                 <section>
                     <h2>Links</h2>
                     <ul>
@@ -404,7 +463,29 @@ div &gt; h1 {
                         <li><a href="http://www.css4you.de/">CSS4u</a></li>
                     </ul>
                 </section>
+                
+        <!-- Fazit und Ausblick -->
+                <section>
+                    <h2>Fazit und Ausblick</h2>
+                    <ul>
+                        <li>Einbindungsm&ouml;glichkeiten</li>
+                        <li>Selektoren</li>
+                        <li>Inline-/Block-Elemente</li>
+                        <li>Boxmodell</li>
+                        <li>CSS-Advanced
+                            <ul>
+                                <li>float</li>
+                                <li>position</li>
+                                <li>Selektoren (Fortsetzung)</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
 
+        <!-- Ende -->
+                <section>
+                        <h1 style="margin: 200px auto;text-align: center;vertical-align: center;font-size: 5em;">Danke</h1>    
+                </section>
 			</div>
 
 		</div>

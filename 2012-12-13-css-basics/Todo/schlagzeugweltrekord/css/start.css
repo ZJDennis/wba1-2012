@@ -1,4 +1,4 @@
-@import url("aufgabe1.css");
+
 
 .clearfix:after {
 	display: block;
@@ -9,8 +9,6 @@
 }
 
 * {
-	/* Todo: Setzen Sie die Schrift auf Myriad-Pro oder alternativ auf eine seriefenlose Schrift*/
-    
 	padding: 0;
 	margin: 0;
 }

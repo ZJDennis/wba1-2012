@@ -1,3 +1,7 @@
+/******************************************************************************
+ *********************** Thema Selektoren *************************************
+ *****************************************************************************/
+
 
 * {
     /**************************************************************************
@@ -44,7 +48,7 @@
     
     /**************************************************************************
     ToDo 6:
-    Belegen Sie die Links innerhalb der Navigation (nav) mit folgenden Eigenschaften:
+    Belegen Sie die Links innerhalb der Navigation (nav ul li a) mit folgenden Eigenschaften:
     Rahmen unten:       solid 2px #4368ab
     Schriftfarbe:       #000 oder auch #000000
     Textdekoration:     none
@@ -96,16 +100,15 @@
 
     /**************************************************************************
     ToDo 11:
-    Belegen Sie die Labels der Inputfelder mit folgenden Eigenschaften:
-    Display:            inline
-    Schriftgroesse:     14px
+    Belegen Sie die Listenfelder des Footers (footer li) mit folgendern Eigenschaft:
+    Listenstiltyp:      none
     **************************************************************************/
 
 
 
     /**************************************************************************
     ToDo 12:
-    Belegen Sie die Links des Footers mit folgenden Eigenschaften:
+    Belegen Sie die Links des Footers (footer a) mit folgenden Eigenschaften:
     Textdekoration:     none
     Schriftfarbe:       #AB428F
     **************************************************************************/
