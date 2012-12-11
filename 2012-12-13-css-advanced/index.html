@@ -101,7 +101,7 @@
 						<ul>
 							<li class="fragment">Art der Positionierung</li>
 							<li class="fragment">Positionierung anhand von Abständen</li>
-							<li class="fragment">Überlappung von Elementen</li>
+							<li class="fragment">Überlagerung von Elementen</li>
 							<li class="fragment">overflow</li> <!-- Anderer Titel? -->
 						</ul>
 					</section>
@@ -150,7 +150,38 @@
 						</ul>
 					</section>
 					<section>
-						<h2><strong>1.2</strong> Ausrichten von Block-Elementen</h2>
+						<h2><strong>1.2</strong> Ausrichten mit Abständen</h2>
+						<p>Nur bei Elementen mit relativer, absoluter oder fixer Position</p>
+						<ul>
+							<li class="fragment">horizontaler Abstand</li>
+							<ul class="fragment">
+								<li>left: <em>value</em>;</li>
+								<p>oder</p>
+								<li>right: <em>value</em>;</li>
+							</ul>
+							<li class="fragment">vertikaler Abstand</li>
+							<ul class="fragment">
+								<li>top: <em>value</em>;</li>
+								<p>oder</p>
+								<li>bottom: <em>value</em>;</li>
+							</ul>
+						</ul>
+					</section>
+					<section>
+						<h2><strong>1.2.1</strong> Beispiel</h2>
+<pre><code>.element {
+	position: relative;
+	top: 100px;
+	left: 100px;
+}</code></pre>
+<pre><code>.element2 {
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+}</code></pre>
+					</section>
+					<section>
+						<h2><strong>1.3</strong> Überlagerung</h2>
 					</section>
 				</section>
 <!--Auskommentiert wegen Datei Konflikt
