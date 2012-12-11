@@ -1,0 +1,162 @@
+@import url("02inline.css");
+
+* {
+    /**************************************************************************
+    ToDo 1:
+    Setzen Sie für das gesamte Dokument:
+    Schriftfamilie:     myriad-pro" und alternativ "sans-serif"
+    **************************************************************************/
+    font-family: myriad-pro, sans-serif;
+}
+
+    /**************************************************************************
+    ToDo 2:
+    Belegen Sie die Hauptueberschriften (h1) mit folgenden Eigenschaften:
+    Schriftgoesse:      18px
+    Schriftgewichtung:  600
+    Zeilenhoehe:        110%
+    **************************************************************************/
+h1 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 110%;
+}
+
+
+    /**************************************************************************
+    ToDo 3:
+    Belegen Sie die Absaetze (p) mit folgender Eigenschaft:
+    Schriftgoesse:      12px
+    **************************************************************************/
+p {
+    font-size: 12px;   
+}
+
+
+    /**************************************************************************
+    ToDo 4:
+    Belegen Sie die Navigation (nav) mit folgender Eigenschaft:
+    Schriftgoesse:      18px
+    **************************************************************************/
+nav {
+	font-size: 18px;
+}
+
+
+    /**************************************************************************
+    ToDo 5:
+    Belegen Sie die Navigationslistenpunkte (nav ul li) mit folgender Eigenschaft:
+    Schriftgewichtung:   bold
+    **************************************************************************/
+nav ul li {
+	font-weight: bold;
+}
+
+    
+    /**************************************************************************
+    ToDo 6:
+    Belegen Sie die Links innerhalb der Navigation (nav) mit folgenden Eigenschaften:
+    Rahmen unten:       solid 2px #4368ab
+    Schriftfarbe:       #000 oder auch #000000
+    Textdekoration:     none
+    Schriftgewichtung:  normal
+    **************************************************************************/
+nav ul li a {
+	border-bottom: solid 2px #4368ab;
+	color: #000;
+	text-decoration: none;
+	font-weight: normal;
+}
+
+
+    /**************************************************************************
+    ToDo 7:
+    Setzen Sie fuer jeden einzelnen der Links in der Navigation folgende
+    Eigenschaften fuer den Rahmen (unten):
+    1. Navigationspunkt: solid 2px #9AC120
+    2. Navigationspunkt: solid 2px #E64123
+    3. Navigationspunkt: solid 2px #4368AB
+    4. Navigationspunkt: solid 2px #F8B738
+    5. Navigationspunkt: solid 2px #2FA1BC
+    **************************************************************************/
+#nav1 {
+    border-bottom: solid 2px #9AC120;   
+}
+
+#nav2 {
+    border-bottom: solid 2px #E64123;   
+}
+
+#nav3 {
+    border-bottom: solid 2px #4368AB;   
+}
+
+#nav4 {
+    border-bottom: solid 2px #F8B738;   
+}
+
+#nav5 {
+    border-bottom: solid 2px #2FA1BC;   
+}
+
+
+    /**************************************************************************
+    ToDo 8:
+    Belegen Sie das Formular (form) mit folgender Eigenschaft:
+    Breite:             640px
+    **************************************************************************/
+form {
+	width: 640px;
+}
+
+
+    /**************************************************************************
+    ToDo 9:
+    Belegen Sie das Fieldset (fieldset) mit folgenden Eigenschaften:
+    Rahmen:             2px #7BB442 solid
+    Schriftgroesse:     14px
+    Breite:             580px
+    **************************************************************************/
+fieldset {
+    border: 2px #7BB442 solid;
+    font-size: 14px;
+    width: 580px;
+    
+}
+
+
+    /**************************************************************************
+    ToDo 10:
+    Belegen Sie die Inputfelder vom Typ="text" mit folgenden Eigenschaften:
+    Rahmen:             1px #7BB442 solid
+    Hoehe:              18px
+    Breite:             220px
+    **************************************************************************/
+input[type="text"] {
+    border: 1px #7BB442 solid; 
+    height: 18px;
+    width: 220px;
+}
+
+
+    /**************************************************************************
+    ToDo 11:
+    Belegen Sie die Listenfelder des Footers mit folgendern Eigenschaft:
+    Listenstiltyp:      none
+    **************************************************************************/
+footer li {
+	list-style-type: none;
+}
+
+
+    /**************************************************************************
+    ToDo 12:
+    Belegen Sie die Links des Footers mit folgenden Eigenschaften:
+    Textdekoration:     none
+    Schriftfarbe:       #AB428F
+    **************************************************************************/
+footer a {
+	text-decoration: none;
+	color: #AB428F;
+}
+
