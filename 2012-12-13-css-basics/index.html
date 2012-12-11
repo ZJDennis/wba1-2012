@@ -21,7 +21,7 @@
 		<link rel="stylesheet" href="../revealjs-template/lib/css/zenburn.css">
         
         <!-- eigenes Layout fuer Praesentation -->
-        <link rel="stylesheet" href="css/lesson.css" id="own_theme">
+        <link rel="stylesheet" type="text/css" href="css/lesson.css" id="own_theme">
 
 		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
 		<script>
@@ -109,7 +109,7 @@
                         <h2>Beispieleigenschaften</h2>
                         <table>
                             <tr>
-                                <td style="width: 15em">
+                                <td class="spalte">
                                     <ul>
                                         <li>color</li>
                                         <li>background-color</li>
@@ -121,7 +121,7 @@
                                         <li>width</li>
                                     </ul>
                                 </td>
-                                <td style="width: 15em">
+                                <td class="spalte">
                                     <ul>
                                         <li>float</li>
                                         <li>clear</li>
@@ -212,6 +212,14 @@
                             
                         </aside>
                     </section>
+                    
+                    <section>
+                        <h2>Aufgabe</h2>
+                        <p>
+                            Ladet euch nun die Beispieldateien herunter und bindet das vorhandene CSS-File
+                            "start.css" an der passenden Stelle in der HTML-Seite ein.
+                        </p>
+				    </section>
 				</section>
 
         <!-- Selektoren -->
@@ -225,6 +233,9 @@
                                 <li>ID (#)</li>
                                 <li>Kind (&gt;)</li>
                             </ul>
+                        <br />
+                        <br />
+                        N&auml;here Informationen <a href="http://www.css4you.de/wscss/css03.html">hier</a>.
                     </section>
         
         <!-- Selektoren Element -->
@@ -300,12 +311,51 @@ div &gt; h1 {
 }
                         </code></pre>
                     </section>
+                    <section>
+                        <h2>Aufgabe</h2>
+                        <p>
+                            Bindet nun das CSS-File "aufgabe1.css" ein. 
+                            Dies ist sowohl innerhalb der HTML-Seite möglich als auch in der CSS-Datei "start.css". 
+                        </p>
+                        <br />
+                        <p>Innerhalb der HTML</p>
+                        <pre><code>
+&lt;link rel="stylesheet" type="text/css" href="aufgabe1.css"&gt;
+                        </code></pre>
+                        <p>Innerhalb der CSS oder HTML</p>
+                        <pre><code>
+@import url("aufgabe1.css");
+                        </code></pre>
+				    </section>
                 </section>
 
         <!-- In-Line- / Block-Element -->
                 <section>
-                    <h2>In-Line-/Block-Elemente</h2>
-                    
+                    <h2>Inline-/Block-Elemente</h2>
+                    <table>
+                        <tr>
+                            <td class="spalte">Inline</td>
+                            <td class="spalte">Block</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <ul>
+                                    <li>nebeneinander</li>
+                                    <li>keine St&ouml;rung des Textflusses</li>
+                                    <li>Beispiele<br />a, b, br, img, span, etc.</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>untereinander</li>
+                                    <li>Textfluss wird gest&ouml;rt</li>
+                                    <li>Beispiele<br />div, form, ul, h1-h6, etc.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                    <br />
+                    N&auml;here Informationen <a href="http://www.css4you.de/elemente.html#block">hier</a>.
                     
                 </section>
                 
@@ -315,7 +365,7 @@ div &gt; h1 {
                 </section>
         
         <!-- Beispiele -->
-				<section class="fullscreen">
+                <section class="fullscreen">
                     <h2>Aufgabe</h2>
                     <div>
                         <pre>
@@ -333,7 +383,7 @@ div &gt; h1 {
         &lt;h2&gt;Home&lt;/h2&gt;
     
         &lt;p&gt;
-            Hallo, sie befinden sich hier auf der Startseite einer ansprechenden 
+            Hallo, sie befinden sich hier auf der Startseite einer ansprechenden
             Seite mit CSS Layout.
         &lt;/p&gt;
         &lt;p&gt;Schick, oder?!&lt;/p&gt;
@@ -341,7 +391,7 @@ div &gt; h1 {
 &lt;/body&gt;</code>
                         </pre>
                     </div>
-				</section>
+                </section>
         
                 <section>
                     <h2>Links</h2>

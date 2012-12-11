@@ -24,6 +24,9 @@ section:first-child h2 {
     text-transform: none;
 }
 
+.reveal h3 {
+    color: #77CC00;
+}
 
 #mainpage {
 	background: url("../img/vieldrin_big.png") no-repeat bottom right;
@@ -96,4 +99,8 @@ section:first-child h2 {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: auto 100%;
+}
+
+.spalte {
+    width: 15em;   
 }
