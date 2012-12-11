@@ -61,10 +61,7 @@
 				</section>
             <!-- Inhaltsverzeichnis -->
 				<section>
-					<h2>CSS</h2>
-					<p>
-						&Uuml;bersicht
-					</p>
+					<h2>&Uuml;bersicht</h2>
 					<ul>
 						<li>Konzept</li>
 						<li>Einbindungsm&ouml;glichkeiten</li>
@@ -301,12 +298,17 @@ form input[type="text"] {
                         HTML
                         <pre><code contenteditable="true">
 &lt;body&gt;
-    &lt;h1 class="ueberschrift"&gt;Element&lt;/h1&gt;
+    &lt;ul&gt;
+        &lt;li class="wichtig"&gt;Element&lt;/li&gt;
+        &lt;li&gt;Element&lt;/li&gt;
+        &lt;li class="wichtig"&gt;Element&lt;/li&gt;
+        &lt;li&gt;Element&lt;/li&gt;
+    &lt;/ul&gt;
 &lt;/body&gt;
                         </code></pre>
                         CSS
                         <pre><code>
-.ueberschrift {
+.wichtig {
     color: #77CC00;
 }
                         </code></pre>
@@ -390,14 +392,18 @@ div &gt; h1 {
                                 <td>
                                     <ul>
                                         <li>nebeneinander</li>
-                                        <li>keine St&ouml;rung des Textflusses</li>
+                                        <li>kein Umbruch</li>
+                                        <li>beschr&auml;nkte Eigenschaften</li>
+                                        <li>Inline-Element -&gt; Inline-Element</li>
                                         <li>Beispiele<br />a, b, br, img, span, etc.</li>
                                     </ul>
                                 </td>
                                 <td>
                                     <ul>
                                         <li>untereinander</li>
-                                        <li>Textfluss wird gest&ouml;rt</li>
+                                        <li>Umbruch</li>
+                                        <li>keine Einschr&auml;nkung der Eigenschaften</li>
+                                        <li>Block-Element -&gt; Inline-Element/Block-Element</li>
                                         <li>Beispiele<br />div, form, ul, h1-h6, etc.</li>
                                     </ul>
                                 </td>
@@ -493,7 +499,7 @@ div &gt; h1 {
                 
         <!-- Fazit und Ausblick -->
                 <section>
-                    <h2>Fazit und Ausblick</h2>
+                    <h2>Zusammenfassung und Ausblick</h2>
                     <ul>
                         <li>Einbindungsm&ouml;glichkeiten</li>
                         <li>Selektoren</li>
