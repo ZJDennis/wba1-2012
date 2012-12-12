@@ -325,35 +325,122 @@ overflow-y: visible;</code></pre>
 				<section> <!-- Kombinatoren -->
 					<section>
 						<h2><strong>4.</strong> Kombinatoren</h2>
+						<p>
 							<ul>
-                            	<li>Abhängiger Selektor</li>
-                                <li class="fragment">Tiefenselektor</li>
-                                <li class="fragment">Kindselektor</li>
-                                <li class="fragment">direkter Nachbarselektor</li>
-                                <li class="fragment">indirekter Nachbarselektor</li>
+                            	<li>Nachfahren-Kombinator (Abhängiger Selektor)</li>
+                                <li class="fragment">Kind-Kombinator (Kindselektor)</li>
+                                <li class="fragment">Benachbarte-Geschwister-Kombinator (Nachbarselektor)</li>
+                                <li class="fragment">Allgemeiner-Geschwister-Kombinator (Geschwisterselektor)</li>
                             </ul>
+						</p>
 					</section>
                     
-                  <section>
-                   	<h2>Abhängiger Selektor</h2>                      
-<pre><code>#content p a {
+                  	<section>
+                   		<h2>Nachfahren-Kombinator</br>(Abhängiger Selektor)</h2> 
+                    	<p>
+                       		 <ul>
+                      		      <li>wählt alle Kinder und Kindeskinder (Nachfahren) eines Elements aus</li>
+                            </ul>
+                        </p> 
+                	</section>
+           			<section>
+                        <h2>Beispiel zu Nachfahren-Kombinator</h2>
+                        <p>
+<pre><code>#content a {
 	text-decoration: underline;
-}</code></pre>                  
-                    </section>
-                    
-                    <section>
-                    	<h2>Tiefenselektor</h2>
-<pre><code>body * a {
-	text-decoration: none;
 }</code></pre>
+                        </p>
+                        <p>
+                        	<pre><code>&lt;body&gt;
+   &lt;div id="header"&gt;
+      Hier ist der Header!!! &lt;a href="www.linkzumziel.de"&gt;Link im Header&lt;/a&gt;
+   &lt;/div&gt;
+   &lt;div id="content"&gt;   <div style="background-color: grey;">      &lt;a href="www.linkzumziel.de"&gt;Hier der Linktext&lt;/a&gt; </div>      &lt;p&gt;<div style="background-color: grey;">         &lt;a href="www.linkzumziel.de"&gt;Hier der Linktext&lt;/a&gt; </div>      &lt;/p&gt;
+   &lt;/div&gt;
+&lt;/body&gt;                    
+            </code></pre></br>
+                        </p>                    
                     </section>
-                    
+
                     <section>
-                    	<h2>Kindselektor</h2>
+                    	<h2>Kind-Kombinator (Kindselektor)</h2>
+                        <p>
+                        	<ul>
+                            	<li>direkte Eltern-Kind-Beziehung</li>
+                                
+                            </ul>
+                        </p>
+                    </section>
+                    <section>
+                    <h2>Beispiel zu Kind-Kombinator</h2>
+                        <p>
 <pre><code>div > p {
 	color: white;
 	background: red;
 }</code></pre>
+<pre><code>
+&lt;body&gt;
+   &lt;p&gt; ... &lt;/p&gt;
+   &lt;div id="irgendwas"&gt;<div style="background-color: grey;">      &lt;p&gt; ... &lt;/p&gt;</div>   &lt;/div&gt;
+   &lt;p&gt; ... &lt;/p&gt;
+&lt;/body&gt;       
+</code></pre>
+                        </p>
+                    </section>
+                    
+                    <section>
+                    	<h2>Benachbarte-Geschwister-Kombinator</h2>
+                        <p>
+                        	<ul>
+                            	<li>erfasst Elemente, die unmittelbar aufeinander folgen</li>
+                        	</ul>
+                        </p>
+                    </section>
+                    
+                    <section>
+                    	<h2>Beispiel zu Benachbarte-Geschwister-Kombinator</h2>
+                        <p>
+<pre><code>
+h1 + p {
+	font-weight: bold;
+}
+</code></pre>
+<pre><code>
+&lt;body&gt;
+   &lt;h1&gt;Die H1 Überschrieft!!!&lt;/h1&gt;<div style="background-color: grey;">   &lt;p&gt;Hier kommt ein Text. Vermutlich mal wieder Lorem Ipsum&lt;/p&gt; </div>   &lt;p&gt; ... &lt;/p&gt;
+   &lt;h2&gt;Die H2 Überschrift!!!&lt;/h2&gt;
+   &lt;p&gt; ... &lt;/p&gt;
+   &lt;p&gt; ... &lt;/p&gt;
+&lt;/body&gt;
+</code></pre>
+                        </p>
+                    </section>
+                    
+                    <section>
+                    	<h2>Allgemeiner-Geschwister-Kombinator</h2>
+                        	<p>
+                            	<ul>
+                                	<li>es werden alle Elemente angesprochen, die im Elementbaum in derselben Ebene auf ein Element folgen</li>
+                                    <li class="fragment">unabhängig davon, ob sich zwischen den Elementen weitere Elemente befinden</li>
+                                    <li class="fragment">mit CSS3 neu eingeführt</li>
+                                </ul>
+                            </p>
+                    </section>
+                    
+                    <section>
+                    	<h2>Beispiel zu Allgemeiner-Geschwister-Kombinator</h2>
+                        <p>
+<pre><code>
+h1 ~ p {
+	font-weight: bold;
+}
+</code></pre>
+<pre><code>
+&lt;body&gt;
+   &lt;p&gt;Erster Absatz.&lt;/p&gt;
+   &lt;h1&gt;Der Geschwisterselektor&lt;/h1&gt;<div style="background-color: grey;">   &lt;p&gt;Zweiter Absatz.&lt;/p&gt;</div>   &lt;hr&gt;<div style="background-color: grey;">   &lt;p&gt;Dritter Absatz.&lt;/p&gt;</div>&lt;/body&gt;
+</code></pre>
+                        </p>
                     </section>
                     
 				</section>
