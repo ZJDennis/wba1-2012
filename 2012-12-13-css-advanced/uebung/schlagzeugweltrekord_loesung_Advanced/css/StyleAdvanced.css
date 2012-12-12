@@ -1,0 +1,141 @@
+
+
+/*Setzen Sie das Formblatt links ...*/
+form {
+    float:left;
+}
+
+
+/* setzen Sie ein Mouse-Over im footer(Pseudoklassen) mit der Farbe " #4368AB " */
+
+footer a:hover {
+	color: #4368AB;
+}
+
+/* setzen Sie das Textfeld rechts vom Fromblatt
+   Erweitern sie das Textfeld und Definieren sie es so das man nach unten Scrollen kann.
+            */
+#marginal {
+    overflow-y:scroll;
+    float:right; 
+}
+
+/*Setzen Sie "footer div" links im Textfluss ...*/
+footer div {
+
+float:left;
+
+}
+
+/*Setzen Sie das FH-Logo rechts im Textfluss ...*/
+header img {
+	float: right;
+
+}
+/*Setzen Sie die Navigation  links im Textfluss ...*/
+nav{
+    float:left;
+}
+
+
+
+
+
+/*
+******************************
+#nav1:hover{
+    background-color:#9AC120;
+}
+    
+#nav2:hover{
+    background-color: #E64123;
+}
+
+#nav3:hover{
+    background-color:#4368AB;
+}
+    
+#nav4:hover{
+    background-color:#F8B738;
+}
+    
+#nav5:hover{
+    background-color:#2FA1BC;
+}
+********************************
+*/
+
+
+
+
+
+/************************************
+Drop-Down-Menu
+*************************************/
+/*
+#menu {
+    font-size:18px;
+    position:absolute;
+    float:left;
+    margin: 66px 0 0 0;
+    padding-right: 10px;
+
+}
+
+
+#menu ul {
+  list-style-type:none;
+  list-style-image:none;
+  margin:0px;
+  padding:0px;
+}
+
+#menu li.topmenu {
+  float:left;
+ 
+
+}
+
+.topmenu a {
+  float:left;
+  width:auto;
+  text-align:right;
+}
+
+.topmenu > ul{
+  display:none;
+    position:relative;
+
+}
+
+.topmenu a, .submenu a{
+  color:Black;
+
+  text-decoration:none;
+  background-color:white;
+  margin:0px 10px;
+
+
+}
+
+.submenu a{
+  font-size:14px;
+  width:auto;
+  position:relative;
+  clear:both;  
+}
+
+#menu a:hover, .topmenu.on a {
+  color:#4C4C4C;
+  background-color:#F8F8ff !important;
+}
+
+.topmenu:hover ul {
+  display:inline;  
+  z-index:500;
+}
+#selected{
+  font-weight:bold;
+}
+    
+*/
