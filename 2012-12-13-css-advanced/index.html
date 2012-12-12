@@ -69,12 +69,12 @@
 				</section>
                 
                 <section>
-                    <h1>Inhalte & Ablauf</h1>
+                    <h1>Inhalte und Ablauf</h1>
                     <p style="font-size: 1em;">Vortrag und Beispiele zu:</p>
                     <ul style="font-size: 0.8em;">
                         <li class="fragment">Positionierung</li>
                         <li class="fragment">Dokumentenfluss</li>
-                        <li class="fragment">Pseudoklassen & Pseudoelemente</li>
+                        <li class="fragment">Pseudoklassen und Pseudoelemente</li>
                         <li class="fragment">Kombinatoren</li>						
                     </ul>
                     <br />
@@ -159,7 +159,7 @@
 								<li>right: <em>value</em>;</li>
 							</ul>
 						</ul>
-						<ul style="float:left">
+						<ul style="float:left;">
 							<li class="fragment">vertikaler Abstand</li>
 							<ul class="fragment">
 								<li>top: <em>value</em>;</li>
@@ -186,7 +186,7 @@
 						<h3>Was wenn Elemente übereinander liegen?</h3>
 						<ul>
 							<li class="fragment">Zuletz genanntes Element im HTML Code liegt vorne</li>
-							<li class="fragment">Steuerbar über <pre><code>z-index: <em>value</em>;</code></pre></li>
+							<li class="fragment">Steuerbar über <pre><code>{ z-index: <em>value</em>; }</code></pre></li>
 							<li class="fragment">Element mit höherem z-index liegt vorne</li>
 						</ul>
 						
@@ -200,18 +200,12 @@
 							<li class="fragment">"fließende" Layouts</li>
 							<li class="fragment">flexible Seiten, die sich anpassen</li>
 							<li class="fragment">Spalten Layouts</li>
-							
-                        	<!--<li>float</li>
-                            <li class="fragment">clear</li>
-                            <li class="fragment">direction</li>
-                            <li class="fragment">display</li>
-                            <li class="fragment">visibility</li> -->
                         </ul>
                     </section>
 					<section>
 						<h2><strong>2.1</strong> float</h2>
 						<ul>
-							<pre class="fragment"><code class="css" style="overflow:hidden;">float: left; <em>oder</em> float: right;</code></pre>
+							<pre class="fragment"><code style="overflow:hidden;">{ float: left; } <em>oder</em> { float: right; }</code></pre>
 							<li class="fragment">lassen Elemente nach links oder rechts "fließen"</li>
 							<li class="fragment">Element und folgende werden soweit wie möglich nach links bzw. rechts gerückt</li>
 							<li class="fragment">ein gefloatetes Element verliert typische Block Eigenschaften</li>
@@ -220,7 +214,7 @@
 					<section>
 						<h2><strong>2.2</strong> clear</h2>
 						<ul>
-							<pre class="fragment"><code class="css" style="overflow:hidden;">clear: left; <em>oder</em> clear: right; <em>oder</em> clear: both;</code></pre>
+							<pre class="fragment"><code class="css" style="overflow:hidden;">{ clear: left; } <em>oder</em> { clear: right; } <em>oder</em> { clear: both; }</code></pre>
 							<li class="fragment">beendet den float Zustand</li>
                             <li class="fragment">erstes Element, welches nicht mehr neben anderen steht</li>
 						</ul>
@@ -236,7 +230,7 @@
 					<section>
 						<h2><strong>2.3.1</strong> overflow kontrollieren</h2>
 						<ul>
-							<pre class="fragment"><code style="overflow:hidden;">overflow: <em>value</em>;</code></pre>
+							<pre class="fragment"><code style="overflow:hidden;">{ overflow: <em>value</em>; }</code></pre>
 							<li class="fragment">Zugelassene Werte:</li>
 							<ul class="fragment">
 								<li>visible <em>(Standard)</em></li>
@@ -249,32 +243,32 @@
 					<section>
 						<h2><strong>2.3.1.1</strong> overflow kontrollieren (Beispiel)</h2>
 						<ul style="float: left;">
-							<pre class="fragment"><code class="css" style="overflow:hidden;">overflow: hidden;</code></pre>
-							<div class="fragment" style="background:gray; width:200px; height: 100px; padding:4px; overflow: hidden;">
+							<pre class="fragment"><code class="css" style="overflow:hidden;">{ overflow: hidden; }</code></pre>
+							<div class="fragment" style="background:gray; width:235px; height: 100px; padding:4px; overflow: hidden;">
 							<div style="background:white; width:300px; height: 50px;"></div>
 							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
 							</div>
 						</ul>
 						
 						<ul style="float: left;">
-							<pre class="fragment"><code class="css" style="overflow:hidden;">overflow: scroll;</code></pre>
-							<div class="fragment" style="background:gray; width:200px; height: 100px; padding:4px; overflow: scroll;">
+							<pre class="fragment"><code class="css" style="overflow:hidden;">{ overflow: scroll; }</code></pre>
+							<div class="fragment" style="background:gray; width:235px; height: 100px; padding:4px; overflow: scroll;">
 							<div style="background:white; width:300px; height: 50px;"></div>
 							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
 							</div>
-							<div class="fragment" style="background:gray; width:200px; height: 100px; margin-top: 20px; padding:4px; overflow: scroll;">
-							Lorem ipsum..
+							<div class="fragment" style="background:gray; width:235px; height: 100px; margin-top: 20px; padding:4px; overflow: scroll;">
+							Lorem ipsum
 							</div>
 						</ul>
 						
 						<ul style="float: left;">
-							<pre class="fragment"><code class="css" style="overflow:hidden;">overflow: auto;</code></pre>
-							<div class="fragment" style="background:gray; width:200px; height: 100px; padding:4px; overflow: auto;">
+							<pre class="fragment"><code class="css" style="overflow:hidden;">{ overflow: auto; }</code></pre>
+							<div class="fragment" style="background:gray; width:220px; height: 100px; padding:4px; overflow: auto;">
 							<div style="background:white; width:300px; height: 50px;"></div>
 							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
 							</div>
-							<div class="fragment" style="background:gray; width:200px; height: 100px; margin-top: 20px; padding:4px; overflow: auto;">
-							Lorem ipsum..
+							<div class="fragment" style="background:gray; width:220px; height: 100px; margin-top: 20px; padding:4px; overflow: auto;">
+							Lorem ipsum
 							</div>
 						</ul>
 					</section>
@@ -283,11 +277,11 @@
 						<ul>
 							<li>Seit CSS 3 kann man overflow per Achse kontrollieren</li>
 							<ul class="fragment">
-								<pre><code class="css" style="overflow:hidden;">overflow-x: <em>value</em>;</code></pre>
+								<pre><code class="css" style="overflow:hidden;">{ overflow-x: <em>value</em>; }</code></pre>
 								<li>Kontrolliert den overflow nur auf der x-Achse</li>
 							</ul>
 							<ul class="fragment">
-								<pre><code style="overflow:hidden;">overflow-y: <em>value</em>;</code></pre>
+								<pre><code style="overflow:hidden;">{ overflow-y: <em>value</em>; }</code></pre>
 								<li>Kontrolliert den overflow nur auf der y-Achse</li>
 							</ul>
 							<!--<li class="fragment">Zusätzliche Werte: <em>no-display</em> und <em>no-content</em></li>-->
@@ -296,17 +290,17 @@
 					<section>
 						<h2><strong>2.3.2.1</strong> overflow pro Achse (Beispiel)</h2>
 						<ul style="float:left;">
-							<pre class="fragment"><code class="css" style="overflow:hidden;">overflow-x: auto;
-overflow-y: hidden;</code></pre>
-							<div class="fragment" style="background:gray; width:240px; height: 100px; padding:4px; overflow-x: auto; overflow-y: hidden;">
+							<pre class="fragment"><code class="css" style="overflow:hidden;">{ overflow-x: auto;
+  overflow-y: hidden; }</code></pre>
+							<div class="fragment" style="background:gray; width:255px; height: 100px; padding:4px; overflow-x: auto; overflow-y: hidden;">
 							<div style="background:white; width:300px; height: 50px;"></div>
 							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
 							</div>
 						</ul>
 						<ul style="float:left;">
-							<pre class="fragment"><code class="css" style="overflow:hidden;">overflow-x: auto;
-overflow-y: visible;</code></pre>
-							<div class="fragment" style="background:gray; width:240px; height: 100px; padding:4px; overflow-x: auto; overflow-y: visible;">
+							<pre class="fragment"><code class="css" style="overflow:hidden;">{ overflow-x: auto;
+  overflow-y: visible; }</code></pre>
+							<div class="fragment" style="background:gray; width:265px; height: 100px; padding:4px; overflow-x: auto; overflow-y: visible;">
 							<div style="background:white; width:300px; height: 50px;"></div>
 							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
 							</div>
@@ -317,94 +311,81 @@ overflow-y: visible;</code></pre>
 				<section> <!-- Pseudoklassen -->
 					<section>
 						<h2><strong>3.</strong> Pseudoklassen und Pseudoelemente</h2>
-						<p>
 							<ul>
-                            	<li class="fragment">Pseudoklassen für Verweise und andere Elemente</li>
+								<li class="fragment">Pseudoklassen für Verweise und andere Elemente</li>
                                 <li class="fragment">Pseudoklassen für Absätze</li>
                                 <li class="fragment">Pseudoelemente für automatisch generierten Inhalt</li>
                                 <li class="fragment">Weitere Pseudoklassen</li>
                             </ul>
-						</p>
 					</section>
                     
                     <section>
-                    	<h2>Pseudoklassen für Verweise und andere Elemente</h2>
-                        <p>
-                        	<ul>
-                            	<li class="fragment">:link</li>
-                                <li class="fragment">:visited</li>
-                                <li class="fragment">:focus</li>
-                                <li class="fragment">:hover</li>
-                                <li class="fragment">:active</li>
-                            </ul>
-                        </p>
+						<h2><strong>3.1</strong> Pseudoklassen für Verweise und andere Elemente</h2>
+						<ul>
+							<li class="fragment">:link</li>
+                            <li class="fragment">:visited</li>
+                            <li class="fragment">:focus</li>
+                            <li class="fragment">:hover</li>
+                            <li class="fragment">:active</li>
+						</ul>
                     </section>
                     
                     <section>
-                    	<h2>Pseudoklassen für Absätze</h2>
-                        <p>
-                        	<ul>
-                            	<li class="fragment">:first-child</li>
-                                <li class="fragment">:first-line</li>
-                                <li class="fragment">:first-letter</li>
-                            </ul>
-                            <div class="fragment">Seit CSS3 auch noch:</div>
-                            <ul>
-                            	<li class="fragment">:last-child</li>
-                                <li class="fragment">:nth-child</li>
-                            </ul>
-                        </p>
-                        <div style="font-size:10px;" class="fragment">Quelle: http://www.elmastudio.de/programmierung/css/css-tipps-die-css-pseudoklassen-selektoren-first-child-last-child-und-nth-child/</div>
+						<h2><strong>3.2</strong> Pseudoklassen für Absätze</h2>
+						<ul>
+							<li class="fragment">:first-child</li>
+							<li class="fragment">:first-line</li>
+                            <li class="fragment">:first-letter</li>
+						</ul>
+						<div class="fragment">Seit CSS3 auch noch:</div>
+						<ul>
+							<li class="fragment">:last-child</li>
+                            <li class="fragment">:nth-child</li>
+						</ul>
+                        <div style="font-size:0.5em;" class="fragment">Quelle:<br> <a href="http://www.elmastudio.de/programmierung/css/css-tipps-die-css-pseudoklassen-selektoren-first-child-last-child-und-nth-child/" target="_blank">http://www.elmastudio.de/programmierung/css/css-tipps-die-css-pseudoklassen-selektoren-first-child-last-child-und-nth-child/</a></div>
                     </section>
                     
                     <section>                    
-<h2>:first-child</h2>
-<p>Angenommen die Listen-Elemente einer Auflistung der neusten Blog-Artikel haben alle folgende border-top CSS-Eigenschaft:</p>
-<pre><code>ul#recent-posts li {
-border-top: 1px solid #333;
-}
-</code></pre>
-<p>Nun wollen wir die "top-border" wegbekommen beim obersten Element:</p>
-<pre><code>ul#recent-posts li:first-child { border-top: none;}
-</code></pre>
+						<h2><strong>3.2.1</strong> :first-child</h2>
+						<p>Angenommen die Listen-Elemente einer Auflistung der neusten Blog-Artikel haben alle folgende border-top CSS-Eigenschaft:</p>
+						<pre><code>ul#recent-posts li {
+	border-top: 1px solid #333;
+}</code></pre>
+						<p>Nun wollen wir die "top-border" wegbekommen beim obersten Element:</p>
+						<pre><code>ul#recent-posts li:first-child { border-top: none;}</code></pre>
 						<img src="images/css-pseudoklassen-selektoren-01.jpg" style="margin: 0;" height="200px"/>
 					</section>
                   
                         	
                     
                     <section>
-<h2>:last-child</h2>
-<p>Nehmen wir nun die "bottom-border"
-vom letzten Element weg:</p>
-<pre><code>ul#recent-posts li:last-child {
-border-bottom: none;
-}
-</code></pre>
+						<h2><strong>3.2.2</strong> :last-child</h2>
+						<p>Nehmen wir nun die "bottom-border"
+						vom letzten Element weg:</p>
+						<pre><code>ul#recent-posts li:last-child {
+	border-bottom: none;
+}</code></pre>
 						<img src="images/css-pseudoklassen-selektoren-02.jpg" style="margin: 0;" height="300px"/>
                     </section>
                     
                     <section>
-                    	<h2>:nth-child</h2>
-<p>Für das "nth-child" nehmen wir ein Argument hinzu, wie z.B. (odd) oder (even).</p>
-<pre><code>tr:nth-child(odd) td {
-background: #C1B49A;
-}
-</code></pre>
+						<h2><strong>3.2.3</strong> :nth-child</h2>
+						<p>Für das "nth-child" nehmen wir ein Argument hinzu, wie z.B. (odd) oder (even).</p>
+						<pre><code>tr:nth-child(odd) td {
+	background: #C1B49A;
+}</code></pre>
 						<p>Man kann aber auch jedes 3te, 4te...n'te Element anstprechen</p>
-<pre><code> *:nth-child (3n+1){...}
-</code></pre>
-						<img src="images/css-pseudoklassen-selektoren-03.jpg" style="margin: 0;" height="300px"/>
+						<pre><code>*:nth-child (3n+1){...}</code></pre>
+						<img src="images/css-pseudoklassen-selektoren-03.jpg" style="margin: 0;" height="200px"/>
                     </section>
                     
                     <section>
-                    	<h2>Pseudoelemente für automatisch generierten Inhalt</h2>
-                        <p>
-                        	<ul>
-                            	<li class="fragment">:before</li>
-                                <li class="fragment">:after</li>
-                                <li class="fragment">fügt vor oder nach einem Element automatisch Inhalt ein</li>
-                            </ul>
-                        </p>
+						<h2><strong>3.3</strong> Pseudoelemente für automatisch generierten Inhalt</h2>
+                        <ul>
+                            <li class="fragment">:before</li>
+                            <li class="fragment">:after</li>
+                            <li class="fragment">fügt vor oder nach einem Element automatisch Inhalt ein</li>
+						</ul>
                     </section>
                     
 				</section>
@@ -412,136 +393,107 @@ background: #C1B49A;
 				<section> <!-- Kombinatoren -->
 					<section>
 						<h2><strong>4.</strong> Kombinatoren</h2>
-						<p>
 							<ul>
-                            	<li>Nachfahren-Kombinator (Abhängiger Selektor)</li>
+								<li>Nachfahren-Kombinator (Abhängiger Selektor)</li>
                                 <li class="fragment">Kind-Kombinator (Kindselektor)</li>
                                 <li class="fragment">Benachbarte-Geschwister-Kombinator (Nachbarselektor)</li>
                                 <li class="fragment">Allgemeiner-Geschwister-Kombinator (Geschwisterselektor)</li>
                             </ul>
-						</p>
 					</section>
                     
-                  	<section>
-                   		<h2>Nachfahren-Kombinator</br>(Abhängiger Selektor)</h2> 
-                    	<p>
-                       		 <ul>
-                      		      <li>wählt alle Kinder und Kindeskinder (Nachfahren) eines Elements aus</li>
-                            </ul>
-                        </p> 
-                	</section>
-           			<section>
-                        <h2>Beispiel zu Nachfahren-Kombinator</h2>
-                        <p>
+					<section>
+						<h2><strong>4.1</strong> Nachfahren-Kombinator<br>(Abhängiger Selektor)</h2> 
+						<ul>
+							<li>wählt alle Kinder und Kindeskinder (Nachfahren) eines Elements aus</li>
+						</ul>
+					</section>
+					<section>
+                        <h2><strong>4.1.1</strong> Beispiel zu Nachfahren-Kombinator</h2>
 <pre><code>#content a {
 	text-decoration: underline;
 }</code></pre>
-                        </p>
-                        <p>
-                        	<pre><code>&lt;body&gt;
+<pre><code>&lt;body&gt;
    &lt;div id="header"&gt;
       Hier ist der Header!!! &lt;a href="www.linkzumziel.de"&gt;Link im Header&lt;/a&gt;
    &lt;/div&gt;
    &lt;div id="content"&gt;   <div style="background-color: grey;">      &lt;a href="www.linkzumziel.de"&gt;Hier der Linktext&lt;/a&gt; </div>      &lt;p&gt;<div style="background-color: grey;">         &lt;a href="www.linkzumziel.de"&gt;Hier der Linktext&lt;/a&gt; </div>      &lt;/p&gt;
    &lt;/div&gt;
-&lt;/body&gt;                    
-            </code></pre></br>
-                        </p>                    
+&lt;/body&gt;</code></pre>               
                     </section>
 
                     <section>
-                    	<h2>Kind-Kombinator (Kindselektor)</h2>
-                        <p>
-                        	<ul>
-                            	<li>direkte Eltern-Kind-Beziehung</li>
-                                
-                            </ul>
-                        </p>
+						<h2><strong>4.2</strong> Kind-Kombinator (Kindselektor)</h2>
+						<ul>
+							<li>direkte Eltern-Kind-Beziehung</li>    
+						</ul>
                     </section>
                     <section>
-                    <h2>Beispiel zu Kind-Kombinator</h2>
-                        <p>
+                    <h2><strong>4.2.1</strong> Beispiel zu Kind-Kombinator</h2>
 <pre><code>div > p {
 	color: white;
 	background: red;
 }</code></pre>
-<pre><code>
-&lt;body&gt;
+<pre><code>&lt;body&gt;
    &lt;p&gt; ... &lt;/p&gt;
    &lt;div id="irgendwas"&gt;<div style="background-color: grey;">      &lt;p&gt; ... &lt;/p&gt;</div>   &lt;/div&gt;
    &lt;p&gt; ... &lt;/p&gt;
 &lt;/body&gt;       
 </code></pre>
-                        </p>
                     </section>
                     
                     <section>
-                    	<h2>Benachbarte-Geschwister-Kombinator</h2>
-                        <p>
-                        	<ul>
-                            	<li>erfasst Elemente, die unmittelbar aufeinander folgen</li>
-                        	</ul>
-                        </p>
+						<h2><strong>4.3</strong> Benachbarte-Geschwister-Kombinator</h2>
+						<ul>
+							<li>erfasst Elemente, die unmittelbar aufeinander folgen</li>
+						</ul>
                     </section>
                     
                     <section>
-                    	<h2>Beispiel zu Benachbarte-Geschwister-Kombinator</h2>
-                        <p>
-<pre><code>
-h1 + p {
+						<h2><strong>4.3.1</strong> Beispiel zu Benachbarte-Geschwister-Kombinator</h2>
+<pre><code>h1 + p {
 	font-weight: bold;
 }
 </code></pre>
-<pre><code>
-&lt;body&gt;
+<pre><code>&lt;body&gt;
    &lt;h1&gt;Die H1 Überschrieft!!!&lt;/h1&gt;<div style="background-color: grey;">   &lt;p&gt;Hier kommt ein Text. Vermutlich mal wieder Lorem Ipsum&lt;/p&gt; </div>   &lt;p&gt; ... &lt;/p&gt;
    &lt;h2&gt;Die H2 Überschrift!!!&lt;/h2&gt;
    &lt;p&gt; ... &lt;/p&gt;
    &lt;p&gt; ... &lt;/p&gt;
 &lt;/body&gt;
 </code></pre>
-                        </p>
                     </section>
                     
                     <section>
-                    	<h2>Allgemeiner-Geschwister-Kombinator</h2>
-                        	<p>
-                            	<ul>
-                                	<li>es werden alle Elemente angesprochen, die im Elementbaum in derselben Ebene auf ein Element folgen</li>
-                                    <li class="fragment">unabhängig davon, ob sich zwischen den Elementen weitere Elemente befinden</li>
-                                    <li class="fragment">mit CSS3 neu eingeführt</li>
-                                </ul>
-                            </p>
+						<h2><strong>4.4</strong> Allgemeiner-Geschwister-Kombinator</h2>
+						<ul>
+							<li>es werden alle Elemente angesprochen, die im Elementbaum in derselben Ebene auf ein Element folgen</li>
+							<li class="fragment">unabhängig davon, ob sich zwischen den Elementen weitere Elemente befinden</li>
+							<li class="fragment">mit CSS3 neu eingeführt</li>
+						</ul>
                     </section>
                     
                     <section>
-                    	<h2>Beispiel zu Allgemeiner-Geschwister-Kombinator</h2>
-                        <p>
-<pre><code>
-h1 ~ p {
+						<h2><strong>4.4.1</strong> Beispiel zu Allgemeiner-Geschwister-Kombinator</h2>
+<pre><code>h1 ~ p {
 	font-weight: bold;
-}
-</code></pre>
-<pre><code>
-&lt;body&gt;
+}</code></pre>
+<pre><code>&lt;body&gt;
    &lt;p&gt;Erster Absatz.&lt;/p&gt;
    &lt;h1&gt;Der Geschwisterselektor&lt;/h1&gt;<div style="background-color: grey;">   &lt;p&gt;Zweiter Absatz.&lt;/p&gt;</div>   &lt;hr&gt;<div style="background-color: grey;">   &lt;p&gt;Dritter Absatz.&lt;/p&gt;</div>&lt;/body&gt;
 </code></pre>
-                        </p>
                     </section>
                     
 				</section>
                 
                 <section>
-                	<section>
-                		<h2>Neues in CSS3</h2>
-                    	<p>
-                    		Ein interessantes Tool das die gravierenden Neuerungen in CSS3 sehr schön veranschaulicht</br></br>
-                        	<ul>
-                            	<li><a href="http://www.css3generator.com/">Neues in CSS3 aus dem Generator</a></li>
-                            	<li><a href="http://www.haz.io/">CSS3 und HTML5 Infos</a></li>
-                            </ul>
-                    	</p>
+					<section>
+						<h2>Neues in CSS3</h2>
+						<p>Ein interessantes Tool das die gravierenden Neuerungen in CSS3 sehr schön veranschaulicht<br><br></p>
+						<ul>
+							<li><a href="http://www.css3generator.com/">Neues in CSS3 aus dem Generator</a></li>
+							<li><a href="http://www.haz.io/">CSS3 und HTML5 Infos</a></li>
+						</ul>
+                    	
                     </section>
                 </section>
 				
