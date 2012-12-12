@@ -25,5 +25,10 @@
 			"title" : "HTML Basics",
 			"authors" : ["Dominik Schilling", "Bruno José Carvalho Gonzaga"]
 		}
+        "2012-12-13-css-advanced/index.html":
+		{
+			"title" : "CSS Advanced",
+			"authors" : ["Dimitri Kiselev", "Sam Kisser", "Sascha Rothkopf", "Armin Weinrebe"]
+		}
 	}
 }
