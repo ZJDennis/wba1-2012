@@ -49,5 +49,11 @@
 			"title" : "Einführung in die Chrome Developer Tools",
 			"authors" : ["Martin Baljan"]
 		},
+
+		"2012-12-13-css-basics/index.html":
+		{
+			"title" : "CSS Basics",
+			"authors" : ["Selin Öztürk", "Uwe Müsse"]
+		}
 	}
 }
