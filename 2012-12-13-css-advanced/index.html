@@ -340,7 +340,7 @@ overflow-y: visible;</code></pre>
                     </section>
                     
                     <section>
-                    	<h2>Pseudoklasse und Pseudoelemente für Absätze</h2>
+                    	<h2>Pseudoklassen für Absätze</h2>
                         <p>
                         	<ul>
                             	<li class="fragment">:first-child</li>
@@ -355,7 +355,42 @@ overflow-y: visible;</code></pre>
                         </p>
                     </section>
                     
+                    <section>                    
+<h2>:first-child</h2>
+<p>Angenommen die Listen-Elemente einer Auflistung der neusten Blog-Artikel haben alle folgende border-top CSS-Eigenschaft:</p>
+<pre><code>ul#recent-posts li {
+border-top: 1px solid #333;
+}
+</code></pre>
+<p>Nun wollen wir die "top-border" wegbekommen beim obersten Element:</p>
+<pre><code>ul#recent-posts li:first-child { border-top: none;}
+</code></pre>
+						<img src="images/css-pseudoklassen-selektoren-01.jpg" style="margin: 0;" height="200px"/>
+					</section>
+                  
+                        	
                     
+                    <section>
+<h2>:last-child</h2>
+<p>Nehmen wir nun die "bottom-border"
+vom letzten Element weg:</p>
+<pre><code>ul#recent-posts li:last-child {
+border-bottom: none;
+}
+</code></pre>
+						<img src="images/css-pseudoklassen-selektoren-02.jpg" style="margin: 0;" height="300px"/>
+                    </section>
+                    
+                    <section>
+                    	<h2>Pseudoelemente für automatisch generierten Inhalt</h2>
+                        <p>
+                        	<ul>
+                            	<li class="fragment">:before</li>
+                                <li class="fragment">:after</li>
+                                <li class="fragment">fügt vor oder nach einem Element automatisch Inhalt ein</li>
+                            </ul>
+                        </p>
+                    </section>
                     
 				</section>
 				
