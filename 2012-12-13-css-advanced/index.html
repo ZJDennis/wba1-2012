@@ -223,6 +223,94 @@
 							<li class="fragment">beendet den float Zustand</li>
 						</ul>
 					</section>
+					<section>
+						<h2><strong>2.3</strong> overflow</h2>
+						<h3>Was wenn ein Inhalt eines div zu groß?</h3>
+						
+						<div class="fragment" style="background:gray; width:400px; height: 300px; padding:4px;">
+							<div style="background:white; width:600px; height: 100px;"></div>
+							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+						</div>
+					</section>
+					<section>
+						<h2><strong>2.3.1</strong> overflow kontrollieren</h2>
+						<ul>
+							<pre class="fragment"><code style="overflow:hidden;">overflow: <em>value</em>;</code></pre>
+							<li class="fragment">Zugelassene Werte:</li>
+							<ul class="fragment">
+								<li>visible <em>(Standard)</em></li>
+								<li>hidden</li>
+								<li>scroll</li>
+								<li>auto</li>
+							</ul>
+						</ul>
+					</section>
+					<section>
+						<h2><strong>2.3.1.1</strong> overflow kontrollieren (Beispiel)</h2>
+						<ul style="float: left;">
+							<pre class="fragment"><code class="css" style="overflow:hidden;">overflow: hidden;</code></pre>
+							<div class="fragment" style="background:gray; width:200px; height: 100px; padding:4px; overflow: hidden;">
+							<div style="background:white; width:300px; height: 50px;"></div>
+							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+							</div>
+						</ul>
+						
+						<ul style="float: left;">
+							<pre class="fragment"><code class="css" style="overflow:hidden;">overflow: scroll;</code></pre>
+							<div class="fragment" style="background:gray; width:200px; height: 100px; padding:4px; overflow: scroll;">
+							<div style="background:white; width:300px; height: 50px;"></div>
+							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+							</div>
+							<div class="fragment" style="background:gray; width:200px; height: 100px; margin-top: 20px; padding:4px; overflow: scroll;">
+							Lorem ipsum..
+							</div>
+						</ul>
+						
+						<ul style="float: left;">
+							<pre class="fragment"><code class="css" style="overflow:hidden;">overflow: auto;</code></pre>
+							<div class="fragment" style="background:gray; width:200px; height: 100px; padding:4px; overflow: auto;">
+							<div style="background:white; width:300px; height: 50px;"></div>
+							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+							</div>
+							<div class="fragment" style="background:gray; width:200px; height: 100px; margin-top: 20px; padding:4px; overflow: auto;">
+							Lorem ipsum..
+							</div>
+						</ul>
+					</section>
+					<section>
+						<h2><strong>2.3.2</strong> overflow pro Achse kontrollieren</h2>
+						<ul>
+							<li>Seit CSS 3 kann man overflow per Achse kontrollieren</li>
+							<ul class="fragment">
+								<pre><code style="overflow:hidden;">overflow-x: <em>value</em>;</code></pre>
+								<li>Kontrolliert den overflow nur auf der x-Achse</li>
+							</ul>
+							<ul class="fragment">
+								<pre><code style="overflow:hidden;">overflow-y: <em>value</em>;</code></pre>
+								<li>Kontrolliert den overflow nur auf der y-Achse</li>
+							</ul>
+							<!--<li class="fragment">Zusätzliche Werte: <em>no-display</em> und <em>no-content</em></li>-->
+						</ul>
+					</section>
+					<section>
+						<h2><strong>2.3.2.1</strong> overflow pro Achse (Beispiel)</h2>
+						<ul style="float:left;">
+							<pre class="fragment"><code class="css" style="overflow:hidden;">overflow-x: auto;
+overflow-y: hidden;</code></pre>
+							<div class="fragment" style="background:gray; width:240px; height: 100px; padding:4px; overflow-x: auto; overflow-y: hidden;">
+							<div style="background:white; width:300px; height: 50px;"></div>
+							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+							</div>
+						</ul>
+						<ul style="float:left;">
+							<pre class="fragment"><code class="css" style="overflow:hidden;">overflow-x: auto;
+overflow-y: visible;</code></pre>
+							<div class="fragment" style="background:gray; width:240px; height: 100px; padding:4px; overflow-x: auto; overflow-y: visible;">
+							<div style="background:white; width:300px; height: 50px;"></div>
+							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+							</div>
+						</ul>
+					</section>
                 </section>
 				
 				<section> <!-- Pseudoklassen -->
