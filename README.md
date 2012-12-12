@@ -1,6 +1,6 @@
 wba1-2012
 =========
 
-### CSS-Basics
+Web-basierte Anwendungen 2012
 
-von Armin Weinrebe und [Sascha Rothkopf](https://github.com/veN1337 "veN1337, Sascha Rothkopf")
+Slides, die im Master Branch sind und in der `public.json` [eingetragen](https://github.com/fh-koeln/wba1-2012/wiki/Git-CheatSheet#wiki-gh-pages) wurden, können unter [fh-koeln.github.com/wba1-2012/](http://fh-koeln.github.com/wba1-2012/) online abgerufen werden.
