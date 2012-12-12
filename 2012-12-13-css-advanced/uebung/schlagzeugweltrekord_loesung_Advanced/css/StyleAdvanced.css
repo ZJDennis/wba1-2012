@@ -29,6 +29,7 @@ Erweitern sie das Textfeld und Definieren sie es so das man nach unten Scrollen 
 #marginal {
     overflow-y:scroll;
     float:right; 
+    height:555px;
 }
 
 /*************************************************************************** 
