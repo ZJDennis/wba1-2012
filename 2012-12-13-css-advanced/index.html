@@ -183,7 +183,7 @@
 					</section>
 					<section>
 						<h2><strong>1.3</strong> Überlagerung</h2>
-						<h3>Was wenn Elementen übereinander liegen?</h3>
+						<h3>Was wenn Elemente übereinander liegen?</h3>
 						<ul>
 							<li class="fragment">Zuletz genanntes Element im HTML Code liegt vorne</li>
 							<li class="fragment">Steuerbar über <pre><code>z-index: <em>value</em>;</code></pre></li>
@@ -199,6 +199,7 @@
                         <ul>
 							<li class="fragment">"fließende" Layouts</li>
 							<li class="fragment">flexible Seiten, die sich anpassen</li>
+							<li class="fragment">Spalten Layouts</li>
 							
                         	<!--<li>float</li>
                             <li class="fragment">clear</li>
@@ -324,7 +325,6 @@ overflow-y: visible;</code></pre>
 				<section> <!-- Kombinatoren -->
 					<section>
 						<h2><strong>4.</strong> Kombinatoren</h2>
-						<p>
 							<ul>
                             	<li>Abhängiger Selektor</li>
                                 <li class="fragment">Tiefenselektor</li>
@@ -332,35 +332,28 @@ overflow-y: visible;</code></pre>
                                 <li class="fragment">direkter Nachbarselektor</li>
                                 <li class="fragment">indirekter Nachbarselektor</li>
                             </ul>
-						</p>
 					</section>
                     
                   <section>
                    	<h2>Abhängiger Selektor</h2>                      
-                          <p>
 <pre><code>#content p a {
 	text-decoration: underline;
-}</code></pre>
-                          </p>                    
+}</code></pre>                  
                     </section>
                     
                     <section>
                     	<h2>Tiefenselektor</h2>
-                        <p>
 <pre><code>body * a {
 	text-decoration: none;
 }</code></pre>
-                        </p>
                     </section>
                     
                     <section>
                     	<h2>Kindselektor</h2>
-                        <p>
 <pre><code>div > p {
 	color: white;
 	background: red;
 }</code></pre>
-                        </p>
                     </section>
                     
 				</section>
