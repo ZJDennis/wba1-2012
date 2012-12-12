@@ -2,7 +2,7 @@
 
 /*************************************************************************** 
 ToDo 1:
-Setzen Sie das Formblatt links.
+Setzen Sie das Formblatt links im Textfluss.
 ****************************************************************************/
 form {
     float:left;
@@ -12,19 +12,23 @@ form {
 /*************************************************************************** 
 ToDo 2:
 Setzen Sie ein Mouse-Over im footer(Pseudoklassen) mit der Farbe " #4368AB " 
+und Färben Sie den "aktivierten" link "rot".
 ****************************************************************************/
 
 footer a:hover{
     color: #4368AB;
 }
-a:active{
+
+footer a:active{
     color:red;
 }
+
 
 /*************************************************************************** 
 ToDo 3:
 Setzen Sie das Textfeld rechts vom Fromblatt.
 Erweitern sie das Textfeld und Definieren sie es so das man nach unten Scrollen kann.
+Begrenzen Sie dazu die Höhe des Texfeldes auf 555px;
 ****************************************************************************/
 #marginal {
     overflow-y:scroll;
