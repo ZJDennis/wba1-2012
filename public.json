@@ -44,6 +44,12 @@
 			"authors" : ["Laura Hermann", "Marcel Holter", "Benedikt Wurth", "Robert Kellermann"]
 		},
 
+		"2012-12-06-web-basics":
+		{
+			"title" : "Web Basics",
+			"authors" : ["Christian Noss"]
+		},
+
 		"2012-12-13-entwicklungstools/index.html":
 		{
 			"title" : "Einführung in die Chrome Developer Tools",
