@@ -14,6 +14,12 @@
 			"authors" : ["Christian Noss"]
 		},
 
+		"2012-11-29-brackets-basics/index.html":
+		{
+			"title" : "Brackets Einführung",
+			"authors" : ["Martin Baljan"]
+		},
+
 		"2012-12-06-git-basics/index.html":
 		{
 			"title" : "Git Basics",
@@ -24,6 +30,49 @@
 		{
 			"title" : "HTML Basics",
 			"authors" : ["Dominik Schilling", "Bruno José Carvalho Gonzaga"]
+		},
+
+		"2012-12-06-html-basics2/index.html":
+		{
+			"title" : "HTML Basics 2",
+			"authors" : ["Sascha Wüstlich", "Aaron Reiher"]
+		},
+
+		"2012-12-06-html-2/index.html":
+		{
+			"title" : "HTML Advanced",
+			"authors" : ["Laura Hermann", "Marcel Holter", "Benedikt Wurth", "Robert Kellermann"]
+		},
+
+		"2012-12-06-web-basics":
+		{
+			"title" : "Web Basics",
+			"authors" : ["Christian Noss"]
+		},
+
+		"2012-12-13-entwicklungstools/index.html":
+		{
+			"title" : "Einführung in die Chrome Developer Tools",
+			"authors" : ["Martin Baljan"]
+		},
+
+		"2012-12-13-css-basics/index.html":
+		{
+			"title" : "CSS Basics",
+			"authors" : ["Selin Öztürk", "Uwe Müsse"]
+		},
+
+		"2012-12-13-css-advanced/index.html":
+		{
+			"title" : "CSS Advanced",
+			"authors" : ["Dimitri Kiselev", "Sam Kisser", "Sascha Rothkopf", "Armin Weinrebe"]
+		},
+
+		"2012-12-13-wba-1-html5-spezial/index.html":
+		{
+			"title" : "HTML5-Spezial",
+			"authors" : ["Eduard Karsten", "Munish Luthra"]
 		}
+
 	}
 }
