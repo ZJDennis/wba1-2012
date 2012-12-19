@@ -218,15 +218,16 @@ input_element.value = "Hallo, " + input_textwert.value;
 			            <li class="fragment" style="list-style-type: none;">
 			                <pre><code class="xml">
 &lt;body>
-    &lt;button id="alert_button">Klick mich!&lt;/button>
+    &lt;button onclick="alert('Erste Warnung!');">Klick mich!&lt;/button>
+    &lt;button id="alert_button">Jetzt mich!&lt;/button>
 &lt;/body>
                             </code></pre>
                             <img class="fragment" src="./imgs/event_listener_beispiel_button.jpg" style="box-shadow: 0 0 20px #000; position: absolute; top: 70px; left: 655px; z-index: 999;" alt="Button mit 'Klick mich!'-Titel">
-			                <pre class="fragment" style="margin-top: 50px;"><code style="overflow: hidden;" class="javascript">
+			                <pre class="fragment" style="margin-top: 25px;"><code style="overflow: hidden;" class="javascript">
 var button_element = document.getElementById('alert_button');
 
 function warnmeldung(event_object) {
-    alert('Warnung! Das war schon alles.');
+    alert('Zweite Warnung! Das war schon alles');
 }
 
 button_element.addEventListener('click', warnmeldung);
