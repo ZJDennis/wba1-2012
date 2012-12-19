@@ -72,6 +72,12 @@
 		{
 			"title" : "HTML5-Spezial",
 			"authors" : ["Eduard Karsten", "Munish Luthra"]
+		},
+		
+		"2012-12-20-javascript-advanced/index.html":
+		{
+			"title" : "JavaScript Advanced",
+			"authors" : ["Lars Behrens", "Lutz Schönfelder", "Alina Sinderovich", "Jorge H. F. Pereira"]
 		}
 
 	}
