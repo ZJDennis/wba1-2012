@@ -73,7 +73,13 @@
 			"title" : "HTML5-Spezial",
 			"authors" : ["Eduard Karsten", "Munish Luthra"]
 		},
-		
+
+		"2012-12-20-javascript-basics/index.html":
+		{
+			"title" : "JavaScript Basics",
+			"authors" : ["Artur Zimmermann", "Edgar Gellert", "Daniela Kucharczyk", "Julia Warkentin"]
+		},
+
 		"2012-12-20-javascript-advanced/index.html":
 		{
 			"title" : "JavaScript Advanced",
