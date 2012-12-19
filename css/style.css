@@ -34,13 +34,15 @@ h2 span.pink {
 a {
 	color: #000;
 	text-decoration: none;
+	border-bottom: 1px dotted #d16;
 }
 
 a:visited {
 	color: #666;
 }
 
-a:hover{
+a:hover,
+a:focus {
 	color: #75bf0d;
 }
 
@@ -66,17 +68,26 @@ header h1 {
 #presentations {
 	margin: 50px 0;
 }
+
 #presentation-list {
 	padding: 0
 }
 
 #presentation-list li {
-	padding: 0 0 2px;
+	padding: 0 0 3px 15px;
 	list-style: none;
 }
 
-.loading {
-	list-style: none;
+#presentation-list .presentation:before {
+	content: "\00BB \0020";
+}
+
+#presentation-list .date-section {
+	padding: 15px 0 1px 0;
+}
+
+#presentation-list .date-section.first {
+	padding: 0 0 1px 0;
 }
 
 .error {
