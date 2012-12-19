@@ -6,6 +6,7 @@
 		// AJAX request
 		$.getJSON( './files/public.json', function( data ) {
 			var items = [];
+			var date = '00.00.0000';
 
 			// Content check
 			if ( $.isEmptyObject( data.presentations ) )
@@ -14,12 +15,20 @@
 			// Go through each item
 			$.each( data.presentations, function( path, val ) {
 				var authors = '';
+				var dateRegExp = new RegExp( "^(\\d+)-(\\d+)-(\\d+)" );
 
 				// Any authors?
 				if ( ! $.isEmptyObject( val.authors ) )
 					authors = ' (' + val.authors.join(', ') + ')';
 
-				items.push( '<li><a href="files/' + path + '" target="_blank">' + val.title + authors + '</li>' );
+				// Get the date
+				var matches = dateRegExp.exec( path );
+				if ( matches ) {
+					date = matches[3] + '.' + matches[2] + '.' + matches[1];
+					oldDate = date;
+				}
+
+				items.push( '<li' + push + '><a href="files/' + path + '" target="_blank">' + date + ': ' + val.title + authors + '</li>' );
 			} );
 
 			// Add to list
