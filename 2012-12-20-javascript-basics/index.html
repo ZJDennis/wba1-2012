@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>WBA1 - JavaScript Basics</title>
+
+		<meta name="description" content="JavaScript Basics">
+		<meta name="author" content="Artur Zimmermann, Edgar Gellert, Daniela Kucharczyk, Julia Warkentin">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link rel="stylesheet" href="../revealjs-template/css/reveal.css">
+		<link rel="stylesheet" href="../revealjs-template/css/theme/wba.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="../revealjs-template/lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="../revealjs-template/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+		<style type="text/css">
+			.reveal section p {
+				font-weight: normal;
+			}
+
+
+			.fullscreenImage .reveal .slides {
+				height: 100%;
+				left: 0;
+				margin: 0 auto;
+				max-width: 100%;
+				padding: 0;
+				top: 0;
+				width: 100%;
+			}
+
+			.fullscreenImage .reveal .slides > section {
+				background-position: center center;
+				background-repeat: no-repeat;
+				background-size: auto 80%;
+				height: 100%;
+				left: 0;
+				margin: 0;
+				position: absolute;
+				top: 0;
+				width: 100%;
+			}
+
+			.fullscreenImage .reveal .slides > section .bu{
+				background-color: rgba(221, 17,102, 0.8);
+				top: 20px;
+				display: inline-block;
+				color: white;
+				padding: 0 10px 0 100px;
+				position:absolute;
+
+			}
+
+			.fullscreenImage .reveal .slides > section .quelle{
+				bottom: 10px;
+				color: white;
+				display: inline-block;
+				font-size: 14px;
+				margin: 0 0 0 10px;
+				position:absolute;
+
+			}
+
+			.fullscreenImage .reveal .slides > section p{
+				margin: 0;
+			}
+			.nobackground .reveal .slides > section{
+				background-image: none;
+			}
+			</style>
+
+		<!--[if lt IE 9]>
+		<script src="../revealjs-template/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+					<h1>JavaScript Basics</h1>
+					<h2>Medieninformatik</h2>
+					<p>December 20th, 2012</p>
+					<p>
+						Studiengang Medieninformatik an der Fachhochschule Köln<br>
+						Campus Gummersbach
+					</p>
+					<p>
+						<a href="https://github.com/azimmer4">Artur Zimmermann,</a>
+						<a href="https://github.com/mushu85">Edgar Gellert</a><br>
+						<a href="https://github.com/Butterfly3108">Daniela Kucharczyk,</a>
+						<a href="https://github.com/JuliaWarkentin">Julia Warkentin</a><br>
+					</p>
+				</section>
+
+				<section>
+					<h2>
+						Themenübersicht
+					</h2>
+					<ol>
+						<li class="fragment">Was ist Javascript?</li>
+						<li class="fragment">Welche Einsatzmöglichkeiten gibt es?</li>
+						<li class="fragment">Wie ist JavaScript aufgebaut?</li>
+						<li class="fragment">Wie lässt sich JavaScript einbinden?</li>
+						<li class="fragment">War alles verständlich?</li>
+						<li class="fragment">Was ist DOM?</li>
+					</ol>
+				</section>
+
+				<section>
+					<h2>1. Was ist JavaScript?</h2>
+					<p>
+						<ul>
+							<li>Skriptsprache</li>
+							<li>keine Datenbanken, Klassen, Schnittstellen und Sicherheitsstufen</li>
+							<li>Variablen ohne Datentypdeklaration</li>
+							<li>steuert das Verhalten einer Webanwendung</li>
+						</ul>
+					</p>
+				</section>
+
+
+				<section>
+					<h3>2. Welche Einsatzmöglichkeiten gibt es?</h3>
+					<p>
+						<ul>
+							<li>aufklappende Menüs</li>
+							<li>Dialogboxen zur Eingabe von Daten</li>
+							<li>User-Aktionen können mit Funktionen belegt werden (Events)</li>
+							<li>Pop-Up Fenster</li>
+							<li>Formularüberprüfung auf korrekte Eingabe</li>
+							<li>visuelle Effekte</li>
+						</ul>
+					</p>
+				</section>
+
+				<section data-state="fullscreenImage"  style="background-image: url(images/jsOn.jpg);">
+					<p class="bu">
+						JavaScript aktiviert
+					</p>
+				</section>
+
+				<section data-state="fullscreenImage"  style="background-image: url(images/jsOff.jpg);">
+					<p class="bu">
+						JavaScript deaktiviert
+					</p>
+				</section>
+
+			<section>
+				<section>
+					<h2>
+						3. Wie ist JavaScript aufgebaut?
+					</h2>
+					<ul>
+						<li>Variablen und Werte</li>
+						<li>Objekte, Eigenschaften und Methoden</li>
+						<li>Funktionen</li>
+						<li>Operatoren</li>
+						<li>Bedingte Anweisungen (if-else/switch)</li>
+						<li>Schleifen (while/for/do-while)</li>
+					</ul>
+				</section>
+
+				<section>
+					<h5>
+						Anwendungsbeispiel
+					</h5>
+
+					<pre><code>
+function pruefe(wort){
+	if(wort.length&lt;3 || wort.length==0){
+		alert(&quot;Ungültige Eingabe!&quot;);
+		document.adresse.stadt.focus();
+	}
+	else if(wort.length&gt;=3)
+		alert(&quot;Wow&quot;);
+}
+					</code></pre>
+					<pre><code>
+&lt;form name=&quot;adresse&quot;&gt;
+	&lt;input type=&quot;text&quot; size=&quot;30&quot; name=&quot;stadt&quot;&gt;
+	&lt;input type=&quot;button&quot; value=&quot;fertsch&quot;
+			onclick=&quot;pruefe(document.adresse.stadt.value)&quot;&gt;
+&lt;/form&gt;
+					</code></pre>
+					<a href="http://de.selfhtml.org/javascript/sprache/index.htm">Weitere Informationen findet Ihr hier</a>
+				</section>
+			</section>
+
+
+		   <section>
+				<section>
+					<h2>
+						4. Wie lässt sich JavaScript einbinden?
+					</h2>
+					<h3>
+						1. Möglichkeit
+					</h3>
+					<p>
+						Entweder im head-, oder body-Bereich des HTML-Codes
+					</p>
+					<pre><code>
+&lt;script type=&quot;text/javascript&quot;&gt;
+		  //Es wird ein Warnhinweis ausgeworfen
+		  alert(&quot;Hey Leute, alles klar?&quot;);
+&lt;/script&gt;
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>
+						2. Möglichkeit
+					</h2>
+					<p>
+						Als externe Datei im head-Bereich einfügen
+					</p>
+					<pre><code>
+&lt;head&gt;
+	  &lt;script type=&quot;text/javascript&quot; src=&quot;/meinscript.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>
+						3. Möglichkeit
+					</h2>
+					<p>
+						In Eventhandlern
+					</p>
+					<pre><code>
+&lt;input type=&quot;button&quot; value=&quot;Klick Mich&quot; onclick=&quot;alert('Ich bin ein Event')&quot;&gt;
+					</code></pre>
+
+					<form>
+						<input type="button" value="Klick Mich" onclick="alert('Du olle Schrulle musst auch jeden Scheiß anfassen...')">
+					</form>
+
+					<pre><code>
+&lt;body onload=&quot;document.anmeldung.vorname.focus()&quot;&gt;
+					</code></pre>
+				</section>
+		</section>
+
+
+		<section>
+			<h2>
+				5. War alles verständlich?
+			</h2>
+			<p>
+				Sollte soweit alles klar sein, auf zu den <a href="http://db.tt/h0O0Dyxf">Übungen</a>.<br><br>Downloadlink: http://db.tt/h0O0Dyxf
+			</p>
+		</section>
+
+		<section>
+			<h2>6. Was ist DOM?</h2>
+			<ul>
+				<li>Document Object Model</li>
+				<li>Beschreibt wie auf Elemente von HTML und anderen XML basierten Dokumenten zugegriffen werden kann</li>
+				<li>Elemente eines HTML-Dokuments werden durch Baumstruktur in Beziehung gesetzt</li>
+				<li>Wird allmählich von allen gängigen Browsern verwendet</li>
+			</ul>
+		</section>
+
+		<section>
+			<h2>You reached the next level</h2>
+			<p style="font-size: 24px">Vielen Dank für eure Aufmerksamkeit,<br>wir wünschen euch einen bezaubernden Tag</p>
+			<img src="images/steve-o_o_GIFSoup.com.gif" style="width: 50%; height: 50%;">
+		</section>
+
+
+		<script src="../revealjs-template/lib/js/head.min.js"></script>
+		<script src="../revealjs-template/js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: '../revealjs-template/lib/js/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
+					{ src: '../revealjs-template/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../revealjs-template/lib/js/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs-template/lib/js/data-markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs-template/plugin/zoom-js/zoom.js', condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
