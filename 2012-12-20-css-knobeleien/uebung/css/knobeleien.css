@@ -1,0 +1,105 @@
+
+/* Kosmetik */
+.zeile{ 	padding-bottom: 30px;}
+.zeile p{	line-height: 130%; }
+footer{   	margin-top: 30px; }
+p{ 			line-height: 130%; padding-bottom: 10px; }
+nav ul{ 	margin-bottom: 10px; }
+
+/* Hintergrundbild 
+################################################################################*/
+
+body{
+	background-image: url("../images/hintergrund.jpg");
+
+}
+
+/* Schatten für weiße Box */
+#wrap{
+	box-shadow: 0 0 20px rgba(0,0,0,0.8);
+}
+
+/* Dokumentfluss wieder herstellen */
+.zeile:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+/* schönes, zweispaltiges Layout
+################################################################################*/
+
+#hauptspalte, #marginalspalte{
+	float:left;
+}
+
+#hauptspalte{
+	width: 520px;
+	margin-right: 20px;
+}
+
+#marginalspalte{
+	width: 200px;
+}
+
+/* Dropdownmenue in schoen
+################################################################################*/
+
+/* Kosmetik */
+nav ul{
+	margin-bottom: 10px;
+}
+
+/* damit die Positionierung des Submenüs den richtigen Ursprung hat */
+nav ul li{
+	position: relative;	
+}
+
+/* Submenü wird erst ausgeblendet ... */
+nav ul li ul {
+	display: block;
+	position: absolute;
+	padding-top: 28px;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: opacity .5s;
+}
+
+/* ..und dann mit Transition beim hover eingeblendet */
+nav ul li ul:hover{ opacity: 1; }
+
+/* li Elemente klappen langsam mit transistion auf */
+nav ul li ul li{
+	height: 0;
+	transition: height 1s;
+	background-color: rgba(0,0,0,0.5);
+	color: #fff;
+	display: block;
+	margin: 1px 0;
+	padding: 5px;
+	font-weight: normal;
+}
+
+nav ul li ul:hover li{
+	height: 20px;
+}
+
+/* Mouseover der li-Elemente */
+nav ul li ul li:hover{
+	background-color: rgba(0,0,0,0.9);
+}
+
+/* schlaue Marginalie
+################################################################################*/
+#hauptspalte{
+	margin-left: 200px;
+}
+
+.schlaue_marginalie{
+	margin-left: -200px;
+	width: 180px;
+	position: absolute;
+	text-align: right;
+	color: #666;
+}
