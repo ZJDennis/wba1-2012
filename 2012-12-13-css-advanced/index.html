@@ -1,0 +1,557 @@
+<!doctype html>
+<html lang="de">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>WBA1 - CSS Advanced</title>
+
+		<meta name="description" content="CSS Advanced">
+		<meta name="author" content="Sascha Rothkopf">
+        <meta name="author" content="Armin Weinrebe">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link rel="stylesheet" href="../revealjs-template/css/reveal.css">
+		<link rel="stylesheet" href="../revealjs-template/css/theme/wba.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="../revealjs-template/lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+            var document = this.document;
+            var window = this.window;
+			document.write('<link rel="stylesheet" href="../revealjs-template/css/print/' + (window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper') + '.css" type="text/css" media="print">');
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="../revealjs-template/lib/js/html5shiv.js"></script>
+		<![endif]-->
+        
+        <style>
+        .reveal.cube .slides section:not(.stack):before {
+            background: rgba(0,0,0,0.9);
+        }
+    
+        .reveal.page .slides section:not(.stack):before {
+            background: rgba(0,0,0,0.9);
+        }
+        </style>
+                    
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+					<h1>WBA1 - CSS Advanced</h1>
+					<h2>Medieninformatik</h2>
+					<p>13. Dezember 2012</p>
+					<p>
+						Studiengang Medieninformatik an der Fachhochschule Köln<br/>
+						Campus Gummersbach
+					</p>
+					<p>
+                        Gruppe 1: <br />
+						<a href="https://github.com/veN1337" target="_blank">Sascha Rothkopf</a><br />
+						<a href="https://github.com/mi1112" target="_blank">Armin Weinrebe</a><br />
+                        <br />
+                        Gruppe 2: <br />
+                        <a href="https://github.com/dimitrikiselev" target="_blank">Dimitri Kiselev</a><br />
+						<a href="https://github.com/skisser" target="_blank">Sam Kisser</a><br />
+					</p>
+				</section>
+                
+                <section>
+                    <h1>Inhalte und Ablauf</h1>
+                    <p style="font-size: 1em;">Vortrag und Beispiele zu:</p>
+                    <ul style="font-size: 0.8em;">
+                        <li class="fragment">Positionierung</li>
+                        <li class="fragment">Dokumentenfluss</li>
+                        <li class="fragment">Pseudoklassen und Pseudoelemente</li>
+                        <li class="fragment">Kombinatoren</li>						
+                    </ul>
+                    <br />
+					<p style="font-size: 1em;" class="fragment">Zum Schluss:</p>
+					<ul>
+						<li class="fragment">
+							Zeit zum ausprobieren bzw. Übung
+						</li>
+					</ul>
+                </section>
+                
+                <section>
+                    <h1>Lernziele</h1>
+                    <ul>
+                        <li class="fragment">korrekte Positionierung</li>
+                        <li class="fragment">Verständnis des Floatings</li>
+						<li class="fragment">richtige Verwendung von Pseudoklassen</li>
+                    </ul>                
+                </section>
+				
+				<section> <!-- Positionierung -->
+					<section>
+						<h2><strong>1.</strong> Positionierung</h2>
+						<ul>
+							<li class="fragment">Art der Positionierung</li>
+							<li class="fragment">Positionierung anhand von Abständen</li>
+							<li class="fragment">Überlagerung von Elementen</li>
+						</ul>
+					</section>
+					<section>
+						<h2><strong>1.1</strong> Arten der Positionierung</h2>
+						<h3 class="fragment">Insgesamt <strong>4</strong> Arten der Positionierung</h3>
+						<ul>
+							<li class="fragment">position: static;</li>
+							<li class="fragment">position: relative;</li>
+							<li class="fragment">position: absolute;</li>
+							<li class="fragment">position: fixed;</li>
+						</ul>
+					</section>
+					<section>
+						<h2><strong>1.1.1</strong> Statische Positionierung</h2>
+						<ul>
+							<li class="fragment">Standard, falls nicht anders angegeben</li>
+							<li class="fragment">Anzeige wie sie im HTML-Code vorkommen</li>
+                            <li class="fragment">Können nicht frei positioniert werden</li>
+						</ul>
+					</section>
+					<section>
+						<h2><strong>1.1.2</strong> Relative Positionierung</h2>
+						<ul>
+							<li class="fragment">nachfolgende Elemente verhalten sich als wäre das Element noch an der ursprünglichen Stelle</li>
+							<li class="fragment">können andere Elemente überlagern</li>
+						</ul>
+					</section>
+					<section>
+						<h2><strong>1.1.3</strong> Absolute Positionierung</h2>
+						<ul>
+							<li class="fragment">werden aus der normalen Reihenfolge herausgelöst</li>
+							<ul class="fragment">
+								<li>Position wird nicht durch andere Elemente beeinflusst</li>
+								<li>Position beeinflusst andere Elemente nicht</li>
+							</ul>
+							<li class="fragment">Position wird relativ zu den Rändern des Eltern-Elements gemessen</li>
+							<li class="fragment">können andere Elemente überlagern</li>
+						</ul>
+					</section>
+					<section>
+						<h2><strong>1.1.4</strong> Fixe Positionierung</h2>
+						<ul>
+							<li class="fragment">wird im Bezug auf das Browserfenster positioniert</li>
+							<li class="fragment">bewegt sich nicht mit, wenn gescrollt wird</li>
+						</ul>
+					</section>
+					<section>
+						<h2><strong>1.2</strong> Ausrichten mit Abständen</h2>
+						<h3>nur mit relativer, absoluter, fixer Position</h3>
+						<ul style="float:left; margin-right:40px;">
+							<li class="fragment">horizontaler Abstand</li>
+							<ul class="fragment">
+								<li>left: <em>value</em>;</li>
+								<p>oder</p>
+								<li>right: <em>value</em>;</li>
+							</ul>
+						</ul>
+						<ul style="float:left;">
+							<li class="fragment">vertikaler Abstand</li>
+							<ul class="fragment">
+								<li>top: <em>value</em>;</li>
+								<p>oder</p>
+								<li>bottom: <em>value</em>;</li>
+							</ul>
+						</ul>
+					</section>
+					<section>
+						<h2><strong>1.2.1</strong> Beispiel</h2>
+<pre><code>.element {
+	position: relative;
+	top: 100px;
+	left: 100px;
+}</code></pre>
+<pre><code>.element2 {
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+}</code></pre>
+					</section>
+					<section>
+						<h2><strong>1.3</strong> Überlagerung</h2>
+						<h3>Was wenn Elemente übereinander liegen?</h3>
+						<ul>
+							<li class="fragment">Zuletz genanntes Element im HTML Code liegt vorne</li>
+							<li class="fragment">Steuerbar über <pre><code>{ z-index: <em>value</em>; }</code></pre></li>
+							<li class="fragment">Element mit höherem z-index liegt vorne</li>
+						</ul>
+						
+					</section>
+				</section>
+                
+                <section> <!-- Dokumentenfluss -->
+                    <section>
+                        <h2><strong>2.</strong> Dokumentenfluss</h2>
+                        <ul>
+							<li class="fragment">"fließende" Layouts</li>
+							<li class="fragment">flexible Seiten, die sich anpassen</li>
+							<li class="fragment">Spalten Layouts</li>
+                        </ul>
+                    </section>
+					<section>
+						<h2><strong>2.1</strong> float</h2>
+						<ul>
+							<pre class="fragment"><code style="overflow:hidden;">{ float: left; } <em>oder</em> { float: right; }</code></pre>
+							<li class="fragment">lassen Elemente nach links oder rechts "fließen"</li>
+							<li class="fragment">Element und folgende werden soweit wie möglich nach links bzw. rechts gerückt</li>
+							<li class="fragment">ein gefloatetes Element verliert typische Block Eigenschaften</li>
+						</ul>
+					</section>
+					<section>
+						<h2><strong>2.2</strong> clear</h2>
+						<ul>
+							<pre class="fragment"><code class="css" style="overflow:hidden;">{ clear: left; } <em>oder</em> { clear: right; } <em>oder</em> { clear: both; }</code></pre>
+							<li class="fragment">beendet den float Zustand</li>
+                            <li class="fragment">erstes Element, welches nicht mehr neben anderen steht</li>
+						</ul>
+					</section>
+					<section>
+						<h2><strong>2.3</strong> overflow</h2>
+						<h3>Was wenn der Inhalt eines div zu groß ist?</h3>
+						<div class="fragment" style="background:gray; width:400px; height: 300px; padding:4px;">
+							<div style="background:white; width:600px; height: 100px;"></div>
+							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+						</div>
+					</section>
+					<section>
+						<h2><strong>2.3.1</strong> overflow kontrollieren</h2>
+						<ul>
+							<pre class="fragment"><code style="overflow:hidden;">{ overflow: <em>value</em>; }</code></pre>
+							<li class="fragment">Zugelassene Werte:</li>
+							<ul class="fragment">
+								<li>visible <em>(Standard)</em></li>
+								<li>hidden</li>
+								<li>scroll</li>
+								<li>auto</li>
+							</ul>
+						</ul>
+					</section>
+					<section>
+						<h2><strong>2.3.1.1</strong> overflow kontrollieren (Beispiel)</h2>
+						<ul style="float: left;">
+							<pre class="fragment"><code class="css" style="overflow:hidden;">{ overflow: hidden; }</code></pre>
+							<div class="fragment" style="background:gray; width:235px; height: 100px; padding:4px; overflow: hidden;">
+							<div style="background:white; width:300px; height: 50px;"></div>
+							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+							</div>
+						</ul>
+						
+						<ul style="float: left;">
+							<pre class="fragment"><code class="css" style="overflow:hidden;">{ overflow: scroll; }</code></pre>
+							<div class="fragment" style="background:gray; width:235px; height: 100px; padding:4px; overflow: scroll;">
+							<div style="background:white; width:300px; height: 50px;"></div>
+							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+							</div>
+							<div class="fragment" style="background:gray; width:235px; height: 100px; margin-top: 20px; padding:4px; overflow: scroll;">
+							Lorem ipsum
+							</div>
+						</ul>
+						
+						<ul style="float: left;">
+							<pre class="fragment"><code class="css" style="overflow:hidden;">{ overflow: auto; }</code></pre>
+							<div class="fragment" style="background:gray; width:220px; height: 100px; padding:4px; overflow: auto;">
+							<div style="background:white; width:300px; height: 50px;"></div>
+							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+							</div>
+							<div class="fragment" style="background:gray; width:220px; height: 100px; margin-top: 20px; padding:4px; overflow: auto;">
+							Lorem ipsum
+							</div>
+						</ul>
+					</section>
+					<section>
+						<h2><strong>2.3.2</strong> overflow pro Achse kontrollieren</h2>
+						<ul>
+							<li>Seit CSS 3 kann man overflow per Achse kontrollieren</li>
+							<ul class="fragment">
+								<pre><code class="css" style="overflow:hidden;">{ overflow-x: <em>value</em>; }</code></pre>
+								<li>Kontrolliert den overflow nur auf der x-Achse</li>
+							</ul>
+							<ul class="fragment">
+								<pre><code style="overflow:hidden;">{ overflow-y: <em>value</em>; }</code></pre>
+								<li>Kontrolliert den overflow nur auf der y-Achse</li>
+							</ul>
+							<!--<li class="fragment">Zusätzliche Werte: <em>no-display</em> und <em>no-content</em></li>-->
+						</ul>
+					</section>
+					<section>
+						<h2><strong>2.3.2.1</strong> overflow pro Achse (Beispiel)</h2>
+						<ul style="float:left;">
+							<pre class="fragment"><code class="css" style="overflow:hidden;">{ overflow-x: auto;
+  overflow-y: hidden; }</code></pre>
+							<div class="fragment" style="background:gray; width:255px; height: 100px; padding:4px; overflow-x: auto; overflow-y: hidden;">
+							<div style="background:white; width:300px; height: 50px;"></div>
+							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+							</div>
+						</ul>
+						<ul style="float:left;">
+							<pre class="fragment"><code class="css" style="overflow:hidden;">{ overflow-x: auto;
+  overflow-y: visible; }</code></pre>
+							<div class="fragment" style="background:gray; width:265px; height: 100px; padding:4px; overflow-x: auto; overflow-y: visible;">
+							<div style="background:white; width:300px; height: 50px;"></div>
+							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+							</div>
+						</ul>
+					</section>
+                </section>
+				
+				<section> <!-- Pseudoklassen -->
+					<section>
+						<h2><strong>3.</strong> Pseudoklassen und Pseudoelemente</h2>
+							<ul>
+								<li class="fragment">Pseudoklassen für Verweise und andere Elemente</li>
+                                <li class="fragment">Pseudoklassen für Absätze</li>
+                                <li class="fragment">Pseudoelemente für automatisch generierten Inhalt</li>
+                                <li class="fragment">Weitere Pseudoklassen</li>
+                            </ul>
+					</section>
+                    
+                    <section>
+						<h2><strong>3.1</strong> Pseudoklassen für Verweise und andere Elemente</h2>
+						<ul>
+							<li class="fragment">:link</li>
+                            <li class="fragment">:visited</li>
+                            <li class="fragment">:focus</li>
+                            <li class="fragment">:hover</li>
+                            <li class="fragment">:active</li>
+						</ul>
+                    </section>
+                    
+                    <section>
+						<h2><strong>3.2</strong> Pseudoklassen für Absätze</h2>
+						<ul>
+							<li class="fragment">:first-child</li>
+							<li class="fragment">:first-line</li>
+                            <li class="fragment">:first-letter</li>
+						</ul>
+						<div class="fragment">Seit CSS3 auch noch:</div>
+						<ul>
+							<li class="fragment">:last-child</li>
+                            <li class="fragment">:nth-child</li>
+						</ul>
+                        <div style="font-size:0.5em;" class="fragment">Quelle:<br> <a href="http://www.elmastudio.de/programmierung/css/css-tipps-die-css-pseudoklassen-selektoren-first-child-last-child-und-nth-child/" target="_blank">http://www.elmastudio.de/programmierung/css/css-tipps-die-css-pseudoklassen-selektoren-first-child-last-child-und-nth-child/</a></div>
+                    </section>
+                    
+                    <section>                    
+						<h2><strong>3.2.1</strong> :first-child</h2>
+						<p>Angenommen die Listen-Elemente einer Auflistung der neusten Blog-Artikel haben alle folgende border-top CSS-Eigenschaft:</p>
+						<pre><code>ul#recent-posts li {
+	border-top: 1px solid #333;
+}</code></pre>
+						<p>Nun wollen wir die "top-border" wegbekommen beim obersten Element:</p>
+						<pre><code>ul#recent-posts li:first-child { border-top: none;}</code></pre>
+						<img src="images/css-pseudoklassen-selektoren-01.jpg" style="margin: 0;" height="200px"/>
+					</section>
+                  
+                        	
+                    
+                    <section>
+						<h2><strong>3.2.2</strong> :last-child</h2>
+						<p>Nehmen wir nun die "bottom-border"
+						vom letzten Element weg:</p>
+						<pre><code>ul#recent-posts li:last-child {
+	border-bottom: none;
+}</code></pre>
+						<img src="images/css-pseudoklassen-selektoren-02.jpg" style="margin: 0;" height="300px"/>
+                    </section>
+                    
+                    <section>
+						<h2><strong>3.2.3</strong> :nth-child</h2>
+						<p>Für das "nth-child" nehmen wir ein Argument hinzu, wie z.B. (odd) oder (even).</p>
+						<pre><code>tr:nth-child(odd) td {
+	background: #C1B49A;
+}</code></pre>
+						<p>Man kann aber auch jedes 3te, 4te...n'te Element anstprechen</p>
+						<pre><code>*:nth-child (3n+1){...}</code></pre>
+						<img src="images/css-pseudoklassen-selektoren-03.jpg" style="margin: 0;" height="200px"/>
+                    </section>
+                    
+                    <section>
+						<h2><strong>3.3</strong> Pseudoelemente für automatisch generierten Inhalt</h2>
+                        <ul>
+                            <li class="fragment">:before</li>
+                            <li class="fragment">:after</li>
+                            <li class="fragment">fügt vor oder nach einem Element automatisch Inhalt ein</li>
+						</ul>
+                    </section>
+                    
+                    <section>
+                    	<h2><strong>3.4</strong> Weitere Pseudoklassen</h2>
+                        <p>
+                        	Link: <a href="http://reference.sitepoint.com/css/css3psuedoclasses">Weitere Pseudoklassen, insbesondere von CSS3</a>
+                        </p>
+                    </section>
+                    
+				</section>
+				
+				<section> <!-- Kombinatoren -->
+					<section>
+						<h2><strong>4.</strong> Kombinatoren</h2>
+							<ul>
+								<li>Nachfahren-Kombinator (Abhängiger Selektor)</li>
+                                <li class="fragment">Kind-Kombinator (Kindselektor)</li>
+                                <li class="fragment">Benachbarte-Geschwister-Kombinator (Nachbarselektor)</li>
+                                <li class="fragment">Allgemeiner-Geschwister-Kombinator (Geschwisterselektor)</li>
+                            </ul>
+					</section>
+                    
+					<section>
+						<h2><strong>4.1</strong> Nachfahren-Kombinator<br>(Abhängiger Selektor)</h2> 
+						<ul>
+							<li>wählt alle Kinder und Kindeskinder (Nachfahren) eines Elements aus</li>
+						</ul>
+					</section>
+					<section>
+                        <h2><strong>4.1.1</strong> Beispiel zu Nachfahren-Kombinator</h2>
+<pre><code>#content a {
+	text-decoration: underline;
+}</code></pre>
+<pre><code>&lt;body&gt;
+   &lt;div id="header"&gt;
+      Hier ist der Header!!! &lt;a href="www.linkzumziel.de"&gt;Link im Header&lt;/a&gt;
+   &lt;/div&gt;
+   &lt;div id="content"&gt;   <div style="background-color: grey;">      &lt;a href="www.linkzumziel.de"&gt;Hier der Linktext&lt;/a&gt; </div>      &lt;p&gt;<div style="background-color: grey;">         &lt;a href="www.linkzumziel.de"&gt;Hier der Linktext&lt;/a&gt; </div>      &lt;/p&gt;
+   &lt;/div&gt;
+&lt;/body&gt;</code></pre>               
+                    </section>
+
+                    <section>
+						<h2><strong>4.2</strong> Kind-Kombinator (Kindselektor)</h2>
+						<ul>
+							<li>direkte Eltern-Kind-Beziehung</li>    
+						</ul>
+                    </section>
+                    <section>
+                    <h2><strong>4.2.1</strong> Beispiel zu Kind-Kombinator</h2>
+<pre><code>div > p {
+	color: white;
+	background: red;
+}</code></pre>
+<pre><code>&lt;body&gt;
+   &lt;p&gt; ... &lt;/p&gt;
+   &lt;div id="irgendwas"&gt;<div style="background-color: grey;">      &lt;p&gt; ... &lt;/p&gt;</div>   &lt;/div&gt;
+   &lt;p&gt; ... &lt;/p&gt;
+&lt;/body&gt;       
+</code></pre>
+                    </section>
+                    
+                    <section>
+						<h2><strong>4.3</strong> Benachbarte-Geschwister-Kombinator</h2>
+						<ul>
+							<li>erfasst Elemente, die unmittelbar aufeinander folgen</li>
+						</ul>
+                    </section>
+                    
+                    <section>
+						<h2><strong>4.3.1</strong> Beispiel zu Benachbarte-Geschwister-Kombinator</h2>
+<pre><code>h1 + p {
+	font-weight: bold;
+}
+</code></pre>
+<pre><code>&lt;body&gt;
+   &lt;h1&gt;Die H1 Überschrieft!!!&lt;/h1&gt;<div style="background-color: grey;">   &lt;p&gt;Hier kommt ein Text. Vermutlich mal wieder Lorem Ipsum&lt;/p&gt; </div>   &lt;p&gt; ... &lt;/p&gt;
+   &lt;h2&gt;Die H2 Überschrift!!!&lt;/h2&gt;
+   &lt;p&gt; ... &lt;/p&gt;
+   &lt;p&gt; ... &lt;/p&gt;
+&lt;/body&gt;
+</code></pre>
+                    </section>
+                    
+                    <section>
+						<h2><strong>4.4</strong> Allgemeiner-Geschwister-Kombinator</h2>
+						<ul>
+							<li>es werden alle Elemente angesprochen, die im Elementbaum in derselben Ebene auf ein Element folgen</li>
+							<li class="fragment">unabhängig davon, ob sich zwischen den Elementen weitere Elemente befinden</li>
+							<li class="fragment">mit CSS3 neu eingeführt</li>
+						</ul>
+                    </section>
+                    
+                    <section>
+						<h2><strong>4.4.1</strong> Beispiel zu Allgemeiner-Geschwister-Kombinator</h2>
+<pre><code>h1 ~ p {
+	font-weight: bold;
+}</code></pre>
+<pre><code>&lt;body&gt;
+   &lt;p&gt;Erster Absatz.&lt;/p&gt;
+   &lt;h1&gt;Der Geschwisterselektor&lt;/h1&gt;<div style="background-color: grey;">   &lt;p&gt;Zweiter Absatz.&lt;/p&gt;</div>   &lt;hr&gt;<div style="background-color: grey;">   &lt;p&gt;Dritter Absatz.&lt;/p&gt;</div>&lt;/body&gt;
+</code></pre>
+                    </section>
+                    
+				</section>
+                
+                <section>
+					<section>
+						<h2><strong>5.</strong> Neues in CSS3</h2>
+						<p>Ein interessantes Tool das die gravierenden Neuerungen in CSS3 sehr schön veranschaulicht<br><br></p>
+						<ul>
+							<li><a href="http://www.css3generator.com/">Neues in CSS3 aus dem Generator</a></li>
+							<li><a href="http://www.haz.io/">CSS3 und HTML5 Infos</a></li>
+						</ul>
+                    	
+                    </section>
+                </section>
+				<section>
+					<section>
+						<h2><strong>6.</strong> Übung</h2>
+						<p>Im Master Branch: Ordner <a href="https://github.com/fh-koeln/wba1-2012/tree/master/2012-12-13-css-advanced/uebung/schlagzeugweltrekord_TODO_Advanced" target="_blank">2012-12-13-css-advanced/uebung/schlagzeugweltrekord_TODO_Advanced</a>
+						</p><br>
+						<h3>Aufgabe:</h3>
+						<p>Ergänzen der TODOs in css/StyleAdvanced.css</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<div style="width:400px;height:100px; position: absolute;top:50%; left:50%;	margin: -50px 0 0 -200px; text-align:center;">
+							<h1>
+								Vielen Dank!
+							</h1>
+						</div>
+					</section>
+				</section>
+				
+			</div>
+
+		</div>
+
+		<script src="../revealjs-template/lib/js/head.min.js"></script>
+		<script src="../revealjs-template/js/reveal.min.js"></script>
+
+		<script>
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'cube', // default/cube/page/concave/zoom/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: '../revealjs-template/lib/js/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
+					{ src: '../revealjs-template/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../revealjs-template/lib/js/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs-template/lib/js/data-markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs-template/plugin/zoom-js/zoom.js', condition: function() { return !!document.body.classList; } },
+					{ src: '../revealjs-template/socket.io/socket.io.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
+					{ src: '../revealjs-template/plugin/speakernotes/client.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } }
+				]
+			});
+
+		</script>
+	</body>
+</html>
