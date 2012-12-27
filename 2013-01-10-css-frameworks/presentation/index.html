@@ -24,11 +24,13 @@
   <!-- Any section element inside of this container is displayed as a slide -->
   <div class="slides">
     <section>
-      <h1>Webbasierte Anwendungen</h1>
-      <h2>Medieninformatik</h2>
+      <h1>CSS Frameworks</h1>
+      <h2>Medieninformtik</h2>
       <p style="float: right">10 Januar 2013</p>
-      <h4> CSS Frameworks </h4>
-      <p> Sergej Kronhardt &amp; Simon Klinge </p>
+      <p> Eine Präsentation über CSS-Frameworks (SASS &amp; SCSS) <br> 
+      als Bestandteil der Webbasierten Anwendungen</p> 
+      <p><a href="https://github.com/skronhar">Sergej Kronhardt</a> & <a href="https://github.com/simm033">Simon Klinge</a> </p>
+      <p>&nbsp; </p>
       <p>&nbsp; </p>
       <p>&nbsp; </p>
       <p>&nbsp; </p>
@@ -38,33 +40,29 @@
         Campus Gummersbach </p>
     </section>
     <section>
-      <h2> CSS - Seine Vor-, und Nachteile </h2>
-      <p> <i><small>- &quot;CSS ist nicht die übersichtlichste Auszeichnungssprache&quot;</small></i> <i><small>- <a href="hhttp://www.webmasterarchiv.com/ubersichtliches-css-sass-scss/">WebmasterArchiv.com</a></small></i> </p>
+      <h2>CSS-Frameworks Ablauf</h2>
       <ul>
-        <li class="fragment"> Vereinfacht das globale Designkonzept von Portalen und Webseite. </li>
-        <li class="fragment"> Einmalige Veränderung am StyleSheet wird Global übernommen </li>
-        <br>
-        <li class="fragment"> Portale und Webseiten mit vielen Aufteilungen haben oft CSS Dateien, die tausende von Codezeilen umfassen. </li>
-        <li class="fragment"> Der Arbeitsaufwand steigt unverhältnismäßig an </li>
-        <li class="fragment"> Formatierungen wiederholen sich häufig, sodass Änderungen und Erweiterungen viel Zeit erfordern. </li>
+        <li class="fragment"> <a href="#/2">Teil 1:</a> Was ist SASS bzw. SCSS? <i><small>(5 Minuten)</small></i></li>
+        <li class="fragment"> <a href="#/3">Teil 2:</a> Warum SASS, SCSS &amp; Co? <i><small>(5 Minuten)</small></i></li>
+        <li class="fragment"> <a href="#/4">Teil 3:</a> Wo wird SASS oder SCSS eingesetzt? <i><small>(5 Minuten)</small></i></li>
+        <li class="fragment"> <a href="#/5">Teil 4:</a> Wie kann ich SASS benutzen? <i><small>(15 Minuten)</small></i></li>
+        <li class="fragment"> <a href="#/6">Teil 5:</a> Ein paar Übungen <i><small>(10 Minuten)</small></i></li>
       </ul>
-      <aside class="notes"> Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you run the speaker notes server. </aside>
     </section>
     <!-- Example of nested vertical slides -->
     <section>
       <section>
-        <h2> Abhilfe durch SASS bzw. SCSS </h2>
-        <p> Die Formatierungen wird in Module aufgeteilt </p>
-        <p> Die Grundmodule bieten Vereinheitlichungen </p>
-        <ul>
-          <li class="fragment"> Typographie </li>
-          <li class="fragment"> Farben etc.</li>
+        <h2> Was ist SASS bzw. SCSS </h2>
+        <p> SASS - Syntactically Awesome Stylesheet </p>
+        <p> SCSS - Sassy Cascading Stylesheet <br>
+        <i><small>(wird bei der Präsentation in den Hintergrund geschoben)</small></i> </p>
+        <p> &nbsp; </p>
+        <ul> 
+        <li> SASS ist ein auf Ruby basierendes Framework zur Vereinfachung der Entwicklung von CSS-Layouts </li>
+        <li> SASS fungiert Serverseitig </li>
+        <li> Die Syntax ist dem einer CSS ähnlich </li>
+        <li> Es erlaubt die Nutzung von Variablen und Funktionen </li>
         </ul>
-        <p> Wiederholungen lassen sich vermeiden und Aufgaben entkoppeln </p>
-        <p> Ein solches Baukastensystem findet sich beispielsweise beim YAML-Framework </p>
-        <!--<a href="#/2/1" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>-->
       </section>
       <section>
         <h2>Beispiel in SCSS</h2>
