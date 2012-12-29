@@ -41,28 +41,111 @@
     <section>
       <h2>CSS-Frameworks Ablauf</h2>
       <ul>
-        <li class="fragment"> <a href="#/2">Teil 1:</a> Was ist SASS bzw. SCSS? <i><small>(5 Minuten)</small></i></li>
-        <li class="fragment"> <a href="#/3">Teil 2:</a> Warum SASS, SCSS &amp; Co? <i><small>(5 Minuten)</small></i></li>
-        <li class="fragment"> <a href="#/4">Teil 3:</a> Wo wird SASS oder SCSS eingesetzt? <i><small>(5 Minuten)</small></i></li>
-        <li class="fragment"> <a href="#/5">Teil 4:</a> Wie kann ich SASS benutzen? <i><small>(15 Minuten)</small></i></li>
-        <li class="fragment"> <a href="#/6">Teil 5:</a> Ein paar Übungen <i><small>(10 Minuten)</small></i></li>
+        <li class="fragment"> <a href="#/2">Teil 1:</a> Was ist SASS/SCSS? <i><small>(5 Minuten)</small></i></li>
+        <li class="fragment"> <a href="#/3">Teil 2:</a> Warum SASS/SCSS &amp; Co? <i><small>(5 Minuten)</small></i></li>
+        <li class="fragment"> <a href="#/4">Teil 3:</a> Unterschiede zwischen SASS/SCSS? <i><small>(5 Minuten)</small></i></li>
+        <li class="fragment"> <a href="#/5">Teil 4:</a> Wie kann ich SCSS benutzen? <i><small>(15 Minuten)</small></i></li>
+        <li class="fragment"> <a href="#/6">Teil 5:</a> Übungen <i><small>(10 Minuten)</small></i></li>
       </ul>
     </section>
-    <!-- Example of nested vertical slides -->
-    <section>
+      
+    <!-- Teil 1: Was ist SASS/SCSS? -->
       <section>
-        <h2> Was ist SASS bzw. SCSS </h2>
-        <p> SASS - Syntactically Awesome Stylesheet </p>
-        <p> SCSS - Sassy Cascading Stylesheet <br>
-        <i><small>(wird bei der Präsentation in den Hintergrund geschoben)</small></i> </p>
-        <p> &nbsp; </p>
-        <ul> 
-        <li> SASS ist ein auf Ruby basierendes Framework zur Vereinfachung der Entwicklung von CSS-Layouts </li>
-        <li> SASS fungiert Serverseitig </li>
-        <li> Die Syntax ist dem einer CSS ähnlich </li>
-        <li> Es erlaubt die Nutzung von Variablen und Funktionen </li>
-        </ul>
+          <p>&nbsp; </p>
+          <p>&nbsp; </p>
+          <h1>
+              Teil 1: Was ist SASS?
+          </h1>
       </section>
+    <section>
+        <h3> Was ist <strong>SASS</strong>?</h3>
+        <ul>
+            <li class="fragment">2007 von Hampton Catlin, Nathan Weizenbaum und Chris Eppstein eigeführt</li>
+            <li class="fragment">SASS ist eine Metasprache zu CSS
+            <ul>
+                <li class="fragment">d.h. SASS-Dateien werden in standard CSS-Dateien übersetzt</li>
+            </ul></li>
+            <li class="fragment">Erweitert CSS3 mit "programmiertechnischen" Funktionen wie:
+            <ul>
+                <li class="fragment"><strong>Variables</strong></li>
+                <li class="fragment"><strong>Nesting</strong> (Verschachtelung)</li>
+                <li class="fragment"><strong>Mixins</strong> (Vererbung)</li>
+            </ul></li>
+        </ul>
+        </section>
+      
+      <!-- Teil 2: Warum SASS -->
+      <section>
+          <p>&nbsp; </p>
+          <p>&nbsp; </p>
+          <h1>
+              Teil 2: Warum SASS?
+          </h1>
+      </section>
+      <section>
+          <h3>Warum SASS/SCSS?</h3>
+          <p><strong>Nachteile von normalem CSS</strong> </p>
+          <ul>
+              <li class="fragment">Eigenschaften wiederholen sich häufig</li>
+              <li class="fragment">Umständlich bei Änderungen von Angaben, welche mehrfach an verschiedenen stellen auftauchen</li>
+              <li class="fragment">Elemente besitzen oft dieselben Deklarationen mit gleichen Werten.</li>
+              <li class="fragment">Selektoren können sehr lang und unübersichtlich werden.</li>
+          </ul>
+      </section>
+      
+      <section>
+          <h3>Warum SASS/SCSS?</h3>
+          <p><strong>Vorteile und Fähigkeiten von SASS</strong> </p>
+          <ul>
+              <li class="fragment">Angaben können zentral definiert werden. (z.B. Farben, Abstände etc.)</li>
+              <li class="fragment">SASS kann rechnen (z.B. Farben und Abstände relativ zu einem Wert berechnen)</li>
+              <li class="fragment">Übersichtlicher und strukturierter
+              <ul>
+                  <li class="fragment">Elemente können von anderen Eigenschaften erben
+                  <li class="fragment">Selektoren können geschachtelt werden.</li>
+                  </ul></li>
+              <li class="fragment">Folglich: erhöhte Wartbarkeit</li>
+              
+          </ul>
+      </section>
+      
+      <!-- Teil 3 Unterschiede zwischen SASS -->
+      <section>
+          <p>&nbsp; </p>
+          <p>&nbsp; </p>
+          <h1>
+              Teil 3: Unterschiede zwischen SASS und SCSS
+          </h1>
+      </section>
+      <section>
+            <h3> SASS gibts es in zwei Dialekten: <strong>1. SASS</strong> und 2. SCSS</h3>
+            <ul>
+                <li class="fragment">SASS - <strong>S</strong>yntactically <strong>A</strong>wesome <strong>S</strong>tyle<strong>s</strong>heet</li>
+                <ul>
+                    <li class="fragment">Ältere Variante</li>
+                    <li class="fragment">Verzichtet auf Klammern und Semikolons</li>
+                    <li class="fragment">Achtet stattdessen auf die Einrückung des Codes</li>
+                    <li class="fragment">Dateiendung:    .sass</li>
+                </ul>
+                </ul>
+          </section>
+      <section>
+          <h3> SASS gibts es in zwei Dialekten: 1. SASS und <strong>2. SCSS</strong></h3>
+          <ul>
+                <li>SCSS - <strong>S</strong>assy <strong>C</strong>ascading <strong>S</strong>tyle<strong>s</strong>heet</li>
+                <ul>
+                    <li class="fragment">Neuere und zumeist genutzte Variante</li>
+                    <li class="fragment">Obermenge zur CSS3-Systax</li>
+                    <li class="fragment">d.h. jede gültige CSS3-Syntax ist gültige SCSS-Syntax.</li>
+                    <li class="fragment">Dateiendung:    .scss</li>
+                </ul>
+                <li class="fragment">Funktional sind SASS und SCSS gleich.</li>
+                <li class="fragment">Wir betrachten im folgenden nur SCSS!</li>
+            </ul>
+      </section>
+      
+        
+        <!--
       <section>
         <h2>Beispiel in SCSS</h2>
         <pre><code> // Generisches Modul für Buttons definieren
@@ -256,6 +339,7 @@ function linkify( selector ) {
       <p> Press b or period on your keyboard to enter the 'paused' mode. This mode is helpful when you want to take disctracting slides off the screen
         during a presentation. </p>
     </section>
+-->
   </div>
 </div>
 <script src="lib/js/head.min.js"></script>
