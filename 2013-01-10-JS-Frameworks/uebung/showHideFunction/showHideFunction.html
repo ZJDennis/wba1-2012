@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>Showing and hiding some text with Javascript and JQuery</title>
+        <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script> -->
+        <!-- Mit lokaler Datei. -->
+        
+        <script src="jquery-1.8.3.min.js"></script>
+        <script>
+        $(document).ready(function(){
+          $("#btnJQ").click(function(){
+            $("#r1").toggle(200);
+          });
+        });
+        </script>
+        
+        <script type="text/javascript">
+            function toggle_visibility(id) {
+               var e = document.getElementById(id);
+               if(e.style.display == 'block')
+                  e.style.display = 'none';
+               else
+                  e.style.display = 'block';
+            }
+        </script>
+    </head>
+    
+    <body>
+        <div id="container">
+            <div class="box">
+                <h2>Hide and Show with JQuery</h2>
+                <button class="css3button" id="btnJQ">Click me</button>
+                <div class="rectangle" id="r1"></div><br>
+            </div>
+            
+            <div class="code">
+                
+                <p>$(document).ready(function(){</p>
+                <p>  $("button").click(function(){</p>
+                <p>    $(".rectangle").toggle(200);</p>
+                <p>    });</p>
+                <p>  });</p>
+            </div>
+            
+            <div class="box">
+                <h2>Hide and Show with Javascript</h2>
+                <button class="css3button" id="btnJS" onclick="toggle_visibility('r2');">Click me</button>
+                <div class="rectangle" id="r2"></div><br>
+            </div>
+            
+            <div class="code">
+                <p>function toggle_visibility(id) {</p>
+                <p>var e = document.getElementById(id);</p>
+                <p>if(e.style.display == 'block')</p>
+                <p>e.style.display = 'none';</p>
+                <p> else</p>
+                <p>e.style.display = 'block';</p>
+                <p>}</p>
+                <p>class="css3button" id="btnJS" onclick="toggle_visibility('r2');"</p>
+            </div>
+            
+        </div>
+    </body>
+    
+</html>
