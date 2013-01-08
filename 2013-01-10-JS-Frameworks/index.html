@@ -51,44 +51,42 @@
         </section>
         
         <section> <!-- Inhalt -->
-    <h2>Inhalte</h2>
-			<p>
-				<ol>
-                	<li class="fragment">Was ist ein Framework?</li>
-					<li class="fragment">Vor- und Nachteile</li>
-					<li class="fragment">Übersicht bekannter JS-Frameworks</li>
-                    <li class="fragment">Übung</li>
-                    <li class="fragment">Hier kommt noch etwas </li>
-                       
-				</ol>
-			</p>
+            <h2>Inhalte</h2>
+                <p>
+                    <ol>
+                        <li class="fragment">Was ist ein Framework?</li>
+                        <li class="fragment">Vor- und Nachteile</li>
+                        <li class="fragment">Übersicht bekannter JS-Frameworks</li>
+                        <li class="fragment">Übung</li>
+                    </ol>
+                </p>
 		</section>	
-<section>
-	<section>
-        <h3>Java Script Frameworks</h3>
-        <h4>What the hell?</h4>
-		<p>
-        	<ul>
-            	<li class="fragment">Kein Programm</li>
-                <li class="fragment">Programmiergerüst, das bestimmte Funktionalitäten bereitstellt</li>
-                <li class="fragment">Beinhaltet eine Bibliothek mit nützlichen Codestrukturen</li>
-            </ul>
-        </p>
-     </section>
-</section>
+
+        <section>
+            <h3>Java Script Frameworks</h3>
+            <h4>What the hell?</h4>
+                <p>
+        	       <ul>
+            	       <li class="fragment">Kein Programm</li>
+                        <li class="fragment">Programmiergerüst, das bestimmte Funktionalitäten bereitstellt</li>
+                        <li class="fragment">Beinhaltet eine Bibliothek mit nützlichen Codestrukturen</li>
+                    </ul>
+                </p>
+        </section>
+
     	<section>
-        <h3>Vor- und Nachteile</h3>
-        <h4>Vorteile</h4>
-		<p>
-        	<ul>
-            	<li class="fragment">In der Regel Kostenlos</li>
-                <li class="fragment">Einfach einzubinden</li>
-                <li class="fragment">Weniger Schreibarbeit</li>
-                <li class="fragment">Fertige Widgets und Animationen</li>
-                <li class="fragment">Code frei verfügbar</li>
-                <li class="fragment">Code anpassbar</li>
-            </ul>
-        </p>
+            <h3>Vor- und Nachteile</h3>
+            <h4>Vorteile</h4>
+            <p>
+                <ul>
+                    <li class="fragment">In der Regel Kostenlos</li>
+                    <li class="fragment">Einfach einzubinden</li>
+                    <li class="fragment">Weniger Schreibarbeit</li>
+                    <li class="fragment">Fertige Widgets und Animationen</li>
+                    <li class="fragment">Code frei verfügbar</li>
+                    <li class="fragment">Code anpassbar</li>
+                </ul>
+            </p>
     </section>
     	<section>
         <h3>Vor- und Nachteile</h3>
@@ -130,23 +128,12 @@
         	<ul>
             	<li class="fragment">Bietet viele Effekte</li>
                 <li class="fragment">Viele Designs</li>
+                <li class="fragment"> <a href="http://jqueryui.com/themeroller/" target="_blank">Preview</a></li>
                 
             </ul>
         </p>
 </section>
-        <section>
-        <h3>Übersicht bekannter JS-Frameworks</h3>
-        <h4>jQuery UI Beispiel</h4>
-             <img src="img/jQueryscreen1.jpg" width=450 height=350 alt="1">
-
-</section>
-
-        <section>
-        <h3>Übersicht bekannter JS-Frameworks</h3>
-        <h4>jQuery UI Beispiel</h4>
-            <img src="img/jQueryscreen2.jpg" width=450 height=350 alt="2">
-
-</section>
+        
 <section>
         <h3>Übersicht bekannter JS-Frameworks</h3>
         <h4>MooTools</h4>
@@ -189,6 +176,27 @@
             </ul>
         </p>
 </section>
+
+<section>
+    <h3>Effekte mit verschiedenen Frameworks</h3>
+    <h4>jQuery</h4>
+    <pre><code class="JavaScript">
+        $("#id2").fadeOut(1000);
+        </code>
+    </pre>
+    <h4>MooTools</h4>
+    <pre><code class="JavaScript">
+        $("id2").set("tween", { duration: 1000 }).fade("out");
+        </code>
+    </pre>
+    <h4>Ext JS</h4>
+    <pre><code class="JavaScript">
+        Ext.get("id2").fadeOut({ duration: 1 });
+        </code>
+    </pre>
+    
+    
+</section>
         <section>
            
             <h3>Übersicht bekannter JS-Frameworks</h3>
@@ -217,276 +225,52 @@
     </section>
 
 <section>
-        <h3>Übung</h3>
-    <h4>Einbindung von Javascript Frameworks</h4>
+        <h3>Übung: Einbindung von Javascript Frameworks</h3>
+    
 		<p>
         	<ul>
-            	<li class="fragment">Downloading jQuery:
+            	<li class="fragment">Downloading jQuery: <a target="_blank" href="http://code.jquery.com/jquery-1.8.3.min.js">DOWNLOAD</a>
+                   <pre><code class="html"> &lt;head> &lt;script src="jquery-1.8.3.min.js">&lt;/script> &lt;/head></code></pre> 
                 <!--<head> <script src="jquery-1.8.3.min.js"></script> </head>-->
                 </li>
+                <li class="fragment">Warum nicht "type" dazu?<pre><code class="html">&lt;script type="text/javascript"></code></pre> HTML 5 braucht es nicht! JavaScript wird als ursprüngliche Script-Sprache in HTML 5 benutzt.</li>
+                
                 <li class="fragment">Alternative zum downloading:
+                    <pre><code class="html"> &lt;head> &lt;script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">&lt;/script> &lt;/head></code></pre> 
                 <!--<head> <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"> </script> </head>--></li>
                 
             </ul>
         </p>
     </section>
+
+<section>
+    <h3>Komplexität</h3>
+    <a href="uebung/showHideFunction/showHideFunction.html" target="_blank">Show Hide Function</a>
+</section>
 <section>
         <h3>Übung</h3>
     <h4>Welche Frameworks benutzen die großen Seiten?</h4>
 		<p>
         	<ul>
-            	<li class="fragment">Apple:</li>
+            	<li class="fragment"><h5>Apple</h5></li>
                 <li class="fragment">scriptaculous, Prototype 1.7, Site Catalyst</li>
-                <li class="fragment">Google:</li>
-                <li class="fragment"></li>
-                <li class="fragment">Facebook:</li>
-                <li class="fragment"></li>
+                <li class="fragment"><h5>Fotocommunity</h5></li>
+                <li class="fragment"> jQuery UI 1.8.23, jQuery 1.7.2, Google Analytics, Modernizr</li>
+                <li class="fragment"><h5>Amazon</h5></li>
+                <li class="fragment"> jQuery 1.2.6, SWFObjekt</li>
                 
             </ul>
         </p>
     </section>
 
-
-	 <section data-markdown>
-				<script type="text/template">
-### HTML5 - Semantic/Structural Elements
-#### SECTION
-	<section>
-		<p>...</p>
-	</section>
-- das section-Element wird für die inhaltliche Gliederung eines Dokumentes bzw. Abschnitts verwendet<br>
-- das &lt;section&gt;-Element ist nicht als Container gedacht. Diese Rolle ist dem div vorbehalten <br>
-- stellt einen Bereich innerhalb der Webdokumentseite oder -anwendung dar, mit einer themenbezogenen Content-Anordnung
-				</script>
-    </section>
-	 <section data-markdown>
-				<script type="text/template">
-### HTML5 - Semantic/Structural Elements
-#### ARTICLE
-	<article>
-		<p>...</p>
-	</article>
-- zeichnet Artikel aus<br>
-- besonders geeignet für Autoren	
-#### NAV
-	<nav>
-		<ul>
-			<li></li>
-		</ul>
-	</nav>	
-- Navigationsbereich hat in HTML5 einen eigenen Tag
-
-				</script>
-    </section>
-	<section data-markdown>
-				<script type="text/template">
-### HTML5 - Semantic/Structural Elements
-#### HEADER
-	<header>
-		<hgroup> <h1> </h1> </hgroup>
-	</header>
-- zeichnet den Kopf des Dokuments oder einer Section aus	
-#### HGROUP
-	<hgroup>
-		<h1></h1>
-		<h2></h2>
-	</hgroup>	
-- Fasst &lt;h1&gt; - &lt;h6&gt; Überschriften zusammen, falls Unterüberschriften vorhanden sind
-
-				</script>
-    </section>
-	<section data-markdown>
-				<script type="text/template">
-### HTML5 - Semantic/Structural Elements
-#### ASIDE
-	<aside>
-		<p>...</p> 
-	</aside>
-- zeichnet eine sidebar aus	
-#### FOOTER
-	<footer>
-		<p>...</p>
-	</footer>	
-- zeichnet die Fußzeile eines Dokuments oder einer section aus<br>
-- ersetzt das bisher oft verwendet div mit id=footer
-				</script>
-    </section>
-
-	<section >
-<h4>Beispiel</h4>
-Einsatz der Strukturelemente
-		<center><p><img src="sematic-elements-vs-div.png" width="430px" height="360px"/></p></center> 
-
-    </section>
-    <section data-markdown>
-    	<script type="text/template">
-#### Beispiel für die Verwendung von &lt;section&gt;, &lt;article&gt;, &lt;hgroup&gt; und &lt;header&gt; 
-	<article>
-		<header>
-			<hgroup> 
-				<h1>Überschrift des Artikels </h1>
-				<h2>Beschreibungstext für die Überschrift</h2> 
-			</hgroup>
-		</header>
-		<section>
-			<header>
-  				<h1>Abschnitt1</h1>
-			</header>
-			<p>.....</p>
-		</section> 
-		<section>
-			<header>
-				<hgroup>
-  			 		<h1>Abschnitt2</h1>
-					<h2>Abschnitt2.1</h2>
-				</hgroup>
-			</header>
-   			<p>.....</p>
-		</section>	  
-	</article>
-
-		</script>
-    </section>
-</section>
-<section> 
-	<section>
-    <h3>HTML5 - New Media</h3>
-			<p>
-				<ul>
-					<li class="fragment">&lt;video&gt;   &lt;/video&gt;</li>
-					<li class="fragment">&lt;audio&gt;   &lt;/audio&gt;</li>
-				</ul>  
-			</p>
-    </section>
-    <section data-markdown>
-				<script type="text/template">
-### HTML5 - New Media
-#### VIDEO
-	<video width="320" height="240" controls  autoplay>
-	<source src="beispielvideo.wav" type="video/wav">
-	<source src="beispielvideo.mp4" type="video/mp4">
-	<source src="beispielvideo.ogg" type="video/ogg">
-     Your browser does not support the video tag.
- 	</video> 
-- Es muss keine zusätzliche Software installiert werden<br> 
-- löst Flash als Videoplayer ab und ist auch für Suchmaschinen besser lesbar <br>
-				</script>
-    </section>
-	<section data-markdown>
-				<script type="text/template">
-### HTML5 - New Media
-#### AUDIO
-	<audio controls autoplay>
-	<source src="beispieltrack.ogg" type="audio/ogg">
-	<source src="beispieltrack.mp3" type="audio/mp3">
-	Your browser does not support the audio tag.
-	</audio> 
-- audio funktioniert ähnlich wie video<br>
-				</script>
-    </section>
-</section>
 <section>
-	<section>
-    <h3>erweiterte Formulare</h3>
-			<p>
-				<ul>
-					
-                    <li class="fragment">&lt;label&gt;   &lt;/label&gt;</li>
-					<li class="fragment">&lt;select&gt;   &lt;/select&gt;</li>
-                    <li class="fragment">&lt;option&gt;   &lt;/option&gt;</li>
-                    <li class="fragment">&lt;optgroup&gt;   &lt;/optgroup&gt;</li>
-                    <li class="fragment">Neue Typen für &lt;input&gt;</li>
-                   	<ul>
-                    	<li class="fragment">type="date"</li>
-                        <li class="fragment">type="tel"</li>
-                        <li class="fragment">type="url"</li>
-                        <li class="fragment">placeholder anstatt value</li>
-                   	</ul>
-				</ul>  
-			</p>
-    </section>	
-	<section data-markdown>
-				<script type="text/template">
-### erweiterte Formulare
-#### LABEL
-	<label for="Beispiel">Beschreibung</label>
-	<input type="text" name="Beispiel">
-	</lable>
-- mit &lt;label&gt; kann man eine logische Verknüpfung zwischen Beschreibung und Eingabefeld herstellen/auszeichnen
-<form>
-<label for="Beispiel">Beschreibung</label>
-<input type="text" name="Beispiel" placeholder="Eingabefeld">
-</lable>
-</form>
-				</script>
+        <h3>Das wars!</h3>
+    <h4>Fragen?</h4>
+     <h4>Vielen Dank für die Aufmerksamkeit!</h4>
+		
+        </p>
     </section>
-    <section data-markdown>
-				<script type="text/template">
-### erweiterte Formulare
-#### Auswahllisten
-	<select name="selectbsp" size="3">
-	<optgroup label="Gruppe1">
-		<option label="G1mitglied1">Mitglied1</option>
-		<option label="G1mitglied2">Mitglied2</option>
-	</optgroup>
-	<optgroup label="Gruppe2">
-		<option label="G2mitglied1">Mitglied1</option>
-		<option label="G2mitglied2">Mitglied2</option>
-	</optgroup>
-	</select>
-- mit &lt;optgroup&gt; kann man die Auswahlliste untergliedern<br>
-size="3"<br>
-<select name="selectbsp" size="3">
-<optgroup label="Gruppe1">
-<option label="G1mitglied1">Mitglied1</option>
-<option label="G1mitglied2">Mitglied2</option>
-</optgroup>
-<optgroup label="Gruppe2">
-<option label="G2mitglied1">Mitglied1</option>
-<option label="G2mitglied2">Mitglied2</option>
-</optgroup>
-</select><br>
-size="1"<br>
-<select name="selectbsp">
-<optgroup label="Gruppe1">
-<option label="G1mitglied1">Mitglied1</option>
-<option label="G1mitglied2">Mitglied2</option>
-</optgroup>
-<optgroup label="Gruppe2">
-<option label="G2mitglied1">Mitglied1</option>
-<option label="G2mitglied2">Mitglied2</option>
-</optgroup>
-</select>
-				</script>
-    </section>
-        <section data-markdown>
-				<script type="text/template">
-### erweiterte Formulare
-#### Neue Typen für &lt;input&gt; 
-	
-	<input type="url" name="Beispielurl"placeholder="www.yourpage.de">
-	<input type="tel" name="Beispieltel" placeholder="Telefonnr.">
-	<input type="date" name="Beispieldate" placeholder="dd.mm.yyyy">
-<form>
-<lable for="Beispielurl">Webseite:</label>
-<input type="url" name="Beispielurl"placeholder="www.yourpage.de"><br>
-<lable for="Beispieltel">Tel.:</label>
-<input type="tel" name="Beispieltel" placeholder="Telefonnr."><br>
-<lable for="Beispieldate">Datum:</label>
-<input type="date" name="Beispieldate" placeholder="dd.mm.yyyy"><br>
-</form>
-				</script>
-    </section>
-    <section data-markdown>
-				<script type="text/template">
-### erweiterte Formulare
-#### Tastaturlayout passt sich dem input type an
-<center><p><img src="type-diff.png"width="800px" heigth="320px"/></p></center>
-	
 
-				</script>
-    </section>
-</section>	
       </div>
 
     </div>
