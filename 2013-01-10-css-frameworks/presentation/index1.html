@@ -43,9 +43,11 @@
       <ul>
         <li class="fragment"> <a href="#/2">Teil 1:</a> Was ist SASS/SCSS? <i><small>(5 Minuten)</small></i></li>
         <li class="fragment"> <a href="#/3">Teil 2:</a> Warum SASS/SCSS &amp; Co? <i><small>(5 Minuten)</small></i></li>
-        <li class="fragment"> <a href="#/4">Teil 3:</a> Unterschiede zwischen SASS/SCSS? <i><small>(5 Minuten)</small></i></li>
-        <li class="fragment"> <a href="#/5">Teil 4:</a> Wie kann ich SASS/SCSS benutzen? <i><small>(15 Minuten)</small></i></li>
-        <li class="fragment"> <a href="#/6">Teil 5:</a> Übungen <i><small>(10 Minuten)</small></i></li>
+        <li class="fragment"> <a href="#/4">Teil 3:</a> Unterschiede zwischen SASS und SCSS <i><small>(2 Minuten)</small></i></li>
+        <li class="fragment"> <a href="#/5">Teil 4:</a> Wie kann ich SASS/SCSS benutzen? <i><small>(10 Minuten)</small></i></li>
+        <li class="fragment"> <a href="#/6">Teil 5:</a> Übungen <i><small>(15 Minuten)</small></i></li>
+        <li class="fragment"> <a href="#/7">Teil 6:</a> Nachteile von SASS<i><small>(3 Minuten)</small></i></li>
+        <li class="fragment"> <a href="#/7">Teil 7:</a> Quellen und weiterführende Links<i><small>(0 Minuten)</small></i></li>
       </ul>
     </section>
       
@@ -67,9 +69,10 @@
             </ul></li>
             <li class="fragment">Erweitert CSS3 mit "programmiertechnischen" Funktionen wie:
             <ul>
-                <li class="fragment"><strong>Variables</strong></li>
+                <li class="fragment"><strong>Variablen</strong></li>
                 <li class="fragment"><strong>Nesting</strong> (Verschachtelung)</li>
-                <li class="fragment"><strong>Mixins</strong> (Vererbung)</li>
+                <li class="fragment"><strong>Mixins</strong></li>
+                <li class="fragment"><strong>Vererbung</strong></li>
             </ul></li>
         </ul>
         </section>
@@ -101,8 +104,8 @@
               <li class="fragment">SASS kann rechnen (z.B. Farben und Abstände relativ zu einem Wert berechnen)</li>
               <li class="fragment">Übersichtlicher und strukturierter
               <ul>
-                  <li class="fragment">Elemente können von anderen Eigenschaften erben
-                  <li class="fragment">Selektoren können geschachtelt werden.</li>
+                  <li class="fragment">Selektoren können andere Eigenschaften erben
+                  <li class="fragment">Selektoren können geschachtelt werden</li>
                   </ul></li>
               <li class="fragment">Folglich: erhöhte Wartbarkeit</li>
               
@@ -167,6 +170,11 @@ $margin: 16px                               $margin: 16px;
               Teil 4: Wie kann ich SASS/SCSS benutzen?
           </h1>
       </section>
+      
+          
+          
+          
+          <!-- VARIABLEN -->
       <section>
           <h3>Variablen</h3>
           
@@ -187,6 +195,11 @@ $marginright:$marginleft + 5px;
               <li class="fragment">Mit numerischen Variablen kann gerechnet werden. (+, -, *, /)</li>
           </ul>
       </section>
+      
+          
+          
+          
+          <!--NESTING -->
       <section>
           <h3>Nesting / Verschachtelung</h3>
           
@@ -207,7 +220,6 @@ nav {
         padding:0px;
     }
 }
-
             </pre></code>
           <ul>
               <li class="fragment">Tags können wie im HTML verschachtelt werden.</li>
@@ -236,205 +248,221 @@ nav li {
     margin:0px;
     padding:0px; 
 }
-
             </pre></code>
       </section>
-        
-        <!--
+      
+      
+      
+      
+      <!-- MIXINS -->
       <section>
-        <h2>Beispiel in SCSS</h2>
-        <pre><code> // Generisches Modul für Buttons definieren
-%button {
-display: inline-block;
-border: none;
-margin: 0;
-padding: 0 10px;
-background-color: #0cf;
-cursor: pointer;
-color: white;
-text-decoration: none;
-text-align: center;
-font-family: inherit;
-font-size: inherit;
-line-height: 1.5;
-vertical-align: middle;
-} </code></pre>
+          <h3>Mixins</h3>
+          <pre><code>
+@mixin rounded-corners {
+    border-width:1px;
+    border-color:#eeeffd;
+    -moz-border-radius:5px;
+    -webkit-border-radiu:5px;
+}
+
+div.somecontainer {
+    @include rounded-corners;
+}
+div.anothercontainer {
+    @include rounded-corners;
+}
+</pre></code>
+
+          <ul>
+              <li class="fragment">Eigenschaften können mit <strong>@mixin</strong> definiert und mit <strong>@include</strong> wiederverwendet werden</li>
+               <li class="fragment">Praktisch für Standardfomatierungen</li>
+          </ul>
       </section>
       <section>
-        <h2> Modul wird auf CSS angewendet </h2>
-        <pre><code> // Konkrete Anwendung: Formular-Submitbuttons
-.contact-form .submit {
-                        
-// Modul button anwenden
-@extend %button;
-
-// Weitere Eigenschaften
-border: 1px solid #222;
+          <h3>Mixins</h3>
+          <p>
+              Aus vorangegangener .scss ensteht folgende .css
+          </p>
+          <pre><code>
+div.somecontainer {
+  border-width: 1px;
+  border-color: #eeeffd;
+  -moz-border-radius: 5px;
+  -webkit-border-radiu: 5px; 
 }
-                        
-// Konkrete Anwendung: Toolbar-Buttons
-.toolbar .button {
-                        
-// Modul button anwenden
-@extend %button;
-                        
-// Weitere Eigenschaften
-border-radius: 2px;
-background-color: #777;
-} </code></pre>
+div.anothercontainer {
+  border-width: 1px;
+  border-color: #eeeffd;
+  -moz-border-radius: 5px;
+  -webkit-border-radiu: 5px; 
+}
+</pre></code>
+      </section>
+      
+      
+      <section>
+          <h3>Mixins mit Parameter</h3>
+          <pre><code>
+@mixin rounded-corners($width, $color, $radius) {
+    border-width:$width;
+    border-color:$color;
+    -moz-border-radius:$radius;
+    -webkit-border-radiu:$radius;
+}
+
+div.somecontainer {
+    @include rounded-corners(1px, #eeeffd, 5px);
+}
+div.anothercontainer {
+    @include rounded-corners(2px, #ffeed4, 8px);
+}
+</pre></code>
+
+          <ul>
+              <li class="fragment">Zusätzlich können Parameter angegeben werden</li>
+              <li class="fragment">Vergleichbar mit Funktionen aus üblichen Programmiersprachen</li>
+          </ul> 
+      </section>
+      
+      <section>
+          <h3>Mixins mit Parameter</h3>
+          <p>
+              Aus vorangegangener .scss ensteht folgende .css
+          </p>
+          <pre><code>
+div.somecontainer {
+  border-width: 1px;
+  border-color: #eeeffd;
+  -moz-border-radius: 5px;
+  -webkit-border-radiu: 5px; 
+}
+div.anothercontainer {
+  border-width: 2px;
+  border-color: #ffeed4;
+  -moz-border-radius: 8px;
+  -webkit-border-radiu: 8px; 
+}   
+</pre></code>
+      </section>
+      
+      
+      
+      
+      <!-- VERERBUNG -->
+      <section>
+          <h3>Vererbung</h3>
+          <pre><code>
+h1 {
+    font-size:30px;
+    font-weight:bold;
+    color:#fffdde;
+}
+h2 {
+    @extend h1;
+    font-size:20px;
+}
+</pre></code>
+           <ul>
+              <li class="fragment">Mittels <strong>@extend</strong> können Eigenschaften ganzer Selektoren "vererbt" werden</li>
+          </ul> 
+      </section>
+      
+      <section>
+          <h3>Vererbung</h3>
+           <p>
+              Aus vorangegangener .scss ensteht folgende .css
+          </p>
+          <pre><code>
+h1, h2 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #fffdde; 
+}
+h2 {
+  font-size: 20px; 
+}
+</pre></code>
+      </section>
+      
+      
+      <!-- Und mehr -->
+      <section>
+          <h3>SASS kann noch mehr</h3>
+          <ul>
+              <li class="fragment">Nesting Properties</li>
+              <li class="fragment">Ausgelagerte Datei einbinden <strong>@include</strong></li>
+              <li class="fragment">Kontrollstrukturen <strong>@if</strong></li>
+              <li class="fragment">Schleifen <strong>@for</strong></li>
+              <li class="fragment">Funktionen (mit Rückgabewert)</li>
+          </ul>
+      </section>
+      
+      
+      
+      
+      
+      <!-- Teil 5 Übungen -->
+      <section>
+          <p>&nbsp; </p>
+          <p>&nbsp; </p>
+          <h1>
+              Teil 5: Übungen
+          </h1>
+          <p>
+              Dies ist eine Live Übung, bitte erscheinen sie am 10.01.13 - 11:00 Uhr im Raum????, um SASS in Action zu sehen. :) 
+          </p>
+      </section>
+      
+      
+      <!-- Teil 6 Nachteile -->
+      <section>
+          <p>&nbsp; </p>
+          <p>&nbsp; </p>
+          <h1>
+              Teil 6: Nachteile von SASS
+          </h1>
       </section>
       <section>
-        <h2>Der generierte CSS-Code</h2>
-        <pre><code> .contact-form .submit, .toolbar .button {
-  display: inline-block;
-  border: none;
-  margin: 0;
-  padding: 0 10px;
-  background-color: #0cf;
-  cursor: pointer;
-  color: white;
-  text-decoration: none;
-  text-align: center;
-  font-family: inherit;
-  font-size: inherit;
-  line-height: 1.5;
-  vertical-align: middle;
-}
- 
-.contact-form .submit {
-  border: 1px solid #222;
-}
- 
-.toolbar .button {
-  border-radius: 2px;
-  background-color: #777;
-} </code></pre>
+          <h3>Nachteile von SASS</h3>
+          <ul>
+              <li class="fragment">Bisher unterstützen nur wenige Editoren  SASS/SCSS </li>
+              <li class="fragment">Direkte Änderungen an der .css datei sind nicht mehr möglich, da diese nach Änderung der .scss überschrieben werden</li>
+              <li class="fragment">Debugging umständlicher (z.B. stimmt die Zeilenangabe in Firebug nicht mit .sass Datei überein)</li>
+              <li class="fragment">Neue potenzielle Fehlerquellen</li>
+              <li class="fragment">Die Direktheit mit der man HTML und CSS bearbeiten kann, geht duch den Kompilierungs-Schritt etwas verloren</li>
+              <li class="fragment">Kaskadierungsgedanke von CSS geht verloren</li>
+              <li class="fragment">SASS muss auf der Maschine erst installiert werden</li>
+          </ul>
       </section>
-    </section>
-    <section>
-      <h2>Point of View</h2>
-      <p> Press <strong>ESC</strong> to enter the slide overview. Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out. </p>
-    </section>
-    <section>
-      <h2 class="bubble">Headline Styles</h2>
-      <p> Railslove's theme features two kinds of headline styles. This is the bubble style. </p>
-    </section>
-    <section>
-      <h2>Marvelous Unordered List</h2>
-      <ul>
-        <li>No order here</li>
-        <li>Or here</li>
-        <li>Or here</li>
-        <li>Or here</li>
-      </ul>
-    </section>
-    <section>
-      <h2>Fantastic Ordered List</h2>
-      <ol>
-        <li>One is smaller than...</li>
-        <li>Two is smaller than...</li>
-        <li>Three!</li>
-      </ol>
-    </section>
-    <section data-markdown>
-      <script type="text/template">
-						## Markdown support
-
-						For those of you who like that sort of thing. Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-
-							<section data-markdown>
-							  ## Markdown support
-
-							  For those of you who like that sort of thing.
-							  Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-							</section>
-					</script>
-    </section>
-    <section id="transitions">
-      <h2>Transition Styles</h2>
-      <p> You can select from different transitions, like: <br>
-        <a href="?transition=cube#/transitions">Cube</a> - <a href="?transition=page#/transitions">Page</a> - <a href="?transition=concave#/transitions">Concave</a> - <a href="?transition=zoom#/transitions">Zoom</a> - <a href="?transition=linear#/transitions">Linear</a> - <a href="?transition=none#/transitions">None</a> - <a href="?#/transitions">Default</a> </p>
-    </section>
-    <section>
-      <section data-state="green">
-        <h2>Global State</h2>
-        <p> Set <code>data-state="green"</code> on a slide and <code>"green"</code> will be added as a class to the document element when the slide is open. This lets you
-          apply broader style changes, like switching the background and headline styles. </p>
-        <a href="#/7/1" class="image"> <img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow"> </a> </section>
-      <section data-state="purple">
-        <h2>"purple"</h2>
-        <p>Go down to see more states</p>
-        <a href="#/7/2" class="image"> <img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow"> </a> </section>
-      <section data-state="orange">
-        <h2>"orange"</h2>
-        <p>There's one more...</p>
-        <a href="#/7/2" class="image"> <img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow"> </a> </section>
-      <section data-state="blue">
-        <h2>"blue"</h2>
-        <a href="#/7/0" class="image"> <img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(180deg);"> </a> </section>
-    </section>
-    <section data-state="customevent">
-      <h2>Custom Events</h2>
-      <p> Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name. </p>
-      <pre><code contenteditable style="font-size: 18px; margin-top: 20px;">Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
-					</code></pre>
-    </section>
-    <section>
-      <h2>Clever Quotes</h2>
-      <p> These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations"> The nice thing about standards is that there are so many to choose from</q> and block: </p>
-      <blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations"> For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-        reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue. </blockquote>
-    </section>
-    <section>
-      <h2>Pretty Code</h2>
-      <pre><code contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
-
-    var nodes = document.querySelectorAll( selector );
-
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
-
-      if( !node.className ) ) {
-        node.className += ' roll';
-      }
-    };
-  }
-}
-					</code></pre>
-      <p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-    </section>
-    <section>
-      <h2>Intergalactic Interconnections</h2>
-      <p> You can link between slides internally, <a href="#/2/3">like this</a>. </p>
-    </section>
-    <section>
-      <h2>Fragmented Views</h2>
-      <p>Hit the next arrow...</p>
-      <p class="fragment">... to step through ...</p>
-      <ol>
-        <li class="fragment"><code>any type</code></li>
-        <li class="fragment"><em>of view</em></li>
-        <li class="fragment"><strong>fragments</strong></li>
-      </ol>
-    </section>
-    <section>
-      <h2>Export to PDF</h2>
-      <p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, below is an example that's been uploaded to SlideShare.</p>
-      <iframe id="slideshare" src="http://www.slideshare.net/slideshow/embed_code/13872948" width="455" height="356" style="margin:0;overflow:hidden;border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen> </iframe>
-      <script>
-						document.getElementById('slideshare').attributeName = 'allowfullscreen';
-					</script>
-    </section>
-    <section>
-      <h2>Take a Moment</h2>
-      <p> Press b or period on your keyboard to enter the 'paused' mode. This mode is helpful when you want to take disctracting slides off the screen
-        during a presentation. </p>
-    </section>
--->
+      
+      
+      
+         <!-- Teil 6 Quellen und Links -->
+      <section>
+          <p>&nbsp; </p>
+          <p>&nbsp; </p>
+          <h1>
+              Teil 6: Quellen und weiterführende Links
+          </h1>
+      </section>
+      <section>
+          <h3>Quellen und weiterführende Links</h3>
+           <ul>
+                <li class="fragment"> <a href="http://sass-lang.com/">sass-lang.com</a> offizielle Homepage</li>
+            </ul>
+      </section>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
   </div>
 </div>
 <script src="lib/js/head.min.js"></script>
