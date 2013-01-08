@@ -44,7 +44,7 @@
         <li class="fragment"> <a href="#/2">Teil 1:</a> Was ist SASS/SCSS? <i><small>(5 Minuten)</small></i></li>
         <li class="fragment"> <a href="#/3">Teil 2:</a> Warum SASS/SCSS &amp; Co? <i><small>(5 Minuten)</small></i></li>
         <li class="fragment"> <a href="#/4">Teil 3:</a> Unterschiede zwischen SASS/SCSS? <i><small>(5 Minuten)</small></i></li>
-        <li class="fragment"> <a href="#/5">Teil 4:</a> Wie kann ich SCSS benutzen? <i><small>(15 Minuten)</small></i></li>
+        <li class="fragment"> <a href="#/5">Teil 4:</a> Wie kann ich SASS/SCSS benutzen? <i><small>(15 Minuten)</small></i></li>
         <li class="fragment"> <a href="#/6">Teil 5:</a> Übungen <i><small>(10 Minuten)</small></i></li>
       </ul>
     </section>
@@ -143,7 +143,102 @@
                 <li class="fragment">Wir betrachten im folgenden nur SCSS!</li>
             </ul>
       </section>
+      <section>
+          <h3>Kurzes Code-Beispiel</h3>
+          <h4>SASS-Syntax &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SCSS-Syntax</h4>
+          <pre><code>
+$blue: #3bbfce                              $blue: #3bbfce;
+$margin: 16px                               $margin: 16px;
+
+.border                                     .border {
+  padding: $margin / 2                        padding: $margin / 2;
+  margin: $margin / 2                         margin: $margin / 2;
+  border-color: $blue                         border-color: $blue;
+                                            }
+          </code></pre>
+      </section>
       
+      
+       <!-- Teil 4 Wie kann ich SASS/SCSS benutzen -->
+      <section>
+          <p>&nbsp; </p>
+          <p>&nbsp; </p>
+          <h1>
+              Teil 4: Wie kann ich SASS/SCSS benutzen?
+          </h1>
+      </section>
+      <section>
+          <h3>Variablen</h3>
+          
+          <pre><code>
+// Farben
+$textcolor:#4f4f4f;
+$navcolor:#DFE1CB;
+// Fonts
+$textfont:arial, helvetica, san-serif;
+$fontsize:12px;
+// Sizes
+$marginleft:90px;
+$marginright:$marginleft + 5px;
+
+            </pre></code>
+          <ul>
+              <li class="fragment">Werden mit <strong>$VARNAME: VALUE; </strong>definiert.</li>
+              <li class="fragment">Mit numerischen Variablen kann gerechnet werden. (+, -, *, /)</li>
+          </ul>
+      </section>
+      <section>
+          <h3>Nesting / Verschachtelung</h3>
+          
+          <pre><code>
+nav {
+    width:330px;
+    margin-left:0;
+    margin-right:0;
+    ul {
+        list-style-type:none;
+        margin:0;
+        padding:0;
+    }
+    li {
+        float:left;
+        background-color:$navcolor;
+        margin:0px;
+        padding:0px;
+    }
+}
+
+            </pre></code>
+          <ul>
+              <li class="fragment">Tags können wie im HTML verschachtelt werden.</li>
+          </ul>
+      </section>
+      
+      <section>
+          <h3>Nesting / Verschachtelung</h3>
+          <p>
+              Aus vorangegangener .scss ensteht folgende .css
+          </p>
+          <pre><code>
+nav {
+    width:330px;
+    margin-left:0;
+    margin-right:0; 
+}
+nav ul {
+    list-style-type:none;
+    margin:0;
+    padding:0; 
+}
+nav li {
+    float:left;
+    background-color:#DFE1CB;
+    margin:0px;
+    padding:0px; 
+}
+
+            </pre></code>
+      </section>
         
         <!--
       <section>
