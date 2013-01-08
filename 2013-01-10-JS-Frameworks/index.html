@@ -58,15 +58,14 @@
 					<li class="fragment">Vor- und Nachteile</li>
 					<li class="fragment">Übersicht bekannter JS-Frameworks</li>
                     <li class="fragment">Übung</li>
-                    <li class="fragment">Hier kommt noch etwas </li>
+                   
                        
 				</ol>
 			</p>
 		</section>	
 <section>
 	<section>
-        <h3>Java Script Frameworks</h3>
-        <h4>What the hell?</h4>
+        <h3>Was ist ein Framework?</h3>
 		<p>
         	<ul>
             	<li class="fragment">Kein Programm</li>
@@ -237,255 +236,19 @@
         	<ul>
             	<li class="fragment">Apple:</li>
                 <li class="fragment">scriptaculous, Prototype 1.7, Site Catalyst</li>
-                <li class="fragment">Google:</li>
-                <li class="fragment"></li>
-                <li class="fragment">Facebook:</li>
-                <li class="fragment"></li>
+                <li class="fragment">Amazon:</li>
+                <li class="fragment">jQuery 1.2.6, SWF Objekt</li>
+                <li class="fragment">Hotmail:</li>
+                <li class="fragment">jQuery 1.8.3</li>
+                <li class="fragment">Github:</li>
+                <li class="fragment">jQuery 1.8.3, Modernizr, Google Analytics</li>
                 
             </ul>
         </p>
     </section>
 
 
-	 <section data-markdown>
-				<script type="text/template">
-### HTML5 - Semantic/Structural Elements
-#### SECTION
-	<section>
-		<p>...</p>
-	</section>
-- das section-Element wird für die inhaltliche Gliederung eines Dokumentes bzw. Abschnitts verwendet<br>
-- das &lt;section&gt;-Element ist nicht als Container gedacht. Diese Rolle ist dem div vorbehalten <br>
-- stellt einen Bereich innerhalb der Webdokumentseite oder -anwendung dar, mit einer themenbezogenen Content-Anordnung
-				</script>
-    </section>
-	 <section data-markdown>
-				<script type="text/template">
-### HTML5 - Semantic/Structural Elements
-#### ARTICLE
-	<article>
-		<p>...</p>
-	</article>
-- zeichnet Artikel aus<br>
-- besonders geeignet für Autoren	
-#### NAV
-	<nav>
-		<ul>
-			<li></li>
-		</ul>
-	</nav>	
-- Navigationsbereich hat in HTML5 einen eigenen Tag
-
-				</script>
-    </section>
-	<section data-markdown>
-				<script type="text/template">
-### HTML5 - Semantic/Structural Elements
-#### HEADER
-	<header>
-		<hgroup> <h1> </h1> </hgroup>
-	</header>
-- zeichnet den Kopf des Dokuments oder einer Section aus	
-#### HGROUP
-	<hgroup>
-		<h1></h1>
-		<h2></h2>
-	</hgroup>	
-- Fasst &lt;h1&gt; - &lt;h6&gt; Überschriften zusammen, falls Unterüberschriften vorhanden sind
-
-				</script>
-    </section>
-	<section data-markdown>
-				<script type="text/template">
-### HTML5 - Semantic/Structural Elements
-#### ASIDE
-	<aside>
-		<p>...</p> 
-	</aside>
-- zeichnet eine sidebar aus	
-#### FOOTER
-	<footer>
-		<p>...</p>
-	</footer>	
-- zeichnet die Fußzeile eines Dokuments oder einer section aus<br>
-- ersetzt das bisher oft verwendet div mit id=footer
-				</script>
-    </section>
-
-	<section >
-<h4>Beispiel</h4>
-Einsatz der Strukturelemente
-		<center><p><img src="sematic-elements-vs-div.png" width="430px" height="360px"/></p></center> 
-
-    </section>
-    <section data-markdown>
-    	<script type="text/template">
-#### Beispiel für die Verwendung von &lt;section&gt;, &lt;article&gt;, &lt;hgroup&gt; und &lt;header&gt; 
-	<article>
-		<header>
-			<hgroup> 
-				<h1>Überschrift des Artikels </h1>
-				<h2>Beschreibungstext für die Überschrift</h2> 
-			</hgroup>
-		</header>
-		<section>
-			<header>
-  				<h1>Abschnitt1</h1>
-			</header>
-			<p>.....</p>
-		</section> 
-		<section>
-			<header>
-				<hgroup>
-  			 		<h1>Abschnitt2</h1>
-					<h2>Abschnitt2.1</h2>
-				</hgroup>
-			</header>
-   			<p>.....</p>
-		</section>	  
-	</article>
-
-		</script>
-    </section>
-</section>
-<section> 
-	<section>
-    <h3>HTML5 - New Media</h3>
-			<p>
-				<ul>
-					<li class="fragment">&lt;video&gt;   &lt;/video&gt;</li>
-					<li class="fragment">&lt;audio&gt;   &lt;/audio&gt;</li>
-				</ul>  
-			</p>
-    </section>
-    <section data-markdown>
-				<script type="text/template">
-### HTML5 - New Media
-#### VIDEO
-	<video width="320" height="240" controls  autoplay>
-	<source src="beispielvideo.wav" type="video/wav">
-	<source src="beispielvideo.mp4" type="video/mp4">
-	<source src="beispielvideo.ogg" type="video/ogg">
-     Your browser does not support the video tag.
- 	</video> 
-- Es muss keine zusätzliche Software installiert werden<br> 
-- löst Flash als Videoplayer ab und ist auch für Suchmaschinen besser lesbar <br>
-				</script>
-    </section>
-	<section data-markdown>
-				<script type="text/template">
-### HTML5 - New Media
-#### AUDIO
-	<audio controls autoplay>
-	<source src="beispieltrack.ogg" type="audio/ogg">
-	<source src="beispieltrack.mp3" type="audio/mp3">
-	Your browser does not support the audio tag.
-	</audio> 
-- audio funktioniert ähnlich wie video<br>
-				</script>
-    </section>
-</section>
-<section>
-	<section>
-    <h3>erweiterte Formulare</h3>
-			<p>
-				<ul>
-					
-                    <li class="fragment">&lt;label&gt;   &lt;/label&gt;</li>
-					<li class="fragment">&lt;select&gt;   &lt;/select&gt;</li>
-                    <li class="fragment">&lt;option&gt;   &lt;/option&gt;</li>
-                    <li class="fragment">&lt;optgroup&gt;   &lt;/optgroup&gt;</li>
-                    <li class="fragment">Neue Typen für &lt;input&gt;</li>
-                   	<ul>
-                    	<li class="fragment">type="date"</li>
-                        <li class="fragment">type="tel"</li>
-                        <li class="fragment">type="url"</li>
-                        <li class="fragment">placeholder anstatt value</li>
-                   	</ul>
-				</ul>  
-			</p>
-    </section>	
-	<section data-markdown>
-				<script type="text/template">
-### erweiterte Formulare
-#### LABEL
-	<label for="Beispiel">Beschreibung</label>
-	<input type="text" name="Beispiel">
-	</lable>
-- mit &lt;label&gt; kann man eine logische Verknüpfung zwischen Beschreibung und Eingabefeld herstellen/auszeichnen
-<form>
-<label for="Beispiel">Beschreibung</label>
-<input type="text" name="Beispiel" placeholder="Eingabefeld">
-</lable>
-</form>
-				</script>
-    </section>
-    <section data-markdown>
-				<script type="text/template">
-### erweiterte Formulare
-#### Auswahllisten
-	<select name="selectbsp" size="3">
-	<optgroup label="Gruppe1">
-		<option label="G1mitglied1">Mitglied1</option>
-		<option label="G1mitglied2">Mitglied2</option>
-	</optgroup>
-	<optgroup label="Gruppe2">
-		<option label="G2mitglied1">Mitglied1</option>
-		<option label="G2mitglied2">Mitglied2</option>
-	</optgroup>
-	</select>
-- mit &lt;optgroup&gt; kann man die Auswahlliste untergliedern<br>
-size="3"<br>
-<select name="selectbsp" size="3">
-<optgroup label="Gruppe1">
-<option label="G1mitglied1">Mitglied1</option>
-<option label="G1mitglied2">Mitglied2</option>
-</optgroup>
-<optgroup label="Gruppe2">
-<option label="G2mitglied1">Mitglied1</option>
-<option label="G2mitglied2">Mitglied2</option>
-</optgroup>
-</select><br>
-size="1"<br>
-<select name="selectbsp">
-<optgroup label="Gruppe1">
-<option label="G1mitglied1">Mitglied1</option>
-<option label="G1mitglied2">Mitglied2</option>
-</optgroup>
-<optgroup label="Gruppe2">
-<option label="G2mitglied1">Mitglied1</option>
-<option label="G2mitglied2">Mitglied2</option>
-</optgroup>
-</select>
-				</script>
-    </section>
-        <section data-markdown>
-				<script type="text/template">
-### erweiterte Formulare
-#### Neue Typen für &lt;input&gt; 
 	
-	<input type="url" name="Beispielurl"placeholder="www.yourpage.de">
-	<input type="tel" name="Beispieltel" placeholder="Telefonnr.">
-	<input type="date" name="Beispieldate" placeholder="dd.mm.yyyy">
-<form>
-<lable for="Beispielurl">Webseite:</label>
-<input type="url" name="Beispielurl"placeholder="www.yourpage.de"><br>
-<lable for="Beispieltel">Tel.:</label>
-<input type="tel" name="Beispieltel" placeholder="Telefonnr."><br>
-<lable for="Beispieldate">Datum:</label>
-<input type="date" name="Beispieldate" placeholder="dd.mm.yyyy"><br>
-</form>
-				</script>
-    </section>
-    <section data-markdown>
-				<script type="text/template">
-### erweiterte Formulare
-#### Tastaturlayout passt sich dem input type an
-<center><p><img src="type-diff.png"width="800px" heigth="320px"/></p></center>
-	
-
-				</script>
-    </section>
 </section>	
       </div>
 
