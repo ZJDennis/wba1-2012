@@ -1,13 +1,13 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 	<head>
 		<meta charset="utf-8">
 
-		<title>WBA1 - JavaScript Basics</title>
+		<title>WBA1 - GIT Advanced</title>
 
-		<meta name="description" content="JavaScript Basics">
-		<meta name="author" content="Artur Zimmermann, Edgar Gellert, Daniela Kucharczyk, Julia Warkentin">
+		<meta name="description" content="Git Advanced">
+		<meta name="author" content="Sascha Lemke, Jörn Fiege">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -152,7 +152,126 @@
 				</section>
 				
 				<section>
-					<h1>Interactive Rebasing</h1>
+					
+					<section>
+						<h1>Saubere History mit rebase</h1>
+						<ul>
+							<li>Die History ist eine Auflistung der Commits</li>
+							<li>Manchmal möchte man Änderungen vornehmen</li>
+							<ul>
+								<li>Beispiel: saubere History für leichtere Einbindung in das Hauptprojekt</li>
+							</ul>
+						</ul>
+					</section>
+					
+					<section>
+						<h1>Struktur mit git merge</h1>
+						<p>
+							git merge bild
+						</p>
+						<small>Bildquelle: git-scm.com</small>
+					</section>
+					
+					<section>
+						<h1>Struktur mit git rebase</h1>
+						<p>
+							git rebase bild
+						</p>
+						<small>Bildquelle: git-scm.com</small>
+					</section>
+				
+				</section>
+				
+				<section>
+					<h1>Ändern des letzten Commits</h1>
+					<ul>
+						<li>Manchmal möchte man den letzten Commit aus der History entfernen oder ändern.</li>
+						<li><code>git commit --amend</code></li>
+						<li>Ermöglicht die Bearbeitung des Commits mit einem Texteditor</li>
+					</ul>
+				</section>
+				
+				<section>
+					<h1>Änderen mehrerer Commits (Interactive rebase)</h1>
+					<code>git rebase -i HEAD~3</code>
+					<p>
+						Ändert die letzten 4 Commits
+					</p>
+					<pre>
+pick f7f3f6d changed my name a bit
+pick 310154e updated README formatting and added blame
+pick a5f4a0d added cat-file
+
+# Rebase 710f0f8..a5f4a0d onto 710f0f8
+#
+# Commands:
+#  p, pick = use commit
+#  e, edit = use commit, but stop for amending
+#  s, squash = use commit, but meld into previous commit
+#
+# If you remove a line here THAT COMMIT WILL BE LOST.
+# However, if you remove everything, the rebase will be aborted.
+#
+					</pre>
+					<small>Codequelle: git-scm.com</small>
+				</section>
+
+				<section>
+					<h1>Neusortieren von Commits</h1>
+					<p>Verhält sich wie interactive rebase nur das man die commits über
+					den Texteditor neu sortiert.</p>
+				</section>
+				
+				<section>
+					<h1>Zusammenfassen von Commits</h1>
+					<pre>
+pick f7f3f6d changed my name a bit
+squash 310154e updated README formatting and added blame
+squash a5f4a0d added cat-file
+					</pre>
+					<ul>
+						<li>Wählten den ersten Commit</li>
+						<li>Nimmt die anderen beiden Commits und fügt sie dem ersten hinzu</li>
+					</ul>
+					<small>Codequelle: git-scm.com</small>
+				</section>
+				
+				<section>
+					<h1>Splitten eines Commits</h1>
+					
+					<pre>
+pick f7f3f6d changed my name a bit
+edit 310154e updated README formatting and added blame
+pick a5f4a0d added cat-file
+					</pre>
+					<pre>
+$ git reset HEAD^
+$ git add README
+$ git commit -m 'updated README formatting'
+$ git add lib/simplegit.rb
+$ git commit -m 'added blame'
+$ git rebase --continue
+					</pre>
+					<small>Codequelle: git-scm.com</small>
+				</section>
+				
+				<section>
+					<h1>Splitten: Ergebnis</h1>
+					<pre>
+$ git log -4 --pretty=format:"%h %s"
+1c002dd added cat-file
+9b29157 added blame
+35cfb2b updated README formatting
+f3cc40e changed my name a bit
+					</pre>
+					<small>Codequelle: git-scm.com</small>
+				</section>
+				
+				<section>
+					<h1>Ende!</h1>
+					<p>
+						Danke für eure Aufmerksamkeit!
+					</p>
 				</section>
 			</div>
 		</div>
