@@ -80,6 +80,7 @@ button{
 
 }
  .code{
+    
     margin: 20px;
     float: right;
     min-height: 230px;
@@ -103,4 +104,8 @@ button{
     display: block;
     margin-top: 0px;
     
+}
+
+.codeText {
+    padding-left: 15px;
 }
