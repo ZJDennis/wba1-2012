@@ -150,7 +150,7 @@ $(selector).action()
                     <p>
                         <strong>$</strong> := jQuery-Notation; <strong>selector</strong> := CSS-Selector; <strong>action</strong> := jQuery-Funktion 
                     </p>
-                    <pre><code>$("p").hide() - Blendet alle &lt;p&gt; Elemente aus.<br /><br />$("#test").hide() - Blendet alle Elemenete mit der id "test" aus.</code></pre>
+                    <pre><code>$("p").hide() - Blendet alle &lt;p&gt; Elemente aus.<br /><br />$("#test","p").hide() - Blendet alle Elemenete mit der id "test" und alle &lt;p&gt; Elemente aus.</code></pre>
                 </section>
                 <section>
                     <h1>Let's start writing less</h1>
@@ -185,10 +185,86 @@ $(document).ready(function(){
                     </code></pre>
                 </section>
                 <section>
-                    <h1>Plugins</h1>
-                    
+                    <h1>Let's start writing less</h1>
+                    <h3>Chaining</h3>
+                    <p id="p1">Verknüpfung mehrerer Funktionen in einem Element</p>
+                    <pre><code class="javascript">
+$(selector).action().action().action();
+                    </code></pre>
+                    <pre><code class="javascript">
+$("#p1").css("color","red").slideUp(2000).slideDown(2000);;
+                    </code></pre>
+                    <button id="chaining">Klick mich!</button>
                 </section>
-			</div>
+  
+                <section>
+                    <h1>Let's start writing less</h1>
+                    <h3>Get und Set (1)</h3>
+                    <ul>
+                        <li>text() - Setzt oder gibt den Text von Elementen wieder</li>
+                        <li>html() - Setzt oder gibt den Inhalt von Elementen in HTML-Struktur wieder</li>
+                        <li>val() -  Setzt oder gibt den Inhalt von Formularfeldern wieder</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>Let's start writing less</h1>
+                    <h3>Get und Set (2)</h3>
+                    <p>
+                        Mit JavaScript
+                    </p>
+                 <pre><code class="javascript">
+function alertName() {
+    var Name = document.getElementById("test");
+    var text = Name.value;
+    alert(text);
+}
+var el = document.getElementById("button");
+el.addEventListener("click", alertName);
+</code></pre>
+                    
+                <pre><code class="javascript">
+$("#button").click(function(){
+    alert(("#test").text());
+  });
+
+               </code></pre>
+                    <p>MIt jQuery </p>
+                </section>  
+                <section>
+                    <h1>Let's start writing less</h1>
+                    <h3>Get und Set (3)</h3>
+
+                        <pre><code class="javascript">
+$("#btn1").click(function(){
+    alert("Text: " + $("#test").text());
+  });
+$("#btn2").click(function(){
+    alert("HTML: " + $("#test").html());
+  });
+                        </code></pre>
+                    <p id="test">Dieser Text ist <b>fett</b>.</p>
+                    <button id="btn1">text();</button>
+                    <button id="btn2">html();</button>
+                </section>
+                <section>
+                    <h1>Let's start writing less</h1>
+                    <h3>Add und Remove</h3>
+                    <ul>
+                        <li>append() - Fügt Inhalt <strong>am Ende</strong> des ausgewählten Elements ein</li>
+                        <li>prepend()- Fügt Inhalt <strong>am Anfang</strong> des ausgewählten Elements ein</li>
+                        <li>before() - Fügt Inhalt <strong>vor</strong> dem ausgewähltem Element ein</li>
+                        <li>after()  - Fügt Inhalt <strong>hinter</strong> dem ausgewähltem Element ein</li>
+                        <li>remove() - Löscht das <strong>ganze</strong> Element und die Kindselemente</li>
+                        <li>empty()  - Löscht nur die <strong>Kindselemente</strong> aus dem ausgewähltem Element</li>
+                    </ul>
+                   
+                </section>
+                 <section>
+                    <h1>Plugins</h1>
+                    <h3>Get und Set (1)</h3>
+
+                </section>
+            </div>
 
 		</div>
 
