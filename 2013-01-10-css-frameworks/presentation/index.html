@@ -25,7 +25,7 @@
   <div class="slides">
     <section>
       <h1>CSS Frameworks</h1>
-      <h2>Medieninformtik</h2>
+      <h2>Medieninformatik</h2>
       <p style="float: right">10 Januar 2013</p>
       <p> Eine Präsentation über CSS-Frameworks (SASS &amp; SCSS) <br>
         als Bestandteil der Webbasierten Anwendungen</p>
@@ -40,14 +40,14 @@
     <section>
       <h2>CSS-Frameworks Ablauf</h2>
       <ul>
-        <li> <a href="#/2">Teil 1:</a> Was ist SASS bzw. SCSS? <i><small>(5 Minuten)</small></i></li>
-        <li> <a href="#/3">Teil 2:</a> Warum SASS, SCSS &amp; Co benutzen? <i><small>(2 Minuten)</small></i></li>
-        <li> <a href="#/4">Teil 3:</a> Wo wird SASS oder SCSS eingesetzt? <i><small>(1 Minuten)</small></i></li>
-        <li> <a href="#/5">Teil 4:</a> Unterschiede zwischen SASS und SCSS <i><small>(2 Minuten)</small></i></li>
-        <li> <a href="#/8">Teil 5:</a> Nachteile von SASS<i><small>(3 Minuten)</small></i></li>
-        <li> <a href="#/7">Teil 6:</a> Wie kann ich SASS benutzen? <i><small>(10 Minuten)</small></i></li>
-        <li> <a href="#/8">Teil 7:</a> Übungen <i><small>(15 Minuten)</small></i></li>
-        <li> <a href="#/9">Teil 8:</a> Quellen und weiterführende Links<i><small>(1 Minuten)</small></i></li>
+        <li> <a href="#/2">Teil 1:</a> Was ist SASS bzw. SCSS? </li>
+        <li> <a href="#/3">Teil 2:</a> Warum SASS, SCSS &amp; Co benutzen? </li>
+        <li> <a href="#/4">Teil 3:</a> Wo wird SASS oder SCSS eingesetzt? </li>
+        <li> <a href="#/5">Teil 4:</a> Unterschiede zwischen SASS und SCSS </li>
+        <li> <a href="#/6">Teil 5:</a> Nachteile von SASS</li>
+        <li> <a href="#/7">Teil 6:</a> Wie kann ich SASS benutzen? </li>
+        <li> <a href="#/8">Teil 7:</a> Übungen </li>
+        <li> <a href="#/9">Teil 8:</a> Quellen und weiterführende Links </li>
       </ul>
     </section>
     
@@ -57,8 +57,7 @@
       <section>
         <h2> Was ist SASS bzw. SCSS </h2>
         <p> SASS - <strong>S</strong>yntactically <strong>A</strong>wesome <strong>S</strong>tyle<strong>s</strong>heet </p>
-        <p> SCSS - <strong>S</strong>assy <strong>C</strong>ascading <strong>S</strong>tyle<strong>s</strong>heet <br>
-          <i><small>(wird bei der Präsentation in den Hintergrund geschoben)</small></i> </p>
+        <p> SCSS - <strong>S</strong>assy <strong>C</strong>ascading <strong>S</strong>tyle<strong>s</strong>heet </p>
         <p>&nbsp; </p>
         <ul>
           <li class="fragment">SASS ist ein auf Ruby basierendes Framework zur Vereinfachung der Entwicklung von CSS-Layouts und wurde bereits 2007 von Hampton Catlin, Nathan Weizenbaum und Chris Eppstein eingeführt</li>
@@ -110,11 +109,12 @@
     <!-- Teil 3: Wo wird SASS oder SCSS eingesetzt -->
     <section>
       <section>
-        <h2>Wo wird SASS oder SCSS eingesetzt?</h2>
+        <h2>Wo und wie wird SASS/SCSS eingesetzt?</h2>
         <p>&nbsp; </p>
         <ul>
           <li> Im privaten Bereich findet SASS immer mehr und mehr Anwender</li>
           <li> Auf Webseiten von Unternehmen mit tausende von CSS-Codezeilen</li>
+          <li> Mit diversen Tools die auf einen Ordner "horchen"</li>
         </ul>
       </section>
     </section>
@@ -141,7 +141,7 @@
           <li>SCSS - <strong>S</strong>assy <strong>C</strong>ascading <strong>S</strong>tyle<strong>s</strong>heet</li>
           <ul>
             <li class="fragment">Neuere und zumeist genutzte Variante</li>
-            <li class="fragment">Obermenge zur CSS3-Systax</li>
+            <li class="fragment">Obermenge zur CSS3-Syntax</li>
             <li class="fragment">d.h. jede gültige CSS3-Syntax ist gültige SCSS-Syntax.</li>
             <li class="fragment">Dateiendung:    .scss</li>
           </ul>
@@ -395,8 +395,60 @@ h2 {
     <section>
       <section>
         <h2>Übungen</h2>
+        <p><a href="#/8/1"> 1. Aufgabe:</a> SASS einrichten </p>
+        <p><a href="#/8/4"> 2. Aufgabe:</a> Variablen </p>
+        <p><a href="#/8/6"> 3. Aufgabe:</a> Nesting </p>
+        <p><a href="#/8/7"> 4. Aufgabe:</a> Mixins </p>
       </section>
-      <section> </section>
+      <section>
+      <h3>1. Aufgabe</h3>
+      <p>Als ertes müssen wir in einem Ordner eine datei style.scss überwachen, damit diese bei Änderung automatisch zu einer style.css übersetzt wird.<br> Hierzu installieren wir Ruby und Sass. <br> <small>(Die style.scss mit der enstsprechenden index.html findet ihr im Ordner uebung (CSS-Frameworks branch))</small></p>
+      <p>&nbsp;</p>  
+<h4>1.1 Windows-user:</h4> <p>Ruby installieren: <a href="http://rubyinstaller.org/downloads/"> klick </a>  <br>
+Ruby-Terminal öffnen: Start -> “ruby” ->  Start Command Prompt with Ruby </p>
+<p>&nbsp;</p> 
+      </section>
+      <section>
+      <h4>1.2 Windows- und Mac-user (mac OS hat ruby vorinstalliert): </h4>
+<p>Sass installieren: “gem install sass”  in terminal eingeben. Zum Ziel-Ordner wechseln. <br>Datei überwachen mit “sass --watch style.scss:style.css” in terminal eingeben.</p> <img src="images/sass.jpg" width="50%" height="50%" alt="SASS"> 
+<p>Wenn alles geklappt hat wurde jetzt eine style.css erstellt, die bei jeder Änderung der style.scss aktualisiert wird. <font color="#dd1166">ACHTUNG:</font> Terminal offen lassen!</p>
+</section>
+<section>
+<h4>1.3 Im Notfall:</h4> 
+<p>Falls es Probleme gibt oder einem das Terminal garnicht zusagt, könnt ihr folgende Seite nutzen um SCSS zu übersetzen.</p>
+<p>Jedoch nur für Testzwecke geeignet <a href="http://sass-lang.com/try.html">klick</a></p>
+</section>
+<section>
+<h4>2.1 Schauen sie sich die style.scss an.</h4> 
+<p> Ändern sie in der ersten Zeile den Wert für <font color="#dd1166">$spacing</font></p> 
+<p> Wie verändert sich die Website? </p>
+<p>Versuchen sie den Vorgang nachzuvollziehen. Schauen sie sich auch die entstandene style.css an.</p>
+</section>
+<section>
+<h4>2.2 In allen Artikel-Klassen und in der Navigation liegt dieselbe Farbe zugrunde.</h4> 
+<p> Legen sie zwei Variablen an (z.B. $color_background und $color_border).</p> 
+<p> Ersetzen sie an den entsprechenden Stellen den Farbwert durch die Variable!</p> 
+<p> Ändern sie nun die Farbe, indem sie den Wert der Variablen ändern. </p>
+</section>
+<section>
+<h4>3. Aufgabe: Nesting</h4> 
+<p> Die Tags: <font color="#dd1166">“nav ul”</font>, <font color="#dd1166">“nav li”</font> und <font color="#dd1166">“nav a”</font> können geschachtelt werden.</p> 
+<p>Tun sie das!</p> 
+<p>Welcher Vorteil ergibt sich daraus?</p>
+</section>
+<section>
+<h4>4. Aufgabe: Mixins</h4> 
+<p> Die Navigation und die Artikel sind allesamt mit einer Border versehen.</p> 
+<p> Der Radius variiert in Artikel 2 und in der Navigation. </p> 
+<pre><code>
+border-style: solid; 
+border-width: 1px; 
+border-color: $color_border; 
+border-radius: 10px;
+</code></pre> 
+<p>Schreiben sie eine <font color="#dd1166">@mixin</font> definition mit diesen Eigenschaften und fügen sie diese an entsprechender Stelle mit <font color="#dd1166">@include</font> ein.</p> 
+<p> Definieren sie einen Parameter für den Radius! </p>
+</section>
     </section>
     
     <!-- Teil 8: Quellen und weiterführende Links -->
@@ -404,11 +456,11 @@ h2 {
     <section>
     <h2> Quellen und Links </h2>
     <p>Offizielle Homepage - <a href="http://sass-lang.com/">sass-lang.com</a></p>
-    <p> &nbsp; </p>
+    <p>&nbsp;  </p>
     <p>Effiziente CSS-Entwicklung mit SASS - <a href="http://www.webkrauts.de/artikel/2011/effiziente-css-entwicklung-mit-sass-und-compass-teil-1">Teil 1</a></p>
     <p>Effiziente CSS-Entwicklung mit SASS - <a href="http://www.webkrauts.de/artikel/2011/effiziente-css-entwicklung-mit-sass-und-compass-teil-2">Teil 2</a></p>
     <p>CSS Modularisierung mit SASS - <a href="http://www.webkrauts.de/artikel/2012/css-modularisierung-mit-sass">Klick</a><br><small>Webkrauts.de (2011/12)</small></p>
-    <p> &nbsp; </p>
+    <p>&nbsp;  </p>
     <p>SASS - <a href="http://de.wikipedia.org/wiki/Sass_(Stylesheet-Sprache)">Wiki</a><br><small>Wikipedia.org (2012)</small></p>
     </section>
     </section>
