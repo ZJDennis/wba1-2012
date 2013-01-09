@@ -56,10 +56,7 @@
 					<p>
 						<ul>
 							<li>Was ist Barrierefreiheit?</li>
-							<ul>
-								<li>Ursprung</li>
-								<li>Web</li>
-							</ul>
+							<li>Richtlinien und Gesetze</li>
 							<li>Was muss beachtet werden?</li>
 							<ul>
 								<li>Schwäche</li>
@@ -80,131 +77,331 @@
 							<li>Gebäude sollen so gestaltet werden, dass jeder (auch Menschen mit Behinderungen) sie nutzen kann</li>														
 						</ul>
 					</p>  
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you run the speaker notes server.
-					</aside>
 				</section>
 
                 <section>
 					<h2>Barrierefreiheit im Web</h2>
 					<p>
 						<ul>
-							<li>Englisch: Accessability</li>
-							<li>Ursprung: Bauwesen</li>
-							<li>Gebäude sollen so gestaltet werden, dass jeder (auch Menschen mit Behinderungen) sie nutzen kann</li>														
+							<li>Begriff im deutschen Raum geprägt durch: DoBus (1993)</li>
+							<li>Webinhalte sollen für alle zugänglich sein.</li>
+							<li>Nutzer...</li>
+							<ul>
+								<li> wie du und ich</li>
+								<li> mit körperlichen oder geistlichen Einschränkungen</li>
+								<li> mit alternativer Hardware oder Software (z.B. Mobilgeräte, ältere Browser)</li>				
+							</ul>
 						</ul>
 					</p>  
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you run the speaker notes server.
-					</aside>
 				</section>
-                
                 <section>
-					<h2>Was muss beachtet werden?</h2>
+					<h2>Richtlinien und Gesetze</h2>
+					<p>
+						<ul>
+							<li>WAI</li>
+							<li>WCAG</li>
+							<li>BITV</li>
+						</ul>
+					</p>
+				</section>
+                <section>
+					<h2>Entwicklung barrierefreier Lösungen</h2>
 					<p>
 						<ul>
 							<li>Sehschwäche</li>
 							<li>Hörschwäche</li>
-							<li>motorische Schwäche</li>
-							<li>kognitive Schwäche</li>	<br>
+							<li>Motorische Schwäche</li>
+							<li>Kognitive Schwäche</li>	<br>
 							<li>Zudem technische Hindernisse</li>							
 						</ul>
 					</p>
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you run the speaker notes server.
-					</aside>
+				</section>
+				
+				<section>
+					<h2>Sehschwäche</h2>
+					<header>Mögliche Problemfelder:</header>
+					<p>
+					<ul>
+						<li>Grafiken</li>
+						<li>Farb- und Kontrastfehlsichtigkeit <font color= "#111111">(Wer kann diesen Satz lesen?)</font></li>
+						<li>Skalierbarkeit <font size= "1">(Oder den hier?)</font></li>
+						<li>Tabellen</li>
+						<li>Schriftbilderkennung</li>			
+					</ul>
+					</p>
 				</section>
 				<section>
 					<h2>Sehschwäche</h2>
-					<p>Es gibt sehr viele verschiedene Arten der Sehschwäche, die je nach Person unterschiedlich ausgeprägt sein kann.
-					   Häufig denkt man hierbei an Erblindung, jedoch muss man auch Schwächen in der Farb- und Kontrastsicht in Betracht ziehen.
-					   Es kann aber auch für manche problematisch sein, Texte in kleinen oder ungewöhnlichen Schriften zu lesen.
-					</p><br><br>
+					<header>Der Alt-Tag</header>
 					<p>
-					   <font color= "#111111">Wer kann diesen Satz lesen?</font>
-					   <font size= "1">Oder den hier?</font>
+						<pre><code>
+&lt;!-- Falsch: --&gt;
+&lt;img src="img/katze.png"&gt;
+&lt;!-- Richtig: --&gt;
+&lt;img src="img/katze.png" alt="Bild einer schwarzen Hauskatze."&gt;
+						</code></pre>
 					</p>
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you run the speaker notes server.
-					</aside>
+					<header>relative Schriftgröße</header>
+					<p>
+						<pre><code>
+h1
+{
+ font-size: 2em;
+}
+						</code></pre>
+					</p>
+				</section>
+				<section>
+					<h2>Sehschwäche</h2>
+					<header>Tabellen für Screenreader darstellen</header>
+					<p>
+						<pre><code>
+&lt;table summary="Wichtigsten Informationen, die man der Tabelle entnehmen kann."&gt;
+    &lt;caption&gt;Beispieltabelle&lt;/caption&gt;
+    &lt;tr&gt;
+        &lt;td&gt;&lt;/td&gt;
+        &lt;th&gt;Überschrift 1&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Überschrift 2&lt;/th&gt;
+        &lt;td&gt;Inhalt A&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Überschrift 3&lt;/th&gt;
+        &lt;td&gt;Inhalt B&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+						</code></pre>
+					</p>
 				</section>
 				<section>
 					<h2>Hörschwäche</h2>
-					<p>Auch hier gilt, man darf nicht nur Alternativen für Taube schaffen, sondern auch für Schwerhörige und leicht Beeinträchtigte.
-					   Ein besonders wichtiger Aspekt für Webseiten mit Medieninhalten (Videos und Audiodateien) ist die Einbindung der Gebärdensprache 
-					   in diesen Medien. Ebenso ist es deutlich erwünscht, Audiospuren nachträglich zu bearbeiten, um die Qualität der Informationsübermittlung zu verbessern.
-					   Ein häufig vernachlässigtes Mittel, ist die generelle Einbindung von Untertiteln, unabhängig davon, ob der "normale" Zuhörer diese braucht, oder nicht.
+					<header>Problemfeld:</header>
+					<p>
+					<ul>
+						<li>Medieninhalte (Video- und Audiodaten)</li>
+						<ul>
+							<li>Videodaten</li>
+							<li>Audiodaten</li>
+						</ul>							
+					</ul>
 					</p>
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you run the speaker notes server.
-					</aside>
+				</section>
+				<section>
+					<h2>Hörschwäche</h2>
+					<header>Lösungen</header>
+					<p>
+						<ul>
+							<li>Bearbeitung der Audiospur (Filterung von Störgeräuschen)</li>
+							<li>Untertitel </li>
+							<li>Gebärdensprache </li>								
+						</ul>
+					</p>
 				</section>
 				<section>
 					<h2>motorische Schwächen</h2>
-					<p>Es gibt viele verschiedene Arten von motorische Schwächen, die es sehr schwer zu berücksichtigen sind. 
-					   So kann eine zitternde Hand bereits einige Probleme beim Bedienen der Maus haben. Für diesen Fall muss eine Website komplett mit der
-					   Tastatur bedienbar sein. Manche Menschen können keine Tastenkombinationen benutzen, da sie kaum Kontrolle in den Armen haben.
-					
+					<header>Probleme</header>
+					<p>
+						<ul>
+							<li> zitternde Hand </li>
+							<li> Verlust oder Lähmung von Körperteilen </li>
+						</ul>
 					</p>
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you run the speaker notes server.
-					</aside>
+				    					
+					
+				</section>
+				<section>
+					<h2>Motorische Schwäche</h2>
+					<header>Accesskeys</header>
+					<p>
+						<pre><code>
+&lt;a href="#navigation" accesskey="1"&gt;Zur Navigation&lt;/a&gt;
+&lt;a href="#content" accesskey="2"&gt;Zum Inhalt&lt;/a&gt;
+						</code></pre>
+					</p>
+					<header>Sprunglinks</header>
+					<p>
+						<pre><code>
+&lt;!-- Können mit Tabulator angesteuert werden --&gt;
+&lt;h2&gt;&lt;a id="top"&gt;beliebiger Sprungpunkt&lt;/a&gt;&lt;/h2&gt;
+&lt;a href="#top">zum Sprungpunkt&lt;/a&gt;
+						</code></pre>
+					</p>
 				</section>
 				<section>
 					<h2>kognitive Schwächen</h2>
+					<header>Probleme</header>
 					<p>
-					
+						<ul>
+							<li>leicht abzulenken</li>
+							<li>längere Bearbeitungszeit von Formularen</li>
+							<li>Verständnisprobleme bei komplexen Inhalten</li>
+						</ul>	
 					</p>
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you run the speaker notes server.
-					</aside>
-				</section>
+				</section>				
+				<section>
+				<h2>kognitive Schwächen</h2>
+					<header>Lösungen</header>
+					<p>
+						<ul>
+							<li>keine blinkende Texte, Animationen</li>
+							<li>keine Time-outs, oder zumindest angemessen lange Zeitintervalle (Sessions)</li>
+							<li>Verständnisprobleme bei komplexen Inhalten</li>
+						</ul>	
+					</p>
+				</section>				
+				<section>
+					<h2>technische Hindernisse</h2>
+					<header>Probleme</header>
+					<p>
+						<ul>
+							<li>ältere Browser</li>
+							<li>Kein Java Script, Flash, o.ä. </li>
+							<li>mobile Endgeräte</li>
+						<ul>
+					</p>
+				</section>	
 				<section>
 					<h2>technische Hindernisse</h2>
 					<p>
-					Browser
-					</p>
+						<img src="images/mobile.png">
+					</p>	
+				</section>
+				<section>
+					<h2>technische Hindernisse</h2>
+					<header>Lösungen</header>
 					<p>
-					mobile Geräte
+						<ul>
+							<li>Fallback- und browserspezifische Lösungen</li>
+							<li>alternative Webseite (Reduktion)</li>
+							<li>relative Größen</li>
+						<ul>
 					</p>
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you run the speaker notes server.
-					</aside>
 				</section>
 				<section>
 					<h2>Die 7 Säulen</h2>
 					<p>
-					    <ul>
-							<li>Textorientierung</li>
-							<li>Kontraste und Farben</li>
-							<li>Skalierbarkeit</li>
-							<li>Linearisierbarkeit</li>	<br>
-							<li>Geräteunabhängigkeit und Dynamik</li>
-							<li>Verständlichkeit, Navigation und Orientierung</li>	
-							<li>Strukturierte Inhalte</li>
+						<header class="fragment">Textorientierung</header>
+						<ul>	
+							<li class="fragment">Besitzt die Seite ohne Grafiken die gleiche Funktionalität?</li>
+							<li class="fragment">Werden Medieninhalte ausreichend beschrieben?</li>
+						</ul>
+						<header class="fragment">Kontraste und Farben</header>
+						<ul>	
+							<li class="fragment">Sind alle Elemente deutlich unterscheidbar?</li>
+							<li class="fragment">Funktioniert das Layout auch mit alternativen Farbeinstellungen?</li>
 						</ul>
 					</p>
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you run the speaker notes server.
-					</aside>
+				</section>
+				<section>
+					<h2>Die 7 Säulen</h2>
+					<p>
+						<header class="fragment">Skalierbarkeit</header>
+						<ul>	
+							<li class="fragment">Sind sämtliche Textgrößen (auch in Textfeldern) veränderbar?</li>
+							<li class="fragment">Passt sich das Layout der Auflösung und eigestellten Textgröße an?</li>
+							<li class="fragment">Muss bei Veränderung der Auflösung/Textgröße gescrollt werden?</li>
+						</ul>
+						<header class="fragment">Linearisierbarkeit</header>
+						<ul>	
+							<li class="fragment">Ist eine Seite bei ausgeschalteten Layout nachvollziehbar?</li>
+							<li class="fragment">Gibt es eine strukturelle Navigation(Sprunglinks,Accesskeys)?</li>
+						</ul>
+					</p>
+				</section>
+				<section>
+					<h2>Die 7 Säulen</h2>
+					<p>
+						<header class="fragment">Geräteunabhängigkeit und Dynamik</header>
+						<ul>	
+							<li class="fragment">Ist die Seite ohne JavaScript, Flash, etc. uneingeschränkt nutzbar?</li>
+							<li class="fragment">Können Inhalte der Seite (z.B. Formulare) mit der Tastatur angesteuert werden? </li>
+							<li class="fragment">Sind die Medieninhalte der Seite auch barrierefrei?</li>
+						</ul>
+					</p>
+				</section>
+				<section>
+					<h2>Die 7 Säulen</h2>
+					<p>
+						<header class="fragment">Verständlichkeit, Navigation und Orientierung</header>
+						<ul>	
+							<li class="fragment">Sind die Texte verständlich formuliert?</li>
+							<li class="fragment">Gibt es "Leichte Sprache" und Gebärdensprache als Alternative?</li>
+							<li class="fragment">Wird richtig angegeben, in welcher Sprache Text und Fremdwörter vorliegen?</li>
+							<li class="fragment">Werden auch phonetische Suchanfragen bearbeitet?</li>
+							<li class="fragment">Gibt es Fehlerkorrekturen, -angaben bei Formularen?</li>
+						</ul>
+					</p>
+				</section>
+				<section>
+					<h2>Die 7 Säulen</h2>
+					<p>
+						<header class="fragment">Strukturierte Inhalte</header>
+						<ul>	
+							<li class="fragment">Ist die HTML Semantik durchgängig richtig und vollständig?</li>
+							<li class="fragment">Haben alle Formularelemente geeignete Beschriftungen? </li>
+						</ul>
+					</p>
 				</section>
 				<section>
 					<h2>Aufgabe</h2>
 					<p>
-					 Gehe auf <a href="www.gm.fh-koeln.de">www.gm.fh-koeln.de</a> Und beurteile diese mit Hilfe der Sieben Säulen für barrierefreie Websiten.
-					 Schaue dir auch den Quellcode an und überprüfe ihn auf die Nutzung von alt-Tags etc. Notiere deine Ergebnisse.
+					 Gehen Sie die Seite auf <a href="www.gm.fh-koeln.de">www.gm.fh-koeln.de</a> und beurteilen Sie diese mit Hilfe der Sieben Säulen für barrierefreie Websiten.
+					 Sehen Sie sich auch den Quellcode an und überprüfen Sie diesen auf die Nutzung von alt-Tags etc.
 					</p>
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you run the speaker notes server.
-					</aside>
 				</section>
 				<section>
-					<h2>Tools</h2>
+					<h2>Lösung</h2>
+					<p>
+						<header>Textorientierung</header>
+						<ul>	
+							<li>Alt-Tag wird (wenn überhaupt) an falscher Stelle eingesetzt</li>
+						</ul>
+						<header>Kontraste und Farben</header>
+						<ul>	
+							<li>Die Links der Navigation bilden einen Block, Einzelelemente nur beim genauen Hinsehen zu identifizieren</li>
+							<li>Festes Farblayout (kritisch bei besuchten Links wegen Kontrast)</li>
+						</ul>
+					</p>
+				</section>
+				<section>
+					<h2>Lösung</h2>
+					<p>
+						<header>Skalierbarkeit</header>
+						<ul>	
+							<li>Textgrößen sind nicht veränderbar</li>
+							<li>Keine (gute) Layoutanpassung</li>
+							<li>Es muss (teilweise unnötig) gescrollt werden?</li>
+						</ul>
+						<header>Linearisierbarkeit</header>
+						<ul>	
+							<li>Sprunglinks vorhanden, jedoch schlecht umgesetzt</li>
+						</ul>
+					</p>
+				</section>
+				<section>
+					<h2>Lösung</h2>
+					<p>
+						<header>Geräteunabhängigkeit und Dynamik</header>
+						<ul>	
+							<li>Medieninhalte sind nicht barrierefrei</li>
+						</ul>
+						<header>Verständlichkeit, Navigation und Orientierung</header>
+						<ul>	
+							<li>Es gibt keine "Leichte Sprache" oder Gebärdensprache für die Website</li>
+						</ul>
+						<header>Strukturierte Inhalte</header>
+						<ul>	
+							<li>Falsche HTML Semantik: Tabellen für das Layout, Benutzung von "Blank"-Grafiken</li>
+						</ul>
+					</p>
+				</section>
+				<section>
+					<h2>Links</h2>
 					<p>
 						<ul>
-							<li><a href="#/3">Screenreader</a></li>
-							<li><a href="#/4">Tool 2</a></li>
-							<li><a href="#/5">Tool 3</a></li>
+							<li><a href="http://www.menschenundrechte.de/index_ls.ph">Beispiel für eine barrierefreie Seite</a></li>
+							<li><a href="http://www.einfach-barrierefrei.net/downloads/poster_barrierefreiheit.pdf">Ein Poster über das Thema Barrierefreiheit im Web</a></li>
 						</ul>
 					</p>
 				</section>				
