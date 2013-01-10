@@ -44,9 +44,9 @@
         <li> <a href="#/3">Teil 2:</a> Warum SASS, SCSS &amp; Co benutzen? </li>
         <li> <a href="#/4">Teil 3:</a> Wo und wie wird SASS/SCSS eingesetzt? </li>
         <li> <a href="#/5">Teil 4:</a> Unterschiede zwischen SASS und SCSS </li>
-        <li> <a href="#/6">Teil 5:</a> Nachteile von SASS</li>
-        <li> <a href="#/7">Teil 6:</a> Wie kann ich SASS benutzen? </li>
-        <li> <a href="#/8">Teil 7:</a> Übungen </li>
+        <li> <a href="#/6">Teil 5:</a> Wie kann ich SASS benutzen? </li>
+        <li> <a href="#/7">Teil 6:</a> Übungen </li>
+		<li> <a href="#/8">Teil 7:</a> Nachteile von SASS</li>
         <li> <a href="#/9">Teil 8:</a> Quellen und weiterführende Links </li>
       </ul>
     </section>
@@ -145,9 +145,7 @@
       </section>
       <section>
         <h3>Kurzes Code-Beispiel</h3>
-        <h4 style="float:left"><small>SASS-Syntax</small></h4>
-        <h4 style="float:right"><small>SCSS-Syntax</small></h4>
-        <p style="clear:both">&nbsp;</p>
+        <h4><small>SASS-Syntax</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small>SCSS-Syntax</small></h4>
         <pre><code>
 $blue: #3bbfce                              $blue: #3bbfce;
 $margin: 16px                               $margin: 16px;
@@ -160,22 +158,8 @@ $margin: 16px                               $margin: 16px;
           </code></pre>
       </section>
     </section>
-    <!-- Teil 5: Nachteile von SASS -->
-    <section>
-      <section>
-        <h2>Nachteile von SASS</h2>
-        <ul>
-          <li class="fragment">Bisher unterstützen nur wenige Editoren  SASS/SCSS </li>
-          <li class="fragment">Direkte Änderungen an der .css datei sind nicht mehr möglich, da diese nach Änderung der .scss überschrieben werden</li>
-          <li class="fragment">Debugging umständlicher (z.B. stimmt die Zeilenangabe in Firebug nicht mit .sass Datei überein)</li>
-          <li class="fragment">Neue potenzielle Fehlerquellen</li>
-          <li class="fragment">Die Direktheit mit der man HTML und CSS bearbeiten kann, geht duch den Kompilierungs-Schritt etwas verloren</li>
-          <li class="fragment">Kaskadierungsgedanke von CSS geht verloren</li>
-        </ul>
-      </section>
-    </section>
-    </section>
-    <!-- Teil 6: Wie kann ich SASS benutzen -->
+   
+    <!-- Teil 5: Wie kann ich SASS benutzen -->
     <section>
       <!-- VARIABLEN -->
       <section>
@@ -374,14 +358,14 @@ h2 {
         </ul>
       </section>
     </section>
-    <!-- Teil 7: Übungen -->
+    <!-- Teil 6: Übungen -->
     <section>
       <section>
         <h2>Übungen</h2>
-        <p><a href="#/8/1"> 1. Aufgabe:</a> SASS einrichten </p>
-        <p><a href="#/8/4"> 2. Aufgabe:</a> Variablen </p>
-        <p><a href="#/8/6"> 3. Aufgabe:</a> Nesting </p>
-        <p><a href="#/8/7"> 4. Aufgabe:</a> Mixins </p>
+        <p><a href="#/7/1"> 1. Aufgabe:</a> SASS einrichten </p>
+        <p><a href="#/7/4"> 2. Aufgabe:</a> Variablen </p>
+        <p><a href="#/7/6"> 3. Aufgabe:</a> Nesting </p>
+        <p><a href="#/7/7"> 4. Aufgabe:</a> Mixins </p>
       </section>
       <section>
         <h3>1. Aufgabe</h3>
@@ -427,7 +411,7 @@ h2 {
         <p>Welcher Vorteil ergibt sich daraus?</p>
       </section>
       <section>
-        <h3>1. Aufgabe</h3>
+        <h3>4. Aufgabe</h3>
         <h4>Mixins</h4>
         <p> Die Navigation und die Artikel sind allesamt mit einer Border versehen.</p>
         <p> Der Radius variiert in Artikel 2 und in der Navigation. </p>
@@ -440,6 +424,21 @@ border-radius: 10px;
         <p>Schreiben sie eine <font color="#dd1166">@mixin</font> definition mit diesen Eigenschaften und fügen sie diese an entsprechender Stelle mit <font color="#dd1166">@include</font> ein.</p>
         <p> Definieren sie einen Parameter für den Radius! </p>
       </section>
+    </section>
+	 <!-- Teil 7: Nachteile von SASS -->
+    <section>
+      <section>
+        <h2>Nachteile von SASS</h2>
+        <ul>
+          <li class="fragment">Bisher unterstützen nur wenige Editoren  SASS/SCSS </li>
+          <li class="fragment">Direkte Änderungen an der .css datei sind nicht mehr möglich, da diese nach Änderung der .scss überschrieben werden</li>
+          <li class="fragment">Debugging umständlicher (z.B. stimmt die Zeilenangabe in Firebug nicht mit .sass Datei überein)</li>
+          <li class="fragment">Neue potenzielle Fehlerquellen</li>
+          <li class="fragment">Die Direktheit mit der man HTML und CSS bearbeiten kann, geht duch den Kompilierungs-Schritt etwas verloren</li>
+          <li class="fragment">Kaskadierungsgedanke von CSS geht verloren</li>
+        </ul>
+      </section>
+    </section>
     </section>
     <!-- Teil 8: Quellen und weiterführende Links -->
     <section>
