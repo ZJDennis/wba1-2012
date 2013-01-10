@@ -102,6 +102,12 @@
 		{
 			"title" : "CSS Frameworks (SASS & Co)",
 			"authors" : ["Sergej Kronhardt", "Simon Klinge"]
+		},
+		
+		"2013-01-10-cms/index.html":
+		{
+			"title" : "CMS (Inhalte, Navigation)",
+			"authors" : ["Dario Vizzaccaro", "David Ostolski"]
 		}
 	}
 }
