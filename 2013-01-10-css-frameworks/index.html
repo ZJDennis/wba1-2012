@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>WBA1 - CSS-Framework</title>
+
+		<meta name="description" content="CSS-Framework">
+		<meta name="author" content="Simon Klinge, Sergej Kronhardt">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link rel="stylesheet" href="../revealjs-template/css/reveal.css">
+		<link rel="stylesheet" href="../revealjs-template/css/theme/wba.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="../revealjs-template/lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="../revealjs-template/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="../revealjs-template/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		
+<div class="reveal">
+  <!-- Any section element inside of this container is displayed as a slide -->
+  <div class="slides">
+    <section>
+      <h1>CSS Frameworks</h1>
+      <h2>Medieninformatik</h2>
+      <p style="float: right">10 Januar 2013</p>
+      <p> Eine Präsentation über CSS-Frameworks (SASS &amp; SCSS) <br>
+        als Bestandteil der Webbasierten Anwendungen</p>
+      <p><a href="https://github.com/skronhar">Sergej Kronhardt</a> & <a href="https://github.com/simm033">Simon Klinge</a> </p>
+      <p>&nbsp; </p>
+      <p>&nbsp; </p>
+      <p>&nbsp; </p>
+      <p>&nbsp; </p>
+      <p> Studiengang Medieninformatik an der Fachhochschule Köln<br/>
+        Campus Gummersbach </p>
+    </section>
+    <section>
+      <h2>CSS-Frameworks Ablauf</h2>
+      <ul>
+        <li> <a href="#/2">Teil 1:</a> Was ist SASS bzw. SCSS? </li>
+        <li> <a href="#/3">Teil 2:</a> Warum SASS, SCSS &amp; Co benutzen? </li>
+        <li> <a href="#/4">Teil 3:</a> Wo und wie wird SASS/SCSS eingesetzt? </li>
+        <li> <a href="#/5">Teil 4:</a> Unterschiede zwischen SASS und SCSS </li>
+        <li> <a href="#/6">Teil 5:</a> Wie kann ich SASS benutzen? </li>
+        <li> <a href="#/7">Teil 6:</a> Übungen </li>
+		<li> <a href="#/8">Teil 7:</a> Nachteile von SASS</li>
+        <li> <a href="#/9">Teil 8:</a> Quellen und weiterführende Links </li>
+      </ul>
+    </section>
+    <!-- Teil 1: Was ist SASS/SCSS? -->
+    <section>
+      <section>
+        <h2> Was ist SASS bzw. SCSS </h2>
+        <p> SASS - <strong>S</strong>yntactically <strong>A</strong>wesome <strong>S</strong>tyle<strong>s</strong>heet </p>
+        <p> SCSS - <strong>S</strong>assy <strong>C</strong>ascading <strong>S</strong>tyle<strong>s</strong>heet </p>
+        <p>&nbsp; </p>
+        <ul>
+          <li class="fragment">SASS ist ein auf Ruby basierendes Framework zur Vereinfachung der Entwicklung von CSS-Layouts und wurde bereits 2007 von Hampton Catlin, Nathan Weizenbaum und Chris Eppstein eingeführt</li>
+        </ul>
+      </section>
+      <section>
+        <ul>
+          <li>SASS ist eine Metasprache zu CSS
+            <ul>
+              <li class="fragment">Diese Metasprache wird anschließend von einem Programm, Präprozessor genannt, wieder in normales CSS übersetzt.</li>
+            </ul>
+          </li>
+          <li class="fragment">Erweitert CSS3 mit "programmiertechnischen" Funktionen wie:
+            <ul>
+              <li class="fragment"><strong> Variablen </strong> (Global oder nur für eine Regel)</li>
+              <li class="fragment"><strong> Nesting </strong> (Verschachtelung) </li>
+              <li class="fragment"><strong> Mixins </strong> (Definieren von Vorlagen) </li>
+              <li class="fragment"><strong> Vererbung </strong> (Damit lässt sich objektorientiertes CSS umsetzen) </li>
+            </ul>
+          </li>
+          <li class="fragment"> SASS fungiert Serverseitig bzw. per Tools auf dem Desktoprechner </li>
+        </ul>
+      </section>
+    </section>
+    <!-- Teil 2: Warum SASS -->
+    <section>
+      <section>
+        <h2> Warum SASS, SCSS &amp; Co benutzen </h2>
+        <p><small><i> "Das Erstellen und Warten umfangreicher Stylesheets ist aufwändig und zeitraubend" </i><br>
+          Mathias Schäfer - <a href="http://www.webkrauts.de/artikel/2011/effiziente-css-entwicklung-mit-sass-und-compass-teil-1"> Webkrauts.de </a></small></p>
+        <ul>
+          <li class="fragment"> Angaben können zentral definiert werden. <br>
+            (z.B. Farben, Abstände etc.) </li>
+          <li class="fragment"> SASS kann rechnen <br>
+            (z.B. Farben und Abstände relativ zu einem Wert berechnen) </li>
+          <li class="fragment"> Übersichtlicher und strukturierter </li>
+          <ul>
+            <li class="fragment"> Selektoren können andere Eigenschaften erben </li>
+            <li class="fragment"> Selektoren können geschachtelt werden </li>
+          </ul>
+          <li class="fragment"> <strong>Folglich:</strong> erhöhte Wartbarkeit </li>
+        </ul>
+      </section>
+    </section>
+    <!-- Teil 3: Wo und wie wird SASS oder SCSS eingesetzt -->
+    <section>
+      <section>
+        <h2>Wo und wie wird SASS/SCSS eingesetzt?</h2>
+        <p>&nbsp; </p>
+        <ul>
+          <li> Im privaten Bereich findet SASS immer mehr und mehr Anwender</li>
+          <li> Auf Webseiten von Unternehmen mit tausende von CSS-Codezeilen</li>
+          <li> Mit diversen Tools die auf einen Ordner "horchen"</li>
+        </ul>
+      </section>
+    </section>
+    <!-- Teil 4: Unterschiede zwischen SASS und SCSS -->
+    <section>
+      <section>
+        <h2>Unterschiede zwischen<br>
+          SASS und SCSS</h2>
+        <p> Die Frameworks gibt es in zwei Dialekten: <a href="#/5">SASS</a> und <a href="#/5/1">SCSS</a></p>
+        <ul>
+          <li class="fragment">SASS - <strong>S</strong>yntactically <strong>A</strong>wesome <strong>S</strong>tyle<strong>s</strong>heet</li>
+          <ul>
+            <li class="fragment">Ältere Variante</li>
+            <li class="fragment">Verzichtet auf Klammern und Semikolons</li>
+            <li class="fragment">Achtet stattdessen auf die Einrückung des Codes</li>
+            <li class="fragment">Dateiendung:    .sass</li>
+          </ul>
+        </ul>
+      </section>
+      <section>
+        <ul>
+          <li>SCSS - <strong>S</strong>assy <strong>C</strong>ascading <strong>S</strong>tyle<strong>s</strong>heet</li>
+          <ul>
+            <li class="fragment">Neuere und zumeist genutzte Variante</li>
+            <li class="fragment">Obermenge zur CSS3-Syntax</li>
+            <ul>
+              <li class="fragment">d.h. jede gültige CSS3-Syntax ist eine gültige SCSS-Syntax.</li>
+            </ul>
+            <li class="fragment">Dateiendung:    .scss</li>
+          </ul>
+          <li class="fragment">Funktional sind SASS und SCSS gleich.</li>
+          <li class="fragment">Wir betrachten im folgenden nur SCSS!</li>
+        </ul>
+      </section>
+      <section>
+        <h3>Kurzes Code-Beispiel</h3>
+        <h4><small>SASS-Syntax</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small>SCSS-Syntax</small></h4>
+        <pre><code>
+$blue: #3bbfce                              $blue: #3bbfce;
+$margin: 16px                               $margin: 16px;
+
+.border                                     .border {
+  padding: $margin / 2                        padding: $margin / 2;
+  margin: $margin / 2                         margin: $margin / 2;
+  border-color: $blue                         border-color: $blue;
+                                            }
+          </code></pre>
+      </section>
+    </section>
+   
+    <!-- Teil 5: Wie kann ich SASS benutzen -->
+    <section>
+      <!-- VARIABLEN -->
+      <section>
+        <h2> Wie kann ich SASS benutzen </h2>
+        <h4>Variablen</h4>
+        <pre><code>
+// Farben
+$textcolor:#4f4f4f;
+$navcolor:#DFE1CB;
+// Fonts
+$textfont:arial, helvetica, san-serif;
+$fontsize:12px;
+// Sizes
+$marginleft:90px;
+$marginright:$marginleft + 5px;
+            </pre>
+        </code>
+        <ul>
+          <li class="fragment">Werden mit <strong>$VARNAME: VALUE;</strong> definiert.</li>
+          <li class="fragment">Mit numerischen Variablen kann gerechnet werden. (+, -, *, /)</li>
+        </ul>
+      </section>
+      <!--NESTING -->
+      <section>
+        <h4>Nesting / Verschachtelung</h4>
+        <pre><code>
+nav {
+    width:330px;
+    margin-left:0;
+    margin-right:0;
+    ul {
+        list-style-type:none;
+        margin:0;
+        padding:0;
+    }
+    li {
+        float:left;
+        background-color:$navcolor;
+        margin:0px;
+        padding:0px;
+    }
+}
+            </pre>
+        </code>
+        <ul>
+          <li class="fragment">Tags können wie im HTML verschachtelt werden.</li>
+        </ul>
+      </section>
+      <section>
+        <h4>Nesting / Verschachtelung</h4>
+        <p> Aus vorangegangener .scss ensteht folgende .css </p>
+        <pre><code>
+nav {
+    width:330px;
+    margin-left:0;
+    margin-right:0; 
+}
+nav ul {
+    list-style-type:none;
+    margin:0;
+    padding:0; 
+}
+nav li {
+    float:left;
+    background-color:#DFE1CB;
+    margin:0px;
+    padding:0px; 
+}
+            </pre>
+        </code> </section>
+      <!-- MIXINS -->
+      <section>
+        <h4>Mixins</h4>
+        <pre><code>
+@mixin rounded-corners {
+    border-width:1px;
+    border-color:#eeeffd;
+    -moz-border-radius:5px;
+    -webkit-border-radiu:5px;
+}
+
+div.somecontainer {
+    @include rounded-corners;
+}
+div.anothercontainer {
+    @include rounded-corners;
+}
+</pre>
+        </code>
+        <ul>
+          <li class="fragment">Eigenschaften können mit <strong>@mixin</strong> definiert und mit <strong>@include</strong> wiederverwendet werden</li>
+          <li class="fragment">Praktisch für Standardfomatierungen</li>
+        </ul>
+      </section>
+      <section>
+        <h4>Mixins</h4>
+        <p> Aus vorangegangener .scss ensteht folgende .css </p>
+        <pre><code>
+div.somecontainer {
+  border-width: 1px;
+  border-color: #eeeffd;
+  -moz-border-radius: 5px;
+  -webkit-border-radiu: 5px; 
+}
+div.anothercontainer {
+  border-width: 1px;
+  border-color: #eeeffd;
+  -moz-border-radius: 5px;
+  -webkit-border-radiu: 5px; 
+}
+</pre>
+        </code> </section>
+      <section>
+        <h4>Mixins mit Parameter</h4>
+        <pre><code>
+@mixin rounded-corners($width, $color, $radius) {
+    border-width:$width;
+    border-color:$color;
+    -moz-border-radius:$radius;
+    -webkit-border-radiu:$radius;
+}
+
+div.somecontainer {
+    @include rounded-corners(1px, #eeeffd, 5px);
+}
+div.anothercontainer {
+    @include rounded-corners(2px, #ffeed4, 8px);
+}
+</pre>
+        </code>
+        <ul>
+          <li class="fragment">Zusätzlich können Parameter angegeben werden</li>
+          <li class="fragment">Vergleichbar mit Funktionen aus üblichen Programmiersprachen</li>
+        </ul>
+      </section>
+      <section>
+        <h4>Mixins mit Parameter</h4>
+        <p> Aus vorangegangener .scss ensteht folgende .css </p>
+        <pre><code>
+div.somecontainer {
+  border-width: 1px;
+  border-color: #eeeffd;
+  -moz-border-radius: 5px;
+  -webkit-border-radiu: 5px; 
+}
+div.anothercontainer {
+  border-width: 2px;
+  border-color: #ffeed4;
+  -moz-border-radius: 8px;
+  -webkit-border-radiu: 8px; 
+}   
+</pre>
+        </code> </section>
+      <!-- VERERBUNG -->
+      <section>
+        <h4>Vererbung</h4>
+        <pre><code>
+h1 {
+    font-size:30px;
+    font-weight:bold;
+    color:#fffdde;
+}
+h2 {
+    @extend h1;
+    font-size:20px;
+}
+</pre>
+        </code>
+        <ul>
+          <li class="fragment">Mittels <strong>@extend</strong> können Eigenschaften ganzer Selektoren "vererbt" werden</li>
+        </ul>
+      </section>
+      <section>
+        <h4>Vererbung</h4>
+        <p> Aus vorangegangener .scss ensteht folgende .css </p>
+        <pre><code>
+h1, h2 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #fffdde; 
+}
+h2 {
+  font-size: 20px; 
+}
+</pre>
+        </code> </section>
+      <!-- Und mehr -->
+      <section>
+        <h4>SASS kann noch mehr</h4>
+        <ul>
+          <li class="fragment">Nesting Properties</li>
+          <li class="fragment">Ausgelagerte Datei einbinden <strong>@include</strong></li>
+          <li class="fragment">Kontrollstrukturen <strong>@if</strong></li>
+          <li class="fragment">Schleifen <strong>@for</strong></li>
+          <li class="fragment">Funktionen (mit Rückgabewert)</li>
+        </ul>
+      </section>
+    </section>
+    <!-- Teil 6: Übungen -->
+    <section>
+      <section>
+        <h2>Übungen</h2>
+        <p><a href="#/7/1"> 1. Aufgabe:</a> SASS einrichten </p>
+        <p><a href="#/7/4"> 2. Aufgabe:</a> Variablen </p>
+        <p><a href="#/7/6"> 3. Aufgabe:</a> Nesting </p>
+        <p><a href="#/7/7"> 4. Aufgabe:</a> Mixins </p>
+      </section>
+      <section>
+        <h3>1. Aufgabe</h3>
+        <p>Als ertes müssen wir in einem Ordner eine datei style.scss überwachen, damit diese bei Änderung automatisch zu einer style.css übersetzt wird.<br>
+          Hierzu installieren wir Ruby und Sass. <br>
+          <small>(Die style.scss mit der enstsprechenden index.html findet ihr im Ordner uebung (CSS-Frameworks branch))</small></p>
+        <p>&nbsp;</p>
+        <h4>1.1 Windows-user:</h4>
+        <p>Ruby installieren: <a href="http://rubyinstaller.org/downloads/"> klick </a> <br>
+          Ruby-Terminal öffnen: Start -> “ruby” ->  Start Command Prompt with Ruby </p>
+        <p>&nbsp;</p>
+      </section>
+      <section>
+        <h4>1.2 Windows- und Mac-user (mac OS hat ruby vorinstalliert): </h4>
+        <p>Sass installieren: “gem install sass”  in terminal eingeben. Zum Ziel-Ordner wechseln. <br>
+          Datei überwachen mit “sass --watch style.scss:style.css” in terminal eingeben.</p>
+        <img src="images/sass.jpg" width="50%" height="50%" alt="SASS">
+        <p>Wenn alles geklappt hat wurde jetzt eine style.css erstellt, die bei jeder Änderung der style.scss aktualisiert wird. <font color="#dd1166">ACHTUNG:</font> Terminal offen lassen!</p>
+      </section>
+      <section>
+        <h4>1.3 Im Notfall:</h4>
+        <p>Falls es Probleme gibt oder einem das Terminal garnicht zusagt, könnt ihr folgende Seite nutzen um SCSS zu übersetzen.</p>
+        <p>Jedoch nur für Testzwecke geeignet <a href="http://sass-lang.com/try.html">klick</a></p>
+      </section>
+      <section>
+        <h3>2. Aufgabe</h3>
+        <h4>2.1 Schauen sie sich die style.scss an.</h4>
+        <p> Ändern sie in der ersten Zeile den Wert für <font color="#dd1166">$spacing</font></p>
+        <p> Wie verändert sich die Website? </p>
+        <p>Versuchen sie den Vorgang nachzuvollziehen. Schauen sie sich auch die entstandene style.css an.</p>
+      </section>
+      <section>
+        <h4>2.2 In allen Artikel-Klassen und in der Navigation liegt dieselbe Farbe zugrunde.</h4>
+        <p> Legen sie zwei Variablen an (z.B. $color_background und $color_border).</p>
+        <p> Ersetzen sie an den entsprechenden Stellen den Farbwert durch die Variable!</p>
+        <p> Ändern sie nun die Farbe, indem sie den Wert der Variablen ändern. </p>
+      </section>
+      <section>
+        <h3>3. Aufgabe</h3>
+        <h4>Nesting</h4>
+        <p> Die Tags: <font color="#dd1166">“nav ul”</font>, <font color="#dd1166">“nav li”</font> und <font color="#dd1166">“nav a”</font> können geschachtelt werden.</p>
+        <p>Tun sie das!</p>
+        <p>Welcher Vorteil ergibt sich daraus?</p>
+      </section>
+      <section>
+        <h3>4. Aufgabe</h3>
+        <h4>Mixins</h4>
+        <p> Die Navigation und die Artikel sind allesamt mit einer Border versehen.</p>
+        <p> Der Radius variiert in Artikel 2 und in der Navigation. </p>
+        <pre><code>
+border-style: solid; 
+border-width: 1px; 
+border-color: $color_border; 
+border-radius: 10px;
+</code></pre>
+        <p>Schreiben sie eine <font color="#dd1166">@mixin</font> definition mit diesen Eigenschaften und fügen sie diese an entsprechender Stelle mit <font color="#dd1166">@include</font> ein.</p>
+        <p> Definieren sie einen Parameter für den Radius! </p>
+      </section>
+    </section>
+	 <!-- Teil 7: Nachteile von SASS -->
+    <section>
+      <section>
+        <h2>Nachteile von SASS</h2>
+        <ul>
+          <li class="fragment">Bisher unterstützen nur wenige Editoren  SASS/SCSS </li>
+          <li class="fragment">Direkte Änderungen an der .css datei sind nicht mehr möglich, da diese nach Änderung der .scss überschrieben werden</li>
+          <li class="fragment">Debugging umständlicher (z.B. stimmt die Zeilenangabe in Firebug nicht mit .sass Datei überein)</li>
+          <li class="fragment">Neue potenzielle Fehlerquellen</li>
+          <li class="fragment">Die Direktheit mit der man HTML und CSS bearbeiten kann, geht duch den Kompilierungs-Schritt etwas verloren</li>
+          <li class="fragment">Kaskadierungsgedanke von CSS geht verloren</li>
+        </ul>
+      </section>
+    </section>
+    </section>
+    <!-- Teil 8: Quellen und weiterführende Links -->
+    <section>
+      <section>
+        <h2> Quellen und Links </h2>
+        <p>Offizielle Homepage - <a href="http://sass-lang.com/">sass-lang.com</a></p>
+        <p>&nbsp; </p>
+        <p>Effiziente CSS-Entwicklung mit SASS - <a href="http://www.webkrauts.de/artikel/2011/effiziente-css-entwicklung-mit-sass-und-compass-teil-1">Teil 1</a></p>
+        <p>Effiziente CSS-Entwicklung mit SASS - <a href="http://www.webkrauts.de/artikel/2011/effiziente-css-entwicklung-mit-sass-und-compass-teil-2">Teil 2</a></p>
+        <p>CSS Modularisierung mit SASS - <a href="http://www.webkrauts.de/artikel/2012/css-modularisierung-mit-sass">Klick</a><br>
+          <small>Webkrauts.de (2011/12)</small></p>
+        <p>&nbsp; </p>
+        <p>SASS - <a href="http://de.wikipedia.org/wiki/Sass_(Stylesheet-Sprache)">Wiki</a><br>
+          <small>Wikipedia.org (2012)</small></p>
+      </section>
+    </section>
+  </div>
+</div>
+
+		<script src="../revealjs-template/lib/js/head.min.js"></script>
+		<script src="../revealjs-template/js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: '../revealjs-template/lib/js/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
+					{ src: '../revealjs-template/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../revealjs-template/lib/js/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs-template/lib/js/data-markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs-template/plugin/zoom-js/zoom.js', condition: function() { return !!document.body.classList; } },
+					{ src: '../revealjs-template/socket.io/socket.io.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
+					{ src: '../revealjs-template/plugin/speakernotes/client.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } }
+				]
+			});
+
+			Reveal.addEventListener( 'tag-cloud-hide', function() {
+
+				setTimeout( function() {
+						var div = document.getElementById( 'tag-cloud' ),
+							items = div.getElementsByTagName( 'span' ),
+							item;
+
+						div.style.color = "#535353";
+
+						for (var i = 0; i < items.length; i++) {
+						    items[i].className = 'pink';
+						}
+					}, 2000 );
+
+			}, false );
+
+		</script>
+
+	</body>
+</html>
