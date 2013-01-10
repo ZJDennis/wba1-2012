@@ -90,6 +90,12 @@
 		{
 			"title" : "JavaScript Frameworks",
 			"authors" : ["Roy Fochtman", "Stefan Börgeling"]
+		},
+
+		"2013-01-10-barrierefreiheit/index.html":
+		{
+			"title" : "Barrierefreiheit",
+			"authors" : ["Martin Senges", "Alexander Stengel"]
 		}
 
 	}
