@@ -96,7 +96,12 @@
 		{
 			"title" : "Barrierefreiheit",
 			"authors" : ["Martin Senges", "Alexander Stengel"]
-		}
+		},
 
+		"2013-01-10-css-frameworks/index.html":
+		{
+			"title" : "CSS Frameworks (SASS & Co)",
+			"authors" : ["Sergej Kronhardt", "Simon Klinge"]
+		}
 	}
 }
