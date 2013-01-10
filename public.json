@@ -84,6 +84,12 @@
 		{
 			"title" : "JavaScript Advanced",
 			"authors" : ["Lars Behrens", "Lutz Schönfelder", "Alina Sinderovich", "Jorge H. F. Pereira"]
+		},
+
+		"2013-01-10-JS-Frameworks/index.html":
+		{
+			"title" : "JavaScript Frameworks",
+			"authors" : ["Roy Fochtman", "Stefan Börgeling"]
 		}
 
 	}
