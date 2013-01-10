@@ -19,17 +19,63 @@
 		<link rel="stylesheet" href="../revealjs-template/lib/css/zenburn.css">
 
 		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-        <script>
-            $(document).ready(function(){
-                $("button").click(function(){
-                    $("p").hide();
-                });
-            });
-        </script>
         <script>
 			document.write( '<link rel="stylesheet" href="../revealjs-template/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
 		</script>
+        
+        <script type="text/javascript" language="javascript" src="jquery.js"></script>
+        <script type="text/javascript" language="javascript" src="jquery.roundabout.js"></script>
+        <script type="text/javascript" language="javascript" src="jquery.roundabout-shapes.js"></script>
+        <script type="text/javascript" language="javascript" src="reflection/reflection.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#hideBtn").click(function(){
+                    $("#hideP").hide();
+                });
+				$("#chaining").click(function(){
+					$("#p1").css("color","red").slideUp(500).slideDown(500);
+				});
+				$("#btn1").click(function(){
+					alert("Text: " + $("#test").text());
+				});
+				$("#btn2").click(function(){
+					alert("HTML: " + $("#test").html());
+				});
+				$("#btn3").click(function(){
+				    alert("Value: " + $("#testInput").val());
+				});
+				$("#funkyP1").click(function(){
+					$("#funkyP1").css("color","#77cc00");
+				});
+				
+				$("#funkyP2").hover(function(){$("#funkyP2").fadeOut(500);},function(){$("#funkyP2").fadeIn(500);});
+				
+				$("#funkyP3").click(function(){
+					$("#funkyP3").css("background-color","#77cc00");
+					$("#funkyP3").animate({width:"300px", height:"250px", marginLeft:"200px"},500);
+					$("#funkyP3").animate({fontSize:"50px"},500);
+				});
+				
+				$("#btnUser1").click(function(){
+					$("#TextWindow").append("<p class='textUser1'>User1: "+$("#textUser1").val()+"</p>");
+				});
+				
+				$("#btnUser2").click(function(){
+					$("#TextWindow").append("<p class='textUser2'>User2: "+$("#textUser2").val()+"</p>");
+				});
+				
+				$("#btnClearUser1").click(function(){
+					$("p").remove(".textUser1");
+				});
+				
+				$("#btnClearUser2").click(function(){
+					$("p").remove(".textUser2");
+				});
+			
+     			$('#Task3').roundabout();
+				//$('#Task3').roundabout({shape: 'waterWheel' });
+            });
+        </script>
 
 		<!--[if lt IE 9]>
 		<script src="../revealjs-template/lib/js/html5shiv.js"></script>
@@ -123,16 +169,16 @@
                 <section>
                     <h1>Let's start writing less</h1>
                     <h3>Einbindung von jQuery</h3>
-                    <p>
-                        Methode 1
+                    <p style="margin-bottom:-10px;">
+                        Methode 1: Datei runterladen und einbinden
                     </p>
                     <pre><code class="html">
 &lt;head&gt;
     &lt;script src="jquery-1.8.3.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
                     </code></pre>
-                    <p>
-                        Methode 2
+                    <p style="margin-bottom:-10px;">
+                        Methode 2: <strong>C</strong>ontent <strong>D</strong>elivery <strong>N</strong>etwork einbinden
                     </p>
                     <pre><code class="html">
 &lt;head&gt;
@@ -150,7 +196,7 @@ $(selector).action()
                     <p>
                         <strong>$</strong> := jQuery-Notation; <strong>selector</strong> := CSS-Selector; <strong>action</strong> := jQuery-Funktion 
                     </p>
-                    <pre><code>$("p").hide() - Blendet alle &lt;p&gt; Elemente aus.<br /><br />$("#test","p").hide() - Blendet alle Elemenete mit der id "test" und alle &lt;p&gt; Elemente aus.</code></pre>
+                    <pre><code>$("p").hide() - Blendet alle &lt;p&gt; Elemente aus.<br /><br />$("#test","p").hide() - Blendet Elemenete mit der id "test" und alle &lt;p&gt; Elemente aus.</code></pre>
                 </section>
                 <section>
                     <h1>Let's start writing less</h1>
@@ -183,22 +229,54 @@ $(document).ready(function(){
   });
 });
                     </code></pre>
+                    <p id="hideP">Ich verschwinde jetzt.</p>
+                    <button id="hideBtn">Klick mich!</button>
                 </section>
+                
                 <section>
-                    <h1>Let's start writing less</h1>
+                	<h1>Übung 1</h1>
+                   	<h3>Manipulieren eines &lt;p&gt; Elements</h3>
+                    
+                    <p id="funkyP1" style="cursor:pointer;">Ich lasse mich verändern. Klick mich.</p>
+                    
+                    <p id="funkyP2" style="cursor:pointer;">Ich lasse mich verändern. Berühre mich.</p>
+                    
+                    <p id="funkyP3" style="cursor:pointer;">Ich lasse mich verändern. Klick mich.</p>
+
+                    </code></pre>
+                </section>
+                
+                <section>
+                    <h1>Übung 1</h1>
+                    <h3>Codeschnipsel</h3>
+                    <pre><code class="javascript">
+
+$(document).ready(function(){
+  $("button").event(function(){
+    $("p").effekt();
+  });
+});
+                    </code></pre>
+                <p><strong>Events:</strong> click, dblclick, mouseenter, mouseleave, keypress, kreydown, keyup</p>
+                <p><strong>Effekte:</strong> hide(), show(), fadeIn(), fadeOut(), slideDown, slideUp, animate({parameter:'value';})</p>
+                </section>
+                
+                <section>
+                    <h1>Basisfunktionen</h1>
                     <h3>Chaining</h3>
-                    <p id="p1">Verknüpfung mehrerer Funktionen in einem Element</p>
+                    <p>Verknüpfung mehrerer Funktionen in einem Element</p>
                     <pre><code class="javascript">
 $(selector).action().action().action();
                     </code></pre>
                     <pre><code class="javascript">
-$("#p1").css("color","red").slideUp(2000).slideDown(2000);;
+$("#p1").css("color","red").slideUp(1000).slideDown(1000);;
                     </code></pre>
+                    <p id="p1">Ich verändere mich.</p>
                     <button id="chaining">Klick mich!</button>
                 </section>
   
                 <section>
-                    <h1>Let's start writing less</h1>
+                    <h1>Basisfunktionen</h1>
                     <h3>Get und Set (1)</h3>
                     <ul>
                         <li>text() - Setzt oder gibt den Text von Elementen wieder</li>
@@ -207,7 +285,7 @@ $("#p1").css("color","red").slideUp(2000).slideDown(2000);;
                     </ul>
                 </section>
                 <section>
-                    <h1>Let's start writing less</h1>
+                    <h1>Basisfunktionen</h1>
                     <h3>Get und Set (2)</h3>
                     <p>
                         Mit JavaScript
@@ -231,7 +309,7 @@ $("#button").click(function(){
                     <p>MIt jQuery </p>
                 </section>  
                 <section>
-                    <h1>Let's start writing less</h1>
+                    <h1>Basisfunktionen</h1>
                     <h3>Get und Set (3)</h3>
 
                         <pre><code class="javascript">
@@ -241,24 +319,49 @@ $("#btn1").click(function(){
 $("#btn2").click(function(){
     alert("HTML: " + $("#test").html());
   });
+$("#btn2").click(function(){
+    alert("HTML: " + $("#test").val());
+  });
                         </code></pre>
                     <p id="test">Dieser Text ist <b>fett</b>.</p>
+	                <p><input type="text" id="testInput" size="20" value="Blubb Blubb" /></p>
                     <button id="btn1">text();</button>
                     <button id="btn2">html();</button>
+                    <button id="btn3">val();</button>
                 </section>
                 <section>
-                    <h1>Let's start writing less</h1>
+                    <h1>Basisfunktionen</h1>
                     <h3>Add und Remove</h3>
                     <ul>
                         <li>append() - Fügt Inhalt <strong>am Ende</strong> des ausgewählten Elements ein</li>
                         <li>prepend()- Fügt Inhalt <strong>am Anfang</strong> des ausgewählten Elements ein</li>
                         <li>before() - Fügt Inhalt <strong>vor</strong> dem ausgewähltem Element ein</li>
                         <li>after()  - Fügt Inhalt <strong>hinter</strong> dem ausgewähltem Element ein</li>
-                        <li>remove() - Löscht das <strong>ganze</strong> Element und die Kindselemente</li>
-                        <li>empty()  - Löscht nur die <strong>Kindselemente</strong> aus dem ausgewähltem Element</li>
+                        <li>remove() - Löscht das <strong>ganze</strong> Element und die Kind-Elemente</li>
+                        <li>empty()  - Löscht nur die <strong>Kind-Elemente</strong> aus dem ausgewähltem Element</li>
                     </ul>
                    
                 </section>
+                
+                <section>
+                	<h1>Übung 2</h1>
+                    <h3>Chat</h3>
+                    
+                    <div class="split" style="font-size:18px;">
+                    	User1:<br>
+                        <input id="textUser1" type="text" size="20" placeholder="Nachticht" /><br>
+                        <button id="btnUser1">Send</button><button id="btnClearUser1">Clear</button>
+                    </div>
+                    <div id="TextWindow" class="split" style="font-size:18px;"></div>
+                    <div class="split" align="right" style="font-size:18px;">
+                    	User2:<br>
+                        <input id="textUser2" type="text" size="20" placeholder="Nachticht" /><br>
+                        <button id="btnUser2">Send</button><button id="btnClearUser2">Clear</button>
+                        
+                    </div>
+                    
+                </section>
+                
                  <section>
                     <h1>Plugins</h1>
 
@@ -266,11 +369,14 @@ $("#btn2").click(function(){
                         <li>Neue, zusätzliche Funktionen</li>
                         <li>Zahlreiche verschiedene Plugins
                             <ul>
-                                <li>jQuery UI  - Erstellung von Desktop ähnlichen Verhältnissen</li>
+                                <li>jQuery UI  - Erstellung von Desktop ähnlichen Oberflächen</li>
                                 <li>Slidedeck  - Slidebars</li>
+                                <li>roundabout  - Coverflow</li>
+                                <li>reflection  - Spiegeleffekt</li>
                             </ul></li>
                     </ul>
                 </section>
+                
                 <section>
                     <h1>Plugins</h1>
                     <h3>Installieren</h3>
@@ -279,11 +385,39 @@ $("#btn2").click(function(){
                         <li>.js und ggf .css Dateien einbinden</li>
                     </ul>
                     <pre><code class="html">
-&lt;script type='text/javascript' src='http://www.slidedeck.com/wp-includes/js/l10n.js?ver=20101110'&gt;&lt;/script&gt;
+&lt;script type='text/javascript' src='http://www.slidedeck.com/wp-includes/js/l10n.js?ver<br />=20101110'&gt;&lt;/script&gt;
                     </code></pre>
                 </section>
+                
+                <section>
+                	<h1>Übung 3</h1>
+                    <h3>Fotoslideshow mit roundabout.js und reflection.js</h3>
+                    <ul id="Task3">
+                    	<li><div align="center"><img src="Bild1.jpg" class="reflect"></div></li>
+                        <li><div align="center"><img src="Bild2.jpg" class="reflect"></div></li>
+                        <li><div align="center"><img src="Bild3.jpg" class="reflect"></div></li>
+                    </ul>
+                </section>
+                
+                <section>
+                	<h1>Übung 3</h1>
+                    
+                    <p>
+                    	Die Dateien <strong>jquery.roundabout.js</strong>, <strong>jquery.roundabout-shapes.js</strong> und <strong>reflection/reflection.js</strong> müssen eingebunden werden.
+                    </p>
+                    <p>Roundabout:</p>
+                    <pre><code class="javascript">
+$('ul').roundabout();	// Für das Standard-Coverflow
+$('ul').roundabout({shape: 'waterWheel' });
+// Für andere Animationen z.B. figure8,square oder lazySusan.
+                    </code></pre>
+                    <p>Um die Reflexion der Bilder zu erzeugen muss lediglich die Klasse "reflect" den Bildern zugeordnet werden.</p>
+                    <pre><code class="html">
+&lt;img src="bild.jpg" class="reflect" /&gt;
+                    </code></pre>
+                </section>
+                
             </div>
-
 		</div>
 
 		<script src="../revealjs-template/lib/js/head.min.js"></script>
