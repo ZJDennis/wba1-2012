@@ -20,6 +20,12 @@
 			"authors" : ["Martin Baljan"]
 		},
 
+		"2012-11-29-wba-1-basics-2/index.html":
+		{
+			"title" : "WBA1 Basics 2",
+			"authors" : ["Christian Noss"]
+		},
+
 		"2012-12-06-git-basics/index.html":
 		{
 			"title" : "Git Basics",
@@ -32,7 +38,7 @@
 			"authors" : ["Dominik Schilling", "Bruno José Carvalho Gonzaga"]
 		},
 
-		"2012-12-06-html-basics2/index.html":
+		"2012-12-06-html-basics-2/index.html":
 		{
 			"title" : "HTML Basics 2",
 			"authors" : ["Sascha Wüstlich", "Aaron Reiher"]
@@ -44,7 +50,7 @@
 			"authors" : ["Laura Hermann", "Marcel Holter", "Benedikt Wurth", "Robert Kellermann"]
 		},
 
-		"2012-12-06-web-basics":
+		"2012-12-06-web-basics/index.html":
 		{
 			"title" : "Web Basics",
 			"authors" : ["Christian Noss"]
@@ -103,11 +109,24 @@
 			"title" : "CSS Frameworks (SASS & Co)",
 			"authors" : ["Sergej Kronhardt", "Simon Klinge"]
 		},
-		
+
 		"2013-01-10-cms/index.html":
 		{
 			"title" : "CMS (Inhalte, Navigation)",
 			"authors" : ["Dario Vizzaccaro", "David Ostolski"]
+		},
+
+		"2013-01-10-javascript-fw-jquery/index.html":
+		{
+			"title" : "JavaScript Frameworks - jQuery",
+			"authors" : ["Julian Schöbel", "Patrick Czajor"]
+		},
+
+		"2013-01-10-klausuraufgaben/index.html":
+		{
+			"title" : "Klausuraufgaben",
+			"authors" : ["Christian Noss"]
 		}
+
 	}
 }
