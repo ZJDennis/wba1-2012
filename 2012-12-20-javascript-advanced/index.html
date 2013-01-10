@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>WBA1 - Javascript Advanced</title>
+
+		<meta name="description" content="Javascript Advanced">
+		<meta name="author" content="Student">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link rel="stylesheet" href="../revealjs-template/css/reveal.css">
+		<link rel="stylesheet" href="../revealjs-template/css/theme/wba.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="../revealjs-template/lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="../revealjs-template/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="../revealjs-template/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+					<h1>WBA1 - JavaScript Advanced</h1>
+					<h2>Medieninformatik</h2>
+					<p>December 20th, 2012</p>
+					<p>
+						Studiengang Medieninformatik an der Fachhochschule Köln<br/>
+						Campus Gummersbach
+					</p>
+					<p style="margin-top: 30px;">
+						<span>Lars Behrens <a href="http://github.com/larsbeh">larsbeh@github</a></span><br>
+						<span>Lutz Schönfelder <a href="http://github.com/luts91">luts91@github</a></span><br>
+					    <span>Alina Sinderovich <a href="http://github.com/ankohayate">ankohayate@github</a></span><br>
+						<span>Jorge H. F. Pereira <a href="http://github.com/jhfpereira">jhfpereira@github</a></span><br>
+					</p>
+				</section>
+				
+				<section>
+				    <h1>Überblick über die Lerneinheit</h1>
+				    <p>
+				        <ul>
+				            <li>Was ist das DOM?</li>
+				            <li>Zugriff auf das DOM</li>
+				            <li>CSS-Eigenschaften dynamisch zuweisen</li>
+				            <li>Erweiterte Selektierung von Elementen</li>
+				            <li>Schwierigkeiten beim Umgang mit dem DOM</li>
+				        </ul>
+				    </p>
+				</section>
+
+				<section>
+				    <h1>Was ist das DOM?</h1>
+				    <p>
+				        <ul>
+				            <li class="fragment"><strong>D</strong>ocument <strong>O</strong>bject <strong>M</strong>odel</li>
+				            <li class="fragment">Vom W3C spezifiziert</li>
+				            <li class="fragment">Eigentlich eine Schnittstelle</li>
+				            <li class="fragment">Ermöglicht JavaScript Zugriff auf die HTML-Struktur</li>
+				            <li class="fragment">Aufbau als Baumstruktur vorstellbar</li>
+				        </ul>
+				    </p>
+				</section>
+				
+				<section>
+				    <h1>Was ist das DOM?</h1>
+				    <p>
+				        <ul>
+				            <li class="fragment">DOM stellt JavaScript-Umgebung Zugriffsobjekte bereit</li>
+				            <li class="fragment">
+				                <strong>window</strong>
+				                <pre><code class="javascript">
+var browserfenster = window;
+                                </code></pre>
+				            </li>
+				            <li class="fragment">
+				                <strong>document</strong>
+				                <pre><code class="javascript">
+var wurzelknoten_des_dom_baums = document;
+                                </code></pre>
+				            </li>
+				            <li class="fragment"><strong>document</strong> ist der Wurzelknoten des DOM-Baums</li>
+				        </ul>
+				    </p>
+				</section>
+				
+				<section>
+				    <h1>Was ist das DOM?</h1>
+                    <div class="fragment" style="float:left; width: 520px;">
+                        <p>HTML-Dokumentenstruktur</p>
+                        <pre><code class="xml">
+
+&lt;html>
+    &lt;head>
+        &lt;title>Titel&lt;/title>
+    &lt;/head>
+    &lt;body>
+        &lt;p>Ein kleiner Paragraph&lt;/p>
+        &lt;p>Ein zweiter kleiner Paragraph&lt;/p>
+    &lt;/body>
+&lt;/html>
+                    
+                    </code></pre>
+                    </div>
+                    <div class="fragment" style="float: right; width: 350px;">
+                    <p>DOM-Baum</p>
+                    <pre><code>
+           document
+              |
+             html
+              |
+         -----------
+        |           |
+      head         body
+        |           |
+      title       -----
+                 |     |
+                 p     p
+                        </code></pre>
+                    </div>
+			        <ul>
+			            <li class="fragment">Bei umfangreichen Seiten natürlich viel größer</li>
+			        </ul>
+				</section>
+				
+				<section>
+				    <h1>Zugriff auf das DOM</h1>
+			        <ul>
+			            <li class="fragment">DOM Spezifikation schreibt Zugriffsmethoden vor</li>
+			            <li class="fragment">
+			                <span>als Beispiel </span><strong>getElementById()</strong>
+			                 <pre class="fragment"><code class="xml">
+&lt;html>
+    &lt;head>&lt;/head>
+    &lt;body>
+        &lt;div>
+            &lt;p id="kleiner_para">Paragraphinhalt&lt;/p>
+        &lt;/div>
+    &lt;/body>
+&lt;/html>
+                            </code></pre>
+			                <pre class="fragment"><code style="overflow: hidden;" class="javascript">
+var paragraph_element = document.getElementById('kleiner_para');
+                            </code></pre>
+			            </li>
+			        </ul>
+			        <div class="fragment" style="position: absolute; border: 2px solid #DD1166; width: 410px; height: 27px; top: 309px; left: 160px; z-index: 999;"></div>
+				</section>
+				
+				<section>
+				    <h1>Zugriff auf das DOM</h1>
+			        <ul>
+			            <!--<li class="fragment">DOM-Elemente bzw. Knoten haben ihrem Typ entsprechende Eigenschaften</li>-->
+			            <li class="fragment">Zugriff auf die Eigenschaften bzw. Attribute des Elements</li>
+			            <li class="fragment" style="list-style-type: none;">
+			                <pre><code style="overflow: hidden;" class="xml">
+&lt;body>
+    &lt;p>
+        &lt;a id="externer_link" href="http://www.google.de">Zu Google gehen&lt;/a>
+    &lt;/p>
+&lt;/body>
+                            </code></pre>
+			                <pre class="fragment"><code class="javascript">
+var link_element = document.getElementById('externer_link');
+
+link_element.id = "neuer_externer_link";
+link_element.href = "http://www.medieninformatik.fh-koeln.de/";
+link_element.innerHTML = "Zur Medieninformatikseite der FH-Köln";
+                            </code></pre>
+			            </li>
+			        </ul>
+			        <div class="fragment" style="position: absolute; border: 2px solid #DD1166; width: 700px; height: 27px; top: 215px; left: 120px; z-index: 999;"></div>
+				</section>
+				
+				<section>
+				    <h1>Zugriff auf das DOM</h1>
+			        <ul>
+			            <li class="fragment">als weiteres Beispiel das <strong>&lt;input></strong> Element</li>
+			            <li class="fragment" style="list-style-type: none;">
+			                <pre><code style="overflow: hidden;" class="xml">
+&lt;body>
+    &lt;form action="#" method="get">
+        &lt;input type="text" id="formular_feld" name="mein_name" value="Horst">
+    &lt;/form>
+&lt;/body>
+                            </code></pre>
+                        <img class="fragment" src="./imgs/input_beispiel_horst.jpg" style="box-shadow: 0 0 20px #000; position: absolute; top: 160px; left: 750px; z-index: 999;" alt="Inputfeld mit 'Horst' als Textwert">
+			                <pre class="fragment" style="margin-top: 50px;"><code class="javascript">
+var input_element = document.getElementById('formular_feld');
+
+var input_textwert = input_element.value;
+input_element.value = "Hallo, " + input_textwert.value;
+                            </code></pre>
+                        <img class="fragment" src="./imgs/input_beispiel_hallo_horst.jpg" style="box-shadow: 0 0 20px #000; position: absolute; top: 360px; left: 750px; z-index: 999;" alt="Inputfeld mit 'Hallo, Horst' als Textwert">
+			            </li>
+			        </ul>
+				</section>
+				
+				<section>
+				    <h1>Zugriff auf das DOM</h1>
+			        <ul>
+			            <li class="fragment">Eventlistener?</li>
+			            <li class="fragment" style="list-style-type: none;">
+			                <pre><code class="xml">
+&lt;body>
+    &lt;button onclick="alert('Erste Warnung!');">Klick mich!&lt;/button>
+    &lt;button id="alert_button">Jetzt mich!&lt;/button>
+&lt;/body>
+                            </code></pre>
+                            <img class="fragment" src="./imgs/event_listener_beispiel_button.jpg" style="box-shadow: 0 0 20px #000; position: absolute; top: 70px; left: 655px; z-index: 999;" alt="Button mit 'Klick mich!'-Titel">
+			                <pre class="fragment" style="margin-top: 25px;"><code style="overflow: hidden;" class="javascript">
+var button_element = document.getElementById('alert_button');
+
+function warnmeldung(event_object) {
+    alert('Zweite Warnung! Das war schon alles');
+}
+
+button_element.addEventListener('click', warnmeldung);
+                            </code></pre>
+                            <img class="fragment" src="./imgs/event_listener_beispiel_button_alert_popup.jpg" style="box-shadow: 0 0 20px #000; position: absolute; top: 305px; left: 655px; z-index: 999;" alt="Button mit 'Klick mich!'-Titel">
+			            </li>
+			        </ul>
+				</section>
+				
+				<section>
+				    <h1>Aufgabe 1</h1>
+			        <h3>Das Auslesen und wieder Füllen eines Inputfelds</h3>
+                    <p style="text-align: center;"><a href="./aufgaben/wba1_js_advanced_aufgaben.zip">Aufgaben herunterladen</a></p>
+                    <div class="fragment">
+                        <p>Evtl. hilfreiche Befehlsübersicht</p>
+                        <pre><code class="javascript">var element = document.getElementById('id_des_elements');</code></pre>
+                        <pre><code class="javascript">function lauscher(event_object){
+    // code
+};
+
+element.addEventListener('click', lauscher);</code></pre>
+                        <pre><code class="javascript">var input_element = document.getElementById('id_des_textfelds');
+input_element.value = 'Neuer Text';</code></pre>
+                    </div>
+				</section>
+				
+				<section>
+				    <h1>CSS-Eigenschaften dynamisch zuweisen</h1>
+			        <ul>
+			            <li class="fragment">DOM erlaubt dynamisches Zuweisen von CSS-Eigenschaften</li>
+			            <li class="fragment">Hat sofortigen Einfluss auf die Formatierung des Elements</li>
+			            <li class="fragment">Setzt auf das <strong>style</strong>-Attribut eines jeden Elements</li>
+			        </ul>
+				</section>
+				
+				<section>
+				    <h1>CSS-Eigenschaften dynamisch zuweisen</h1>
+			        <ul>
+			            <li class="fragment">
+			                <span>Alle Elemente besitzen die Eigenschaft <strong>style</strong></span>
+			                <pre class="fragment"><code class="javascript">element.style</code></pre>
+			            </li>
+			            <li class="fragment">
+			                <span>Verfügt über Untereigenschaften wie z.B.</span>
+			                <pre class="fragment"><code style="overflow: hidden;" class="javascript">element.style.border            = "1px solid #ff0000"; // Rot
+element.style.position          = "absolute";
+element.style.left              = "300px";
+element.style.color             = "#00ff00"; // Grün
+element.style.backgroundColor   = "#0000ff"; // background-color wird zu backgroundColor
+                 :
+                 :</code></pre>
+			             </li>
+			            <li class="fragment">Die bereits bekannten CSS-Eigenschaften</li>
+			        </ul>
+				</section>
+				
+				<section>
+				    <h1>Aufgabe 2</h1>
+			        <h3>Über Buttons die Hintergrundfarbe setzen</h3>
+                    <p style="text-align: center;"><a href="./aufgaben/wba1_js_advanced_aufgaben.zip">Aufgaben herunterladen</a></p>
+                    <div class="fragment">
+                        <p>Evtl. hilfreiche Befehlsübersicht</p>
+                        <pre><code class="javascript">var element = document.getElementById('id_des_elements');</code></pre>
+                        <pre><code class="javascript">function lauscher(event_object){
+    // code
+};
+
+element.addEventListener('click', lauscher);</code></pre>
+                        <pre><code class="javascript">var body_element = document.getElementById('id_des_body_elements');
+body_element.style.border = "1px solid #ff0000";</code></pre>
+                    </div>
+				</section>
+				
+				<section>
+				    <h1>Erweiterte Selektierung von Elementen</h1>
+			        <ul>
+			            <li class="fragment"><strong>getElementById</strong> ist ja ganz nett und so, aber...</li>
+			            <li class="fragment">ist in seiner Funktion stark beschränkt</li>
+			            <li class="fragment">Das W3C hat da etwas viel mächtigeres in Petto</li>
+			            <li class="fragment"><strong>querySelector</strong> und <strong>querySelectorAll</strong></li>
+			            <li class="fragment">sagt alle schön "Hallo" zu den beiden :)</li>
+			        </ul>
+				</section>
+				
+				<section>
+				    <h1>Erweiterte Selektierung von Elementen</h1>
+			        <ul>
+			            <li class="fragment">Die Allrounder</li>
+			            <li class="fragment">Setzen auf Selektoren</li>
+			            <li class="fragment">Selbe Selektierart wie bei CSS</li>
+			            <li class="fragment">
+			                <strong>querySelector</strong>
+			                <pre class="fragment"><code class="javascript">var p_element = document.querySelector('div p.zitat');</code></pre>
+			                <pre class="fragment"><code class="javascript">var p_element = document.querySelector('div p#erstes_zitat');</code></pre>
+			                <pre class="fragment"><code style="overflow: hidden;" class="javascript">var b_element = document.querySelector('body section#erster_eintrag p span.betreff b');</code></pre>
+			            </li>
+			        </ul>
+				</section>
+				
+				<section>
+				    <h1>Erweiterte Selektierung von Elementen</h1>
+			        <ul>
+			            <li class="fragment"><strong>querySelector</strong> liefert das erste zutreffende Element</li>
+			            <li class="fragment">Will man alle haben, dann <strong>querySelectorAll</strong></li>
+			            <li class="fragment"><span>gibt ein Array mit allen zutreffenden Elementen zurück</span>
+			                <pre class="fragment"><code class="xml">&lt;body>
+    &lt;div>
+        &lt;p class="zitat">a&lt;/p>
+        &lt;p class="zitat">a&lt;/p>
+        &lt;p class="autor_name">a&lt;/p>
+    &lt;/div>
+&lt;/body></code></pre>
+		                    <pre class="fragment"><code class="javascript">var p_elemente = document.querySelectorAll('div p.zitat');
+p_elemente.length; // Anzahl der Arrayfelder
+p_elemente[0]; // auf das erste Element zugreifen</code></pre>
+			            </li>
+			        </ul>
+			        <div class="fragment" style="position: absolute; border: 2px solid #DD1166; width: 235px; height: 46px; top: 305px; left: 120px; z-index: 999;"></div>
+				</section>
+				
+				<section>
+				    <h1>Schwierigkeiten beim Umgang mit dem DOM</h1>
+			        <ul>
+			            <li class="fragment"><strong>querySelector</strong> und <strong>querySelectorAll</strong> sind relativ neu und von älteren Browsern nicht unterstützt</li>
+			            <li class="fragment">Nicht jeder Browser hält sich an den DOM-Standard</li>
+			            <li class="fragment">Moderne Browser bessern sich aber mittlerweile in der Hinsicht</li>
+			            <li class="fragment">Volle Browserunterstützung führt zu mehr Code für Fallback-Lösungen und somit schwerer zu pflegen</li>
+			            <li class="fragment">Die Lösung: <strong>JavaScript-Frameworks</strong></li>
+			        </ul>
+				</section>
+				
+				<section>
+				    <h1 style="text-align: center; margin-top: 25%; font-size: 3em;" class="pink fragment">Fragen?</h1>
+				    <p class="fragment" style="text-align: center; font-size: 1.5em;">...dann auf zur letzten Aufgabe...</p>
+				</section>
+				
+				<section>
+				    <h1>Aufgabe 3</h1>
+			        <h3>Ein Formular validieren</h3>
+                    <p style="text-align: center;"><a href="./aufgaben/wba1_js_advanced_aufgaben.zip">Aufgaben herunterladen</a></p>
+                    <div class="fragment">
+                        <p>Evtl. hilfreiche Befehlsübersicht</p>
+                        <pre><code class="javascript">var required_elements = document.querySelectorAll('div#contact_form .required');</code></pre>
+                        <pre><code class="javascript">var formular_element = document.querySelector('form#contact_form');
+function lauscher(event_object){
+    // code
+};
+
+formular_element.addEventListener('submit', lauscher);</code></pre>
+                        <pre><code class="javascript">required_elements[0].style.backgroundColor = '#ff0000';</code></pre>
+                    </div>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="../revealjs-template/lib/js/head.min.js"></script>
+		<script src="../revealjs-template/js/reveal.min.js"></script>
+
+		<script>
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: '../revealjs-template/lib/js/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
+					{ src: '../revealjs-template/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../revealjs-template/lib/js/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs-template/lib/js/data-markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs-template/plugin/zoom-js/zoom.js', condition: function() { return !!document.body.classList; } },
+					{ src: '../revealjs-template/socket.io/socket.io.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
+					{ src: '../revealjs-template/plugin/speakernotes/client.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } }
+				]
+			});
+
+		</script>
+	</body>
+</html>

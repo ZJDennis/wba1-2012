@@ -1,0 +1,53 @@
+@import url("03box.css");
+/**************************************************************************
+    ToDo 1:
+    Belegen Sie die Hauptnavigation mit folgender Eigenschaft 
+    Display:            inline
+    **************************************************************************/
+nav ul li {
+	display: inline;
+}
+
+
+    /**************************************************************************
+    ToDo 2:
+    Belegen Sie die Labels, Inputfelder und das Dropdownmenue mit folgender Eigenschaft:
+    Display:            block
+    **************************************************************************/
+label, input, select {
+    display: block;
+}
+
+
+    /**************************************************************************
+    ToDo 3:
+    Belegen Sie die Labels der Inputfelder mit folgenden Eigenschaften:
+    Display:            inline
+    Schriftgroesse:     14px
+    **************************************************************************/
+label {
+    display: inline;
+    font-size: 14px;
+}
+
+
+    /**************************************************************************
+    ToDo 4:
+    Belegen Sie die Inputfelder vom Typ="radio" mit folgender Eigenschaft:
+    Display:            inline-block
+    **************************************************************************/
+input[type="radio"] {
+    display: inline-block;
+}
+
+
+    /**************************************************************************
+    ToDo 5:
+    Belegen Sie die Absaetze der Marginalspalte mit folgenden Eigenschaften: 
+    Display:            block
+    Schriftgroesse:     12px
+    **************************************************************************/
+#marginal p {
+    display: block;
+    font-size: 12px;
+}

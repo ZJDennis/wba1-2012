@@ -1,0 +1,35 @@
+@import url("01selektoren.css");
+
+.clearfix:after {
+	display: block;
+	clear: both;
+	content: ".";
+	height: 0;
+	visibility: hidden;
+}
+
+* {
+	/* Todo: Setzen Sie die Schrift auf Myriad-Pro oder alternativ auf eine seriefenlose Schrift*/
+    
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background-image: url(../../schlagzeugweltrekord/images/hintergrund.jpg);
+}
+
+#wrap {
+	background: #fff;
+	width: 940px;
+	margin: 0 auto;
+	padding: 10px 20px 10px 20px;
+}
+
+header {
+	margin: 0 0 26px 0;
+}
+
+#teaser {
+	margin: 0 0 26px 0;
+}

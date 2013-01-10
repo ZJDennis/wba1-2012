@@ -4,10 +4,10 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>WBA1 - Git, Github, Presentations & Doku</title>
+		<title>WBA1 - Lehreinheit</title>
 
-		<meta name="description" content="Introduction to git and Github">
-		<meta name="author" content="Jan Kus">
+		<meta name="description" content="WBA-Basics">
+		<meta name="author" content="Volker Schaefer">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -22,6 +22,93 @@
 		<script>
 			document.write( '<link rel="stylesheet" href="../revealjs-template/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
 		</script>
+        <style type="text/css">
+            .kaestchen {
+                margin: 30px 0 0 30px !important;
+            }
+            .kaestchen li {
+                background-color: #DD1166;
+                color: white;
+                display: inline-bock;
+                float: left;
+                list-style-type: none;
+                margin: 0 15px 0px 0;
+                padding: 10px;
+                text-align: center;
+                width: 230px;
+                
+            }
+            
+            blockquote {
+                width: 96% !important;
+                margin: 0 0 50px 0 !important;
+                padding: 2% !important;
+            }
+            
+            
+            section {
+                'background-color: grey !important;   
+            }
+
+            .fullscreenImage .reveal .slides {
+                height: 100%;
+                left: 0;
+                margin: 0 auto;
+                max-width: 100%;
+                padding: 0;
+                top: 0;
+                width: 100%;
+            }
+    
+            .fullscreenImage .reveal .slides > section {
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: auto 92%;
+                height: 100%;
+                left: 0;
+                margin: 0;
+                position: absolute;
+                top: 0;
+                width: 100%;
+            }
+                
+            .fullscreenImage .reveal .slides > section .bu{
+                background-color: rgba(221, 17,102, 0.8);
+                top: 100px;
+                display: inline-block;
+                color: white;
+                padding: 0 10px 0 100px;
+                position:absolute;
+                    
+            }
+
+            .fullscreenImage .reveal .slides > section .quelle{
+                bottom: 10px;
+                color: white;
+                display: inline-block;
+                font-size: 14px;
+                margin: 0 0 0 10px;
+                position:absolute;
+                    
+            }
+            
+            .fullscreenImage .reveal .slides > section p{
+                margin: 0;
+            }
+            
+            .nobackground .reveal .slides > section{
+                background-image: none;
+            }
+            
+
+    
+            .whiteBackground .state-background {
+                background-color: white;
+                
+            }
+            
+            
+        </style>
 
 		<!--[if lt IE 9]>
 		<script src="../revealjs-template/lib/js/html5shiv.js"></script>
@@ -36,248 +123,294 @@
 			<div class="slides">
 
 				<section>
-					<h1>WBA1 - Let's talk about tools</h1>
+					<h1>WBA1 - Web-Basics</h1>
 					<h2>Medieninformatik</h2>
-					<p>November 29th, 2012</p>
+					<p>06. Dezember 2012</p>
+                    <br />
 					<p>
 						Studiengang Medieninformatik an der Fachhochschule Köln<br/>
 						Campus Gummersbach
 					</p>
+                    <br />
 					<p>
-						Jan Kus<br />
-						http://github.com/koos
+						Prof. Christian Noss<br />
+						<a href="http://github.com/cnoss">http://github.com/cnoss</a>
 					</p>
 				</section>
 
-				<section>
-					<h2>About me</h2>
-					<p>
-						<ul>
-							<li>M.Sc. Jan Kus</li>
-							<li>FH-Köln Medieninformatik</li>
-							<li>2003 - 2010</li>
-							<li>2008 - Bumann, Schneider, Kus GbR (<em>Railslove</em>)</li>							
-							<li>2010 - Railslove GmbH (15 Mitarbeiter)</li>														
-						</ul>
-					</p>
-					<p>
-						<i>
-						<small><a href="http://jankus.name">Homepage</a> / <a href="http://twitter.com/koos">@koos on Twitter</a> / <a href="http://railslove.com">Railslove</a> / <a href="http://facebook.com/jbvkoos">Facebook</a></small></i>
-					</p>
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you run the speaker notes server.
-					</aside>
-				</section>
+                <section data-state="fullscreenImage"  style="background-image: url(images/TimBernersLee.jpg)">
+                    <p class="bu fragment">
+                        Tim Berners-Lee, Gründer des W3C 
+                    </p>
+                    <p class="quelle">Quelle: <a href="http://www.edht.org.uk">http://www.edht.org.uk</a> (03.12.2012)</p>
+                </section>
+                <section>
+                    <blockquote>
+                       Das Web editieren zu können ist genauso wichtig, wie durch das Web zu browsen. 
+                    </blockquote>
+                    <br />
+                    <blockquote>
+                        Computer können genutzt werden, um im Hintergrund Aufgaben zu erledigen, damit Gruppen besser zusammenarbeiten können.
+                    </blockquote>
+                    <p>
+                        <small>Quelle: Berners-Lee, Tim: Weaving the Web, 1. Aufl., HarperOne, 1999</small>
+                    </p>
+                </section>
+                <section>
+                    <blockquote>
+                        Jeder Bereich des Internets sollte eher eine Netzstruktur als eine Baumstruktur haben. Erwähnenswerte 
+                        Ausnahmen sind das Domain Name System und die Regeln für die Vergabe von Domainnamen durch die ICANN.
+                    </blockquote>
+                    <br />
+                    <blockquote>
+                        Informatiker tragen nicht nur eine technische, sondern auch eine moralische Verantwortung.
+                    </blockquote>
+                    <p>
+                        <small>Quelle: Berners-Lee, Tim: Weaving the Web, 1. Aufl., HarperOne, 1999</small>
+                    </p>
 
-				<section>
-					<h2>Let's talk about tools</h2>
-					<p>
-						<ul>
-							<li><a href="#/3">Git & Github (Code)</a></li>
-							<li><a href="#/4">Github Wiki & Issues (Documentation & Problems)</a></li>
-							<li><a href="#/5">Reveal.js (Presentation)</a></li>
-						</ul>
-					</p>
-				</section>				
+                </section>
 
-				<!-- Example of nested vertical slides -->
-				<section>
-					<section>
-						<h2>Git & Github</h2>
-						<p>
-							<ul>
-								<li>Git is a distributed revision control and source code management system (Subversion, Mercurial, CVS)
-									<ul>
-										<li><a href="http://git-scm.com/">http://git-scm.com</a></li>
-									</ul>
-								</li>									
-								<li>
-									Github is a SaaS platform to host code
-									<ul>
-										<li><a href="http://github.com/">http://github.com</a></li>								
-									</ul>
-								</li>
+                <section>
+                    <h2>
+                        Die <strong>drei</strong> Säulen des <strong>WWW</strong>
+                    </h2>
+                    <ul>
+                        <li class="fragment"><strong>URI</strong><br /><strong>U</strong>niform <strong>R</strong>esource <strong>I</strong>dentifier</li>
+                        <li class="fragment"><strong>HTTP</strong><br /> <strong>H</strong>yper<strong>T</strong>ext <strong>T</strong>ransfer <strong>P</strong>rotocol</li>
+                        <li class="fragment"><strong>HTML</strong><br /><strong>H</strong>yper<strong>T</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>
+                        Aufbau einer <strong>URI</strong>
+                    </h2>
+                    <p class="fragment" style="font-size: 23px; margin-bottom: 0px">
+                        http://hans:geheim@example.org:80/demo/example.cgi?land=de&stadt=aa#geschichte
+                    </p>
+                        <embed class="fragment" type="image/svg+xml" src="images/aufbau_url_bezeichnungen.svg"/>
+                </section>
+                <section>
+                    <embed type="image/svg+xml" src="images/client_server.svg"/>
+                    <embed class="fragment" style="position: absolute; top: 220px; left: 0px;" type="image/svg+xml" src="images/request.svg"/>
+                    <embed class="fragment" style="position: absolute; top: 265px; right: 65px;" type="image/svg+xml" src="images/response.svg"/>
+                </section>
+                <section>
+                    <embed type="image/svg+xml" src="images/client_server_proxy.svg"/>
+                    <embed class="fragment" style="position: absolute; top: 210px; left: 170px;" type="image/svg+xml" src="images/cache.svg"/>
+                </section>
+                <section>
+                    <h2>
+                        HTTP-Statuscodes
+                    </h2>
+                        <p>
+                            
+                        Die Antwort- oder Statuscodes von HTTP bestimmen direkt die Bedeutung der Antwort auf eine HTTP-Anfrage. 
+                        Sie werden stets in der ersten Zeile der Response (= Server-Antwort) in der Form</p>
+                        <pre><code>HTTP/1.1 &lt;Statuscode&gt; </code></pre>
+                        <p>
+                        übermittelt, wobei der Statuscode aus einer dreistelligen Zahl und einer kurzen Beschreibung besteht. 
+                        Die Statuscodes werden nach ihrer ersten Ziffer in Gruppen von unterschiedlicher Bedeutung eingeteilt.
+                        </p>
+                        <p>
+                            <small>Quelle: <a href="http://wiki.selfhtml.org/wiki/Referenz:HTTP/Antwortcodes">http://wiki.selfhtml.org/wiki/Referenz:HTTP/Antwortcodes</a> (04.12.2012)</small>    
+                        </p>
+                </section>
+                <section>
+                    <h2>
+                        HTTP-Statuscodes
+                    </h2>
+                    <ul>
+                        <li><strong>100+ </strong>Informationen</li>
+                        <li><strong>200+ </strong>Erfolg</li>
+                        <li><strong>300+ </strong>Umleitung</li>
+                        <li><strong>400+ </strong>Fehler beim Client</li>
+                        <li><strong>500+ </strong>Fehler beim Server</li>
+                    </ul>
 
-							</ul>
-						</p>
-					</section>
-					<section>
-						<h2>Git Basics</h2>
-						Clone Repositories
-						<pre><code contenteditable>> git clone git@github.com:fh-koeln/wba1-2012.git</code></pre>
-						Pull Code
-						<pre><code contenteditable>> git pull origin master</code></pre>
-						Add, Commit & Push Code
-						<pre>
-							<code contenteditable>
-> git add .
-> git commit -a -m "added fancy stuff"
-> git push origin master
-							</code>							
-						</pre>
-						Do you need more? <a href="http://rogerdudler.github.com/git-guide/index.de.html">Git Guide</a>
-					</section>
-					<section>
-						<h2>GitHub</h2>
-						<p>GitHub is a plattform to share code with friends, co-workers, classmates</p>
-						<p>Over two million users on GitHub</p>
-						<p>It's <em>the</em> plattform to share your code with people - open source or private</p>
-						</p>
-					</section>
-					<section>
-						<h2>Things to do now?</h2>
-						<ul>
-							<li>Get an account: <a href="https://github.com/signup/free">https://github.com/signup/free</a></li>
-							<li>Clone
-								<pre><code contenteditable>> git clone git@github.com:fh-koeln/wba1-2012.git</code></pre>
-							</li>
-							<li>Modify your Slides & Code</li>
-							<li>Push it back
-								<pre>
-									<code contenteditable>
-> git add .
-> git commit -a -m "added fancy stuff"
-> git push origin master
-									</code>							
-								</pre>
-							</li>
-						</ul>
-					</section>
-				</section>
-				<section>
-					<section>
-						<h2>Documentations and Issues</h2>
-						<p>
-							Put all your class documentations to the GitHub wiki: <a href="https://github.com/fh-koeln/wba1-2012/wiki">https://github.com/fh-koeln/wba1-2012/wiki</a>
-						</p>
-						<p>
-							If you have questions use GitHub issues: <a href="https://github.com/fh-koeln/wba1-2012/issues">https://github.com/fh-koeln/wba1-2012/issues</a>
-						</p>
-					</section>
-					<section>
-						<h2>Your Documentation on Github wiki</h2>
-						<p>
-							Put all your class documentations to the GitHub wiki: <a href="https://github.com/fh-koeln/wba1-2012/wiki">https://github.com/fh-koeln/wba1-2012/wiki</a>
-						</p>
-						<p>
-							The GitHub wiki speaks: Markdown, Textile, RDoc, etc.
-						</p>
-						<p>
-							But lets agree on Markdown?
-						</p>
-						<p>
-							You can get more help here: <a href="http://daringfireball.net/projects/markdown/syntax">http://daringfireball.net/projects/markdown/syntax</a>
-						</p>
-					</section>	
-					<section>
-						<h2>Github issues for questions</h2>
-						<p>
-							Just visit: <a href="https://github.com/fh-koeln/wba1-2012/issues">https://github.com/fh-koeln/wba1-2012/issues</a>
-						</p>
-						<p>
-							Submitting an issue you can <em>assign</em> it to somebody and/or add a lable to it (<em>todo, idee, enhancement, etc.</em>)
-						</p>
-					</section>									
-				</section>				
-				<section>
-					<section>
-						<h2>Presentations with Reveal.js</h2>
-						<p>
-							HTML Presentation Framework (HTML, CSS, Javascript)
-						</p>
-						<ol>
-							<li class="fragment">Transitions</li>
-							<li class="fragment">Custom Javascript Events</li>
-							<li class="fragment">Embedding Code</li>
-							<li class="fragment">Internal Linking</li>							
-							<li class="fragment">Fragmented Views</li>														
-							<li class="fragment">Exporting</li>														
-						</ol>
-					</section>
-					<section id="transitions">
-						<h2>Transition Styles</h2>
-						<p>
-							You can select from different transitions, like: <br>
-							<a href="?transition=cube#/transitions">Cube</a> -
-							<a href="?transition=page#/transitions">Page</a> -
-							<a href="?transition=concave#/transitions">Concave</a> -
-							<a href="?transition=zoom#/transitions">Zoom</a> -
-							<a href="?transition=linear#/transitions">Linear</a> -
-							<a href="?transition=none#/transitions">None</a> -
-							<a href="?#/transitions">Default</a>
-						</p>
-					</section>
-					<section data-state="customevent">
-						<h2>Custom Events</h2>
-						<p>
-							Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-						</p>
-						<pre><code contenteditable style="font-size: 18px; margin-top: 20px;">Reveal.addEventListener( 'customevent', function() {
-		console.log( '"customevent" has fired' );
-	} );
-						</code></pre>
-					</section>
-					<section>
-						<h2>Pretty Code</h2>
-						<pre><code contenteditable>
-	function linkify( selector ) {
-	  if( supports3DTransforms ) {
+                </section>
+                <section>
+                    <h2>
+                        MIME-Types
+                    </h2>
+                        <p>
+                            Der Internet Media Type, auch MIME-Type (<strong>M</strong>ultipurpose <strong>I</strong>nternet <strong>M</strong>ail <strong>E</strong>xtension) 
+                            oder Content-Type (nach dem Namen des Feldes), klassifiziert die Daten im Rumpf einer Nachricht im Internet. Wie im MIME-Standard erläutert, wird 
+                            z. B. bei einer HTTP-Übertragung einem Browser mitgeteilt, welche Daten der Webserver sendet                            
+                        </p>
+                        <p>
+                            <small>Quelle: <a href="http://de.wikipedia.org/wiki/Internet_Media_Type">http://de.wikipedia.org/wiki/Internet_Media_Type</a> (04.12.2012)</small>        
+                        </p>
+                </section>
+                <section>
+                    <h2>
+                        MIME-Types
+                    </h2>
+                    <ul>
+                        <li>application/pdf</li>
+                        <li>audio/mp3</li>
+                        <li>image/jpeg</li>
+                        <li>text/html</li>
+                        <li>video/mpeg</li>
+                    </ul>
+                </section>
+                <section data-state="whiteBackground fullscreenImage" style="background-image: url(images/roussel_lesemaschine.jpg)">
+                            <p class="bu">Roussels Lesemaschine</p>
+                            <p class="quelle" style="color: black">
+                               Quelle: <a href="http://www.khm.de/~flw/lexikon/25.html">http://www.khm.de/~flw/lexikon/25.html</a> (04.12.2012)
+                            </p>
+                </section>
+                <section data-state="fullscreenImage" style="background-image: url(images/buecherrad_ramelli.jpg)" >
+                            <p class="bu">Buecherrad von Agostino Ramelli (16. Jahrhundert)</p>
+                            <p class="quelle">
+                               Quelle: <a href="http://de.wikipedia.org/wiki/Ramellis_Bücherrad">http://de.wikipedia.org/wiki/Ramellis_Bücherrad</a> (04.12.2012)
+                            </p>
+                </section>
+                <section data-state="fullscreenImage" style="background-image: url(images/erste_website.png)" >
+                    <p class="bu fragment" style="width: 720px;">Die erste Website, verfasst und veröffentlicht von Tim Berners-Lee am 13. November 1990 auf einem NeXT-Rechner</p>
+                    <p class="quelle">
+                        Quelle: <a href="http://www.w3.org/History/19921103-hypertext/hypertext/WWW/TheProject.html">http://www.w3.org/History/19921103-hypertext/hypertext/WWW/TheProject.html</a> (04.12.2012)
+                    </p>
+         
+                </section>
+                <section>
+                    <h2>
+                        Das Web ist ein <strong>Hypertext</strong>-Informationssystem
+                    </h2>
+                    <blockquote>
+                        Hypertext ermöglicht es Ihnen, Texte und visuelle Informationen auf nicht lineare 
+                        Weise zu lesen und durch sie zu navigieren, indem sie das auswählen, 
+                        was Sie als nächstes wissen wollen.
+                    </blockquote>
+                    <p>
+                        <small>Quelle: Lemay, Laura; Tyler, Denise: HTML 4 in 21 Tagen, 1. Aufl.,  Markt+Technik, 2000, S. 15</small>
+                    </p>
+                </section>
+                <section>
+                    <h2>
+                        HTML - <strong>H</strong>yper<strong>t</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage
+                    </h2>
+                    <blockquote>
+                        Die Hypertext Markup Language (deutsch: Hypertext-Auszeichnungssprache) 
+                        ist eine textbasierte Auszeichnungssprache zur Strukturierung von Inhalten 
+                        wie Texten, Bildern und Hyperlinks in Dokumenten. HTML-Dokumente sind die Grundlage 
+                        des World Wide Web und werden von einem Webbrowser dargestellt.
+                    </blockquote>
+                    <p>
+                        <small>Quelle: <a href="http://de.wikipedia.org/wiki/Hypertext_Markup_Language">http://de.wikipedia.org/wiki/Hypertext_Markup_Language</a> (04.12.2012)</small>
+                    </p>
 
-	    var nodes = document.querySelectorAll( selector );
+                </section>
+                <section data-state="nobackground">
+                    <div style="text-align: center">
+                        
+                        <embed type="image/svg+xml" src="images/sgml.svg"/>
+                        <embed style="position:absolute; top: 16px; left: 285px"type="image/svg+xml" src="images/xml.svg"/>
+                        <embed style="margin-top:-10px" type="image/svg+xml" src="images/dtd.svg"/>
+                        <embed  style="margin-top:-10px" type="image/svg+xml" src="images/auszeichnungssprachen.svg"/>
+                    </div>
 
-	    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-	      var node = nodes[i];
+                </section>
 
-	      if( !node.className ) ) {
-	        node.className += ' roll';
-	      }
-	    };
-	  }
-	}
-						</code></pre>
-						<p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-					</section>
-					<section>
-						<h2>Intergalactic Interconnections</h2>
-						<p>
-							You can link between slides internally,
-							<a href="#/2/3">like this</a>.
-						</p>
-					</section>
-					<section>
-						<h2>Fragmented Views</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<ol>
-							<li class="fragment"><code>any type</code></li>
-							<li class="fragment"><em>of view</em></li>
-							<li class="fragment"><strong>fragments</strong></li>
-						</ol>
-					</section>
-					<section>
-						<h2>Export to PDF</h2>
-						<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, below is an example that's been uploaded to SlideShare.</p>
-						<iframe id="slideshare" src="http://www.slideshare.net/slideshow/embed_code/13872948" width="455" height="306" style="margin:0;overflow:hidden;border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:0px" allowfullscreen> </iframe>
-						<script>
-							document.getElementById('slideshare').attributeName = 'allowfullscreen';
-						</script>
-					</section>
-					<section>
-						<h2>Further Information</h2>
-						<p>
-							On Github<br/>
-							<a href="https://github.com/hakimel/reveal.js">https://github.com/hakimel/reveal.js</a>
-						</p>
-					</section>						
-				</section>
+                <section>
+                    <h2>
+                        Protokoll
+                    </h2>
+                    
+                    <blockquote class="fragment">
+                            Ein Protokoll ist ein Satz von Regeln, nach denen Daten zwischen 
+                            Computern bzw. Prozessen ausgetauscht werden, die durch ein Netzwerk 
+                            miteinander verbunden sind.    
+                    </blockquote>
+                </section>
+                <section>
+                    <h2>
+                        Dienst
+                    </h2>
+                    
+                    <blockquote class="fragment">
+                        Ein Dienst ist eine Funktion, die von einem Rechner anderen Teilnehmern 
+                        in einem Computernetzwerk bereitgestellt wird
+                    </blockquote>
+                </section>
+                <section>
+                    <h2>
+                        Format
+                    </h2>
+                    
+                    <blockquote class="fragment">
+                        Ein Format ist eine oft standardisierte Beschreibung, 
+                        wie Informationen in einer Datei gespeichert werden.
+                    </blockquote>
+                </section>
+
+                <section>
+                    <h2>
+                        <strong>Wer</strong> von Ihnen nutzt:
+                    </h2>
+                    <ul class="kaestchen">
+                        <li class="fragment">World Wide Web</li>
+                        <li class="fragment">Pinterest</li>
+                        <li class="fragment">Skype</li>
+                        <li class="fragment">Twitter</li>
+                        <li class="fragment">ICQ</li>
+                        <li class="fragment">Instagram</li>
+                        <li class="fragment">Facebook</li>
+                        <li class="fragment">Flickr</li>
+                        <li class="fragment">YouTube</li>
+                        <li class="fragment">Xing</li>
+                        <li class="fragment">Online Banking</li>
+                        <li class="fragment">Amazon</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>
+                        Was sind die Vor- und Nachteile von Web-basierten Anwendungen?
+                    </h2>
+                    <div class="fragment" style="float: left !important; margin-right: 70px;">
+                        <h3>Vorteile</h3>
+                        <ul>
+                            <li>Aktualisierbarkeit</li>
+                            <li>Zugänglichkeit</li>
+                            <li>Kostenstruktur</li>
+                            <li>Plattformunabhängigkeit</li>
+                            <li>Frei von Redundanzen</li>
+                            <li>Personalisierbarkeit</li>
+                            <li>Weniger Medienbrüche</li>
+                            <li>Messbarkeit</li>
+                        </ul>
+                    </div>
+                    <div class="fragment">
+                        <h3>
+                            Nachteile
+                        </h3>
+                        <ul>
+                            <li>Keine Haptik</li>
+                            <li>Technisches Equipment erforderlich</li>
+                            <li>Sicherheit (gläserner User)</li>
+                            <li>Interaktivität/Geschwindgkeit</li>
+                        </ul>
+                    </div>
+                </section>
+                <section data-state="fullscreenImage" style="background-image: url(images/bill_gates.jpg)">
+                    <blockquote style= "max-width: 400px; position: absolute; top: 80px; left: 100px;">
+                        Das Internet ist nur ein Hype
+                    </blockquote>
+                    <p class="quelle">
+                        Quelle: <a href="http://www.thirdage.com">http://www.thirdage.com</a> (04.12.2012)
+
+                    </p>
+                </section>
+
+            
 			</div>
+
 		</div>
 
 		<script src="../revealjs-template/lib/js/head.min.js"></script>
 		<script src="../revealjs-template/js/reveal.min.js"></script>
-		<script src="../revealjs-template/js/wba.js"></script>
-		<script>
 
+		<script>
 			// Full list of configuration options available here:
 			// https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
@@ -301,6 +434,5 @@
 			});
 
 		</script>
-
 	</body>
 </html>
