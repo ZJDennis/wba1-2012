@@ -120,6 +120,12 @@
 		{
 			"title" : "JavaScript Frameworks - jQuery",
 			"authors" : ["Julian Schöbel", "Patrick Czajor"]
+		},
+
+		"2013-01-10-klausuraufgaben/index.html":
+		{
+			"title" : "Klausuraufgaben",
+			"authors" : ["Christian Noss"]
 		}
 
 	}
