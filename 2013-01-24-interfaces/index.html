@@ -84,27 +84,39 @@
 						</li>
 						<li class="fragment"><a href="#/3">Begriffe</a></li>
 						<li class="fragment"><a href="#/4">Datenaustausch</a></li>
-						<!--li class="fragment"><a href="#/5">REST</a></li>
-                                                <li class="fragment"><a href="#/5">JSON</a></li>
-						<li class="fragment"><a href="#/6">Preview</a></li-->
+						<li class="fragment"><a href="#/5">Ausblicke</a></li>
 					</ul>
 				</section>
                                 
                                 <!-- Seite 2 HTTP -->
                                 <section>
-                                    <h2>Datenformate</h2>
+                                    <h2><a href="#/2">Datenformate</a></h2>
                                     <section>
                                         
                                         <ul>
-                                            <li class="fragment">XML</li>
-                                            <li class="fragment">SOAP</li>
-                                            <li class="fragment">YAML</li>
-                                            <li class="fragment">JSON</li>
+                                            <li class="fragment"><a  href="#/2/1">XML</a></li>
+                                            <li class="fragment"><a  href="#/2/5">SOAP</a></li>
+                                            <li class="fragment"><a  href="#/2/7">YAML</a></li>
+                                            <li class="fragment"><a  href="#/2/9">JSON</a></li>
                                         </ul>
                                     </section>
                                     <section>
-                                         <h4>XML</h4>
-                                        <svg width="640" height="540" xmlns="http://www.w3.org/2000/svg">
+                                        <h4>XML Extensible Markup Language</h4>
+                                        <pre>
+Das erste Donnergrollen kam von den XML Entwicklern über ihre Pläne SGML zu vereinfachen. 
+Diese Leute sagten, sie brauchten eine einfache Form von SGML 
+die über das Web geliefert werden könnte. "SGML ist zu komplex für solch eine Aufgabe",
+sagten sie, "und diePerformance würde ein Problem sein
+außer wir könnten einige der unangenehmen Eigenschaften von SGML abstreifen".
+Ihre Vision war die Leute dazu zu bringen, SGML weiter zu benutzen für komplexe Dokumente,
+dann diese auszuliefern im Ganzen als XML über das Web. 
+Die erklärte Absicht war nicht, SGML zu ersetzen, aber es zu erweitern.
+                                        </pre>
+                                        <p> <a href="http://books.google.de/books/about/Web_Services_Implementation_Guide.html?id=7HIT4pUBtuUC&redir_esc=y">Brian E. Travis</a></p>
+                                    </section>
+                                    <section>
+                                         <h4>XML Extensible Markup Language</h4>
+                                        <svg width="640" height="300" style="margin-top:-50px;margin-left:-140px" xmlns="http://www.w3.org/2000/svg">
  <defs>
   <linearGradient id="svg_20" x1="0" y1="0" x2="1" y2="1">
    <stop offset="0" stop-color="#ffaaff"/>
@@ -127,10 +139,11 @@
   <text fill="#000000" stroke-width="0" x="306" y="269" id="svg_90" font-size="24" font-family="serif" text-anchor="middle" xml:space="preserve">XHTML</text>
  </g>
 </svg>
+<p>XML ist eine Untermenge von SGML</p>
                                     </section>
-                                    <section>
+                                     <section>
                                         
-                                        <h4>XML</h4>
+                                        <h4>XML Extensible Markup Language</h4>
                                         
                                         <pre class="fragment">
                                                 <code contenteditable>
@@ -139,35 +152,83 @@
 &lt;note&gt;
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;to&gt;Tove&lt;/to&gt;
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;from&gt;Jani&lt;/from&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;heading&gt;Reminder&lt;/heading&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;heading type=&quot;text&quot;&gt;Reminder&lt;/heading&gt;
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt;Don't forget me this weekend!&lt;/body&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;gotit yes=&quot;true&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;gotit yes=&quot;true&quot; /&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;foobar /&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;Foobar /&gt;
 &lt;/note&gt;                                                 
                                             </code>
                                         </pre>
                                         <small><a href="http://www.uzi-web.de/xml/xml_toc.htm">http://www.uzi-web.de/xml/xml_toc.htm</a></small>
                                     </section>
                                     <section>
-                                        <h4>SOAP</h4>
-                                        <pre class="fragment">
+                                        <h4>XML Extensible Markup Language</h4>
+                                        <ul>
+                                            <li class="fragment">Elemente m&uuml;ssen geschlossen werden <span class="pink">&lt;p&gt;&lt;/p&gt;</span></li>
+                                            <li class="fragment">Leere Elemente m&uuml;ssen geschlossen werden <span class="pink">&lt;p /&gt</span></li>
+                                            <li class="fragment">Attribute sind Case Sensitive <span class="pink">&lt;Br /&gt != &lt;br /&gt</span></li>
+                                            <li class="fragment">Attributwerte zwingend in Anf&uuml;hrungszeichen <span class="pink">Count=1</span></li>
+                                            <li class="fragment">XML Deklaration muss vorhanden sein</li>
+                                            <li class="fragment">DTD ist optional</li>
+                                        </ul>
+                                    </section>
+                                   
+                                    <section>
+                                        <h4>SOAP Simple Object Access Protokoll</h4>
+                                        <ul>
+                                            <li class="fragment">Untermenge von XML</li>
+                                            <li class="fragment">Envelope und Body zwingend</li>
+                                            <li class="fragment">Head optional</li>
+                                            <li class="fragment">Envelope Namespace http://www.w3.org/2001/12/soap-envelope</li>
+                                            <li class="fragment">Qualified Namespaced Elemente im Body</li>
+                                        </ul>
+                                    </section>
+                                    <section>
+                                        <h4>SOAP Simple Object Access Protokoll</h4>
+                                        <pre>
                                             <code contenteditable>
 &lt;?xml version=&quot;1.0&quot;?&gt;
 &lt;soap:Envelope
-xmlns:soap=&quot;http://www.w3.org/2001/12/soap-envelope&quot;
-soap:encodingStyle=&quot;http://www.w3.org/2001/12/soap-encoding&quot;&gt;
-
-&lt;soap:Body&gt;
-  &lt;m:GetPrice xmlns:m=&quot;http://www.w3schools.com/prices&quot;&gt;
-    &lt;m:Item&gt;Apples&lt;/m:Item&gt;
-  &lt;/m:GetPrice&gt;
-&lt;/soap:Body&gt;
-
+  xmlns:soap=&quot;http://www.w3.org/2001/12/soap-envelope&quot;
+  soap:encodingStyle=&quot;http://www.w3.org/2001/12/soap-encoding&quot;&gt;
+    &lt;soap:Body&gt;
+      &lt;m:GetPrice xmlns:m=&quot;http://www.xyz.com/buecher&quot;&gt;
+        &lt;m:Item&gt;Apples&lt;/m:Item&gt;
+      &lt;/m:GetPrice&gt;
+    &lt;/soap:Body&gt;
 &lt;/soap:Envelope&gt;                                                    
                                             </code>
                                         </pre>
+                                        <small><a href="http://www.w3.org/TR/soap/">http://www.w3.org/TR/soap/</a></small>
                                     </section>
                                     <section>
-                                        <h4>YAML obermenge von JSON</h4>
+                                        <h4><a href="#/2">YAML Ain't Markup Language</a></h4>
+                                        <pre class="fragment">
+                                                <code contenteditable>
+# Kommentar
+--- Neuer Abschnitt
+  - Punkt 1
+  - Punkt 2
+  - Punkt 3
+--- Abschnitt
+  - ['Punkt 1','Punkt 2']
+                                                </code>
+                                        </pre>
+                                    </section>
+                                    <section>
+                                        <h4><a href="#/2">YAML Ain't Markup Language</a></h4>
+                                        <ul>
+											<li class="fragment">Annahme: Alle Daten k&ouml;nnen mit Skalaren, Arrays und<br>
+											assoziativen Arrays ausgedr&uuml;ckt werden.</li>
+											<li class="fragment">Lehnt an den Strukturen von Python und Ruby an</li>
+                                            <li class="fragment">Nicht typisiert</li>
+											<li class="fragment">Problematik: CRLF,LF,NL</li>
+                                        </ul>
+                                    </section>
+                                    
+                                    <section>
+                                        <h4><a href="#/2">YAML Ain't Markup Language</a></h4>
                                         <pre class="fragment">
                                                 <code contenteditable>
 # access-points: contains an entry for every access-point.
@@ -188,23 +249,24 @@ access-points:
                                             </pre>
                                     </section>
                                     <section>
-                                        <h4>JSON JavaScript Object Notation</h4>
+                                        <h4><a href="#/2">JSON JavaScript Object Notation</a></h4>
                                         <ul>
-                                            <li class="fragment">Untermenge von YAML</li>
+                                            <li class="fragment">Untermenge von YAML ( valides YAML Dokument )</li>
                                             <li class="fragment">Typisiert</li>
                                             <li class="fragment">Wird von JS als Object angesehen ( eval() )</li>
-                                            <li class="fragment">VORSICHT! Eval() ist Evil ;-)</li>
-                                            <li class="fragment">Weniger Overhead</li>
+                                            <li class="fragment"><span class="pink">ABER VORSICHT! Eval() ist Evil ;-)</span></li>
+                                            <li class="fragment">Weniger Overhead als XML</li>
+                                            <li class="fragment">Mime-Type: application/json</li>
                                         </ul>
                                     </section>
                                     <section>
-                                        <h4>JSON</h4>
+                                        <h4><a href="#/2">JSON</a></h4>
                                         <pre class="fragment">
-                                                <code contenteditable>
+                                                <code contenteditable> // Z.B. Als Variable var json = {};
 {
   "Herausgeber": "Xema",
   "Nummer": "1234-5678-9012-3456",
-  "Deckung": 2e+6,
+  "Deckung": 2.6,
   "Währung": "EURO",
   "Inhaber": {
     "Name": "Mustermann",
@@ -225,51 +287,48 @@ access-points:
                                     <section>
                                         
                                         <ul>
-                                            <li class="fragment">statefull</li>
-                                            <li class="fragment">stateless</li>
-                                            <li class="fragment">sync</li>
-                                            <li class="fragment">async</li>
+                                            <li class="fragment">stateful / stateless</li>
+                                            <li class="fragment">sync / async</li>
                                             <li class="fragment">Resource</li>
+                                            <li class="fragment">Representation</li>
                                         </ul>
                                     </section>
                                     <section>
-                                        <span class="pink">Stateful</span>
-                                            <p class="fragment">Unter einer Stateful Verbindung versteht man, dass eine Verbindung zum Server st&auml;ndig aufrecht erhalten wird, sodass der Server
+                                        <p class="pink"><a href="#/2">stateful / stateless</a></p>
+                                            <p class="fragment">Unter einer <span class="pink">Stateful</span> Verbindung versteht man, dass eine Verbindung zum Server st&auml;ndig aufrecht erhalten wird, sodass der Server
                                             den Client ebenfalls erreichen kann.</p>
-                                    </section>
-                                    <section>
-                                        <span class="pink">Stateless</span>
-                                            <p class="fragment">Unter einer "Stateless" Verbindung versteht man, dass eine Verbindung zu einem Server nur f&uuml;r eine Aufgabe aufgebaut, und danach
+                                            <br>
+                                            <p class="fragment">Unter einer <span class="pink">Stateless</span> Verbindung versteht man, dass eine Verbindung zu einem Server nur f&uuml;r eine Aufgabe aufgebaut, und danach
                                             sofort wieder beendet wird.</p>
+                                            <br>
+                                            <p class="fragment">Was ist mit HTTP?</p>
                                     </section>
                                     <section>
-                                        <span class="pink">Synchron</span>
+                                        <p class="pink">sync / async ( siehe AJAX )</p>
                                             <p class="fragment">Ein synchrones Laden einzelner Resourcen sagt aus, dass eine Resource immer erst vollständig geladen wird, 
                                                 bevor mit dem Script fortgefahren wird.</p>
-                                    </section>
-                                    <section>
-                                        <span class="pink">Asynchron</span>
-                                            <p class="fragment">Ein synchrones Laden einzelner Resourcen sagt aus, dass die Resourcen parallel geladen werden.</p>
+                                            <br>
+                                            <p class="fragment">Ein asynchrones Laden einzelner Resourcen sagt aus, dass die Resourcen parallel geladen werden.</p>
+                                            <br>
+                                            <p class="fragment">Achtung! Hierbei "synchron" != Gleichzeitig</p>
                                     </section>
                                     <section>
                                         <span class="pink">Resource</span>
                                             <p class="fragment">Alles, was aus Sicht des Entwicklers eine eindeutige Identifizierung verdient!<br><br>
                                             Stichwort: URI</p>
-                                    </section>
-                                    <section>
-                                        <p class="pink">Beispiele</p>
                                             <ul>
                                                 <li class="fragment">http://localhost/index.html</li>
                                                 <li class="fragment">http://localhost/index.php</li>
-                                                <li class="fragment">http://localhost/foo/bar</li>
+                                                <li class="fragment">http://localhost/foo/bar/</li>
                                                 <li class="fragment">http://localhost/foo/bar.php?site=zwei</li>
                                             </ul>
-                                            <p class="fragment">Frage: Header?? ( Accept: text/html,application/xhtml+xml,application/xml )</p>
                                     </section>
                                     <section>
                                         <span class="pink">Representation</span>
                                             <p class="fragment">Schwierig :-)</p>
                                             <p class="fragment">Stumpf gesagt: Format.... Oder?!?</p>
+                                            <p class="fragment">Frage: Header??</p>
+                                            <p class="fragment">Accept: text/html<br>Accept: application/xhtml+xml<br>Accept: application/xml</p>
                                     </section>
                                 </section>
 				<section>
@@ -277,8 +336,8 @@ access-points:
 					<section>
 						
 						<ul>
-                                                    <li class="fragment">Connection Types</li>
-                                                    <li class="fragment">Requests</li>
+                                                    <li class="fragment">REST / CRUD</li>
+                                                    <li class="fragment">Request Aufbau</li>
                                                     <li class="fragment">GET</li>
                                                     <li class="fragment">POST</li>
                                                     <li class="fragment">PUT</li>
@@ -287,17 +346,34 @@ access-points:
 						</ul>
 					</section>
                                         <section>
-                                            <h4><a href="#/2">Connection Types</a></h4>
-                                            
-                                                                                       
-                                            <em>HTTP nur pseudo statefull</em>
-                                        </section>
+						<h4><a href="#/4">REST / CRUD</a></h4>
+						<p class="fragment">REST: Representational State Transfer</p>
+                                                <p class="fragment">Erstmals von Roy Fielding in seiner Dissertation beschrieben.</p>
+                                                <p class="fragment">Kein W3C oder sonstiger Standard</p>
+                                                <br>
+                                                <p class="fragment">CRUD: Create,Read,Update,Delete</p>
+                                                <p class="fragment">Kommt von generellen Datenbankoperationen</p>
+                                                <p class="fragment">In diesem Kontext: Read, Put, Post, Delete ( HTTP Methoden )</p>
+					</section>
+                                        <section>
+						<h4><a href="#/4">REST</a></h4>
+                                                    <p class="fragment">Die Kommunikation erfolgt auf Abruf. Der Client ist aktiv und fordert vom passiven Server eine Repräsentation an, bzw. modifiziert eine Resource. <span class="pink">Stateless</span></p>
+                                                    <br>
+                                                    <p class="fragment">Resourcen,besitzen eine ihnen zugeordnete URI, mit der sie adressiert werden können. </p>
+                                                    <br>
+                                                    <p class="fragment">Die Representation einer Resource kann als Dokument vom Client angefordert werden.<span class="pink">Puuuuuhhhh...Dokument?</span></section>
+                                        <section>
+						<h4><a href="#/4">REST</a></h4>
+                                                    <p class="fragment">Repräsentationen können auf weitere Resourcen verweisen, die ihrerseits wieder Repräsentationen liefern, die wiederum auf Resourcen verweisen können.</p>
+                                                    <br>
+                                                    <p class="fragment">Der Server verfolgt keinen Clientstatus. Jede Anfrage an den Server muss alle Informationen beinhalten, die zum Interpretieren der Anfrage notwendig sind.</p>
+                                                    <br>
+                                                    <p class="fragment">Caches werden unterstützt. Der Server kann seine Antwort als Cache fähig oder nicht Cache fähig kennzeichnen.</p>
+					</section>
 					<section>
-                                            <h4><a href="#/2">Requests</a></h4>
-                                            
+                                            <h4><a href="#/4">Request Aufbau</a></h4>
                                             <pre class="fragment">
-                                                <code contenteditable>
-// Beispiel JavaScript 
+                                                <code contenteditable>// Beispiel JavaScript 
 
 var client = new XMLHttpRequest();
 client.open('GET','preis.php', false);
@@ -309,188 +385,56 @@ client.send(null);
                                                 </code>
                                             </pre>
                                             <small><small>IE &#60; 7 au&szlig;en vor gelassen!</small></small>
-                                                
 					</section>
 					<section>
 						<h4><a href="#/2">GET</a></h4>
+                                                <p class="fragment">Zum lesen einer Resource</p>
+                                                <br>
+                                                <p class="fragment">Nachteil</p>
 						<ul>
-						<li class="fragment">Gebrauch
-						<ul>
-							<li class="fragment">Wird gebraucht um eine Resource abzurufen.</li>
+							<li class="fragment">Maximale L&auml;nge begrenzt</li>
+                            <li class="fragment">Sichtbarkeit in Addressleiste</li>
 						</ul>
-                                                    </li>
-						<li class="fragment">Nachteile
-						<ul>
-							<li class="fragment">maximale L&auml;nge begrenzt</li>
-                                                        <li class="fragment">Sichtbarkeit in Addressleiste</li>
-						</ul>
-                                                    </li>
-						</ul>
+                                                    
 					</section>
-                                        <section>
-                                            <h4><a href="#/2">GET</a></h4>
-                                            <p>Beispiel</p>
-                                            <pre>
-                                                <code contenteditable>
-$.get(blub);
-                                                </code>
-                                            </pre>
-                                        </section>
-                                        <section>
-                                            <h4><a href="#/2">GET</a></h4>
-                                            <p>Response</p>
-                                        </section>
-					<section>
+                                     	<section>
                                             <h4><a href="#/2">POST</a></h4>
                                             <ul>
-						<li class="fragment">Vorteile
+						<li class="fragment">Why
                                                     <ul>
                                                         <li class="fragment">bliblablub</li>
-                                                    </ul>
-                                                </li>
-                                                <li class="fragment">Nachteile
-                                                    <ul>
-                                                        <li class="fragment">viele</li>
                                                     </ul>
                                                 </li>
                                             </ul>
 					</section>
                                         <section>
-                                            <h4><a href="#/2">POST</a></h4>
-                                            <p>Beispiel</p>
+                                            <h4><a href="#/2">PUT</a></h4>
+                                            <p>Why</p>
 					</section>
                                         <section>
                                             <h4><a href="#/2">PUT</a></h4>
-                                            <p>Response</p>
+                                            <p>Why</p>
 					</section>
                                         <section>
                                             <h4><a href="#/2">DELETE</a></h4>
+                                            <p>Why</p>
                                         </section>
 					
 					<section>
 						<h4><a href="#/2">Status Codes</a></h4>
                                                 <ul>
-                                                <li>1</li>
-                                                <li>2</li>
-                                                <li>3</li>
-                                                <li>4</li>
+                                                <li>200 oki</li>
+                                                <li>400 bad</li>
+                                                <li>300 redirect</li>
+                                                <li>500 öhm</li>
                                                 </ul>
-					</section>
-					<section>
-                                            <br>
-						Further Requests comming soon
-					</section>
-				</section>
-				<section>
-					<h2>JSON</h2>
-					<section>
-						<p class="fragment">
-							<span class="pink">J</span>ava
-							<span class="pink">S</span>cript&nbsp;
-							<span class="pink">O</span>bject&nbsp;
-							<span class="pink">N</span>otation
-						</p>
-					</section>
-                                        <section>
-                                            <h4><a href="#/3">Was ist JSON?</a></h4>
-                                            Die Javascript Object Notation ist im Grunde genommen nichts weiteres als ein assoziatives Array.<br>
-                                            Also quasi ein ein Array aus Key => Value Paaren. Dieses Array kann allerdings von Javascript<br>
-                                            als Object interpretiert werden.
-					</section>
-                                        <section>
-                                            <h4><a href="#/3">Bestandteile JSON String</a></h4>
-                                            Um einen JSON String zu erstellen reicht eine Variable Deklaration in Javascript aus.
-                                            <code>var x = {};</code>
-                                            
-					</section>
-					<section>
-                                            <h4><a href="#/3">Erstellen von JSON</a></h4>
-                                            Um einen JSON String zu erstellen reicht eine Variable Deklaration in Javascript aus.
-                                            <code>var x = {};</code>
-                                            
-					</section>
-					<section>
-                                            <h4><a href="#/3">Typisierung</a></h4>
-                                            Key = ""
-                                            Value = Number,String, Array, Object
-					</section>
-					<section>
-                                            <h4><a href="#/3">Validit&auml;t</a></h4>
-					</section>
-					<section>
-                                            <h4><a href="#/3">JSON Header</a></h4>
-					</section>
-				</section>
-				<section>
-					<h2>REST</h2>
-					<section>
-						<p class="fragment">
-							<span class="pink">Re</span>presentational&nbsp;
-							<span class="pink">S</span>tate&nbsp;
-							<span class="pink">T</span>ransfer
-						</p>
-					</section>
-					<section>
-                                            <h4><a href="#/4">Meaning</a></h4>
-					</section>
-					<section>
-                                            <h4><a href="#/4">get/post</a></h4>
-					</section>
-					<section>
-                                            <h4><a href="#/4">Response</a></h4>
-					</section>
-				</section>
-				<section>
-					<h2>SOAP</h2>
-					<section>
-						<p class="fragment">
-							<span class="pink">S</span>imple&nbsp;
-							<span class="pink">O</span>bject&nbsp;
-							<span class="pink">A</span>ccess&nbsp;
-							<span class="pink">P</span>rotokoll
-						</p>
-					</section>
-					<section>
-                                            <h4><a href="#/5">Syntax</a></h4>
-					</section>
-					<section>
-                                            <h4><a href="#/5">Envelope</a></h4>
-					</section>
-					<section>
-                                            <h4><a href="#/5">Access</a></h4>
-					</section>
-				</section>
-				<section>
-					<h2>XML</h2>
-					<section>
-						<p class="fragment">
-							<span class="pink">X</span>tensible&nbsp;
-							<span class="pink">M</span>arkup&nbsp;
-							<span class="pink">L</span>anguage&nbsp;
-						</p>
-					</section>
-					<section>
-                                            <h4><a href="#/6">Beschreibung / History / SGML</a></h4>
-					</section>
-					<section>
-                                            <h4><a href="#/6">Aufbau</a></h4>
-                                            Case Sensitive
-					</section>
-					<section>
-                                            <h4><a href="#/6">Datum</a></h4>
-					</section>
-					<section>
-                                            <h4><a href="#/6">Content</a></h4>
-					</section>
-					<section>
-                                            <h4><a href="#/6">Style / XLS</a></h4>
 					</section>
 				</section>
 				<section>
 					<h2>Ausblick</h2>
 					<section>
 						<p class="fragment">
-							Stateful Web Services <small><small>http://www.google.com/patents/US20080104520</small></small><br>
+							Stateful Web Services <br>
                                                         Bidirectional Web Services <br>
 							Servlets / JSP<br>
 							Parallel AJAX
@@ -505,7 +449,8 @@ $.get(blub);
                                                 rfc 6455
 						</section>
 						<section>
-						Was sind Servlets / JSP?
+						Was sind Servlets / JSP?<br>
+                                                Chrome nativ?
 						</section>
 						<section>
 						Was meint Paralleles Ajax?
