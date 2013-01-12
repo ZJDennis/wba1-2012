@@ -120,6 +120,11 @@
 		{
 			"title" : "JavaScript Frameworks - jQuery",
 			"authors" : ["Julian Schöbel", "Patrick Czajor"]
+		},
+		"2013-01-24-interfaces/index.html":
+		{
+			"title" : "Datenformate und Schnittstellen",
+			"authors" : ["Oliver van der Bürie","Derya Ergül"]
 		}
 
 	}
