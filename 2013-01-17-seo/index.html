@@ -199,34 +199,49 @@
                             <li>Voll mit Keywords</li>
                             </ul>
                 </section>
-                
-                <section>
-                    <h1>Bildersitemap??</h1>
-                    TODO
-                </section>
 
 				<section>
-					<h1>Crawler steuern</h1>
+					<h1>Crawler steuern: <strong>Anker-Tags</strong></h1>
 					<ul>
-						<li>&lt;a href="/mitarbeiter.html" rel="nofollow"&gt;Mitarbeiter&lt;/a&gt;</li>
-						<li>&lt;meta name="robots" value="NOINDEX" /&gt;</li>
-						<li>/robots.txt</li>
+						<li>Links können Steuerbefehle für Suchmaschinen beinhalten</li>
+						<li>„nofollow“ verhindert das die Zieladresse indiziert wird</li>
 					</ul>
-				</section>
-				<section>
-					<h1>.htaccess</h1>
-					TODO
-				</section>
-
-				<section>
-					<h1>GET /robots.txt HTTP/1.1</h1>
-					TODO
+					<pre><code>&lt;nav&gt;
+	&lt;a href="/"&gt;Home&lt;/a&gt;
+	&lt;a href="/mitarbeiter.html" rel="nofollow"&gt;Mitarbeiter&lt;/a&gt;
+	&lt;a href="/kontakt.html"&gt;Kontakt&lt;/a&gt;
+	...</code></pre>
 				</section>
 
 				<section>
-                    <h1>TODO</h1>
-                    TODO
-                </section>
+					<h1>Crawler steuern: <strong>Meta-Tags</strong></h1>
+					<ul>
+						<li>Meta-Tag definiert Steuerbefehle Dokumentenweit</li>
+						<li>„noindex“ verhindert indexierung der aktuellen Seite</li>
+						<li>„nofollow“ legt Standard für Anker-Tags fest</li>
+						<li>Kann pro Anker-Tag überschrieben werden</li>
+					</ul>
+					<pre><code>&lt;head&gt;
+	&lt;meta name="robots" content="noindex, nofollow" /&gt;
+	...
+&lt;/head&gt;
+&lt;body&gt;
+	...
+	&lt;a href="/" rel="follow"&gt;Home&lt;/a&gt;
+	&lt;a href="/mitarbeiter.html"&gt;Mitarbeiter&lt;/a&gt;
+	&lt;a href="/kontakt.html" rel="follow"&gt;Kontakt&lt;/a&gt;</code></pre>
+				</section>
+
+				<section>
+					<h1>Crawler steuern: <strong>Robots Exclusion Protocol</strong></h1>
+					<ul>
+						<li>Text-Datei mit Regeln zur Suchmaschinen-Steuerung</li>
+						<li>Per Konvention wird der Pfad /robots.txt verwendet</li>
+					</ul>
+					<pre><code>User-agent: *
+Disallow: /mitarbeiter.html
+Disallow: /images/</code></pre>
+				</section>
 
                 <section>
                     <h1>Vielen Dank</h1>
