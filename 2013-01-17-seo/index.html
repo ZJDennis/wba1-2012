@@ -52,16 +52,24 @@
 				</section>
 
                 <section>
-                    <h1>Einführung</h1>
+                    <h1>
+                        SEO
+                    </h1>
                     <ul>
-                        <li>Grundlagen</li>                        
-                        <li>Website-Struktur verbessern</li>
-                        <li>Conten optimieren</li>
-                        <li>Umgang mit Crawlern</li>
-                        <li>SEO für Mobilegeräte</li>
-                        <li>Promotion und Analyze</li>
+                        <li>Onpage</li>
+                        <ul>
+                            <li>Einführung</li>
+                            <li>Content</li>
+                            <li>Struktur &amp; Semantik</li>
+                        </ul>
+                        <li>Offpage</li>
+                        <ul>
+                            <li>Tools zur Analyse</li>
+                            <li>Linkpartnerschaften</li>
+                            <li>Werbung</li>
+                        </ul>
                     </ul>
-                </section>
+				</section>
 				<section>
 					<h1>Wie funktioniert eine Suchmaschine?</h1>
 					<ul>
@@ -75,143 +83,122 @@
 							... und die semantische Bedeutung dessen:
 							<ul>
 								<li class="fragment">Bewertet die Wichtigkeit (&lt;title&gt;, &lt;h1&gt;, &lt;small&gt;, ...)</li>
-								<li class="fragment">Folgt links für eine weitere Indizierung (&lt;a&gt;, und &lt;area&gt;)</li>
-								<li class="fragment">Lädt Bilder runter (&lt;img&gt;, ...)</li>
+								<li class="fragment">Folgt links für eine weitere Indizierung (&lt;a&gt; und &lt;area&gt;)</li>
 							</ul>
 					</ul>
 				</section>
                 <section>
-                    <h1>Grundlagen</h1>
+                    <h1>Content: <strong>Grundlagen</strong></h1>
                     <ul>
-                         <li>Bewusstsein verschiedener Zielgruppen
+                        <li>Bewusstsein verschiedener Zielgruppen
                             <ul>
                                 <li>Neulinge</li>
                                 <li>Kenner</li>
                             </ul>
-                        </li>
-                        
+                        </li> 
+                         <li>Saubere Sprache</li>
+                         <li>Strukurierter Text</li>
                     </ul>
                 </section>
                 <section>
-                    <h1>Website-Struktur verbessern</h1>
+                    <h1>Content: <strong>Ankertext</strong></h1>
                     <ul>
-                    <li class="fragment">Titel-Tag</li>
-                    <li class="fragment">Meta-Tag "description"</li>
-                    <li class="fragment">Optimierte Benutzung von Bildern</li>
+                        <li>Kurz, aussagekräftig & zusammenhängend</li>
+                        <li>Selbst verfasst</li>
+                        <li>Sinnvolle interne Links für den Nutzer - nicht für Suchmaschienen!</li>
                     </ul>
                 </section>
                 <section>
-                    <h1>Titel</h1>
+                    <h1>Content: <strong>Don'ts</strong></h1>
+                    
+                            <ul>
+                                <li>Text in Bildern</li>
+                                <li>Wiederholender Inhalt</li>
+                                <li>Text für Suchmaschienen schreiben</li>
+                            </ul>
+                </section>
+                
+                <section>
+                    <h1>Struktur: <strong>Domainname &amp; URL</strong></h1>
                     <ul>
-                        <li>innerhalb des head-Tags</li>
-                        <li>erste Zeile der Suchergebnisse</li>
-                        <li>Suchwort=Titel=Fett</li>
+                    <li>Worte benutzen</li>
+                    <li>Einfache Verzeichnis-Struktur <a href="http://www.apple.com/de/iphone/from-the-app-store/">Beispiel</a></li>
+                    <li>Eine URL pro Dokument <a href="http://www.heise.de/newsticker/meldung/Oracle-patcht-kritische-Java-Luecke-1782915.html">Negativ Beispiel</a></li>
                     </ul>
                 </section>
                 <section>
-                    <h1>Titel</h1>
+                    <h1>Struktur: <strong>Titel-Tag</strong></h1>
                     <ul>
-                    <li>dos
+                        <li>Innerhalb des head-Tags</li>
+                         <li>Üblicherweiße ähnlich der &lt;h1&gt; </li>
+                        <li>Erste Zeile der Suchergebnisse</li>
+                    </ul>
+
+                    <pre><code>...
+&lt;head&gt;
+    &lt;title&gt;Achsen - Skateshop24&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Achsen&lt;/h1&gt;
+    ...</code></pre>
+                </section>
+                <section>
+                    <h1>Struktur: <strong>Titel-Dos</strong></h1>
                             <ul>
                             <li>Content der Seite beschreiben</li>
                             <li>Einen Titel für jede Seite</li>
                             <li>Kurz aber Aussagekräftig</li>
                             </ul>
-                        </li>
-                    </ul>
                 </section>
 
                 <section>
-                    <h1>Meta-Tag "description"</h1>
+                    <h1>Struktur: <strong>Meta-Tag</strong></h1>
                     <ul>
-                        <li>beschreibt die Seite</li>
+                        <li>"description" beschreibt die Seite</li>
                         <li>benutzt, falls kein sinnvoller Absastz vorhanden ist</li>
                     </ul>
+                <pre><code>... 
+&lt;head&gt;
+    &lt;title&gt;Achsen - Skateshop24&lt;/title&gt;
+    &lt;meta name="description" content="Auf Skateshop24 findest du rund um die Uhr eine riesige Auswahl an Achsen für dein Skateboard" /&gt;
+&lt;/head&gt;
+...</code></pre>
                 </section>
 
                 <section>
-                    <h1>Meta-Tag "description"</h1>
-                    <ul>
-                        <li>Dont's
+                    <h1>Struktur: <strong>Meta-Tag</strong>
+                    <strong style="background-color: #dd1166; -webkit-transform:rotate(10deg); display:inline-block; margin-left: -10px">
+                        Don'ts
+                    </strong>
+                    </h1>
                             <ul>
-                            <li>die ganze Seite reinkopieren</li>
-                            <li>mit Keywords vollstopfen</li>
+                            <li>Die ganze Seite reinkopieren</li>
+                            <li>Mit Keywords vollstopfen</li>
                             <li>Ständige Verwendung der selbem Description</li>
                             </ul>
-                        </li>
-                    </ul>
                 </section>
                 <section>
-                    <h1>Optimierte Benutzung von Bildern</h1>
+                    <h1>Struktur: <strong>Bilder</strong></h1>
                     <ul>
                         <li>Inhaltlich passende Titel - trotzdem kurz</li>
-                        <li>"alt" Atribut nutzen</li>
-                        <li>Ein Verzeichniss für alle Bilder</li>
-                        <li>gebräuchliche Formate</li>
+                        <li>"alt" Attribut nutzen</li>
+                        <li>Ein Verzeichnis für alle Bilder</li>
+                        <li>Gebräuchliche Formate</li>
                     </ul>
+                    <pre><code>&lt;img src="../images/Rollen57.jpg" alt="Rollen 57 - Bigfoot"/&gt;</code></pre>
                 </section>
                 
                 <section>
-                    <h1>Optimierte Benutzung von Bildern</h1>
-                    <ul>
-                        <li>don'ts
+                    <h1>Struktur: <strong>Bilder</strong>
+                    <strong style="background-color: #dd1166; -webkit-transform:rotate(10deg); display:inline-block; margin-left: -10px">
+                        Don'ts
+                    </strong></h1>
                             <ul>
-                            <li>lange Dateinamen</li>
-                            <li>lange Alt-Texte -- kann als Spam angesehen werden</li>
-                            <li>voll mit Keywords</li>
+                            <li>Standard Dateinamen</li>
+                            <li>Lange Alt-Texte - kann als Spam angesehen werden</li>
+                            <li>Voll mit Keywords</li>
                             </ul>
-                        </li>
-                    </ul>
                 </section>
-
-                <section>
-                    <h1>Navigation der Webseite vereinfachen</h1>
-                    TODO
-                </section>
-
-                <section>
-                    <h1>Guter Content</h1>
-                    <ul>
-                        <li>Bewusst sein, von unterschiedlichen Zielgruppen</li>
-                        <li>Guter Inhalt wird geteilt
-                            <ul>
-                                <li>foren</li>
-                                <li>blogs</li>
-                                <li>E-mail</li>
-                                <li>Social Media</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </section>
-
-                <section>
-                    <h1>Guter Content</h1>
-                    <ul>
-                        <li>dont's
-                            <ul>
-                                <li>Text in Bildern</li>
-                                <li>Unsaubere Sprache</li>
-                                <li>Unstrukurierter Text</li>
-                                <li>Wiederholender Inhalt</li>
-                                <li>Text für Suchmaschienen schreiben</li>
-                            </ul>
-                        </li>
-                        
-                    </ul>
-                </section>
-                
-                <section>
-                    <h1>Guter Content</h1>
-                    <h2>Passender Ankertext</h2>
-                    <ul>
-                        <li>Kurz, aussagekräftig & zusammenhängend</li>
-                        <li>Selbst verfasst</li>
-                        <li>Hervorhebung</li>
-                        <li>Sinnvolle interne Links für den Nutzer - nicht für Suchmaschienen!</li>
-                    </ul>
-                </section>
-                
-                
                 
                 <section>
                     <h1>Bildersitemap??</h1>
