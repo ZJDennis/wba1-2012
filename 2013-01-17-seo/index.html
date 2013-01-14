@@ -74,9 +74,9 @@
 					<h1>Wie funktioniert eine Suchmaschine?</h1>
 					<ul>
 						<li class="fragment">Versucht das surfverhalten der Nutzer nachzubilden</li>
-						<li class="fragment">Crawler rufen Seiten automatiert &amp; regelmäßig ab</li>
+						<li class="fragment"><span class="pink">Crawler</span> rufen Seiten automatiert &amp; regelmäßig ab</li>
 						<li class="fragment">
-							Der Indexierungsvorgang interpretiert das Markup ...<br/>
+							Der <span class="pink">Indexierungsvorgang</span> interpretiert das Markup ...<br/>
 							(Implementierung i.d.R. Geschäftsgeheimnis)
 						</li>
 						<li class="fragment">
@@ -185,9 +185,18 @@
                 </section>
                 <section>
                     <h1>Struktur: <strong>Semantische Auszeichnung</strong></h1>
-                    <ul>
-                        <li></li>
-                    </ul>
+	                <ul>
+		                <li>Verwendung von Überschriften, etc.</li>
+		                <li>Durchgängige Benutzung</li>
+		                <li>HTML5 schreibt nur eine H1-Überschrift vor</li>
+	                </ul>
+	                <pre><code>&lt;h1&gt;Achsen&lt;/h1&gt;
+    ...
+    &lt;strong&gt;Wichtig: ...&lt;/strong&gt;</code></pre>
+	                <small>statt</small>
+	                <pre><code>&lt;p class="header"&gt;Achsen&lt;/p&gt;
+    ...
+    &lt;b&gt;Wichtig???&lt;/b&gt;</code></pre>
                 </section>
                 <section>
                     <h1>Struktur: <strong>Bilder</strong></h1>
@@ -217,7 +226,17 @@
                     <h1>
                         Aufgaben
                     </h1>
+					<ul>
+						<li>TODO: Links</li>
+					</ul>
                 </section>
+
+				<section>
+					<h1>Crawler steuern: <strong>Grundlagen</strong></h1>
+					<ul>
+						<li>TODO: aus doku übernehmen</li>
+					</ul>
+				</section>
 
 				<section>
 					<h1>Crawler steuern: <strong>Anker-Tags</strong></h1>
