@@ -219,8 +219,83 @@ javascript: document.body.contentEditable = 'true'; document.designMode = 'on'; 
                 </section>
 
                 <section>
-                    <h3>Hashing/Salting</h3>
+                    <h3>Hash-Funktionen</h3>
+                    <ul>
+                        <li>Kryptographische Hash-Funktionen</li>
+                        <ul>
+                            <li>SHA256</li>
+                            <li>SHA512</li>
+                            <li>WHIRLPOOL</li>
+                            <li>...</li>
+                        </ul>
+                        <div class="fragment">
+                            <li>Vorteile</li>
+                            <ul>
+                                <li>"One-Way-Functions"</li>
+                                <li><pre>
+hallo = 598d4c200461b81522a3328565c25f7c
+hello = 5d41402abc4b2a76b9719d911017c592
+                                </pre></li>
+                                <li>Kollisionsresistent</li>
+                            </ul>
+                        </div>
+                    </ul>
+                </section>
+                
+                <section>
+                    <h3>Hash-Funktionen</h3>
+                    <ul>
+                        <li>Hintergrund:</li>
+                        <ul>
+                            <li>Passwort für Angreifer unbrauchbar machen</li>
+                            <li>Passwort wird nie gespeichert!</li>
+                            <li>Hashcode wird gespeichert, der keine Rückschlüsse auf Passwort erlauben (soll)</li>
+                        </ul>
+                        <div class="fragment">
+                            <li>Nachteile:</li>
+                            <ul>
+                                <li>Sicherheit heutzutage nicht mehr gegeben</li>
+                                <li>Riesige Datenbanken im <a href="http://crackstation.net/">Netz</a>, mit vorberechneten Hashes</li>
+                                <li>gleiche Hashwerte bei gleichem Passwort</li>
+                                <li>Lösung: <strong>Salting</strong></li>
+                            </ul>
+                        </div>
+                    </ul>
+                </section>
+                
+                <section>
+                    <h3>Salting</h3>
+                    <ul>
+                        
+                        <ul>
+                            <li>Salt = zufällige Zeichenkette</li>
+                            <li>Wird mit Passwort konkateniert</li>
+                            <li><pre>
+hallo + 565c25f7c = 3d8a60305864ca1300d4b67c58c82c94
+hallo + b9719d91f = 9fc0c1698b0cda1f3a2037e9723312ca
+                            </pre></li>
+                            <li>Wichtig:</li>
+                            <ul>
+                                <li>Ein Salt nur einmal benutzen!</li>
+                                <li>Salt sollte groß und zufällig sein!</li>                                
+                            </ul>
 
+                        </ul>
+                    </ul>
+                </section>
+                
+                <section>
+                    <h3>Salting: Speichern und Valideren</h3>
+                    <ol>
+                        <li>Großen, zufälligen Salt generieren</li>
+                        <li>Salt mit Passwort konkatenieren und hashen</li>
+                        <li>Hash und Salt in der Datenbank abspeichern</li>
+                        <li>Bei Validierung wird Salt aus Datenbank mit dem übermittelten Passwort gehasht</li>
+                        <li>Ergebnis-Hash mit Hash aus Datenbank vergleichen</li>
+                        <ul>
+                            <li>Übereinstimmung = Zugang</li>
+                        </ul>
+                    </ol>
                 </section>
 
                 <section>
@@ -228,6 +303,42 @@ javascript: document.body.contentEditable = 'true'; document.designMode = 'on'; 
                     <div>
                         <iframe width="853" height="480" src="https://www.youtube-nocookie.com/embed/RBdblurq8Kw" frameborder="0" allowfullscreen></iframe>
                     </div>
+                </section>
+                
+                <section>
+                    <h1>Schützende Browsertools</h1>
+                    <ul>
+                        <li><a href="https://addons.mozilla.org/de/firefox/addon/noscript/">NoScript</a></li>
+                        <ul>
+                            <li>Tool um Scripte im Auge zu behalten</li>
+                        </ul>
+                        <li><a href="https://addons.mozilla.org/de/firefox/addon/betterprivacy/">BetterPrivacy</a></li>
+                        <ul>
+                            <li>Dient dem Schutz vor Super-Cookies</li>
+                        </ul>
+                        <li>
+                            <a href="https://www.eff.org/https-everywhere">HTTPS Everywhere</a>
+                            <ul>
+                                <li>"Erzwingt" https dort wo es geht</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+                
+                <section>
+                    <h1>Zusammenfassung</h1>
+                    <ul>
+                        <li>Allgemeine Gefahren kennengelernt</li>
+                        <li>Scripte nach Möglichkeit deaktivieren!</li>
+                        <li>Am besten <strong>immer</strong> https verwenden!</li>
+                        <ul>
+                            <li>Besucher: Auf Gültigkeit des Zertifikates achten</li>
+                            <li>Betreiber: (Leider) teures aber sicheres Zertifikat kaufen</li>
+                        </ul>
+                        <li>Sichere Verschlüsselungen, Code-Escaping,.. verwenden</li>
+                       
+                    </ul>
+                
                 </section>
 
 
