@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>WBA1 - CMS</title>
+
+		<meta name="description" content="CMS">
+		<meta name="author" content="Dario Vizzaccaro, David Ostolski">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link rel="stylesheet" href="../revealjs-template/css/reveal.css">
+		<link rel="stylesheet" href="../revealjs-template/css/theme/wba.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="../revealjs-template/lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="../revealjs-template/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="../revealjs-template/lib/js/html5shiv.js"></script>
+		<![endif]-->
+		<style>
+		.progress {
+			z-index: 9999;
+		}
+		.fullscreen .state-background {
+			width: 100%;
+			height: 100%;
+		}
+
+		.fullscreen .reveal .slides {
+			margin: 0;
+			padding: 0;
+		 	width: 100%;
+		 	height: 100%;
+		 	max-width: 100%;
+		 	left: 0;
+		 	right: 0;
+		 	top: 0;
+		 	bottom: 0;
+		}
+
+		.fullscreen .reveal .slides > section {
+		 	position: absolute;
+		 	width: 100%;
+		 	height: 100%;
+		 	min-height: 100%;
+		 	text-align: left;
+		 	left: 0;
+		 	right: 0;
+		 	top: 0;
+		 	bottom: 0;
+		 	margin: 0;
+		 	background-position: center center;
+		 	background-repeat: no-repeat;
+		 	background-size: auto 100%;
+		}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+					<h1>WBA1 - CMS</h1>
+					<h2>Medieninformatik</h2>
+					<p>10. Januar 2013</p>
+					<p>
+						Studiengang Medieninformatik an der Fachhochschule Köln<br/>
+						Campus Gummersbach
+					</p>
+
+					<p style="margin-top: 100px">
+						Dario Vizzaccaro
+						<a href="https://github.com/dvizzacc" target="_blank">github @dvizzacc</a><br />
+						David Ostolski
+						<a href="https://github.com/DerDavid" target="_blank">github @DerDavid</a>
+					</p>
+				</section>
+
+				<section>
+					<h1>Aufbau der Lerneinheit <strong>CMS</strong></h1>
+					
+					<ul>
+						<li>Was ist ein CMS? Warum braucht man ein CMS?</li>
+						<li>Die Qual der Wahl (Das richtige CMS wählen)</li>
+                        <li>Inhalte und Navigation</li>
+						<li>Übungen und Zeit zum ausprobieren</li>
+					</ul>
+
+					<h1 style="margin-top: 1.0em; margin-bottom: 0.5em;">Lernziele</h1>
+					<ul>
+						<li>Verständnis der wichtigsten Funktionen</li>
+						<li>Einführung in den meistverwendeten CMS</li>
+					</ul>
+				</section>
+                
+                <section>
+					<h1><strong>0</strong> Was ist ein CMS?</h1>
+                    <h3><span style="color:white">Content-</span><span style="color:#77cc00">Managment-</span>System</p>
+                    <h3><span style="color:white">Inhalts</span><span style="color:#77cc00">verwaltungs</span>system</h3>
+                    
+                    <ul>
+                        <ul style="list-style:none">
+                            <li class="fragment">Software zur gemeinschaftlichen...</li></ul>
+                            <li class="fragment">Erstellung</li>
+                            <li class="fragment">Bearbeitung</li>
+                            <li class="fragment">Organisation</li>
+                        <ul style="list-style:none">
+                            <li class="fragment">...von <strong>Inhalten</strong></li></ul>
+                        </ul>
+				</section>
+
+				<section>
+					<h1><strong>0</strong> Warum braucht man ein CMS?</h1>
+                    <h3>Wie verwalte ich meine Seite <strong>ohne</strong> CMS?</h3>
+                    
+					<ul>
+						<li class="fragment">Programmierkenntnisse</li>
+						<li class="fragment">FTP Client</li>
+                        <li class="fragment">Sicherheit</li>
+						<li class="fragment">Seververwaltung</li>
+                        <li class="fragment">Mehrere Admins?<br />...<br /></li>
+                    </ul>
+				</section>
+                    
+                <section>
+					<h1><strong>0</strong> Warum braucht man ein CMS?</h1>
+                    <h3>Wie verwalte ich meine Seite <strong>mit</strong> CMS?</h3>
+					<ul>
+						<li class="fragment">Keine Programmierkenntnisse</li>
+						<li class="fragment">Kein FTP Client</li>
+                        <li class="fragment">Geprüfte Sicherheit</li>
+						<li class="fragment">Mehrere Admins!</li>
+                        <li class="fragment">Leicht erweiter- und personalisierbar</li>
+                        <li class="fragment">Dynamische Inhalte<br />...<br /></li>
+                    </ul>
+                </section>    
+
+				<section>
+					<h1><strong>1</strong> Das richtige CMS wählen</h1>
+                    <h3>Zwei grundlegende Fragen:</h3>
+                <ul>
+                    <ul style="list-style:none">
+					   <li class="fragment"><h1><strong>Welche Inhalte werde ich verwalten?</strong></h1></li>
+                   
+                        <li style="margin-top: -1.1em; margin-bottom: 1.0em" class="fragment">&rarr; Blog, Mobile, eShop, Unternehmen, Nachrichten,...</li> 
+                        <li class="fragment"><h3>und</h3>
+                    <h1><strong>Open Source oder Closed Source?</strong></h1></li>
+                        <li style="margin-top: -1.1em; margin-bottom: 1.0em" class="fragment">&rarr; PHP + MySQL</li>
+                    </ul>
+                </ul>
+                </section>  
+                
+                <section>
+                    <h1><strong>1</strong> Das richtige CMS wählen</h1>
+                    <h3>General Purpose CMS</h3>
+                    <h3 style="margin-top: -0.8em; margin-bottom: 0.5em"><i><strong>CMS für allgemeine Zwecke</strong></i></h3>
+                    <img src="http://i50.tinypic.com/ne95w3.png">
+                <ul>
+                    <ul style="list-style:none">
+					   <li style="margin-top: -0.1em; margin-bottom: 0.0em" class="fragment">Die drei meistverwendeten CMS im Vergleich (Google Trends)</li>
+                    </ul>
+                    <img src="http://i48.tinypic.com/2r73j7l.png">
+                </ul>
+                </section>
+                
+                <section>
+                    <h1><strong>1</strong> Das richtige CMS wählen</h1>
+                    <table border="0" width="110%">
+	                   <tr>
+		                  <td><h3>WordPress</h3></td>
+		                  <td><h3>Drupal</h3></td>
+		                  <td><h3>Joomla!</h3></td>
+	                   </tr>
+	                   <tr>
+		                  <td><li class="fragment">Sehr übersichtliche Bedienoberfläche</li>
+                              <li class="fragment">Einfache Installation und Seitenstruktur</li>
+                              <li class="fragment">One-Click-Updates</li>
+                              <li class="fragment">Automatische Suchmaschienenoptimierung</li>
+                              <li class="fragment">Große Community - Plugins, Themen, Erweiterungen, usw.</li>
+                              <li class="fragment"><span style="color:#77cc00">Popularität</span></li>
+                          </td>
+                          <td><li class="fragment">Schlagwortbasierte Kategorisierung (Tagging)</li>
+                              <li class="fragment">Standard Web 2.0 Features</li>
+                              <li class="fragment">Intuitive Rechteverwaltung</li>
+                              <li class="fragment"><span style="color:#77cc00">Hohe Serverlast</span></li>
+                              <li class="fragment"><span style="color:#77cc00">Recht Komplexe Bedienoberfläche</span></li>
+                          </td>
+                              <td><li class="fragment">Standardmäßig sehr viele Komponenten</li>
+                              <li class="fragment"><span style="color:#77cc00">Backend veraltet</span></li>
+                              <li class="fragment"><span style="color:#77cc00">Komplexe Bedienoberfläche</span></li>
+                              <li class="fragment"><span style="color:#77cc00">Kein SEO</span></li>
+                              <li class="fragment"><span style="color:#77cc00">Community nicht so aktiv wie bei WP oder Drupal</span></li>
+                          </td>
+	                   </tr>
+                    </table>
+                </section>
+                
+                <section>
+                    <h1><strong>1</strong> Das richtige CMS wählen</h1>
+                    <h3>Open Source <strong>VS</strong> Closed Source</h3>
+                    <table border="0" width="100%">
+	                   <tr>
+		                  <td><h3>Open Source</h3></td>
+		                  <td><h3>Closed Source</h3></td>
+	                   </tr>
+	                   <tr>
+		                  <td><li class="fragment">Kostenlos! :-)</li>
+                              <li class="fragment">Komplett personalisierbar</li>
+                              <li class="fragment">Oft qualitativ besser</li>
+                              <li class="fragment">Große Community – Mehr Support, Erweiterungen, Themen, usw.</li>
+                              <li class="fragment"><span style="color:#77cc00">Sicherheitslücken einfacher zu finden</span></li>
+                          </td>
+                          <td><li class="fragment">Garantierter Support</li>
+                              <li class="fragment">Besondere Eigenschaften</li>
+                              <li class="fragment">Sicherheitslücken schwieriger zu finden</li>
+                              <li class="fragment"><span style="color:#77cc00">Hohe Kosten</span></li>
+                              <li class="fragment"><span style="color:#77cc00">Behebung von Bugs kann länger dauern</span></li>
+                          </td>
+	                   </tr>
+                    </table>
+                </section>
+                
+                <section>
+					<h1><strong>2</strong> Inhalte und Navigation</h1>
+                    <img style="margin-top: -1.1em; margin-bottom: 0.0em" src="http://i.imgur.com/LJZR2.png?1">
+                    <h3><span style="color:white">WordPress 3.5 Backend (Dashboard)</span></h3>
+				</section>
+                
+                <section>
+					<h1><strong>2</strong> Inhalte und Navigation</h1>
+                    <img style="margin-top: -1.1em; margin-bottom: 0.0em" src="http://i.imgur.com/nIJtA.png?1">
+                    <h3><span style="color:white">WordPress 3.5 Backend (Post)</span></h3>
+				</section>
+                
+                <section>
+					<h1><strong>2</strong> Inhalte und Navigation</h1>
+                    <img style="margin-top: -1.1em; margin-bottom: 0.0em" src="http://i.imgur.com/6FGfW.png">
+                    <h3><span style="color:white">WordPress 3.5 Struktur</span></h3>
+				</section>
+                
+                <section>
+					<h1><strong>2</strong> Inhalte und Navigation</h1>
+                    <img style="margin-top: -1.1em; margin-bottom: 0.0em" src="http://i.imgur.com/F625V.png?1">
+                    <h3><span style="color:white">WordPress 3.5 Backend (Themes)</span></h3>
+				</section>
+                
+                <section>
+					<h1><strong>2</strong> Inhalte und Navigation</h1>
+                    <img style="margin-top: -1.1em; margin-bottom: 0.0em" src="http://i.imgur.com/kydod.png?1">
+                    <h3><span style="color:white">Playstation.Blog (DE) Struktur</span></h3>
+				</section>
+                
+                <section>
+					<h1><strong>3</strong> Übungen und Zeit zum ausprobieren</h1>
+                    <br />
+                    <h3>Vielen Dank und viel Spaß!</h3>
+                    <br />
+                    Übung als PDF runterladen: <a href="CMS_Uebung.pdf">CMS_Uebung.pdf</a>
+				</section>
+                
+		<script src="../revealjs-template/lib/js/head.min.js"></script>
+		<script src="../revealjs-template/js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: '../revealjs-template/lib/js/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
+					{ src: '../revealjs-template/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../revealjs-template/lib/js/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs-template/lib/js/data-markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs-template/plugin/zoom-js/zoom.js', condition: function() { return !!document.body.classList; } }
+					//{ src: '../revealjs-template/socket.io/socket.io.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
+					//{ src: '../revealjs-template/plugin/speakernotes/client.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

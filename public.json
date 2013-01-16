@@ -8,10 +8,21 @@
 			"authors" : ["Jan Kus"]
 		},
 
-
 		"2012-11-29-wba-1-basics/index.html":
 		{
 			"title" : "WBA1 Basics",
+			"authors" : ["Christian Noss"]
+		},
+
+		"2012-11-29-brackets-basics/index.html":
+		{
+			"title" : "Brackets Einführung",
+			"authors" : ["Martin Baljan"]
+		},
+
+		"2012-12-06-wba-1-basics-2/index.html":
+		{
+			"title" : "WBA1 Basics 2",
 			"authors" : ["Christian Noss"]
 		},
 
@@ -19,6 +30,112 @@
 		{
 			"title" : "Git Basics",
 			"authors" : ["Dominik Schilling", "Christoph Jerolimov"]
+		},
+
+		"2012-12-06-html-basics/index.html":
+		{
+			"title" : "HTML Basics",
+			"authors" : ["Dominik Schilling", "Bruno José Carvalho Gonzaga"]
+		},
+
+		"2012-12-06-html-basics-2/index.html":
+		{
+			"title" : "HTML Basics 2",
+			"authors" : ["Sascha Wüstlich", "Aaron Reiher"]
+		},
+
+		"2012-12-06-HTML-Advanced/index.html":
+		{
+			"title" : "HTML Advanced",
+			"authors" : ["Laura Hermann", "Marcel Holter", "Benedikt Wurth", "Robert Kellermann"]
+		},
+
+		"2012-12-06-web-basics/index.html":
+		{
+			"title" : "Web Basics",
+			"authors" : ["Christian Noss"]
+		},
+
+		"2012-12-13-entwicklungstools/index.html":
+		{
+			"title" : "Einführung in die Chrome Developer Tools",
+			"authors" : ["Martin Baljan"]
+		},
+
+		"2012-12-13-css-basics/index.html":
+		{
+			"title" : "CSS Basics",
+			"authors" : ["Selin Öztürk", "Uwe Müsse"]
+		},
+
+		"2012-12-13-css-advanced/index.html":
+		{
+			"title" : "CSS Advanced",
+			"authors" : ["Dimitri Kiselev", "Sam Kisser", "Sascha Rothkopf", "Armin Weinrebe"]
+		},
+
+		"2012-12-13-wba-1-html5-spezial/index.html":
+		{
+			"title" : "HTML5-Spezial",
+			"authors" : ["Eduard Karsten", "Munish Luthra"]
+		},
+
+		"2012-12-20-javascript-basics/index.html":
+		{
+			"title" : "JavaScript Basics",
+			"authors" : ["Artur Zimmermann", "Edgar Gellert", "Daniela Kucharczyk", "Julia Warkentin"]
+		},
+
+		"2012-12-20-javascript-advanced/index.html":
+		{
+			"title" : "JavaScript Advanced",
+			"authors" : ["Lars Behrens", "Lutz Schönfelder", "Alina Sinderovich", "Jorge H. F. Pereira"]
+		},
+
+		"2013-01-10-JS-Frameworks/index.html":
+		{
+			"title" : "JavaScript Frameworks",
+			"authors" : ["Roy Fochtman", "Stefan Börgeling"]
+		},
+
+		"2013-01-10-barrierefreiheit/index.html":
+		{
+			"title" : "Barrierefreiheit",
+			"authors" : ["Martin Senges", "Alexander Stengel"]
+		},
+
+		"2013-01-10-css-frameworks/index.html":
+		{
+			"title" : "CSS Frameworks (SASS & Co)",
+			"authors" : ["Sergej Kronhardt", "Simon Klinge"]
+		},
+
+		"2013-01-10-cms/index.html":
+		{
+			"title" : "CMS (Inhalte, Navigation)",
+			"authors" : ["Dario Vizzaccaro", "David Ostolski"]
+		},
+
+		"2013-01-10-javascript-fw-jquery/index.html":
+		{
+			"title" : "JavaScript Frameworks - jQuery",
+			"authors" : ["Julian Schöbel", "Patrick Czajor"]
+		},
+		"2013-01-24-interfaces/index.html":
+		{
+			"title" : "Datenformate und Schnittstellen",
+			"authors" : ["Oliver van der Bürie","Derya Ergül"]
+		},
+		"2013-01-17-SocialMediaGes/index.html":
+		{
+			"title" : "Social Media gesellschaftlich",
+			"authors" : ["Ramona Lind","Pascal Büchle"]
+		},
+		"2013-01-17-seo/index.html":
+		{
+			"title": "SEO",
+			"authors": ["Mark Steven Buder", "Christoph Jerolimov"]
 		}
+
 	}
 }
