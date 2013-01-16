@@ -5,9 +5,8 @@
 
 		// AJAX request
 		$.getJSON( './files/public.json', function( data ) {
-			var items = [];
+			var items = {};
 			var oldDate = null;
-
 
 			// Content check
 			if ( $.isEmptyObject( data.presentations ) )
@@ -28,25 +27,44 @@
 				var matches = dateRegExp.exec( path );
 				if ( matches ) {
 					dateString = matches[3] + '.' + matches[2] + '.' + matches[1];
-					currentDate = new Date( matches[1], matches[2], matches[3] );
+					currentDate = new Date( matches[1], matches[2] - 1, matches[3] ).getTime();
+				} else {
+					currentDate = new Date().getTime();
+				}
 
-					if ( null === oldDate ) {
-						items.push( '<li class="date-section first">' + dateString + ':</li>' );
+				// Not new array yet
+				if ( "undefined" === typeof( items[currentDate] ) )
+					items[currentDate] = [];
+
+				items[currentDate].push( '<li class="presentation"><a href="files/' + path + '" target="_blank">' + val.title + authors + '</li>');
+			} );
+
+			// Clear screen
+			list.empty();
+
+			// Sort by date
+			var keys = Object.keys( items );
+			keys.sort();
+
+			// Output with sections
+			for ( var i = 0; i < keys.length; i++ ) {
+				var key = keys[i];
+				var currentDate = new Date();
+				currentDate.setTime( key );
+				var dateString = currentDate.toLocaleDateString();
+
+				if ( null === oldDate ) {
+					list.append( '<li class="date-section first">' + dateString + ':</li>' );
+					oldDate = currentDate;
+				} else {
+					if ( oldDate < currentDate ) {
+						list.append( '<li class="date-section">' + dateString + ':</li>' );
 						oldDate = currentDate;
-					} else {
-						if ( oldDate < currentDate ) {
-							items.push( '<li class="date-section">' + dateString + ':</li>' );
-							oldDate = currentDate;
-						}
 					}
 				}
 
-				items.push( '<li class="presentation"><a href="files/' + path + '" target="_blank">' + val.title + authors + '</li>' );
-			} );
-
-			// Add to list
-			list.html( items );
-
+				list.append( items[key] );
+			}
 		} ).error( function( a, b, c ) {
 			// A bit error handling
 			if ( 'unexpected_token' == c.type )
