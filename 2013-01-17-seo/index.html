@@ -53,21 +53,23 @@
 
                 <section>
                     <h1>
-                        SEO
+	                    <strong>S</strong>earch <strong>E</strong>ngine <strong>O</strong>ptimization
                     </h1>
                     <ul>
-                        <li>Onpage</li>
-                        <ul>
-                            <li>Einführung</li>
-                            <li>Content</li>
-                            <li>Struktur &amp; Semantik</li>
-                        </ul>
-                        <li>Offpage</li>
-                        <ul>
-                            <li>Tools zur Analyse</li>
-                            <li>Linkpartnerschaften</li>
-                            <li>Werbung</li>
-                        </ul>
+                        <li><span class="pink">Onpage</span>
+	                        <ul>
+	                            <li>Einführung</li>
+	                            <li>Content</li>
+	                            <li>Struktur &amp; Semantik</li>
+	                        </ul>
+                        </li>
+	                    <li class="fragment"><span class="pink">Offpage</span>
+	                        <ul>
+	                            <li>Tools zur Analyse</li>
+	                            <li>Linkpartnerschaften</li>
+	                            <li>Werbung</li>
+	                        </ul>
+                        </li>
                     </ul>
 				</section>
 				<section>
@@ -160,13 +162,15 @@
                 <section>
                     <h1>Struktur: <strong>Meta-Tag</strong></h1>
                     <ul>
-                        <li>"description" beschreibt die Seite</li>
-                        <li>benutzt, falls kein sinnvoller Absastz vorhanden ist</li>
+                        <li><span class="pink">description</span> beschreibt die Seite<br/>
+	                        wird verwendet, falls kein sinnvoller Absastz vorhanden ist</li>
+	                    <li><span class="pink">keywords</span> Versteckte Schlüsselwörter, z.B. für Synonyme</li>
                     </ul>
                 <pre><code>... 
 &lt;head&gt;
     &lt;title&gt;Achsen - Skateshop24&lt;/title&gt;
     &lt;meta name="description" content="Auf Skateshop24 findest du rund um die Uhr eine riesige Auswahl an Achsen für dein Skateboard" /&gt;
+    &lt;meta name="keywords" content="Skaten, Skateshop, Rollen, Bretter;" /&gt;
 &lt;/head&gt;
 ...</code></pre>
                 </section>
@@ -179,7 +183,8 @@
                     </h1>
                             <ul>
                             <li>Die ganze Seite reinkopieren</li>
-                            <li>Mit Keywords vollstopfen</li>
+                            <li>Description mit Keywords vollstopfen</li>
+	                        <li>Keine unnötigen Keywords ohne Zusammenhang</li>
                             <li>Ständige Verwendung der selbem Description</li>
                             </ul>
                 </section>
@@ -202,7 +207,8 @@
                     <h1>Struktur: <strong>Bilder</strong></h1>
                     <ul>
                         <li>Inhaltlich passende Titel - trotzdem kurz</li>
-                        <li>"alt" Attribut nutzen</li>
+	                    <li><span class="pink">alt</span> Attribut wenn das Bild feld</li>
+	                    <li><span class="pink">title</span> Attribut für mehr Informationen</li>
                         <li>Ein Verzeichnis für alle Bilder</li>
                         <li>Gebräuchliche Formate</li>
                     </ul>
@@ -223,28 +229,32 @@
 
                
 				<section>
-                    <h1>
-                        Aufgaben
-                    </h1>
-					<ul>
-						<li>TODO: Links</li>
-					</ul>
+					<h1><strong style="background-color: #dd1166; -webkit-transform:rotate(-5deg); display:inline-block; margin: 60px 0 40px -10px;">
+						Hier geht es zur Aufgabe
+                    </strong></h1>
+					<div style="text-align: center;">
+						<a href="http://bit.ly/seo-tut" style="border-bottom: 5px solid #77cc00; font-size: 92px; -webkit-transition: none; -webkit-perspective-origin: 0; -webkit-perspective: none;">bit.ly/seo-tut</a>
+					</div>
+
                 </section>
 
 				<section>
 					<h1>Crawler steuern: <strong>Grundlagen</strong></h1>
-					<ul>
-						<li>TODO: aus doku übernehmen</li>
-					</ul>
+					<ol>
+						<li class="fragment"><span class="pink">Download</span> der Webseite</li>
+						<li class="fragment"><span class="pink">Auswertung</span> weiterer Links -> Crawler-„Todo“-Liste</li>
+						<li class="fragment"><span class="pink">Bewertung</span> des Inhalts (Semantik wie Überschriften)</li>
+						<li class="fragment"><span class="pink">Indizierung</span> des Inhalts -> Wortstammsuche, Synonyme, etc.</li>
+					</ol>
 				</section>
 
 				<section>
 					<h1>Crawler steuern: <strong>Anker-Tags</strong></h1>
 					<ul>
 						<li>Links können Steuerbefehle für Suchmaschinen beinhalten</li>
-						<li>„nofollow“ verhindert das die Zieladresse indiziert wird</li>
+						<li><span class="pink">nofollow</span> verhindert das die Zieladresse indiziert wird</li>
 					</ul>
-					<pre><code>&lt;nav&gt;
+					<pre class="fragment"><code>&lt;nav&gt;
 	&lt;a href="/"&gt;Home&lt;/a&gt;
 	&lt;a href="/mitarbeiter.html" rel="nofollow"&gt;Mitarbeiter&lt;/a&gt;
 	&lt;a href="/kontakt.html"&gt;Kontakt&lt;/a&gt;
@@ -255,9 +265,24 @@
 					<h1>Crawler steuern: <strong>Meta-Tags</strong></h1>
 					<ul>
 						<li>Meta-Tag definiert Steuerbefehle Dokumentenweit</li>
+						<li><span class="pink">noindex</span> verhindert indexierung der aktuellen Seite</li>
+						<li><span class="pink">nofollow</span> legt Standard für Anker-Tags fest</li>
+					</ul>
+					<pre class="fragment"><code>&lt;head&gt;
+	&lt;meta name="robots" content="noindex, nofollow" /&gt;
+	...
+&lt;/head&gt;
+&lt;body&gt;
+	...</code></pre>
+				</section>
+
+				<section>
+					<h1>Crawler steuern: <strong>Meta-Tags</strong></h1>
+					<ul>
+						<li>Meta-Tag definiert Steuerbefehle Dokumentenweit</li>
 						<li>„noindex“ verhindert indexierung der aktuellen Seite</li>
 						<li>„nofollow“ legt Standard für Anker-Tags fest</li>
-						<li>Kann pro Anker-Tag überschrieben werden</li>
+						<li class="pink">Kann pro Anker-Tag überschrieben werden</li>
 					</ul>
 					<pre><code>&lt;head&gt;
 	&lt;meta name="robots" content="noindex, nofollow" /&gt;
@@ -282,8 +307,6 @@ Disallow: /images/</code></pre>
 				</section>
 
                 <section>
-                    <h1>Vielen Dank</h1>
-                    TODO
                 </section>
 
 			</div>
