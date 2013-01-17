@@ -44,7 +44,7 @@
 					</p>
 					<p style="margin-top: 100px;">
 						<span>11083571<a href="http://github.com/Cr4ckX">David Petersen</a></span><br>
-						<span>MatrikelN<a href="http://github.com/xy00z">Simon Zemke</a></span><br>
+						<span>11085303<a href="http://github.com/xy00z">Simon Zemke</a></span><br>
 					</p>
 				</section>
 				
@@ -299,11 +299,62 @@ hallo + b9719d91f = 9fc0c1698b0cda1f3a2037e9723312ca
                 </section>
 
                 <section>
-                    <h1>SQL, XSS Injection</h1>
-                    <div>
-                        <iframe width="853" height="480" src="https://www.youtube-nocookie.com/embed/RBdblurq8Kw" frameborder="0" allowfullscreen></iframe>
-                    </div>
+                    <h1>XSS Injection</h1>
+                        
+                        <!-- Code falsch, code richtig...-->
+                    <h3>Formularfeld Ausgabe falsch</h3>
+                    <pre><code>
+'Ihre Suche nach "'.$suche.'" ergab folgende Treffer:'
+                    </code></pre>
+                    <h3>Formularfeld Ausgabe richtig</h3>
+
+                    <pre><code>
+'Ihre Suche nach "'.htmlspecialchars($suche).'" ergab folgende Treffer:'
+                    </code></pre>
+                    
                 </section>
+                
+                
+                
+                 <section>
+                    <h1>SQL Injection</h1>
+                        
+                        <!-- Code falsch, code richtig...-->
+                    <h3>Code falsch</h3>
+                    <pre><code>
+$email = $_POST['username'];
+$password = $_POST['password'];
+$query = "SELECT `kundennummer` FROM `user` WHERE `passwort` = '$password' AND `email` = '$email'";
+                    </code></pre>
+                    <h3>Code richtig</h3>
+                                
+                    <pre><code>
+$email = trim(htmlspecialchars($_POST['username']));
+$password = trim(htmlspecialchars($_POST['password']));
+$query = "SELECT `kundennummer` FROM `user` WHERE `passwort` = '$password' AND `email` = '$email'";
+                    </code></pre>
+                    
+                </section>
+                
+                
+                <section>
+                <h1>SQL Injection-Code</h1>
+                <h3>Unmaskiert</h3>
+                <pre><code>
+
+
+                </code></pre>
+                <h3>Maskiert</h3>
+                <pre><code>
+
+
+                </code></pre>
+                
+                
+                
+                </section>
+                
+                
                 
                 <section>
                     <h1>Schützende Browsertools</h1>
@@ -340,6 +391,8 @@ hallo + b9719d91f = 9fc0c1698b0cda1f3a2037e9723312ca
                     </ul>
                 
                 </section>
+                
+    
 
 
 		</div>
