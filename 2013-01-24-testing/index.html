@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
 
-    <title>Testing</title>
+    <title>WBA1 -Testing</title>
 
     <meta name="description" content="JS-Frameworks">
     <meta name="author" content="David Wachs, Jeremy Dennis Zervo">
@@ -76,7 +76,8 @@
                     </ul>
                 </p>
         </section>
-    	<section>
+    	
+        <section>
             <h3>Testing</h3>
             <h4>Was testen?</h4>
             <p>
@@ -86,105 +87,273 @@
                     <li class="fragment">Laufzeitverhalten</li>
                 </ul>
             </p>
-    </section>
+        </section>
+
     	<section>
-        <h3>Testing</h3>
-        <h4>Wie testen?</h4>
-		<p>
-        	<ul>
-            	<li class="fragment">Black-Box-Test</li>
-                <li class="fragment">White-Box-Test</li>
-				<li class="fragment">Unit-Test / Modultest</li>
-            </ul>
-        </p>
-    </section>
-	</section>
-    	<section>
-        <h3>Wie testen?</h3>
-        <h4>Black-Box-Test</h4>
-		<p>
-        	<ul>
-            	<li class="fragment">Tester haben keine Kenntnisse der inneren Programmstruktur</li>
-				<li class="fragment">Nur das nach außen Sichtbare Verhalten wird getestet (Black-Box)</li>
-                <li class="fragment">Ziel: Übereinstimmung des Softwareverhaltens mit den Spezifikationen</li>
-				<li class="fragment">Aufwendige Erstellung der Tests</li>
-				<li class="fragment">keine Garantie auf Fehlerfreiheit</li>
-            </ul>
-        </p>
-    </section>
-	<section>
-        <h3>Wie testen?</h3>
-        <h4>White-Box-Test</h4>
-		<p>
-        	<ul>
-            	<li class="fragment">Kenntnisse der inneren Programmstruktur bzw. des Quellcodes</li>
-				<li class="fragment">Testfälle werden anhand der inneren Programmstruktur festgelegt </li>
-                <li class="fragment">Ziel: Finden von Laufzeit- bzw. logischen Fehlern und optimierung des Laufzweitverhaltens</li>
-				<li class="fragment">keine Garantie auf Fehlerfreiheit</li>
-            </ul>
-        </p>
-    </section>
-    	<section>
-        <h3>Wie testen?</h3>
-		<h4>Unit-Test / Modultest</h4>
-		<p>
-        	<ul>
-            	<li class="fragment">spezielle Art von White-Box-Test</li>
-				<li class="fragment">Module werden getrennt voneinander getestet</li>
-                <li class="fragment">zuerst Ausgangszustand initialisieren</li>
-                <li class="fragment">darauf die zu testenden Operationen ausführen</li>
-                <li class="fragment">Ist-Ergebnis mit Spezifikationen vergleichen</li>
-            </ul>
-        </p>
-</section>
+            <section>
+            <h3>Testing</h3>
+            <h4>Wie testen?</h4>
+    		<p>
+            	<ul>
+                	<li class="fragment">Black-Box-Test</li>
+                    <li class="fragment">White-Box-Test</li>
+    				<li class="fragment">Unit-Test / Modultest</li>
+                </ul>
+            </p>
+            </section>
+
+            <section>
+            <h3>Wie testen?</h3>
+            <h4>Black-Box-Test</h4>
+            <p>
+                <ul>
+                    <li class="fragment">Tester haben keine Kenntnisse der inneren Programmstruktur</li>
+                    <li class="fragment">Nur das nach außen Sichtbare Verhalten wird getestet (Black-Box)</li>
+                    <li class="fragment">Ziel: Übereinstimmung des Softwareverhaltens mit den Spezifikationen</li>
+                    <li class="fragment">Aufwendige Erstellung der Tests</li>
+                    <li class="fragment">keine Garantie auf Fehlerfreiheit</li>
+                </ul>
+            </p>
+            </section>
+
+           <section>
+                <h3>Wie testen?</h3>
+                <h4>White-Box-Test</h4>
+                <p>
+                    <ul>
+                        <li class="fragment">Kenntnisse der inneren Programmstruktur bzw. des Quellcodes</li>
+                        <li class="fragment">Testfälle werden anhand der inneren Programmstruktur festgelegt </li>
+                        <li class="fragment">Ziel: Finden von Laufzeit- bzw. logischen Fehlern und optimierung des Laufzweitverhaltens</li>
+                        <li class="fragment">keine Garantie auf Fehlerfreiheit</li>
+                    </ul>
+                </p>
+            </section>
+
+            <section>
+                <h3>Wie testen?</h3>
+                <h4>Unit-Test / Modultest</h4>
+                <p>
+                    <ul>
+                        <li class="fragment">spezielle Art von White-Box-Test</li>
+                        <li class="fragment">Module werden getrennt voneinander getestet</li>
+                        <li class="fragment">zuerst Ausgangszustand initialisieren</li>
+                        <li class="fragment">darauf die zu testenden Operationen ausführen</li>
+                        <li class="fragment">Ist-Ergebnis mit Spezifikationen vergleichen</li>
+                    </ul>
+                </p>
+            </section>
+
+
+        </section>
+
+
+
+
         <section>
-        <h3>Testen mit Javascript - Jasmine</h3>
-        <h4>Jasmin in ein Projekt einbinden</h4>
-		<p>
-        	<ul>			
-            	<li class="fragment"><a href="https://github.com/pivotal/jasmine/downloads" target="_blank">aktuelle Version runterladen</a></li>
-                <li class="fragment">Source-Dateien in das scr-Verzeichnis</li>
-                <li class="fragment">Spec-Dateien (Tests) in das spec-Verzeichnis</li>
-                <li class="fragment">Source- und Spec Dateien in der SpecRunner.html einbinden</li>
-				<li class="fragment">SpecRunner.html mit Browser öffnen</li>
-            </ul>
-        </p>
-</section>
-        <section>
-        <h3>Testen mit Javascript - Jasmine</h3>
-        <h4>Testbeispiel</h4>
-		<p>
-        	<ul>
-                <li class="fragment"><a href="http://tryjasmine.com/" target="_blank">Jasmine online testen</a></li>        
-            </ul>
-        </p>
-</section>
+            <section>
+            <h3>Testen mit Jasmine</h3>
+            <h4>Was ist Jasmine?</h4>
+    		<p>
+            	<ul>
+                    <li class="fragment">Jasmin ist ein Unit-Testing-Framework für JavaScript</li>
+                    <li class="fragment">Es wurde stark geprägt und beinhaltet vieles aus ScrewUnit, JSSpec, JSpec und RSpec</li>
+                    <li class="fragment"> Wichtigsten Zielsetzungen der Macher war und ist: </li>
+                    <ol>
+                        <li class="fragment">Es ist nicht auf bestimmten Browser, Platformen, etc., abestimmt</li>
+                        <li class="fragment">Somit funktioniert es überall dort, wo auch JavaScript läuft (Browsers, Server, Handys, etc.)</li>
+                        <li class="fragment">Die Syntax ist sprachüblich und einfach</li>
+                    </ol> 
+                </ul>
+            </p>
+            </section>
+
+            <section>
+            <h3>Testen mit Jasmine</h3>
+            <h4>Besonderheiten</h4>
+            <p>
+                <ul>
+                    <li class="fragment">Jasmine setzt nicht auf bestimmte JavaScript Frameworks.</li>
+                    <li class="fragment">Es ist ein <a href="http://behaviour-driven.org/">BDD</a> Framework</li>
+                    <li class="fragment"> Es braucht kein DOM</li>
+                </ul>
+            </p>
+            </section>
+
+            <section data-markdown>
+                <script type="text/template">
+            ###Testen mit Jasmin
+            ####Wie sieht ein Test aus?
+                    
+                //Suites beschreiben den Test allgemein
+                describe("A suite is just a function", function() {
+                  var a;
+                  //Specs beschreiben was getestet wird
+                  it("and so is a spec", function() {
+                    a = true;
+                    //Expectations sind die "Tests", welche dann mit dem Matcher, hier .toBe(), verglichen werden
+                    expect(a).toBe(true);
+                  });
+                }); 
+            </script>
+            </section>
+
+            <section>
+            <h3>Testen mit Jasmine</h3>
+            <h4>Matcher</h4>
+            <p>
+                <ul>
+                    <li class="fragment">Jeder Matcher kann mit .not verneint werden</li>
+                    <li class="fragment">Hier ein paar Beispiele für Matcher:</li>
+                    <ul>
+                        <li class="fragment">expect(x).toEqual(y); (Test gibt kein Fehler, falls y == x)</li>
+                        <li class="fragment">expect(x).toBe(y); (Test gibt kein Fehler, falls y gleiches Objekt wie x)</li>
+                        <li class="fragment">expect(x).toContain(y); (Test gibt kein Fehler, falls String oder Array x, y beinhaltet)</li>
+                        <li class="fragment"><a href="https://github.com/pivotal/jasmine/wiki/Matchers">weitere</a></li>
+                    </ul>
+                    
+                </ul>
+            </p>
+            </section>
+
+            <section data-markdown>
+                <script type="text/template">
+            ###Testen mit Jasmin
+            ####Ein Beispieltest  
+                /*Beispiel JavaScript*/
+                function addition( a, b ){   
+                    return a + b; 
+                };
+
+                /*Beispiel Jasmine*/
+                describe("addition(a, b)", function(){ 
+                    it("sollte 3", function(){         
+                    expect( addition(1, 2) ).toBe( 3 );     
+                    }); 
+                });
+            </script>
+            </section>
+
+            <section>
+            <h3>Testen mit Jasmine</h3>
+            <h4>Übung 1</h4>
+
+            <p> Zur <a href="Uebungen/uebung1.txt" target="_blank">uebung1</a> Jasmin-Tests schreiben auf
+                <a href="http://tryjasmine.com/" target="_blank">tryjasmine.com</a>.
+                <p>Kleiner Tipp am Rande:<br>Einfach die <a href="Uebungen/uebung1.txt" target="_blank">uebung1</a> mit einem beliebigen Editor oder im Browser öffnen und den gesamten Inhalt rechts bei <a href="http://tryjasmine.com/" target="_blank">tryjasmine</a> einfügen. 
+                </p>
+
+
+            </p>
+            </section>
+
+            <section>
+            <h3>Testen mit Jasmine</h3>
+            <h4>Einbindung und Benutzung von Jasmin</h4>
+            <p>
+                </ul>
+
+                    <ul>
+                    <li class="fragment"><a href="https://github.com/pivotal/jasmine/downloads">aktuelle Version runterladen</a></li>
+                    <li class="fragment">Source-Dateien in das scr-Verzeichnis</li>
+                    <li class="fragment">Spec-Dateien (Tests) in das spec-Verzeichnis</li>
+                    <li class="fragment">Source- und Spec Dateien in der SpecRunner.html einbinden</li>
+                    <li class="fragment">SpecRunner.html mit Browser öffnen</li>
+                </ul>
+            </p>
+            </section>
+
+            <section>
+            <h3>Testen mit Jasmine</h3>
+            <h4>Nützliches bei Jasmin</h4>
+            <p>
+                </ul>
+                    <li class="fragment">Um den Test-Code möglich effizent schreiben zu können liefert Jamsine die Funktionen beforeEach() und afterEach()</li>
+                    <li class="fragment">Hiermit ist es möglich Variablen oder Objekt vor bzw. nach jedem Spec neu zu definieren oder auch zu initialsieren</li>
+                </ul>
+            </p>
+            </section>
+
+            <section data-markdown>
+                <script type="text/template">
+            ###Testen mit Jasmine
+            ####Beispiel für afterEach() und Tests bei Klassen
+            
+                describe("Testdatei", function() {
+                  var testklasse = new Testklasse();
+                  var z1;
+                  var z2;
+                  var z3;
+                  var z4;
+
+                  afterEach(function() {
+                      z1 = 4;
+                      z2 = 0;
+                      z3 = -2;
+                      z4 = 154;
+                  });
+                  it("XYZ", function(){
+                    expect(testklasse.addition(z1, z2)).toEqual(z1+z2); 
+                  });
+            </script>
+            </section>
+
+            <section>
+            <h3>Testen mit Jasmine</h3>
+            <h4>Übung 2</h4>
+
+            <p> 
+                <ul>
+                    <li class="fragment"><a href="https://github.com/pivotal/jasmine/downloads">aktuelle Jasmine Version runterladen</a></li>
+                    <li class="fragment">uebung2_BasicCalculator.js und uebung2_BasicCalculatorSpec.js richtig einbinden</li>
+                    <li class="fragment">ToDos in uebung2_BasicCalculatorSpec.js bearbeiten</li>
+                </ul>
+            </p>
+            </section>
+
+            <section>
+            <h3>Testen mit Jasmine</h3>
+            <h4>Hilfreiches Links</h4>
+            <p>
+                <ul>
+                    <li class="fragment"><a href="https://github.com/pivotal/jasmine/wiki/">Jasmine Wiki auf GitHub</a></li>
+                    <li class="fragment"><a href="https://github.com/pivotal/jasmine/wiki/Background">Hintergünde und Ziele von Jasmine</a></li>
+                    <li class="fragment"><a href="http://pivotal.github.com/jasmine/">Step by Step Erklärungen zu Jasmine</a></li>
+                    <li class="fragment"><a href="https://github.com/pivotal/jasmine/wiki/Matchers">Matchers und Matcher selbst schreiben</a></li>
+                    <li class="fragment"><a href="http://tryjasmine.com/">Jasmin Online</a></li>
+
+                </ul>
+            </p>
+            </section>
+
+
+        </section>
+
+
         
-<section>
-        <h3>Testen mit Javascript - QUnit</h3>
-        <h4></h4>
-		<p>
-        	<ul>
-            	<li class="fragment">...</li>
-            </ul>
-        </p>
-</section>
-<section>
-        <h3>Übung</h3>
-    <h4></h4>
-		<p>
-        	<ul>
-            	<li class="fragment">...</li>              
-            </ul>
-        </p>
-    </section>
-<section>
+        <section>
+            <h3>Testen mit Javascript - QUnit</h3>
+            <h4></h4>
+    		<p>
+            	<ul>
+                	<li class="fragment">...</li>
+            </p>
+        </section>
+
+        <section>
+            <h3>Übung zu QUnit</h3>
+            <h4></h4>
+    		<p>
+            	<ul>
+                	<li class="fragment">...</li>              
+                </ul>
+            </p>
+        </section>
+
+        <section>
         <h3>Das wars!</h3>
-    <h4>Fragen?</h4>
-     <h4>Vielen Dank für die Aufmerksamkeit!</h4>
-		
-        </p>
-    </section>
+            <h4>Fragen?</h4>
+            <h4>Vielen Dank für die Aufmerksamkeit!</h4>
+        </section>
 
 
 	
@@ -207,7 +376,7 @@
         history: true,
 
         theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-        transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
+        transition: Reveal.getQueryHash().transition || 'concave', // default/cube/page/concave/zoom/linear/none
 
         // Optional libraries used to extend on reveal.js
         dependencies: [
