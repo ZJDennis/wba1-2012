@@ -175,27 +175,22 @@
                     <p style="margin-bottom:-10px;">
                         Methode 1: Datei runterladen und einbinden
                     </p>
-                    <pre><code class="html">
-&lt;head&gt;
+                    <pre><code class="html">&lt;head&gt;
     &lt;script src="jquery-1.8.3.min.js"&gt;&lt;/script&gt;
-&lt;/head&gt;
-                    </code></pre>
+&lt;/head&gt;</code></pre>
                     <p style="margin-bottom:-10px;">
                         Methode 2: <strong>C</strong>ontent <strong>D</strong>elivery <strong>N</strong>etwork einbinden
                     </p>
-                    <pre><code class="html">
-&lt;head&gt;
+                    <pre><code class="html">&lt;head&gt;
     &lt;script type=”text/javascript” src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/
     jquery.min.js"&gt;&lt;/script&gt;
-&lt;/head&gt;
-                    </code></pre>
+&lt;/head&gt;</code></pre>
+					<p style="font-size:20px;"><strong>Hinweis:</strong> Um Versionsübergreifend gültig zu sein, kann man anstatt 1.8.3 auch nur 1 schreiben. Dann wird die aktuellste Version zwischen 1.0.0 und 1.9.9 eingebunden.</p>
                 </section>
                 <section>
                     <h1>Let's start writing less</h1>
                     <h3>Syntax (1)</h3>
-<pre><code class="html">
-$(selector).action()
-                    </code></pre>
+<pre><code class="html">$(selector).action()</code></pre>
                     <p>
                         <strong>$</strong> := jQuery-Notation; <strong>selector</strong> := CSS-Selector; <strong>action</strong> := jQuery-Funktion 
                     </p>
@@ -207,13 +202,11 @@ $(selector).action()
                     <p>
                         Das Document Ready Event
                     </p>
-                    <pre><code class="javascript">
-$(document).ready(function(){
+                    <pre><code class="javascript">$(document).ready(function(){
 
-   // jQuery methods go here...
+   // Hier kommen alle jQuery-Funktionen rein.
 
-});
-                    </code></pre>
+});</code></pre>
                     <p>
                         Vor Ausführung der jQuery-Funktionen muss die Seite komplett geladen sein.
                     </p>
@@ -224,14 +217,11 @@ $(document).ready(function(){
                     <p>
                         Konkretes Beispiel
                     </p>
-                    <pre><code class="javascript">
-
-$(document).ready(function(){
+                    <pre><code class="javascript">$(document).ready(function(){
   $("#btn").click(function(){
     $("#pgr").hide();
   });
-});
-                    </code></pre>
+});</code></pre>
                     <p id="hideP">Ich verschwinde jetzt.</p>
                     <button id="hideBtn">Klick mich!</button>
                 </section>
@@ -251,15 +241,12 @@ $(document).ready(function(){
                 
                 <section>
                     <h1>Übung 1</h1>
-                    <h3>Codeschnipsel</h3>
-                    <pre><code class="javascript">
-
-$(document).ready(function(){
+                    <p>
+                    <pre><code class="javascript">$(document).ready(function(){
   $("button").event(function(){
     $("p").effekt();
   });
-});
-                    </code></pre>
+});                    </code></pre>
                 <p><strong>Events:</strong> click, dblclick, mouseenter, mouseleave, keypress, kreydown, keyup</p>
                 <p><strong>Effekte:</strong> hide(), show(), fadeIn(), fadeOut(), slideDown, slideUp, animate({parameter:'value';}), css("CSS-Eigenschaft","Wert")</p>
                 </section>
