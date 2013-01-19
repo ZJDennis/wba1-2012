@@ -23,11 +23,11 @@
 			document.write( '<link rel="stylesheet" href="../revealjs-template/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
 		</script>
         
-<!--        <script type="text/javascript" language="javascript" src="Übung/jquery.js"></script> -->
+<!--        <script type="text/javascript" language="javascript" src="Uebung/jquery.js"></script> -->
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-        <script type="text/javascript" language="javascript" src="Übung/jquery.roundabout.js"></script>
-        <script type="text/javascript" language="javascript" src="Übung/jquery.roundabout-shapes.js"></script>
-        <script type="text/javascript" language="javascript" src="Übung/reflection/reflection.js"></script>
+        <script type="text/javascript" language="javascript" src="Uebung/jquery.roundabout.js"></script>
+        <script type="text/javascript" language="javascript" src="Uebung/jquery.roundabout-shapes.js"></script>
+        <script type="text/javascript" language="javascript" src="Uebung/reflection/reflection.js"></script>
         <script>
             $(document).ready(function(){
                 $("#hideBtn").click(function(){
@@ -229,25 +229,27 @@
                 <section>
                 	<h1>Übung 1</h1>
                    	<h3>Manipulieren eines &lt;p&gt; Elements</h3>
+                    <p style="border-bottom:1px solid #CCC; padding-bottom:5px; margin-bottom:20px;">Lade dir die <a href="Uebung/Uebung.zip">Übungsmaterialien</a> herunter. Du musst nur die <strong>Uebung.html</strong> bearbeiten.<br>Um mit der jQuery-Schreibweise warm zu werden, versuche den Paragraphen mit der id "p1" so zu manipulieren, wie in den Beispielen unten vorgegeben. Auf der nächsten Folie findest du einige Codeschnipsel und Funktionsnamen die du ausprobieren kannst.</p>
                     
                     <p id="funkyP1" style="cursor:pointer;">Ich lasse mich verändern. Klick mich.</p>
-                    
                     <p id="funkyP2" style="cursor:pointer;">Ich lasse mich verändern. Berühre mich.</p>
-                    
-                    <p id="funkyP3" style="cursor:pointer;">Ich lasse mich verändern. Klick mich.</p>
+					<p id="funkyP3" style="cursor:pointer;">Ich lasse mich verändern. Klick mich.</p>
 
                     </code></pre>
                 </section>
                 
                 <section>
                     <h1>Übung 1</h1>
-                    <p>
+                    <h3>Codeschnipsel</h3>
                     <pre><code class="javascript">$(document).ready(function(){
   $("button").event(function(){
     $("p").effekt();
   });
-});                    </code></pre>
-                <p><strong>Events:</strong> click, dblclick, mouseenter, mouseleave, keypress, kreydown, keyup</p>
+});
+// button ist ein Platzhalter für das Objekt, welches mit einem Event belegt werden soll
+// p ist ein Platzhalter für das Objekt, das manipuliert werden soll
+</code></pre>
+                <p style="clear:both;"><strong>Events:</strong> click, dblclick, mouseenter, mouseleave, keypress, kreydown, keyup</p>
                 <p><strong>Effekte:</strong> hide(), show(), fadeIn(), fadeOut(), slideDown, slideUp, animate({parameter:'value';}), css("CSS-Eigenschaft","Wert")</p>
                 </section>
                 
@@ -382,9 +384,9 @@ $("#btn2").click(function(){
                 	<h1>Übung 3</h1>
                     <h3>Fotoslideshow mit roundabout.js und reflection.js</h3>
                     <ul id="Task3">
-                    	<li><img src="Übung/Bild1.jpg" class="reflect" width="100%"></li>
-                        <li><img src="Übung/Bild2.jpg" class="reflect" width="100%"></li>
-                        <li><img src="Übung/Bild3.jpg" class="reflect" width="100%"></li>
+                    	<li><img src="Uebung/Bild1.jpg" class="reflect" width="100%"></li>
+                        <li><img src="Uebung/Bild2.jpg" class="reflect" width="100%"></li>
+                        <li><img src="Uebung/Bild3.jpg" class="reflect" width="100%"></li>
                     </ul>
                 </section>
                 
