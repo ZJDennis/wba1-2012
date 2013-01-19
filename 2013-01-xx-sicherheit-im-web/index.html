@@ -311,6 +311,9 @@ hallo + b9719d91f = 9fc0c1698b0cda1f3a2037e9723312ca
                     <pre><code>
 'Ihre Suche nach "'.htmlspecialchars($suche).'" ergab folgende Treffer:'
                     </code></pre>
+                    <ul>
+                        <li>Textfeld Size begrenzen!</li>
+                    </ul>
                     
                 </section>
                 
@@ -326,8 +329,7 @@ $email = $_POST['username'];
 $password = $_POST['password'];
 $query = "SELECT `kundennummer` FROM `user` WHERE `passwort` = '$password' AND `email` = '$email'";
                     </code></pre>
-                    <h3>Code richtig</h3>
-                                
+                    <h3>Code richtig</h3>                                
                     <pre><code>
 $email = trim(htmlspecialchars($_POST['username']));
 $password = trim(htmlspecialchars($_POST['password']));
