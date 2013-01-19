@@ -230,7 +230,7 @@
                 <section>
                 	<h1>Übung 1</h1>
                    	<h3>Manipulieren eines &lt;p&gt; Elements</h3>
-                    <p style="border-bottom:1px solid #CCC; padding-bottom:5px; margin-bottom:20px;">Lade dir die <a href="Uebung/Uebung.zip">Übungsmaterialien</a> herunter. Du musst nur die <strong>Uebung.html</strong> bearbeiten.<br>Um mit der jQuery-Schreibweise warm zu werden, versuche den Paragraphen mit der id "p1" so zu manipulieren, wie in den Beispielen unten vorgegeben. Auf der nächsten Folie findest du einige Codeschnipsel und Funktionsnamen die du ausprobieren kannst.</p>
+                    <p style="border-bottom:1px solid #CCC; padding-bottom:5px; margin-bottom:20px;">Lade dir die <a href="Uebung/Uebung.zip">Übungsmaterialien</a> herunter. Du musst nur die <strong>Uebung.html</strong> bearbeiten.<br />Um mit der jQuery-Schreibweise warm zu werden, versuche den Paragraphen mit der id "p1" so zu manipulieren, wie in den Beispielen unten vorgegeben. Auf der nächsten Folie findest du einige Codeschnipsel und Funktionsnamen die du ausprobieren kannst.</p>
                     
                     <p id="funkyP1" style="cursor:pointer;">Ich lasse mich verändern. Klick mich.</p>
                     <p id="funkyP2" style="cursor:pointer;">Ich lasse mich verändern. Berühre mich.</p>
@@ -333,14 +333,14 @@ $("#btn2").click(function(){
                     </ul>
                     </p>
                     <div class="split">
-                    	User1:<br>
-                        <input id="textUser1" type="text" size="20" placeholder="Nachticht" /><br>
+                    	User1:<br />
+                        <input id="textUser1" type="text" size="20" placeholder="Nachticht" /><br />
                         <button id="btnUser1">Send</button><button id="btnClearUser1">Clear</button>
                     </div>
                     <div id="TextWindow" class="split"></div>
                     <div class="split" align="right">
-                    	User2:<br>
-                        <input id="textUser2" type="text" size="20" placeholder="Nachticht" /><br>
+                    	User2:<br />
+                        <input id="textUser2" type="text" size="20" placeholder="Nachticht" /><br />
                         <button id="btnUser2">Send</button><button id="btnClearUser2">Clear</button>
                         
                     </div>
@@ -368,19 +368,18 @@ $("#btn2").click(function(){
                         <li>Plugin runterladen</li>
                         <li>.js und ggf .css Dateien einbinden</li>
                     </ul>
-                    <pre><code class="html">
-&lt;script type='text/javascript' src='http://www.slidedeck.com/wp-includes/js/l10n.js?ver<br />=20101110'&gt;&lt;/script&gt;
-                    </code></pre>
+                    <pre><code class="html">&lt;script type='text/javascript' src='http://www.slidedeck.com/wp-includes/js/l10n.js?ver<br />=20101110'&gt;&lt;/script&gt;</code></pre>
                 </section>
                 
                 <section>
                 	<h1>Übung 3</h1>
                     <h3>Fotoslideshow mit roundabout.js und reflection.js</h3>
                     <ul id="Task3">
-                    	<li><img src="Uebung/Bild1.jpg" class="reflect" width="100%"></li>
-                        <li><img src="Uebung/Bild2.jpg" class="reflect" width="100%"></li>
-                        <li><img src="Uebung/Bild3.jpg" class="reflect" width="100%"></li>
+                    	<li><img src="Uebung/Bild1.jpg" class="reflect" width="200px"></li>
+                        <li><img src="Uebung/Bild2.jpg" class="reflect" width="200px"></li>
+                        <li><img src="Uebung/Bild3.jpg" class="reflect" width="200px"></li>
                     </ul>
+                    <p>Um zu zeigen, wie mächtig jQuery Plugins sind, sollst du hier das Plugin roundabout einsetzen. Es macht aus einer einfachen unordered list eine Coverflow-Bibliothek. Mit dem Plugin reflection kann man zudem noch eine Spiegelung auf den Boden realisieren.<br />Es sind sehr einfache Beispiele, die sich schnell umsetzen lassen um den Rahmen der Übung nicht zu sprengen. Prinzipiell lässt sich aber jedes Plugin derart leicht einbinden und anwenden.</p>
                 </section>
                 
                 <section>
@@ -390,15 +389,9 @@ $("#btn2").click(function(){
                     	Die Dateien <strong>jquery.roundabout.js</strong>, <strong>jquery.roundabout-shapes.js</strong> und <strong>reflection/reflection.js</strong> müssen eingebunden werden.
                     </p>
                     <p>Roundabout:</p>
-                    <pre><code class="javascript">
-$('ul').roundabout();	// Für das Standard-Coverflow
-$('ul').roundabout({shape: 'waterWheel' });
-// Für andere Animationen z.B. figure8,square oder lazySusan.
-                    </code></pre>
-                    <p>Um die Reflexion der Bilder zu erzeugen muss lediglich die Klasse "reflect" den Bildern zugeordnet werden.</p>
-                    <pre><code class="html">
-&lt;img src="bild.jpg" class="reflect" /&gt;
-                    </code></pre>
+                    <pre><code class="javascript">$('ul').roundabout();</code></pre>
+                    <p>Um die Reflexion der Bilder zu erzeugen muss lediglich die Klasse "reflect" den &lt;img&gt;-Tags zugeordnet werden.</p>
+                    <pre><code class="html">&lt;img src="bild.jpg" class="reflect" /&gt;</code></pre>
                 </section>
                 
             </div>

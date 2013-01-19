@@ -18,13 +18,14 @@
 	list-style:none;
 	padding:0;
 	margin:0 auto;
-	width:20em;
-	height:7em;
+	width:400px;
+	height:200px;
+	margin-top:-50px;
 }
 
 #Task3 li{
-	height:10em;
-	width:15em;
+	height:150px;
+	width:200px;
 	text-align:center;
 	cursor: pointer;
 }
