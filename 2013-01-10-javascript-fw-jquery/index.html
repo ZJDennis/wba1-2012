@@ -326,20 +326,24 @@ $("#btn2").click(function(){
                 <section>
                 	<h1>Übung 2</h1>
                     <h3>Chat</h3>
-                    
-                    <div class="split" style="font-size:18px;">
+                    <p>Diese Übung soll verdeutlichen, wie einfach es ist, mit jQuery neue HTML-Strukturelemente hinzuzufügen und vorhandene Elemente auszulesen. Um den Chat zum laufen zu bringen muss du:
+                    <ul style="font-size:22px;">
+                    	<li><strong>Die Texte aus den Textboxen auslesen</strong></li>
+                        <li><strong>Die ausgelesenen Texte in das TextWindow in der Mitte einfügen</strong></li>
+                    </ul>
+                    </p>
+                    <div class="split">
                     	User1:<br>
                         <input id="textUser1" type="text" size="20" placeholder="Nachticht" /><br>
                         <button id="btnUser1">Send</button><button id="btnClearUser1">Clear</button>
                     </div>
-                    <div id="TextWindow" class="split" style="font-size:18px; background-color:#343434; height:300px; box-shadow:0px 0px 3px #0CF;"></div>
-                    <div class="split" align="right" style="font-size:18px;">
+                    <div id="TextWindow" class="split"></div>
+                    <div class="split" align="right">
                     	User2:<br>
                         <input id="textUser2" type="text" size="20" placeholder="Nachticht" /><br>
                         <button id="btnUser2">Send</button><button id="btnClearUser2">Clear</button>
                         
                     </div>
-                    
                 </section>
                 
                  <section>

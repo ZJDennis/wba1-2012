@@ -19,20 +19,26 @@ h1{
 	width:250px;
 	height:300px;
 	margin:25px;
+	font-size:18px;
+}
+
+#TextWindow{
+	 background-color:#343434;
+	 height:300px;
+	 box-shadow:0px 0px 3px #0CF;
 }
 
 #Task3{
-	list-style: none;
-	padding: 0;
-	margin: 0 auto;
-	width: 20em;
-	height: 8em;
+	list-style:none;
+	padding:0;
+	margin:0 auto;
+	width:20em;
+	height:7em;
 }
 
 #Task3 li{
-	height: 10em;
-	width: 15em;
-	text-align: center;
-	cursor: pointer;
+	height:10em;
+	width:15em;
 	text-align:center;
+	cursor: pointer;
 }

@@ -1,8 +1,17 @@
 .split{
 	float:left;
 	width:250px;
-	height:300px;
 	margin:25px;
+	font-size:18px;
+}
+
+#TextWindow{
+	 background-color:#343434;
+	 height:150px;
+	 box-shadow:0px 0px 3px #0CF;
+	 font-size:18px;
+	 padding:5px;
+	 overflow:auto;
 }
 
 #Task3{
