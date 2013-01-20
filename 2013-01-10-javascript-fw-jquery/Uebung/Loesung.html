@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Lösung der Übungen zu jQuery</title>
+<link rel="stylesheet" href="uebung.css">
+<!-- jquery-Bibliotheken nicht vergessen! -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script type="text/javascript" language="javascript" src="Uebung/jquery.roundabout.js"></script>
+<script type="text/javascript" language="javascript" src="Uebung/jquery.roundabout-shapes.js"></script>
+<script type="text/javascript" language="javascript" src="Uebung/reflection/reflection.js"></script>
+<script>
+	$(document).ready(function(){
+		$("#p1").click(function(){
+			$("#p1").css("background-color","#77cc00");
+			$("#p1").animate({width:"400px", height:"100px", marginLeft:"100px"},500);
+			$("#p1").animate({fontSize:"40px"},500);
+		});
+		
+		$("#btnUser1").click(function(){
+			$("#TextWindow").append("<p class='textUser1'>User1: "+$("#textUser1").val()+"</p>");
+		});
+		
+		$("#btnUser2").click(function(){
+			$("#TextWindow").append("<p class='textUser2'>User2: "+$("#textUser2").val()+"</p>");
+		});
+		
+		$("#btnClearUser1").click(function(){
+			$("p").remove(".textUser1");
+		});
+		
+		$("#btnClearUser2").click(function(){
+			$("p").remove(".textUser2");
+		});
+	
+		$('#Task3').roundabout();
+	});
+</script>
+</head>
+
+<body>
+
+	<section>
+    	<h1>Übung 1</h1>
+        
+        <p id="p1">Ich bin dein Versuchsabsatz.</p>
+    </section>
+    
+    <section>
+        <h1>Übung 2</h1>
+        
+        <p>Hilfe: Du brauchst nur die Funktionen append(), remove() und val().</p>
+        
+        <div class="split">
+            User1:<br>
+            <input id="textUser1" type="text" size="20" placeholder="Nachricht" /><br>
+            <button id="btnUser1">Send</button><button id="btnClearUser1">Clear</button>
+        </div>
+        <div id="TextWindow" class="split"></div>
+        <div class="split" align="right">
+            User2:<br>
+            <input id="textUser2" type="text" size="20" placeholder="Nachricht" /><br>
+            <button id="btnUser2">Send</button><button id="btnClearUser2">Clear</button>
+            
+        </div>
+        
+    </section>
+    
+    <section style="clear:both;">
+    	<h1>Übung 3</h1>
+        
+        <ul id="Task3">
+            <li><img src="Bild1.jpg" width="100%"></li>
+            <li><img src="Bild2.jpg" width="100%"></li>
+            <li><img src="Bild3.jpg" width="100%"></li>
+        </ul>
+    </section>
+
+</body>
+</html>
