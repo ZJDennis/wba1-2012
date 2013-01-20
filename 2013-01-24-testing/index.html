@@ -64,87 +64,126 @@
                 </p>
 		</section>	
 
-        <section>
-            <h3>Testing</h3>
-            <h4>Warum testen?</h4>
+              <section>
+            <h3>Warum testen?</h3>
                 <p>
         	       <ul>
-            	        <li class="fragment">Menschen machen immer Fehler</li>
-                        <li class="fragment">Fehlerwahrscheinlich steigt mit Größe und Komplexität der Anwendung</li>
-						<li class="fragment">Auch Methoden wie Pair Programming garantieren keine hohe Fehlerfreiheit</li>
-                        <li class="fragment">Kunde soll ein möglichst fehlerfreies Produkt erhalten</li>
+            	        <li>Menschen machen immer Fehler</li>
+                        <li>Fehlerwahrscheinlich steigt mit Größe und Komplexität der Anwendung</li>
+						<li>Auch Methoden wie Pair Programming garantieren keine hohe Fehlerfreiheit</li>
+                        <li>Kunde soll ein möglichst fehlerfreies Produkt erhalten</li>
                     </ul>
                 </p>
         </section>
-    	
-        <section>
-            <h3>Testing</h3>
-            <h4>Was testen?</h4>
-            <p>
-                <ul>
-					<li class="fragment">Verhalten der Software gegenüber den Vorgaben</li>
-                    <li class="fragment">Laufzeitfehler / Logische Fehler</li>
-                    <li class="fragment">Laufzeitverhalten</li>
-                </ul>
-            </p>
-        </section>
-
     	<section>
-            <section>
-            <h3>Testing</h3>
-            <h4>Wie testen?</h4>
-    		<p>
-            	<ul>
-                	<li class="fragment">Black-Box-Test</li>
-                    <li class="fragment">White-Box-Test</li>
-    				<li class="fragment">Unit-Test / Modultest</li>
-                </ul>
-            </p>
-            </section>
-
-            <section>
-            <h3>Wie testen?</h3>
-            <h4>Black-Box-Test</h4>
+            <h3>Was testen?</h3>
             <p>
                 <ul>
-                    <li class="fragment">Tester haben keine Kenntnisse der inneren Programmstruktur</li>
-                    <li class="fragment">Nur das nach außen Sichtbare Verhalten wird getestet (Black-Box)</li>
-                    <li class="fragment">Ziel: Übereinstimmung des Softwareverhaltens mit den Spezifikationen</li>
-                    <li class="fragment">Aufwendige Erstellung der Tests</li>
-                    <li class="fragment">keine Garantie auf Fehlerfreiheit</li>
+					<li>Verhalten der Software gegenüber den Vorgaben</li>
+                    <li>Laufzeitverhalten</li>
+					<li>Verhalten der Software innerhalb einer Infrastruktur</li>
                 </ul>
             </p>
-            </section>
-
-           <section>
-                <h3>Wie testen?</h3>
-                <h4>White-Box-Test</h4>
-                <p>
-                    <ul>
-                        <li class="fragment">Kenntnisse der inneren Programmstruktur bzw. des Quellcodes</li>
-                        <li class="fragment">Testfälle werden anhand der inneren Programmstruktur festgelegt </li>
-                        <li class="fragment">Ziel: Finden von Laufzeit- bzw. logischen Fehlern und optimierung des Laufzweitverhaltens</li>
-                        <li class="fragment">keine Garantie auf Fehlerfreiheit</li>
-                    </ul>
-                </p>
-            </section>
-
-            <section>
-                <h3>Wie testen?</h3>
-                <h4>Unit-Test / Modultest</h4>
-                <p>
-                    <ul>
-                        <li class="fragment">spezielle Art von White-Box-Test</li>
-                        <li class="fragment">Module werden getrennt voneinander getestet</li>
-                        <li class="fragment">zuerst Ausgangszustand initialisieren</li>
-                        <li class="fragment">darauf die zu testenden Operationen ausführen</li>
-                        <li class="fragment">Ist-Ergebnis mit Spezifikationen vergleichen</li>
-                    </ul>
-                </p>
-            </section>
-
-
-        </section>
+    </section>
+	<section>
+	<h3>Wie testen?</h3>
+	<h4>Wichtige Erkenntnisse</h4>
+	<ul>
+		<li>Testing ist <b>NICHT</b> debugging</li>
+		<li>Tests finden niemals alle Fehler</li>
+		<li>Jede Testart findet eine andere Art von Fehler</li>
+		<li>Ziel: Fehler finden, nicht die Ursache</li>
+	</ul>
+	</section>
+	<section>
+	<h3>Wie testen?</h3>
+	<h4>Beispiel Ablauf</h4>
+	<table>
+	<tr>
+		<td>
+			<img src="Images/1.jpg" width="600px" height="360px"/>
+		</td>
+	</tr>
+	</table>
+	</section>
+	<section>
+        <h3>Wie testen?</h3>
+        <h4>White-Box-Test</h4>
+		<p>
+        	<ul>
+            	<li>Kenntnisse der inneren Programmstruktur bzw. des Quellcodes</li>
+				<li>Testfälle werden anhand der inneren Programmstruktur festgelegt </li>
+				<li>Verschiedene Testmethoden (z.B. Überdeckungstests, Modultests) </li>
+                <li>Ziel: Quellcode muss gewisse Qualitätskritieren erfüllen (z.B. Zeilenüberdeckung)</li>
+            </ul>
+        </p>
+    </section>
+	<section>
+        <h3>Wie testen?</h3>
+		<h4>Unit-Test / Modultest</h4>
+		<p>
+		<img src="Images/2.jpg"/>
+			<ul>
+				<li>Module werden getrennt voneinander getestet</li>
+                <li>zuerst Ausgangszustand initialisieren</li>
+                <li>darauf die zu testenden Operationen ausführen</li>
+                <li>Ist-Ergebnis mit Spezifikationen vergleichen</li>
+			</ul>
+		</p>
+</section>
+    	<section>
+        <h3>Wie testen?</h3>
+        <h4>Black-Box-Test</h4>
+		<p>
+        	<ul>
+            	<li>Tester haben keine Kenntnisse der inneren Programmstruktur</li>
+				<li>Nur das nach außen Sichtbare Verhalten wird getestet (Black-Box)</li>
+                <li>Ziel: Übereinstimmung des Softwareverhaltens mit den Spezifikationen</li>
+				<li>Aufwendige Erstellung der Tests</li>
+            </ul>
+        </p>
+    </section>
+	<section>
+        <h3>Wie testen?</h3>
+        <h4>Component-, Integration- und System-Test</h4>
+		<table>
+	<tr>
+		<td>
+			<img src="Images/3.jpg"/>
+		</td>
+		<td>
+			<ul>
+				<li>Softwareverhalten im System testen</li><br>
+                <li>Komponenten zusammen testen</li><br>
+				<li>Komponenten unabhängig voneinander Testen</li>
+            </ul>
+			</td>
+	</tr>
+	</table>
+    </section>
+<section>
+<h3>Wie testen?</h3>
+	<h4>Beispiel Ablauf Zusammenfassung</h4>
+	<table>
+	<tr>
+		<td>
+			<img src="Images/4.jpg"/>
+		</td>
+	</tr>
+	</table>
+	</section>
+	<section>
+        <h3>Javascript Testing Frameworks</h3>
+		<p>
+        	<ul>			           	
+                <li>Jasmine</li>
+                <li>QUnit</li>
+                <li>UnitTesting</li>
+				<li>...</li>
+				<li><a href="http://en.wikipedia.org/wiki/List_of_unit_testing_frameworks#JavaScript" target="_blank">weitere Frameworks</a></li>
+            </ul>
+        </p>
+</section>
 
 
 
@@ -330,24 +369,49 @@
 
 
         
-        <section>
-            <h3>Testen mit Javascript - QUnit</h3>
-            <h4></h4>
-    		<p>
-            	<ul>
-                	<li class="fragment">...</li>
-            </p>
-        </section>
-
-        <section>
-            <h3>Übung zu QUnit</h3>
-            <h4></h4>
-    		<p>
-            	<ul>
-                	<li class="fragment">...</li>              
-                </ul>
-            </p>
-        </section>
+        <section data-markdown>
+<script type="text/template">
+###QUnit
+<ul>
+<li><a href="http://qunitjs.com/" target="_blank">QUnit einbinden</a></li> 
+</ul>
+####Funktion
+		function multiplication(z1, z2) {
+				return z1*z2;
+		}
+####Test
+		test("Multiplikation testen", function () {
+			var z1 = 0;
+			var z2 = 1;
+			expect(1);
+			equal(z1*z2, multiplication(z1, z2), "Funktioniert");
+		});
+</script>
+</section>
+<section data-markdown>
+<script type="text/template">
+####ok
+		test( "ok test", function() {
+			ok( 1 == "1", "Passed!" );
+		});
+####strictEqual
+		test( "strictEqual test", function() {
+			strictEqual( 1, 1, "1 and 1 are the same value and type" );
+		});
+####throws
+		test( "throws", function() {
+			throws(function(){ throw new Error("Error"), "Exception thrown"); 
+		});
+</script>
+</section>
+<section>
+        <h3>Übung 3</h3>
+		<ul>
+		<li>Test in mit QUnit schreiben (BasicCalculator)</li>
+		<li>Im Verzeichnis Uebungen/Uebung3/resources/ die BasicCalculatorSpec.js bearbeiten</li>
+		</ul>
+    </section>
+<section>
 
         <section>
         <h3>Das wars!</h3>
