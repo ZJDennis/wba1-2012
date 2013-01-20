@@ -331,8 +331,8 @@ $query = "SELECT `kundennummer` FROM `user` WHERE `passwort` = '$password' AND `
                     </code></pre>
                     <h3>Code richtig</h3>                                
                     <pre><code>
-$email = trim(htmlspecialchars($_POST['username']));
-$password = trim(htmlspecialchars($_POST['password']));
+$email = trim(mysql_real_escape_string($_POST['username']));
+$password = trim(mysql_real_escape_string($_POST['password']));
 $query = "SELECT `kundennummer` FROM `user` WHERE `passwort` = '$password' AND `email` = '$email'";
                     </code></pre>
                     
