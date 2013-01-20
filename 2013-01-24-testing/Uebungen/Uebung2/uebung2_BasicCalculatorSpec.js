@@ -1,9 +1,9 @@
 describe("BasicCalculator", function() {
   var uebung2_basicCalculator  = new uebung2_BasicCalculator();
-  var z1 = 4;
-  var z2 = 0;
-  var z3 = -2;
-  var z4 = 154;
+  var z1;
+  var z2;
+  var z3;
+  var z4;
 
 /*ToDo Uebung 2.1
 
