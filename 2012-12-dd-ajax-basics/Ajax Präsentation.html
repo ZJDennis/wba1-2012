@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Ajax</title>
+
+		<meta name="description" content="Lehreinheit">
+		<meta name="author" content="Student">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link rel="stylesheet" href="../revealjs-template/css/reveal.css">
+		<link rel="stylesheet" href="../revealjs-template/css/theme/wba.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="../revealjs-template/lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="../revealjs-template/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="../revealjs-template/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+					
+					<h1>Ajax</h1>
+					</br>
+					</br>
+					</br>
+					<p>24. Januar 2013</p>
+					<p>
+						Studiengang Medieninformatik an der Fachhochschule Köln<br/>
+						Campus Gummersbach
+					</p>
+					<p>
+						<a href="https://github.com/MaxNe" target="_blank">Max Neidhardt</a><br />
+						<a href="http://github.com/cries" target="_blank">Christian Ries</a><br />
+					</p>
+				</section>
+
+				<section>
+					<h2>Übersicht</h2>
+					<ul>
+						<li>Einleitung</li>
+						<li>Ursprung</li>
+						<li>Anwendungsbeispiele</li>
+						<li>Asynchronität</li>
+						<li>XMLHttpRequest</li>
+						<li>Frameworks</li>
+						<li>Übung</li>
+						<li>Vor- und Nachteile</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Einleitung</h2>
+					<ul>
+						<li>Ajax = "Asynchronous Java Script and XML"</li>
+						<li>ermöglicht asynchrone Datenübertragung zwischen Webserver und Client bzw. Browser</li>
+						<li>ruft Daten dynamisch vom Webserver ab ohne die Seite neu laden zu müssen</li>
+						<li>kann Anfragen asynchron bearbeiten</li>
+						<li>erweckt den Eindruck einer Desktopanwendung</li>
+					</ul>
+				</section>
+
+				
+				<section>
+					<h2>Ursprung</h2>
+					<ul>
+						<li>Ursprung des Namens ist nicht eindeutig</li>
+						<li>maßgeblich durch Jesse James Garrett in seinem Aufsatz "Ajax: A new approach to Web Applications" geprägt</li>
+						<li>Idee existiert schon seit 1998</li>
+						<li>von Microsoft entwickelt und später durch das Outlook-Web-Access-Team verfeinert um E-Mails in Outlook abzurufen</li>
+						
+					</ul>
+				</section>
+				
+				<section>
+					<h2>Anwendungsbeispiele</h2>
+					<ul>
+						<li><a href="https://maps.google.de/" target="_blank">Google Maps</a></li>
+						<li><a href="https://accounts.google.com/" target="_blank">Gmail</a></li>
+						<li><a href="http://www.flickr.com/" target="_blank">Flickr</a></li>
+						<li><a href="https://facebook.com/" target="_blank">Facebook</a></li>
+						
+					</ul>
+				</section>
+				
+				<section>
+					<h2>Asynchronität</h2>
+					<ul>
+						<li>normale HTTP-Anwendungen laufen nach dem Request-Response-Paradigma ab</li>
+						<li>es findet eine <a href="http://de.wikipedia.org/w/index.php?title=Datei:Prozessfluss-traditionell.svg&filetimestamp=20070610135734" target="_blank">synchrone Datenübertragung</a> statt</li>
+						<li>eine Ajax-Anwendung muss nicht nach jeder Benutzeraktion auf den Server warten</li>
+						<li>Die Datenübertragung ist <a href="http://de.wikipedia.org/w/index.php?title=Datei:Prozessfluss-ajax.svg&filetimestamp=20111102193443" target="_blank">asynchron</a></li>
+						
+					</ul>
+				</section>
+				
+				<section>
+					<section>
+						<h2>XMLHttpRequest</h2>
+						<ul>
+							<li>XMLHttpRequest-Objekt stellt Schnittstelle für Kommunikation zwischen Client und Server zur Verfügung</li>
+							<li>Daten werden über das HTTP-Protokol übertragen daher können alle HTTP-Anfragemethoden (GET, POST, HEAD, PUT) verwendet werden</li>
+							<li>XMLHttpRequest wird von jedem Browser unterschiedlich gehandhabt. Es muss eine sogenannte Browserweiche eingebaut werden</li>
+							
+						</ul>
+					</section>
+					
+					<section data-markdown>
+						<script type="text/template">
+							## Browserunterschiede
+							Mozilla, Opera, Safari und Internet Explorer v7:
+								
+									request = new XMLHttpRequest();
+									
+							Internet Explorer v6:
+								
+									request = new ActiveXObject("Microsoft.XMLHTTP");
+
+							Internet Explorer v5:
+									
+									request = new ActiveXObject("Msxml2.XMLHTTP");
+						</script>
+					</section>
+					
+					<section data-markdown>
+						<script type="text/template">
+							## Browserweiche
+							
+							Eine Browserweiche kann mit einem try...catch Block realisiert werden:
+								
+									var request = null;
+									try {
+										request = new XMLHttpRequest();
+									} catch(e) {
+										try {
+											request = new new ActiveXObject("Microsoft.XMLHTTP");
+										}	catch(e) {
+											try {
+												request = new ActiveXObject("Msxml2.XMLHTTP");
+											} catch(e) {
+												// kein XMLHttpRequest-Objekt erhalten!
+											}
+										}
+									}
+						</script>
+					</section>
+					
+					<section data-markdown>
+						<script type="text/template">
+							## Methoden
+							Mit der open()-Methode kann eine Anfrage an einen Server ausgeführt werden. </br>Syntax:
+								
+									object.open(method, url [, async [, user[, password]]])
+									
+							Erst nach dem aufrufen von send() wird eine Anfrage an den Server geschickt. Bei GET-Anfragen wird als Parameter null übergeben. </br>Beispiel:
+								
+									request.send(null);
+						</script>
+					</section>
+					
+					<section data-markdown>
+						<script type="text/template">
+							## Methoden
+							Mit setRequestHeader() kann man den HTTP-Header vor dem Absenden einstellen. </br>Beispiel:
+
+									request.setRequestHeader('Accept','text/xml');
+						</script>
+					</section>
+					
+					<section>
+						<h2>readyState</h2>
+						object.readyState enthält momentanen Status für die Anfrage. Anfrage ist abgeschlossen wenn readyState = 4 ist.</br></br>
+						<ul>
+							<li>0: Der Request wurde noch nicht initialisiert d.h. bevor XMLHttpRequest.open aufgerufen wurde.</li>
+
+							<li>1: Der Request wurde „gesetzt“, ist aber noch nicht gesendet worden d.h. bevor XMLHttpRequest.send aufgerufen wurde.</li>
+
+							<li>2: Der Request wurde gesendet und wird „bearbeitet“.</li>
+							
+						
+						</ul>
+					</section>
+					
+					<section>
+						<h2>readyState</h2>
+						
+						<ul>
+						<li>3: Der Request wird noch bearbeitet, allerdings stehen schon einige Daten zur Verfügung. Es kann darauf bereits mit XMLHttpRequest.responseText zugegriffen werden.</li>
+
+						<li>4: Der Response (Anwort) ist abgeschlossen d.h. es stehen alle Daten zur Verfügung.</li>
+						</ul>
+					</section>
+					
+					<section data-markdown>
+						<script type="text/template">
+							## readyState
+							In Kombination mit dem Event-Handler onreadystatechanged ergibt sich so eine oft genutzte Struktur für die Callback-Funktion:
+							
+									request.onreadystatechanged = function() {
+									  if(request.readyState == 4){
+										if(request.status == 200){
+										  // Antwort verarbeiten
+										}
+									  }
+									}
+									
+							Um die Antwort des Servers auszulesen stehen folgende Eigenschaften zur Verfügung:
+							
+									responseText
+									responseXML 
+						</script>
+					</section>
+					
+				</section>
+				
+				<section>
+					<h2>Frameworks</h2>
+				</section>
+
+				<section>
+					<h2>Übung</h2>
+					</br>
+					</br>
+					<a href="" target="_blank">Aufgabe zu Ajax</a>
+				</section>
+				
+				<section>
+					<h2>Vorteile</h2>
+					
+					<ul>
+						<li>Webseiten müssen dank Ajax nicht komplett neu geladen werden</li>
+						<li>Der Webserver wird durch Ajax entlastet da statische Daten nicht fortwährend übertragen werden müssen</li>
+						<li>Die Ajax-Technologie ist frei zugänglich und plattform-unabhängig. Es wird kein Browser-Plugin benötigt um Ajax zu nutzen</li>
+					</ul>
+				</section>
+				
+				<section>
+					<h2>Nachteile</h2>
+					
+					<ul>
+						<li>Webbrowser muss Javascript unterstützen.</li>
+						<li>Server kann ohne Anforderungen keine asynchronen Events an Ajax-Client durchleiten (Polling-Problem). Deswegen muss der Ajax-Client ständig Anfragen senden. 
+						So entsteht eine hohe Auslastung des Servers</li>
+						<li>Die Lesezeichen-Funktion und "Zurück"-Funktion eines Webbrowsers funktionieren in Zusammenhang mit Ajax nicht richtig</li>
+					</ul>
+				</section>
+				
+				<section>
+					<h2>Nachteile</h2>
+					
+					<ul>
+						<li>Durch eine hohe Latenz kann es länger dauern die Daten vom Webserver zu laden. Durch vorausschauendes Laden kann man die Ladezeit verkürzen. Es werden also Inhalte geladen die der Nutzer als Nächstes anklicken könnte</li>
+						<li>Visuelles Feedback geben um zu verdeutlichen dass die Anwendung nicht abgestürzt ist sondern Daten lädt</li>
+						<li>Keine Barrierefreiheit da Ajax hauptsächlich für grafische Webbrowser entwickelt wurde</li>
+					</ul>
+				</section>
+				
+			</div>
+
+		</div>
+
+		<script src="../revealjs-template/lib/js/head.min.js"></script>
+		<script src="../revealjs-template/js/reveal.min.js"></script>
+
+		<script>
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: '../revealjs-template/lib/js/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
+					{ src: '../revealjs-template/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../revealjs-template/lib/js/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs-template/lib/js/data-markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs-template/plugin/zoom-js/zoom.js', condition: function() { return !!document.body.classList; } },
+					{ src: '../revealjs-template/socket.io/socket.io.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
+					{ src: '../revealjs-template/plugin/speakernotes/client.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } }
+				]
+			});
+
+		</script>
+	</body>
+</html>
