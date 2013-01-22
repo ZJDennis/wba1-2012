@@ -317,7 +317,24 @@ hallo + b9719d91f = 9fc0c1698b0cda1f3a2037e9723312ca
                     
                 </section>
                 
-                
+                <section>
+                    <h1>XSS Injection</h1>
+                        
+                        <!-- Code falsch, code richtig...-->
+                    <h3>Formularfeld (falsch) Interpretation</h3>
+                    <pre><code>
+'Ihre Suche nach "&lt;b&gt;hallo welt&lt;/b&gt;" ergab folgende Treffer:'
+                    </code></pre>
+                    <h3>Formularfeld (richtig) Interpretation</h3>
+
+                    <pre><code>
+'Ihre Suche nach "&.lt;b&.gt;hallo welt&.lt;/b&g.t;" ergab folgende Treffer:'
+                    </code></pre>
+                    <ul>
+                        <li>Textfeld Size begrenzen!</li>
+                    </ul>
+                    
+                </section>                
                 
                  <section>
                     <h1>SQL Injection</h1>
@@ -343,13 +360,11 @@ $query = "SELECT `kundennummer` FROM `user` WHERE `passwort` = '$password' AND `
                 <h1>SQL Injection-Code</h1>
                 <h3>Unmaskiert</h3>
                 <pre><code>
-
-
+SELECT `kundennummer` FROM `user` WHERE `email` = 'simon.zemke@sidesigne.de' AND `passwort` = 'x' OR '1' = '1' AND `email` = 'simon.zemke@sidesigne.de'
                 </code></pre>
                 <h3>Maskiert</h3>
                 <pre><code>
-
-
+SELECT `kundennummer` FROM `user` WHERE `email` = 'simon.zemke@sidesigne.de' AND `passwort` = 'x\' OR \'1\' \= \'1\' AND \`email\` = \'simon.zemke@sidesigne.de'
                 </code></pre>
                 
                 
