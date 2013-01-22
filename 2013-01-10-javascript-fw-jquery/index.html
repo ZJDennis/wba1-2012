@@ -1,0 +1,429 @@
+﻿<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>JS-Framework jQuery</title>
+
+		<meta name="description" content="Lehreinheit">
+		<meta name="author" content="Student">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link rel="stylesheet" href="../revealjs-template/css/reveal.css">
+		<link rel="stylesheet" href="../revealjs-template/css/theme/wba.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="../revealjs-template/lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+        <script>
+			document.write( '<link rel="stylesheet" href="../revealjs-template/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+        
+<!--        <script type="text/javascript" language="javascript" src="Uebung/jquery.js"></script> -->
+		<link rel="stylesheet" href="index.css">
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script type="text/javascript" language="javascript" src="Uebung/jquery.roundabout.js"></script>
+        <script type="text/javascript" language="javascript" src="Uebung/reflection/reflection.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#hideBtn").click(function(){
+                    $("#hideP").hide();
+                });
+				$("#chaining").click(function(){
+					$("#p1").css("color","red").slideUp(500).slideDown(500);
+				});
+				$("#btn1").click(function(){
+					alert("Text: " + $("#test").text());
+				});
+				$("#btn2").click(function(){
+					alert("HTML: " + $("#test").html());
+				});
+				$("#btn3").click(function(){
+				    alert("Value: " + $("#testInput").val());
+				});
+				$("#funkyP1").click(function(){
+					$("#funkyP1").css("color","#77cc00");
+				});
+				
+				$("#funkyP2").hover(function(){$("#funkyP2").fadeOut(500);},function(){$("#funkyP2").fadeIn(500);});
+				
+				$("#funkyP3").click(function(){
+					$("#funkyP3").css("background-color","#77cc00");
+					$("#funkyP3").animate({width:"400px", height:"100px", marginLeft:"100px"},500);
+					$("#funkyP3").animate({fontSize:"40px"},500);
+				});
+				
+				$("#btnUser1").click(function(){
+					$("#TextWindow").append("<p class='textUser1'>User1: "+$("#textUser1").val()+"</p>");
+				});
+				
+				$("#btnUser2").click(function(){
+					$("#TextWindow").append("<p class='textUser2'>User2: "+$("#textUser2").val()+"</p>");
+				});
+				
+				$("#btnClearUser1").click(function(){
+					$("p").remove(".textUser1");
+				});
+				
+				$("#btnClearUser2").click(function(){
+					$("p").remove(".textUser2");
+				});
+			
+     			$('#Task3').roundabout();
+				//$('#Task3').roundabout({shape: 'waterWheel' });
+            });
+        </script>
+
+		<!--[if lt IE 9]>
+		<script src="../revealjs-template/lib/js/html5shiv.js"></script>
+		<![endif]-->
+        
+        
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+					<h1>Javascript Frameworks</h1>
+					<h2>jQuery</h2>
+					<p>10. Januar 2013</p>
+					<p>
+						Studiengang Medieninformatik an der Fachhochschule Köln<br/>
+						Campus Gummersbach
+					</p>
+					<p>
+						Julian Schöbel <a href="http://github.com/fh-koeln/wba1-2012">github</a> <a href="http://github.com/derSdot">@ derSdot</a><br />
+                        Patrick Czajor <a href="http://github.com/fh-koeln/wba1-2012">github</a> <a href="http://github.com/pczajor">@ pczajor</a><br />
+					</p>
+				</section>
+                
+                <section>
+					<h1>write less, do more</h1>
+					
+                    <p>
+                        <img src="http://static.jquery.com/files/rocker/images/logo_jquery_215x53.gif" width="300px" />
+                    </p>
+                        <ul>
+                            <li>frei</li>
+                            <li>komfortable DOM-Manipulation</li>
+                            <ul>
+                                    <li>weniger Quellcode</li>
+                                    <li>populäre Funktionen</li>
+                            </ul>
+                        </ul>
+                </section>
+               
+                <section>
+                    <h1>Entwicklung</h1>
+                        <ul>
+                            <li>Entwickler: <strong>John Resig</strong></li>
+                            <li>Veröffentlicht: Januar 2006 (BarCamp)</li>
+                            <li>2008: Microsoft und Nokia setzen jQuery in ihren Produkten ein</li>
+                            <li>Populäre CMS (Wordpress, MediaWiki, Drupal) integrieren jQuery</li>
+                            <li>jQuery ist eines der meistgenutzen Frameworks
+                                <ul>
+                                    <li><strong>jede zweite Seite</strong> im Netz nutzt jQuery</li>
+                                    <li>rund <strong>57%</strong> der 10000 meistbesuchten Webseiten nutzen jQuery</li>
+                                </ul>
+                            </li>
+                        </ul>
+                </section>
+               
+                <section>
+                    <h1>Funktionen</h1>
+                        <ul>
+                            <li>Elementselektion über die <strong>Sizzle Selector Engine</strong></li>
+                            <li>Erweitertes Event-System</li>
+                            <li>Hilfsfunktionen (<strong>each</strong>-Funktion)</li> 
+                            <li>Effekte und Animationen</li>
+                            <li>zahlreiche freie <strong>Plug-ins</strong>
+                                <ul>
+                                    <li>jQuery UI</li>
+                                </ul></li>
+                            
+                        </ul>
+                </section>
+            
+                <section>
+                    <h1>Populäre Seiten</h1>
+                        <ul style="float:left; margin-left:100px;">
+                            <li>Google</li>
+                            <li>Dell</li>
+                            <li>Mozilla</li>
+                            <li>CBS</li>
+                        </ul>
+                        <ul style="float:left; margin-left:300px;">
+                            <li>NBC</li>
+                            <li>Netflix</li>
+                            <li>Wordpress</li>
+                            <li>Drupal</li>
+                        </ul>
+                </section>
+            
+                <section>
+                    <h1>Let's start writing less</h1>
+                    <h3>Einbindung von jQuery</h3>
+                    <p style="margin-bottom:-10px;">
+                        Methode 1: Datei runterladen und einbinden
+                    </p>
+                    <pre><code class="html">&lt;head&gt;
+    &lt;script src="jquery-1.8.3.min.js"&gt;&lt;/script&gt;
+&lt;/head&gt;</code></pre>
+                    <p style="margin-bottom:-10px;">
+                        Methode 2: <strong>C</strong>ontent <strong>D</strong>elivery <strong>N</strong>etwork einbinden
+                    </p>
+                    <pre><code class="html">&lt;head&gt;
+    &lt;script type=”text/javascript” src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/
+    jquery.min.js"&gt;&lt;/script&gt;
+&lt;/head&gt;</code></pre>
+					<p style="font-size:20px;"><strong>Hinweis:</strong> Um versionsübergreifend gültig zu sein, kann man anstatt 1.8.3 auch nur 1 schreiben. Dann wird die aktuellste Version zwischen 1.0.0 und 1.9.9 eingebunden.</p>
+                </section>
+                <section>
+                    <h1>Let's start writing less</h1>
+                    <h3>Syntax (1)</h3>
+<pre><code class="html">$(selector).action()</code></pre>
+                    <p>
+                        <strong>$</strong> := jQuery-Notation<br />
+                        <strong>selector</strong> := CSS-Selector<br />
+                        <strong>action</strong> := jQuery-Funktion 
+                    </p>
+                    <pre><code>$("p").hide() - Blendet alle &lt;p&gt; Elemente aus.<br /><br />$("#test","p").hide() - Blendet Elemente mit der id "test" und alle &lt;p&gt; Elemente aus.</code></pre>
+                </section>
+                <section>
+                    <h1>Let's start writing less</h1>
+                    <h3>Syntax (2)</h3>
+                    <p>
+                        Das Document Ready Event
+                    </p>
+                    <pre><code class="javascript">$(document).ready(function(){
+
+   // Hier kommen alle jQuery-Funktionen rein.
+
+});</code></pre>
+                    <p>
+                        Vor Ausführung der jQuery-Funktionen muss die Seite komplett geladen sein.
+                    </p>
+                </section>
+                <section>
+                    <h1>Let's start writing less</h1>
+                    <h3>Syntax (3)</h3>
+                    <p>
+                        Konkretes Beispiel
+                    </p>
+                    <pre><code class="javascript">$(document).ready(function(){
+  $("#btn").click(function(){ // #btn bezieht sich hier auf ein Element mit der ID btn
+    $("#pgr").hide(); // #pgr bezieht sich hier auf ein Element mit der ID pgr
+  });
+});</code></pre>
+                    <p id="hideP">Ich verschwinde jetzt.</p>
+                    <button id="hideBtn">Klick mich!</button>
+                </section>
+                
+                <section>
+                	<h1>Übung 1</h1>
+                   	<h3>Manipulieren eines &lt;p&gt; Elements</h3>
+                    <p style="border-bottom:1px solid #CCC; padding-bottom:5px; margin-bottom:20px;">Lade dir die <a href="Uebung/Uebung.zip">Übungsmaterialien</a> herunter. Du musst nur die <strong>Uebung.html</strong> bearbeiten.<br />Um mit der jQuery-Schreibweise warm zu werden, versuche den Paragraphen mit der id "p1" so zu manipulieren, wie in den Beispielen unten vorgegeben. Auf der nächsten Folie findest du einige Codeschnipsel und Funktionsnamen die du ausprobieren kannst.</p>
+                    
+                    <p id="funkyP1" style="cursor:pointer;">Ich lasse mich verändern. Klick mich.</p>
+                    <p id="funkyP2" style="cursor:pointer;">Ich lasse mich verändern. Berühre mich.</p>
+					<p id="funkyP3" style="cursor:pointer;">Ich lasse mich verändern. Klick mich.</p>
+
+                    </code></pre>
+                </section>
+                
+                <section>
+                    <h1>Übung 1</h1>
+                    <h3>Codeschnipsel</h3>
+                    <pre><code class="javascript">$(document).ready(function(){
+  $("button").event(function(){
+    $("p").effekt();
+  });
+});
+// button ist ein Platzhalter für das Objekt, welches mit einem Event belegt werden soll
+// p ist ein Platzhalter für das Objekt, das manipuliert werden soll</code></pre>
+                <p style="clear:both;"><strong>Events:</strong> click, dblclick, mouseenter, mouseleave, keypress, kreydown, keyup</p>
+                <p><strong>Effekte:</strong> hide(), show(), fadeIn(), fadeOut(), slideDown, slideUp, animate({parameter:'value';}), css("CSS-Eigenschaft","Wert")</p>
+                </section>
+                
+                <section>
+                    <h1>Basisfunktionen</h1>
+                    <h3>Chaining</h3>
+                    <p>Verknüpfung mehrerer Funktionen in einem Element</p>
+                    <pre><code class="javascript">$(selector).action().action().action();</code></pre>
+                    <pre><code class="javascript">$("#p1").css("color","red").slideUp(1000).slideDown(1000);</code></pre>
+                    <p id="p1">Ich verändere mich.</p>
+                    <button id="chaining">Klick mich!</button>
+                </section>
+  
+                <section>
+                    <h1>Basisfunktionen</h1>
+                    <h3>Get und Set (1)</h3>
+                    <ul>
+                        <li>text() - Setzt oder gibt den Text von Elementen wieder</li>
+                        <li>html() - Setzt oder gibt den Inhalt von Elementen in HTML-Struktur wieder</li>
+                        <li>val() -  Setzt oder gibt den Inhalt von Formularfeldern wieder</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>Basisfunktionen</h1>
+                    <h3>Get und Set (2)</h3>
+                    <p>
+                        Mit JavaScript
+                    </p>
+                 <pre><code class="javascript">function alertName() {
+    var name = document.getElementById("test");
+    var text = name.value;
+    alert(text);
+}
+var el = document.getElementById("button");
+el.addEventListener("click", alertName);</code></pre>
+                <p>Mit jQuery </p>   
+                <pre><code class="javascript">$("#button").click(function(){
+    alert(("#test").text());
+  });</code></pre>
+                </section>  
+                <section>
+                    <h1>Basisfunktionen</h1>
+                    <h3>Get und Set (3)</h3>
+
+                        <pre><code class="javascript">$("#btn1").click(function(){
+    alert("Text: " + $("#test").text());
+  });
+$("#btn2").click(function(){
+    alert("HTML: " + $("#test").html());
+  });
+$("#btn2").click(function(){
+    alert("Value: " + $("#test").val());
+  });</code></pre>
+                    <p id="test">Dieser Text ist <b>fett</b>.</p>
+	                <p><input type="text" id="testInput" size="20" value="Blubb Blubb" /></p>
+                    <button id="btn1">text();</button>
+                    <button id="btn2">html();</button>
+                    <button id="btn3">val();</button>
+                </section>
+                <section>
+                    <h1>Basisfunktionen</h1>
+                    <h3>Add und Remove</h3>
+                    <ul style="font-size:28px;">
+                        <li>append() - Fügt Inhalt <strong>am Ende</strong> des ausgewählten Elements ein</li>
+                        <li>prepend()- Fügt Inhalt <strong>am Anfang</strong> des ausgewählten Elements ein</li>
+                        <li>before() - Fügt Inhalt <strong>vor</strong> dem ausgewähltem Element ein</li>
+                        <li>after()  - Fügt Inhalt <strong>hinter</strong> dem ausgewähltem Element ein</li>
+                        <li>remove() - Löscht das <strong>ganze</strong> Element und die Kind-Elemente</li>
+                        <li>empty()  - Löscht nur die <strong>Kind-Elemente</strong> aus dem ausgewähltem Element</li>
+                    </ul>
+                   
+                </section>
+                
+                <section>
+                	<h1>Übung 2</h1>
+                    <h3>Chat</h3>
+                    <p>Diese Übung soll verdeutlichen, wie einfach es ist, mit jQuery neue HTML-Strukturelemente hinzuzufügen und vorhandene Elemente auszulesen. Um den Chat zum Laufen zu bringen, muss du:
+                    <ul style="font-size:22px;">
+                    	<li><strong>Die Texte aus den Textboxen auslesen</strong></li>
+                        <li><strong>Die ausgelesenen Texte in das TextWindow in der Mitte einfügen</strong></li>
+                    </ul>
+                    </p>
+                    <div class="split">
+                    	User1:<br />
+                        <input id="textUser1" type="text" size="20" placeholder="Nachricht" /><br />
+                        <button id="btnUser1">Send</button><button id="btnClearUser1">Clear</button>
+                    </div>
+                    <div id="TextWindow" class="split"></div>
+                    <div class="split" align="right">
+                    	User2:<br />
+                        <input id="textUser2" type="text" size="20" placeholder="Nachricht" /><br />
+                        <button id="btnUser2">Send</button><button id="btnClearUser2">Clear</button>
+                        
+                    </div>
+                </section>
+                
+                 <section>
+                    <h1>Plugins</h1>
+
+                    <ul>
+                        <li>Neue, zusätzliche Funktionen</li>
+                        <li>Zahlreiche verschiedene Plugins
+                            <ul>
+                                <li>jQuery UI  - Erstellung von Desktop ähnlichen Oberflächen</li>
+                                <li>Slidedeck  - Slidebars</li>
+                                <li>roundabout  - Coverflow</li>
+                                <li>reflection  - Spiegeleffekt</li>
+                            </ul></li>
+                    </ul>
+                </section>
+                
+                <section>
+                    <h1>Plugins</h1>
+                    <h3>Einbinden</h3>
+                    <ul>
+                        <li>Plugin runterladen</li>
+                        <li>.js und ggf .css Dateien einbinden</li>
+                    </ul>
+                    <pre><code class="html">&lt;script type='text/javascript' src='http://www.slidedeck.com/wp-includes/js/l10n.js?ver<br />=20101110'&gt;&lt;/script&gt;</code></pre>
+                </section>
+                
+                <section>
+                	<h1>Übung 3</h1>
+                    <h3>Fotoslideshow mit roundabout.js und reflection.js</h3>
+                    <ul id="Task3">
+                    	<li><img src="Uebung/Bild1.jpg" class="reflect" width="200px"></li>
+                        <li><img src="Uebung/Bild2.jpg" class="reflect" width="200px"></li>
+                        <li><img src="Uebung/Bild3.jpg" class="reflect" width="200px"></li>
+                    </ul>
+                    <p>Um zu zeigen, wie mächtig jQuery Plugins sind, sollst du hier das Plugin roundabout einsetzen. Es macht aus einer einfachen unordered list eine Coverflow-Bibliothek. Mit dem Plugin reflection kann man zudem noch eine Spiegelung auf den Boden realisieren.<br />Es sind sehr einfache Beispiele, die sich schnell umsetzen lassen um den Rahmen der Übung nicht zu sprengen. Prinzipiell lässt sich aber jedes Plugin derart leicht einbinden und anwenden.</p>
+                </section>
+                
+                <section>
+                	<h1>Übung 3</h1>
+                    
+                    <p>
+                    	Die Dateien <strong>jquery.roundabout.js</strong>, <strong>jquery.roundabout-shapes.js</strong> und <strong>reflection/reflection.js</strong> müssen eingebunden werden. Es ist wichtig darauf zu achten, dass diese Dateien nicht vor dem Einbinden von jQuery selbst eingebunden werden.
+                    </p>
+                    <p>Roundabout:</p>
+                    <pre><code class="javascript">$('ul').roundabout();</code></pre>
+                    <p>Um die Reflexion der Bilder zu erzeugen muss lediglich die Klasse "reflect" den &lt;img&gt;-Tags zugeordnet werden.</p>
+                    <pre><code class="html">&lt;img src="bild.jpg" class="reflect" /&gt;</code></pre>
+                </section>
+                
+            </div>
+		</div>
+
+		<script src="../revealjs-template/lib/js/head.min.js"></script>
+		<script src="../revealjs-template/js/reveal.min.js"></script>
+
+		<script>
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: '../revealjs-template/lib/js/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
+					{ src: '../revealjs-template/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../revealjs-template/lib/js/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs-template/lib/js/data-markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs-template/plugin/zoom-js/zoom.js', condition: function() { return !!document.body.classList; } },
+					{ src: '../revealjs-template/socket.io/socket.io.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
+					{ src: '../revealjs-template/plugin/speakernotes/client.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } }
+				]
+			});
+
+		</script>
+    </body>
+</html>

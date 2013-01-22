@@ -1,0 +1,320 @@
+/*
+* Skeleton V1.2
+* Copyright 2011, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 6/20/2012
+*/
+
+/* Table of Content
+==================================================
+	#Site Styles
+	#Page Styles
+	#Media Queries
+	#Font-Face */
+
+/* #Site Styles
+================================================== */
+
+.clearfix:after {
+	display: block;
+	clear: both;
+	content: ".";
+	height: 0;
+	visibility: hidden;
+}
+
+* {
+	font-family: myriad-pro, sans-serif;
+	padding: 0;
+	margin: 0;
+}
+body {
+	background-image: url(../images/hintergrund.jpg);
+}
+
+h1 {
+	font-size: 18px;
+	font-weight:600;
+	line-height: 110%;
+	margin: 0px 0 10px 0;
+}
+
+p {
+	font-size: 12px;
+}
+
+#wrap {
+	background: #fff;
+	width: 940px;
+	margin: 0 auto;
+	padding: 10px 20px 10px 20px;
+}
+/*header {
+	margin: 0 0 26px 0;
+}*/
+/*header img {
+	float: right;
+}*/
+nav {
+	float: left;
+	margin: 66px 0 0 0;
+	font-size: 18px;
+}
+nav ul li {
+	display: inline;
+	padding-right: 10px;
+	font-weight: bold;
+}
+nav ul li a {
+	border-bottom: solid 2px #4368ab;
+	color: #000;
+	text-decoration: none;
+	font-weight: normal;
+}
+nav ul li + li a {
+	border-bottom: solid 2px #9AC120;
+}
+nav ul li + li + li a {
+	border-bottom: solid 2px #E64123;
+}
+nav ul li + li + li + li a {
+	border-bottom: solid 2px #4368AB;
+}
+nav ul li + li + li + li + li a {
+	border-bottom: solid 2px #F8B738;
+}
+nav ul li + li + li + li + li + li a {
+	border-bottom: solid 2px #2FA1BC;
+}
+
+#teaser {
+	margin-bottom: 26px;
+}
+
+article {
+	font-size: 12px;
+	margin: 0px;
+	padding: 0px;
+}
+
+footer {
+	border-top: 1px black solid;
+	font-size: 12px;
+	padding-top: 20px;
+}
+footer div {
+	float: left;
+	margin: 0 11px 0 0;
+	width: 149px;
+}
+footer ul {
+	margin: 0 0 12px 0;
+}
+footer li {
+	list-style-type: none;
+}
+footer a {
+	text-decoration: none;
+	color: #AB428F;
+}
+footer a:hover {
+	color: #4368AB;
+}
+
+
+/* #Page Styles
+================================================== */
+
+#teaser figcaption {
+	font-size: 15px;
+}
+
+#teaser img {
+	width: 100%;
+}
+#first_section img, #second_section img {
+	/*border: #C7CBCC 5px solid;*/
+	margin: 0 0 15px 0;
+	width: 100%;
+}
+#second_section {
+	padding-top: 46px;
+}
+#second_section article {
+	margin: 0 0 30px 0;
+}
+#second_section article p {
+	margin: 0 0 10px 0;
+}
+
+#second_section a {
+	background-color: #7BB442;
+	color: #FFF;
+	display: inline-block;
+	font-size: 12px;
+	height: 22px;
+    text-align: center;
+	text-decoration: none;
+    line-height: 22px;
+}
+
+#second_section a img{
+    border: none;
+    margin: 0px;
+}
+.link_sprechblase {
+	width: 35px;
+}
+.link_mehr_infos {
+	width: 156px;
+}
+aside > div {
+	border: 5px #7BB442 solid;
+	border-radius: 5px;
+	float: left;
+	margin: -1px 0 0 0;
+}
+aside > img {
+	float: left;
+	margin: 0px 0 0 20px;
+	padding: 0;
+}
+aside > h1 {
+	float: left;
+	font-size: 12px;
+	margin: 10px 0 0 10px;
+	padding: 0;
+}
+aside article {
+	border-bottom: 1px #7BB442 solid;
+	font-size: 12px;
+	padding: 10px 8px 10px 8px;
+}
+aside article:last-child {
+	border: none;
+}
+aside time {
+    margin: 2px 0 0 0;
+	color: #4368AB;
+}
+
+.dropdown {
+	display: none;
+}
+
+.dropdown select {
+	width: 100%;
+	height: 30px;
+}
+
+.logo {
+	float: right;
+}
+
+.logo img {
+	margin-bottom: 20px;
+}
+
+#headerbox {
+	margin-top: 20px;
+}
+
+.container {
+	background: #fff;
+}
+
+#tweetbox {
+	margin-bottom: 20px;
+}
+
+.dropdown nav {
+	float: none;
+	margin: 0;
+}
+
+/* #####################################################################################################
+##########################################################################################################
+
+Übung 03
+
+Auf ALLEN mobilen Endgeräten soll das Logo im Headerbereich (.logo img) halb so groß (70*44px) dargestellt werden.
+Wählen Sie den passenden Media-Query und fügen Sie die passenden CSS-Eigenschaften hinzu.
+
+
+#########################################################################################################
+##################################################################################################### */
+
+
+/* #Media Queries
+================================================== */
+
+	/* Smaller than standard 960 (devices and browsers) */
+	@media only screen and (max-width: 959px) {}
+
+	/* Tablet Portrait size to standard 960 (devices and browsers) */
+	@media only screen and (min-width: 768px) and (max-width: 959px) {		
+		
+		.logo {
+			float: none;
+			text-align: center;
+		}
+		
+		.logo img {
+			margin-bottom: -40px;
+		}
+		
+	}
+
+	/* All Mobile Sizes (devices and browser) */
+	@media only screen and (max-width: 767px) {
+		
+		.fullwidth {
+			display: none;
+		}
+		
+		.dropdown {
+			display: block;
+		}
+		
+		.logo {
+			float: none;
+			text-align: center;
+		}
+		
+		.container {
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+		
+	}
+
+	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+	@media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+	@media only screen and (max-width: 479px) {}
+	
+	
+/* #####################################################################################################
+##################################################################################################### */
+
+
+/* #Font-Face
+================================================== */
+/* 	This is the proper syntax for an @font-face file
+		Just create a "fonts" folder at the root,
+		copy your FontName into code below and remove
+		comment brackets */
+
+/*	@font-face {
+	    font-family: 'FontName';
+	    src: url('../fonts/FontName.eot');
+	    src: url('../fonts/FontName.eot?iefix') format('eot'),
+	         url('../fonts/FontName.woff') format('woff'),
+	         url('../fonts/FontName.ttf') format('truetype'),
+	         url('../fonts/FontName.svg#webfontZam02nTh') format('svg');
+	    font-weight: normal;
+	    font-style: normal; }
+*/

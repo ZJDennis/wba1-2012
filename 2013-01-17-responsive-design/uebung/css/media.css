@@ -1,0 +1,17 @@
+/* TODO 1: Legen Sie die Breakpoints bei 786px und 480px fest. */
+
+/* TODO 2: Die Schriftgröße des Textes soll nach jedem Breakpoint kleiner werden. */
+
+@media screen and ( ... ) {
+    p {font-size: }
+}
+
+@media
+
+/* TODO 3: Die Überschrift h1 soll unter 480px ihre Farbe ändern. */
+
+@media    
+    
+/* TODO 4: Die Überschrift h1 soll über 768px die Farbe ändern. */
+        
+@media
