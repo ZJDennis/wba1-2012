@@ -6,8 +6,8 @@
 
 		<title>WBA1 - Lokalisierung</title>
 
-		<meta name="description" content="WBA-Basics">
-		<meta name="author" content="Volker Schaefer">
+		<meta name="description" content="WBA-Lokalisierung">
+		<meta name="author" content="Pascal Kottmann">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -142,24 +142,101 @@
 
                 <!--<section data-state="fullscreenImage"  style="background-image: url(images/TimBernersLee.jpg)">-->
 				<section>
-				<h2>
-                        Lokalisierung
-                    </h2>
+				<h2>Lokalisierung</h2>
                     <ul>
-                        <li class="fragment"><strong>Anpassung von Webseiten:</strong><br />verschiedene Sprachen<br />Zeit- und Datumsformate<br /></li>
-						<li class="fragment"><strong>Schriftformatierung:</strong><br />Zeichensätze<br />Unicode/UTF8 <br /></li>
+                        <li class="fragment"><strong>Anpassung von Webseiten:</strong></li>
+						<ul>
+						 <li class="fragment">verschiedene Sprachen</li>
+						 <li class="fragment">Zeit und Datumsformate</li>
+						 <li class="fragment">Einsatz von Währung</li>
+						 <li class="fragment">Tastaturgebrauch</li>
+						 <li class="fragment">Vergleichung und Sortierung</li>
+						 <li class="fragment">Texte und Grafiken</li>
+						 <li class="fragment">Abweichende gesetzliche Bestimmungen</li>
+						</ul>
                     </ul>
                     
                     
                 </section>
-                <section>
-                    <h2>Schriftformatierung</h2><br />
-					UTF8<br />
-					Unicode<br />
-					etc.
+                
+				<section>
+					<h2>Schrift</h2><br />
+					<ul>
+					<li>Zeichen:<br /></li>
+					<ul>
+					<li class="fragment">Lateinisches Alphabet: 26<br /></li>
+					<li class="fragment">Chinesische Zeichen: ~20.000<br /></li>			
+					</ul>
+					</ul>
+					<br /><br /><br /><br /><br />Quelle: w3c (http://www.w3.org/International/questions/qa-what-is-encoding stand:23.01.2013)
+				</section>
+				<section>
+				<h2>Schrift</h2>
+				<h4>Codierung</h4>
+				Wenn der Text bspw. so aussehen sollte:<br />
+				<img class="fragment" src="mojibake1.gif"><br /><br />
+				dann kann es sein, dass er so dargestellt wird:<br />
+				<img class="fragment" src="mojibake2.gif"><br />
+				Quelle: W3C http://www.w3.org/International/questions/qa-what-is-encoding (stand: 23.01.2013)
+				</section>
+				<section>
+				<h2>Umlaute</h2>
+				Umlaute "Ä, Ö, Ü" lassen sich mit &Xuml; darstellen<br />(X ist Variabel(a,o,u)).<br />
+				Auch alle anderen Zeichen lassen sich so bzw. ähnlich darstellen.
+				</section>
+				<section>
+				<h2>&Uuml;bung</h2>
+				Suche eine Tabelle mit Zeichenreferenzen und schreibe deinen Namen mithilfe von Referenzen auf eine Webseite.<br /> <br />
+				<p class="fragment">&#80; &#97;	&#115; &#99; &#97; &#108;</p>
+				<p class="fragment">P = &amp;#80;<br />a = &amp;#97;<br />s = &amp;#115;<br />c = &amp;#99;<br />a = &amp;#97;<br />l = &amp;#108;</p>
+				<p class="fragment">http://html5-webdesign.de/Zeichen-Referenz.html</p>
+				</section>
+				<section>				
+                    <h2>Schriftformatierung</h2>
+					<ul><li>Zeichensätze</li>
+					<ul>
+					<li>ASCII</li>
+						<ul><li>128 Codepoints</li>
+							<li>95 Darstellbare Zeichen</li></ul>
+					<li>Unicode(ISO 10646)</li>
+						<ul><li>1.114.112 CodePoints</li>
+						<li>110.182 Darstellbare Zeichen</li></ul>
+					</ul>
+					</ul>
                 </section>
+				<section>
+				<h2>Schrift</h2>
+				<strong>ASCII</strong> - 
+				<strong>A</strong>merican <strong>S</strong>tandard <strong>C</strong>ode for <strong>I</strong>nformation <strong>I</strong>nterchange<br />
+				<p>(ISO 646)</p>
+					7-Bit-Zeichencodierung (max. 128Zeichen)<br />
+					Grundlage für alle auf Bits basierende Kodierung für Zeichensätze<br /><br />
+					<ul><li>enthält:</li><ul><li>Zahlen</li><li>Lateinisches Alphabet(groß- und kleinbuchstaben)</li><li>"standard" Zeichen</li></ul></ul>
+					
+				</section>
+				<section>
+				<h2>Schrift</h2>
+				<strong>Unicode(ISO 10646)</strong><br /><br />
+							<ul>
+							<li>Ziel alle Sprachen und Zeichen abzudecken</li>
+							<li>17 Ebenen zu je 2^16(65.536 Zeichen) <br />(Insgesamt: 1.114.112 mögliche Zeichen)</li>
+							<li>Oktober 1991 - Version 1.0.0 - 7.161 Zeichen</li>
+							<li>September 2012 - Version 6.2 - 110.182 Zeichen</li>
+										
+				</section>
+				<section>
+				<h2>Schrift</h2>
+				<strong>UTF-8</strong><br />
+				<strong>U</strong>nicode <strong>T</strong>ransformation <strong>F</strong>ormat<br /><br />
+							
+							Standard Internetkodierung für Unicode <br />nach "Internet Engineering Task Force" <br /><br />
+							Die ersten 128 Zeichen entsprechen dem ASCII<br />
+							
+										
+				</section>
+				
                 <section>
-                    Beispielseiten für die Sprachauswahl:<br />
+                    <h2>Beispielseiten für die Sprachauswahl:</h2>
 					<a href="http://www.samsung.com/de/">Samsung</a><br />
 					<a href="http://www.apple.com/de/">Apple</a><br />
 					<a href="http://de.wikipedia.org/wiki/Wikipedia:Hauptseite">Wikipedia</a><br />
