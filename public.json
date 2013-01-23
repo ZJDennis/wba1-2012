@@ -163,11 +163,17 @@
 			"title": "Sicherheit im Web",
 			"authors": ["David Petersen", "Simon Zemke"]
 		},
-		
+
 		"2013-01-24-testing/index.html":
 		{
 			"title" : "Testing",
 			"authors" : ["David Wachs", "Jeremy Dennis Zervo"]
+		},
+
+		"2013-01-24-social-media-tech/index.html":
+		{
+			"title" : "Social Media technisch",
+			"authors" : ["Rivo Tantely", "Lisa Lang"]
 		}
 
 	}
