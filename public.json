@@ -162,6 +162,12 @@
 		{
 			"title": "Sicherheit im Web",
 			"authors": ["David Petersen", "Simon Zemke"]
+		},
+		
+		"2013-01-24-testing/index.html":
+		{
+			"title" : "Testing",
+			"authors" : ["David Wachs", "Jeremy Dennis Zervo"]
 		}
 
 	}
