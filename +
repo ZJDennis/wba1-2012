@@ -1,0 +1,46 @@
+Praesentation
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# Explicit paths specified without -i nor -o; assuming --only paths...
+# On branch Film_im_Web
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	deleted:    2013-01-24-film-im-web/index.html
+#
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   2012-12-20-javascript-basics/schlagzeug_javascript/images/schatten_teaser.jpg
+#	modified:   2012-12-20-javascript-basics/schlagzeug_javascript/images/schlagzeug_sonor.jpg
+#	modified:   2012-12-20-javascript-basics/schlagzeug_javascript/images/schlagzeuger_mit_schlagzeug.jpg
+#	modified:   2012-12-20-javascript-basics/schlagzeug_javascript/images/teaser.jpg
+#	modified:   2012-12-20-javascript-basics/schlagzeug_js_loesung/images/campus_gummersabach.jpg
+#	modified:   2012-12-20-javascript-basics/schlagzeug_js_loesung/images/campus_gummersbach_hof.jpg
+#	modified:   2012-12-20-javascript-basics/schlagzeug_js_loesung/images/fachhochschule_gebaeude.jpg
+#	modified:   2012-12-20-javascript-basics/schlagzeug_js_loesung/images/fans_konzert.jpg
+#	modified:   2012-12-20-javascript-basics/schlagzeug_js_loesung/images/hintergrund.jpg
+#	modified:   2012-12-20-javascript-basics/schlagzeug_js_loesung/images/schatten_teaser.jpg
+#	modified:   2012-12-20-javascript-basics/schlagzeug_js_loesung/images/schlagzeug_sonor.jpg
+#	modified:   2012-12-20-javascript-basics/schlagzeug_js_loesung/images/schlagzeuger_mit_schlagzeug.jpg
+#	modified:   2012-12-20-javascript-basics/schlagzeug_js_loesung/images/teaser.jpg
+#	modified:   2013-01-10-JS-Frameworks/img/jQueryscreen1.jpg
+#	modified:   2013-01-10-JS-Frameworks/img/jQueryscreen2.jpg
+#	modified:   2013-01-10-JS-Frameworks/uebung/showHideFunction/jquery-1.8.3.min.js
+#	modified:   2013-01-10-barrierefreiheit/images/mobile.png
+#	modified:   2013-01-10-barrierefreiheit/sieben_saeulen_barrierefreiheit.pdf
+#	modified:   2013-01-10-cms/CMS_Uebung.pdf
+#	modified:   2013-01-10-css-frameworks/images/sass.jpg
+#	modified:   2013-01-10-css-frameworks/uebung/Aufgabenstellung.pdf
+#	modified:   2013-01-10-javascript-fw-jquery/Bild1.jpg
+#	modified:   2013-01-10-javascript-fw-jquery/Bild2.jpg
+#	modified:   2013-01-10-javascript-fw-jquery/Bild3.jpg
+#	modified:   2013-01-10-javascript-fw-jquery/jquery.js
+#	modified:   2013-01-10-javascript-fw-jquery/jquery.roundabout.js
+#	modified:   revealjs-template/js/reveal.js
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	2013-01-24-film-im-web/ .html
