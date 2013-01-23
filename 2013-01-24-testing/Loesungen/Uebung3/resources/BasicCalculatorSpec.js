@@ -6,9 +6,9 @@ test("isNumber erfolgreich getestet", function () {
  var z4 = 154;
  expect(4);
  ok(true == basicCalculator.isNumber(z1, z4), "Korrekte Parameter"); 
- equal(false, basicCalculator.isNumber("Test", z4), "erster Parameter Falsch");
- strictEqual(false, basicCalculator.isNumber(z1, "TEst"), "zweiter Parameter Falsch");
- equal(false, basicCalculator.isNumber("Test", null), "beide Parameter Falsch");
+ equal(basicCalculator.isNumber("Test", z4), false, "erster Parameter Falsch");
+ strictEqual(basicCalculator.isNumber(z1, "TEst"), false, "zweiter Parameter Falsch");
+ equal(basicCalculator.isNumber("Test", null), false, "beide Parameter Falsch");
 });
   
 //Übung 3.1
@@ -18,7 +18,7 @@ var basicCalculator = new BasicCalculator();
 var z1 = 0;
 var z2 = 1;
 expect(2);
-strictEqual(z1+z2, basicCalculator.addition(z1, z2), "Rechnung korrekt getestet");
+strictEqual(basicCalculator.addition(z1, z2), z1+z2, "Rechnung korrekt getestet");
 throws(function() { basicCalculator.addition(null, z1); }, "Falsche Uebergabeparameter getestet");
 });
 
@@ -42,7 +42,7 @@ var basicCalculator = new BasicCalculator();
 var z1 = 3;
 var z2 = 5;
 expect(2);
-equal(z1*z2, basicCalculator.multiplication(z1, z2), "Rechnung korrekt getestet");
+equal(basicCalculator.multiplication(z1, z2), z1*z2, "Rechnung korrekt getestet");
 throws(function() { basicCalculator.multiplication(null, z1); }, "Falsche Uebergabeparameter getestet");
 });
 
@@ -56,7 +56,7 @@ var z1 = 3;
 var z2 = 5;
 var z3 = 0;
 expect(3);
-equal(z1/z2, basicCalculator.division(z1, z2), "Rechnung korrekt getestet");
+equal(basicCalculator.division(z1, z2), z1/z2, "Rechnung korrekt getestet");
 throws(function() { basicCalculator.division(null, z1); }, "Falsche Uebergabeparameter getestet");
 throws(function() { basicCalculator.division(z1, z3); }, "Division durch 0 getestet!");
 });
