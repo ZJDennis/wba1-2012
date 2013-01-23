@@ -400,6 +400,29 @@
 		});
 </script>
 </section>
+<section data-markdown>
+<script type="text/template">
+###Module
+	var z1;
+	var z2;
+	module("Tests", {
+		setup: function() {
+			z1 = 1;
+			z2 = 2;
+		}
+		teardown: function() {
+		}
+	});
+	test("Addition", function() {
+		expect(1);
+		equal(z1+z2, 3, "Addition getestet");
+	});
+	test("Subtraktion", function() {
+		expect(1);
+		equal(z1-z2, -1, "Subtraktion getestet");
+	});
+</script>
+</section>
     <section>
         <h3>Übung 3</h3>
         <ul>
