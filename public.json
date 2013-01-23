@@ -156,6 +156,12 @@
 		{
 			"title": "Klausuraufgaben",
 			"authors": ["Christian Noss"]
+		},
+
+		"2013-01-24-sicherheit-im-web/index.html":
+		{
+			"title": "Sicherheit im Web",
+			"authors": ["David Petersen", "Simon Zemke"]
 		}
 
 	}
