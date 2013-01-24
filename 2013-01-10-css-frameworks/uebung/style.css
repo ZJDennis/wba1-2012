@@ -1,76 +1,73 @@
-/* Sass-Übung CSS-Frameworks im Rahmen von WBA1. Autor: Simon Klinge */
 body {
   float: left;
   padding: 5px;
-  background-color: black;
+  background-color: grey;
   font-family: Arial,Helvetica,sans-serif;
   font-size: 13px; }
 
 nav {
   position: absolute;
-  left: 25px;
-  top: 25px; }
+  left: 35px;
+  top: 35px; }
 
 nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0; }
-
-nav li {
-  float: left;
-  background-color: #81BEF7;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #E0ECF8;
-  border-radius: 1px;
-  margin: 0px;
-  margin-right: 10px;
-  padding: 0px; }
-
-nav a {
-  text-decoration: none;
-  display: block;
-  margin: 0px;
-  padding: 5px; }
+  nav ul li {
+    float: left;
+    background-color: #81BEF7;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #E0ECF8;
+    border-radius: 1px;
+    margin: 0px;
+    margin-right: 10px;
+    padding: 0px; }
+  nav ul a {
+    text-decoration: none;
+    display: block;
+    margin: 0px;
+    padding: 5px; }
 
 article.article1 {
   position: absolute;
-  left: 25px;
-  top: 75px;
+  left: 35px;
+  top: 105px;
   width: 500px;
   height: 250px;
   margin: 0;
   padding: 10px;
-  background-color: #81BEF7;
+  background-color: grey;
   border-style: solid;
   border-width: 1px;
-  border-color: #E0ECF8;
+  border-color: red;
   border-radius: 10px; }
 
 article.article2 {
   position: absolute;
-  left: 575px;
-  top: 75px;
+  left: 605px;
+  top: 105px;
   width: 300px;
-  height: 500px;
+  height: 700px;
   margin: 0;
   padding: 10px;
-  background-color: #81BEF7;
+  background-color: grey;
   border-style: solid;
   border-width: 1px;
-  border-color: #E0ECF8;
-  border-radius: 1px; }
+  border-color: red;
+  border-radius: 10px; }
 
 article.article3 {
   position: absolute;
-  left: 25px;
-  top: 375px;
+  left: 35px;
+  top: 425px;
   width: 500px;
-  height: 200px;
+  height: 380px;
   margin: 0;
   padding: 10px;
   background-color: #81BEF7;
   border-style: solid;
   border-width: 1px;
-  border-color: #E0ECF8;
+  border-color: red;
   border-radius: 10px; }

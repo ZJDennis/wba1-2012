@@ -175,16 +175,23 @@
 			"title" : "Social Media technisch",
 			"authors" : ["Rivo Tantely", "Lisa Lang"]
 		},
+
 		"2013-01-24-Lokalisierung/index.html":
 		{
 			"title" : "Lokalisierung Zeichencodierung",
 			"authors" : ["Pascal Kottmann", "Sandra Herhaus"]
 		},
-		
+
 		"2013-01-24-ajax-basics/index.html":
 		{
 			"title" : "Ajax Basic",
 			"authors" : ["Max Neidhardt", "Christian Ries"]
+		},
+
+		"2013-01-10-CSS-Frameworks-YAML/index.html":
+		{
+			"title" : "CSS Frameworks-YAML",
+			"authors" : ["Sarah Oatridge", "Christoph Czisch"]
 		}
 	}
 }
