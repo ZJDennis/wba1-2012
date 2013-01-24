@@ -1,24 +1,30 @@
+var z1;
+var z2;
+var z3;
+var z4;
+var basicCalculator;
+module("Test", {
+	setup: function() {
+		z1 = 4;
+		z2 = 0;
+		z3 = -2;
+		z4 = 154;
+		basicCalculator = new BasicCalculator();
+	}
+});
 test("isNumber erfolgreich getestet", function () {
- var basicCalculator = new BasicCalculator();
- var z1 = 4;
- var z2 = 0;
- var z3 = -2;
- var z4 = 154;
  expect(4);
  ok(true == basicCalculator.isNumber(z1, z4), "Korrekte Parameter"); 
- equal(false, basicCalculator.isNumber("Test", z4), "erster Parameter Falsch");
- strictEqual(false, basicCalculator.isNumber(z1, "TEst"), "zweiter Parameter Falsch");
- equal(false, basicCalculator.isNumber("Test", null), "beide Parameter Falsch");
+ equal(basicCalculator.isNumber("Test", z4), false, "erster Parameter Falsch");
+ strictEqual(basicCalculator.isNumber(z1, "TEst"), false, "zweiter Parameter Falsch");
+ equal(basicCalculator.isNumber("Test", null), false, "beide Parameter Falsch");
 });
   
 //Übung 3.1
 //basicCalculator.addition() Test schreiben mit strictEqual
 test("Addition getestet", function () {
-var basicCalculator = new BasicCalculator();
-var z1 = 0;
-var z2 = 1;
 expect(2);
-strictEqual(z1+z2, basicCalculator.addition(z1, z2), "Rechnung korrekt getestet");
+strictEqual(basicCalculator.addition(z1, z2), z1+z2, "Rechnung korrekt getestet");
 throws(function() { basicCalculator.addition(null, z1); }, "Falsche Uebergabeparameter getestet");
 });
 
@@ -26,9 +32,6 @@ throws(function() { basicCalculator.addition(null, z1); }, "Falsche Uebergabepar
 //Übung 3.2 
 //basicCalculator.subtraction() Test schreiben mit ok
 test("Subtraktion getestet", function () {
-var basicCalculator = new BasicCalculator();
-var z1 = 0;
-var z2 = 1;
 expect(2);
 ok(z1-z2 == basicCalculator.subtraction(z1, z2), "Rechnung korrekt getestet");
 throws(function() { basicCalculator.subtraction(z2, ""); }, "Falsche Uebergabeparameter getestet");
@@ -38,11 +41,8 @@ throws(function() { basicCalculator.subtraction(z2, ""); }, "Falsche Uebergabepa
 //Übung 3.3
 //basicCalculator.multiplication() Test schreiben
 test("Multiplikation getestet", function () {
-var basicCalculator = new BasicCalculator();
-var z1 = 3;
-var z2 = 5;
 expect(2);
-equal(z1*z2, basicCalculator.multiplication(z1, z2), "Rechnung korrekt getestet");
+equal(basicCalculator.multiplication(z1, z2), z1*z2, "Rechnung korrekt getestet");
 throws(function() { basicCalculator.multiplication(null, z1); }, "Falsche Uebergabeparameter getestet");
 });
 
@@ -51,12 +51,8 @@ throws(function() { basicCalculator.multiplication(null, z1); }, "Falsche Ueberg
 //hier soll auch getestet werden, ob die Funktion division eine 
 //Exception wirft sobald, man versucht durch 0 zu teilen (throws)
 test("Division getestet", function () {
-var basicCalculator = new BasicCalculator();
-var z1 = 3;
-var z2 = 5;
-var z3 = 0;
 expect(3);
-equal(z1/z2, basicCalculator.division(z1, z2), "Rechnung korrekt getestet");
+equal(basicCalculator.division(z1, z3), z1/z3, "Rechnung korrekt getestet");
 throws(function() { basicCalculator.division(null, z1); }, "Falsche Uebergabeparameter getestet");
-throws(function() { basicCalculator.division(z1, z3); }, "Division durch 0 getestet!");
+throws(function() { basicCalculator.division(z1, z2); }, "Division durch 0 getestet!");
 });
