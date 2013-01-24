@@ -187,6 +187,12 @@
 			"title" : "Ajax Basic",
 			"authors" : ["Max Neidhardt", "Christian Ries"]
 		},
+        
+        "2013-01-24-film-im-web/praesent.html":
+		{
+			"title" : "Film im Web",
+			"authors" : ["Nigel Frangenberg", "Nazan Aysune"]
+		},
 
 		"2013-01-10-CSS-Frameworks-YAML/index.html":
 		{
