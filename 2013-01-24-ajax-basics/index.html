@@ -289,23 +289,24 @@
 				</section>
 				
 				<section>
+					<section>
 					<h2>Frameworks</h2>
 					Die Verwendung von Frameworks macht den Umgang mit AJAX erheblich einfacher.</br></br>
 			    jQuery ist dafür sehr gut geeignet da es einfache Methoden zur Verfügung stellt:</br></br>
 					<ul>
 							<li>load()</li>
 							<li>get()</li>
-							<li>post()</li>
+							<li>ajax()</li>
 					</ul>
-				</section>
-				<section>
+					</section>
+					<section>
 					<h2>Frameworks</h2>
 					<h3>load() - Methode</h3>
 					<section data-markdown>
 						<script type="text/template">
 							Syntax: 
 				
-									$(selector).load(URL,data,callback);
+									$(selector).load(URL,data,callback)
 									
 							- URL: bezeichnet die zu ladene URL
 							
@@ -341,7 +342,7 @@
 						<script type="text/template">
 							Syntax: 
 				
-									$.get(URL,callback);
+									$.get(URL,callback)
 									
 							- URL: bezeichnet die zu ladene URL
 							
@@ -366,12 +367,52 @@
 					</section>
 				</section>
 				<section>
+					<h2>Frameworks</h2>
+					<h3>ajax() - Methode</h3>
+					<section data-markdown>
+						<script type="text/template">
+						
+						Syntax: 
+				
+								$.ajax({name:value, name:value, ... })
+									
+						-  Die Parameter sind ein oder mehrere name/value Paare
+							
+						-  z.B.: url, dataType... (http://api.jquery.com/jQuery.ajax/)
+							
+						</script>
+					</section>
+				</section>
+				<section>
+					<h2>Frameworks</h2>
+					<h3>ajax() - Methode / Beispiele</h3>
+					<section data-markdown>
+						<script type="text/template">
+						
+								$("button").click(function(){
+									$.ajax({
+										url:"data.json",
+										success:function(data){
+											for (res in data['results']) {
+                        // Do something
+											}
+										}
+									});
+								}); 
+								
+						</script>
+					</section>
+				</section>
+				</section>
+				
+				<section>
 					<h2>Übung</h2>
 					</br>
 					</br>
-					<a href="" target="_blank">Aufgabe zu Ajax</a>
+					<a href="http://apfelkuchen.no-ip.org/uebung1/aufgabe.html" target="_blank">Übung 1 - XMLHTTPRequest</a></br></br>
+					<a href="http://apfelkuchen.no-ip.org/uebung2/aufgabe.html" target="_blank">Übung 2 - Ajax & Twitter API</a>
 				</section>
-				
+
 				<section>
 					<h2>Vorteile</h2>
 					
