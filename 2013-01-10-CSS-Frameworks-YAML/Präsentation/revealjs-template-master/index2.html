@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>WBA1 - CSS Frameworks</title>
+
+		<meta name="description" content="CSS Frameworks">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link rel="stylesheet" href="../revealjs-template/css/reveal.css">
+		<link rel="stylesheet" href="../revealjs-template/css/theme/wba.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="../revealjs-template/lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="../revealjs-template/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="../revealjs-template/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+					<h1>WBA</h1>
+					<h2>CSS Frameworks</h2>
+					<p>January 10th, 2013</p>
+					<p>
+						Studiengang Medieninformatik an der Fachhochschule Köln<br/>
+						Campus Gummersbach
+					</p>
+					<p>
+						Sarah Oatridge<br />
+						sarah_oatridge@gmx.net<br />
+                        Christoph Czisch<br />
+                        Christoph.Czisch@me.com
+					</p>
+				</section>
+
+                <section>
+					<h2>Ein kleiner Überblick...</h2>
+					<ul>
+                    	<li class="fragment">Was sind CSS Frameworks?</li>
+                        <li class="fragment">Vor- und Nachteile</li>
+                        <li class="fragment">Welche Frameworks gibt es?</li>
+                        <li class="fragment">Blueprint, YAML</li>
+                        <li class="fragment">Tool: Thinkin´Tags</li>
+                    </ul>
+
+
+				</section>
+
+                <section>
+                	<h2>Was sind CSS Frameworks?</h2>
+                    <ul>
+                    	<li class="fragment">Werkzeug zur Layoutentwicklung</li>
+                        <li class="fragment">projektunabhängiges Baukastensystem</li>
+                    </ul>
+                    <blockquote class="fragment">
+    				<p>CSS-Frameworks sind leistungsfähige Entwicklungsumgebungen für die Erstellung von Webseiten und richten sich vorrangig an professionelle Webentwickler. Sie stellen universelle Layoutbausteine bereit und definieren ein Regelwerk, im Rahmen dessen der Entwickler sich frei bewegen kann.</p>
+        			<cite>Dirk Jesse, YAML Entwickler</cite>
+    				</blockquote>
+                    <p></p>
+                </section>
+
+                <section>
+                	<h2>Vorteile</h2>
+                    <ul>
+                    	<li class="fragment">Steigerung der Produktivität</li>
+                        <li class="fragment">Browserbugs umgehen</li>
+                        <li class="fragment">Browserübergreifende Lauffähigkeit</li>
+                        <li class="fragment">Einheitliche Code-Basis</li>
+                        <li class="fragment">verbesserter Workflow im Team</li>
+                    </ul>
+                </section>
+
+				<section>
+                	<h2>Nachteile</h2>
+                    <ul>
+                    	<li class="fragment">aufgeblähter Code (Overhead)</li>
+                        <li class="fragment">Einarbeitungszeit</li>
+                        <li class="fragment">Fehler anderer übernehmen</li>
+
+                    </ul>
+                </section>
+
+                <section>
+                    <a href="#/2/1" class="image">
+							<img width="557" height="661" src="Unbenannt.jpg" alt="Vergleich von CSS Frameworks">
+                            </a>
+                </section>
+
+
+                <section>
+                	<section>
+                    <h2>Blueprint</h2>
+                    </section>
+
+                    <section>
+                        <h2>Blueprint</h2>
+                    		<h3>Vorteile</h3>
+                            <ul>
+                            	<li class="fragment">Browserübergreifend</li>
+                                <li class="fragment">veränderbare Typographie</li>
+                                <li class="fragment">Layouts sind druckfertig</li>
+                            </ul>
+                    </section>
+
+                    <section>
+                        <h2>Blueprint</h2>
+                    		<h3>Vorteile</h3>
+                            <ul>
+                            	<li>grid</li>
+                                	<ul>
+                                    	<li class="fragment">senkrechtes Raster</li>
+                                        <li class="fragment">max 24 Spalten</li>
+                                        <li class="fragment">max 950 px</li>
+                                        <li class="fragment">immer 10 px rechten Rand</li>
+                                    </ul>
+
+                            </ul>
+                    </section>
+
+                    <section>
+                        <h2>Blueprint</h2>
+                    		<h3>Nachteile</h3>
+                            <ul>
+                            	<li class="fragment">fixes Layout</li>
+                                <li class="fragment">maximale Spaltenanzahl</li>
+                            </ul>
+                    </section>
+
+
+    				<section>
+                    	<h2>Blueprint</h2>
+                        	<h3>6 Stylesheets</h3>
+                            <ul>
+                            	<li class="fragment">reset.css</li>
+                                <li class="fragment">typography.css</li>
+                                <li class="fragment">grid.css</li>
+                                <li class="fragment">ie.css</li>
+                                <li class="fragment">print.css</li>
+                                <li class="fragment">form.css</li>
+                            </ul>
+                    </section>
+
+                    <section data-markdown>
+                	<script type="text/template">
+						## Einbindung in HTML
+							<html>
+								<head>
+								<meta http-equiv=“content-type“ content=“text/html; charset=utf-8“/>
+									<title>Blueprint Test</title>
+									<Link rel=“stylesheet“href=“blueprint/screen.css“ type=“text/css“ media=“screen,projection“/>
+									<Link rel=“stylesheet“ href=“blueprint/print.css“ type=“text/css“ media=“print“/>
+								</head>
+								<body>
+								</body>
+							</html>
+
+					</script>
+
+                </section>
+
+
+                    <section data-markdown>
+                	<script type="text/template">
+						## grid in Blueprint
+							<div class=“container“>
+								<div id=“header“ class=“span-24 last“>
+									<p>blah</p>
+								</div>
+								<div id=“content“ class=“span-16“>
+									<p>blah2</p>
+								</div>
+								<div id=“sidebar“ class=“span-8 last“>
+									<p>blah3</p>
+								</div>
+								<div id=“footer“ class=“span-24 last“>
+									<p>blah4</p>
+								</div>
+							</div>
+
+					</script>
+
+                </section>
+
+
+                </section>
+
+
+
+                <section>
+                	<section>
+                	<h2>YAML</h2>
+                   </section>
+                <section>
+                	<h2>YAML</h2>
+                    	<h3>Aufbau, Arbeitsweise</h3>
+                        <ul>
+                        	<li class="fragment">Sammlung von CSS Dateien</li>
+                            <li class="fragment">Core Ordner = Basis CSS Dateien und IE Hacks</li>
+                            <li class="fragment">verschiedene zusätzliche Ordner für</li>
+                            <li class="fragment">Navigation, Formulare, Printversionen von Webseiten</li>
+                            <li class="fragment">man layoutet Webseite mittels vorhandener YAML Klassen</li>
+						</ul>
+                </section>
+                <section>
+                	<h2>YAML</h2>
+                    	<h3>Features</h3>
+                        <ul>
+                        	<li class="fragment">Flexible, fixe und elastische Layouts</li>
+                            <li class="fragment">flexibles Grid- und Formular-System</li>
+                            <li class="fragment">sehr umfangreiche Dokumentation</li>
+                            <li class="fragment">HTML5/CSS3 ready</li>
+                            <li class="fragment">unterstützt jQuery</li>
+                            <li class="fragment">browserübergreifende Layouts</li>
+						</ul>
+                </section>
+                <section>
+                	<h2>YAML</h2>
+                    	<h3>einige Klassen</h3>
+                        <ul>
+                        	<li class="fragment">.ym-wrapper (Layout)</li>
+                            <li class="fragment">.ym-grid (Grid)</li>
+                            <li class="fragment">.ym-column (Spalten)</li>
+                            <li class="fragment">.ym-form (Formulare)</li>
+                            <li class="fragment">.ym-clearfix (Float Handhabung)</li>
+                        </ul>
+                </section>
+
+                <section>
+                	<h2>YAML</h2>
+                    	<h3>Wrapper</h3>
+                        <ul>
+                        	<li class="fragment">.ym-wrapper</li>
+                            <li class="fragment">Layout-Modul</li>
+                            <li class="fragment">Standardwerte Breite</li>
+                            <li class="fragment">optinal: .ym-wbox (für padding und borders)</li>
+                        </ul>
+                </section>
+
+                <section data-markdown>
+                	<script type="text/template">
+						## .ym-wrapper
+							<body>
+							 	<div class="ym-wrapper">
+									<div>
+										Inhalt...
+									</div>
+								</div>
+							</body>
+					</script>
+
+                </section>
+
+               <section>
+                	<h2>YAML</h2>
+                    	<h3>Grid</h3>
+                        <ul>
+                        	<li class="fragment">.ym-grid</li>
+                            <li class="fragment">flexibles Raster-Modul</li>
+                            <li class="fragment">Verschachtelungen möglich</li>
+                            <li class="fragment">basiert auf Prozentsätzen</li>
+                            <li class="fragment">.ym-g20, .ym-g20, .ym-g33, .ym-g50, ...</li>
+                            <li class="fragment">Anpassungen / Erweiterungen möglich</li>
+                        </ul>
+                </section>
+                	<section data-markdown>
+                	<script type="text/template">
+						## .ym-grid
+							<div class="ym-grid">
+								<div class="ym-g50 ym-gl">
+									<div class="ym-gbox">
+									 	<-! Inhalt ->
+										...
+									</ Div>
+								</ Div>
+								<div class="ym-g50 ym-gr">
+									<div class="ym-gbox">
+										<-! Inhalt ->
+										...
+									</ Div>
+								</ Div>
+							</ Div>
+					</script>
+
+                </section>
+
+                <section>
+                	<h2>YAML</h2>
+                    	<h3>Spalten</h3>
+                        <ul>
+                        	<li class="fragment">.ym-column</li>
+                            <li class="fragment">teilt Inhaltsbereich in 2 bzw 3 Spalten auf</li>
+                            <li class="fragment">Breiten anpassbar (px, em, %)</li>
+                            <li class="fragment">Reihenfolge variabel</li>
+                            <li class="fragment">optional: .ym-cbox-(left / right)</li>
+                        </ul>
+                </section>
+
+                <section data-markdown>
+                	<script type="text/template">
+						## .ym-column
+							<div class="ym-column">
+								<div class="ym-col1">
+									<div class="ym-cbox">
+										...
+									</ Div>
+								</ Div>
+								<div class="ym-col2">
+									<div class="ym-cbox">
+										...
+									</ Div>
+								</ Div>
+								<div class="ym-col3">
+									<div class="ym-cbox">
+										...
+									</ Div>
+								</ Div>
+							</ Div>
+					</script>
+
+                </section>
+
+                <section>
+                	<h2>YAML</h2>
+                    	<h3>Formulare</h3>
+                        <ul>
+                        	<li class="fragment">.ym-form</li>
+                            <li class="fragment">optional: .ym-full, .ym-required,...</li>
+                            <li class="fragment">Kind-Klassen: .ym-fbox-text, .ym-fbox-select, .ym-fbox-check,...</li>
+                            <li class="fragment">visuelle Anpassung: .ym-columnar, .ym-full, .ym-inline</li>
+                            <li class="fragment">Pflichtangaben, Fehlermeldungen, Buttons möglich</li>
+                        </ul>
+                </section>
+
+                <section>
+                	<h2>YAML</h2>
+                    	<h3>Float Handhabung</h3>
+                        <ul>
+                        	<li class="fragment">.ym-clearfix = float löschen</li>
+                        	<li class="fragment">.ym-contain-dt = vehindert abschneiden von übergroßen Kindelementen</li>
+                            <li class="fragment">.ym-contain-oh = schneidet bei Overflow Kindelement ab und zeigt ohne Scrollbalken an</li>
+                            <li class="fragment">.ym-contain-fl = bei relativer Positionierung</li>
+                        </ul>
+                </section>
+
+                <section>
+                	<h2>YAML</h2>
+                    	<h3>Navigation</h3>
+                        <ul>
+                        	<li class="fragment">horizontale Navigation</li>
+                        	<li class="fragment">.ym-hlist</li>
+                            <li class="fragment">vertikale Navigation</li>
+                            <li class="fragment">.ym-vlist</li>
+                        </ul>
+                </section>
+
+
+                </section>
+
+
+                <section>
+                	<h2>Thinkin´ Tags</h2>
+                    <ul>
+                    	<li class="fragment">browserbasiertes Arbeiten</li>
+                        <li class="fragment">auf CSS Frameworks spezialisiert</li>
+                        <li class="fragment">keine großen Vorkenntnisse erforderlich</li>
+                        <h3>Link: http://www.thinkintags.com</h3>
+                    </ul>
+                </section>
+
+                <section>
+                	<h2>Aufgabe 1</h2>
+                    	<h3>http://www.thinkintags.com</h3>
+                        <p>Bauen Sie mit mittels "Thinkin´Tags" eine simple Web-Seite. Dazu öffnen Sie ein neues Projekt und                         benennen es beliebig. Als Code Base soll YAML CSS FRAMEWORK ausgewählt werden. Die Seite soll über einen Header, eine Navigation, eine Main und einen Footer verfügen.<br>Hinweis: Nutzen Sie den Element-Browser. Und immer mal wieder in den Source Reiter schauen, dort sieht man wie YAML im HTML Code aussieht.
+
+                    	</p>
+                </section>
+
+                <section>
+                	<h2>Aufgabe 2</h2>
+                    	<p>Fügen Sie die passenden Layout Einstellungen hinzu:</p>
+                        <ul>
+                        	<li>max. Seitenbreite = 600px</li>
+                            <li>Seitenausrichtung = center</li>
+                            <li>Header, Navigation, Main, Footer Padding = 10px</li>
+                        </ul>
+
+                </section>
+
+                <section>
+                	<h2>Aufgabe 3</h2>
+                    	<p>Fügen Sie...</p>
+                        <ul>
+                        	<li>eine Headline, </li>
+                            <li>eine horizontale Navigation,</li>
+                            <li>ein Bild und einen Blindtext ein (mehrere Lösungen möglich),</li>
+                            <li>zwei (neben einander) Texte mit H2 Überschrift ein (.ym-grid nutzen),</li>
+                            <li>einen kleinen Einzeiler in den Footer ein</li>
+                        </ul>
+
+                </section>
+
+                <section>
+                	<h2>Aufgabe 4</h2>
+                    	<p>Ändern Sie die Schriftart der Texte auf Verdana und die Größe auf 14pt.<br>Die Headlines sollen auf Impact geändert werden.</p>
+
+                </section>
+
+				<section>
+                	<h2>Danke!</h2>
+                    <p>Quellenangaben:<br>www.highresolution.info<br>www.yaml.de<br>www.redaxo.org<br>www.yaml.de<br>www.yaml.dnn.ch<br>www.notes-sandbox.net<br>www.net.tutsplus.com/tutorials<br>www.pehbehbeh.de<br>www.blueprintcss.org<br>und Wikipedia ;)
+</p>
+
+                </section>
+
+			</div>
+
+		</div>
+
+		<script src="../revealjs-template/lib/js/head.min.js"></script>
+		<script src="../revealjs-template/js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: '../revealjs-template/lib/js/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
+					{ src: '../revealjs-template/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../revealjs-template/lib/js/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs-template/lib/js/data-markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs-template/plugin/zoom-js/zoom.js', condition: function() { return !!document.body.classList; } },
+					{ src: '/socket.io/socket.io.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
+					{ src: 'plugin/speakernotes/client.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
