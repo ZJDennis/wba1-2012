@@ -4,9 +4,9 @@
         <title>Javascript Advanced - Aufgabe 1</title>
     </head>
     <body>
-        <button id="rot">Rot</button>
-        <button id="gruen">Gr&uuml;n</button>
-        <button id="blau">Blau</button>
+        <button id="button_rot">Rot</button>
+        <button id="">Gr&uuml;n</button>
+        <button id="">Blau</button>
         
         <script type="text/javascript">
         
@@ -22,23 +22,19 @@
         
         
             /* ###TODO###: Elementreferenzen über ihre ID holen */
-            var button_rot = document.getElementById('rot');
-            var button_gruen = document.getElementById('gruen');
-            var button_blau = document.getElementById('blau');
-			alert(button_rot);
+            var button_rot = document;
+            var button_gruen = document;
+            var button_blau = document;
             
             function setze_hintergrundfarbe(color) {
                 /* ###TODO###: Hintergrundfarbe des body-Elements setzen; Farbe ist über 'color' mitgegeben */
-				alert("Tada");
-                document.body.style.backgroundColor=color;
+                document.body.style;
             }
-			function rot_setzen(e) { setze_hintergrundfarbe('#ff0000'); /* Farbe Rot */ }
+            
+            
+            function rot_setzen(e) { setze_hintergrundfarbe('#ff0000'); /* Farbe Rot */ }
             function blau_setzen(e) { setze_hintergrundfarbe('#0000ff'); /* Farbe Blau */ }
             function gruen_setzen(e) { setze_hintergrundfarbe('#00ff00'); /* Farbe Grün */ }
-            button_rot.addEventListener('rot_setzen', setze_hintergrundfarbe());
-            button_gruen.addEventListener('gruen_setzen', setze_hintergrundfarbe);
-			button_blau.addEventListener('blau_setzen', setze_hintergrundfarbe);
-            
         
             /* ###TODO###:
                Den Buttons die Eventlistener zuweisen
