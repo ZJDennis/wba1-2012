@@ -14,7 +14,7 @@ h1 {
     Aussenabstand:        66px 0 0 0
     **************************************************************************/
 nav {
-	margin: 66px 0 0 0;
+	margin: 66px 0 10px 0;
 }
 
 
@@ -126,6 +126,7 @@ input[type="radio"] {
     Innenabstand, oben: 20px
     **************************************************************************/
 footer {
+	display:inline;
 	border-top: 1px black solid;
 	font-size: 12px;
 	padding-top: 20px;
@@ -139,6 +140,7 @@ footer {
     Breite:             149px
     **************************************************************************/
 footer div {
+	display:inline;
 	margin: 0 11px 0 0;
 	width: 149px;
 }

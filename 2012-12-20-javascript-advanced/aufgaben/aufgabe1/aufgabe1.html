@@ -14,7 +14,7 @@
 
             function alertName() {
                 /* ###TODO###: Inhalt des Textfelds auslesen (über seine ID) und diesen Inhalt einer Zwischenvariable zur Weiterverwendung zuweisen */
-                var Name = '';
+                var Name = document.getElementById('get_name').value;
                 
                 /* alert-Popup mit Zusammengesetzten String aufrufen */
                 alert("Hello " + Name + "!");
@@ -23,8 +23,8 @@
             function load(event_object) {
             
                 /* ###TODO###: Button-Element über seine ID beziehen und ihm die Funktion 'alertName' als Eventhandler hinzufügen */
-                var el = document;
-                el;
+                var el = document.getElementById('click');
+                el.addEventListener('click', alertName);;
             }
             
             /* Wenn der DOM-Baum aufgebaut ist, wird die Funktion load aufgerufen */
@@ -35,8 +35,8 @@
         <div>
             Would you tell me your name please?
             <br>
-            <input type="text" id="">
-            <input type="button" id="" value="OK">
+            <input type="text" id="get_name">
+            <input type="button" id="click" value="OK">
         </div>
     </body>
 </html>

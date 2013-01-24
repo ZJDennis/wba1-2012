@@ -1,19 +1,46 @@
 <!doctype html>
-<html>
-<head>
+<html><head>
 <meta charset="utf-8">
 <title>Beispiele</title>
 <link rel="stylesheet" href="uebung.css">
-<!-- jquery-Bibliotheken nicht vergessen! -->
+<script type="text/javascript" language="javascript" src="jquery.js"></script>
+        <script type="text/javascript" language="javascript" src="jquery.roundabout.js"></script>
+        <script type="text/javascript" language="javascript" src="jquery.roundabout-shapes.js"></script>
+        <script type="text/javascript" language="javascript" src="reflection/reflection.js"></script>
 <script>
-	//Hier den jQuery-Code einfügen
+$(document).ready(function(){
+  $("#p1").hover(function(){
+    $("#p1").hide();
+  });
+$("#btnUser1").click(function(){
+$("#TextWindow").append("<p class='textUser1'>User1: "+$("#textUser1").val()+"</p>");
+});
+				
+$("#btnUser2").click(function(){
+$("#TextWindow").append("<p class='textUser2'>User2: "+$("#textUser2").val()+"</p>");
+});			
+				
+$("#btnClearUser1").click(function(){
+$("p").remove(".textUser1");
+});
+				
+$("#btnClearUser2").click(function(){
+$("p").remove(".textUser2");
+});
+			
+$('#Task3').roundabout();
+
+$("#bild3").click(function(){
+					$("#bild3").animate({width:"300px", height:"250px"},500);
+					
+});
 </script>
 </head>
 
 <body>
 
 	<section>
-    	<h1>Übung 1</h1>
+    	<h1 class="reflect">Übung 1</h1>
         
         <p id="p1">Ich bin dein Versuchsabsatz.</p>
     </section>
@@ -39,9 +66,9 @@
     	<h1>Übung 3</h1>
         
         <ul id="Task3">
-            <li><img src="Bild1.jpg" width="100%"></li>
-            <li><img src="Bild2.jpg" width="100%"></li>
-            <li><img src="Bild3.jpg" width="100%"></li>
+            <li><img id="bild1" src="Bild1.jpg" width="100%" class="reflect"></li>
+            <li><img id="bild2" src="Bild2.jpg" width="100%" class="reflect"></li>
+            <li><img id="bild3" src="Bild3.jpg" width="100%" class="reflect"></li>
         </ul>
     </section>
 
