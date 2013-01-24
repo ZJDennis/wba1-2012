@@ -179,6 +179,12 @@
 		{
 			"title" : "Lokalisierung Zeichencodierung",
 			"authors" : ["Pascal Kottmann", "Sandra Herhaus"]
+		},
+		
+		"2013-01-24-ajax/index.html":
+		{
+			"title" : "Ajax Basic",
+			"authors" : ["Max Neidhardt", "Christian Ries"]
 		}
 	}
 }
