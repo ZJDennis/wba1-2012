@@ -1,7 +1,0 @@
-#wrapper {
-    max-width: 980px;
-    margin: auto;
-}
-
-/* TODO: Lassen Sie das Bild an der Größe des Browserfensters sklieren. */
-#teaser { max-width: 100%; }
