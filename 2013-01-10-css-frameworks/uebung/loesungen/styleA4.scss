@@ -1,0 +1,113 @@
+// Lösung zu A4. Veränderungen sind mit einem //<---------- makiert
+
+$spacing:25px;
+$padding:0px;
+$article_1_width:500px;
+$article_1_height:250px;
+$article_2_width:300px;
+$article_2_height:500px;
+$article_3_width:$article_1_width;
+$article_3_height:$article_2_height - $article_1_height - ($spacing * 2);
+
+$color_background:#81BEF7;
+$color_border:#E0ECF8;
+
+@mixin set_border($radius) {		//<-------
+	border-style:solid;				//<-------
+	border-width:1px;				//<-------
+	border-color:$color_border;		//<-------	
+	border-radius:$radius;			//<-------
+}
+
+body {
+    float:left;
+    padding: 5px;
+    background-color: black;
+    font-family:Arial,Helvetica,sans-serif;
+    font-size: 13px;
+}
+nav {
+	// Position
+    position:absolute;
+    left:$spacing;
+    top:$spacing;
+	ul {									
+		list-style-type:none;
+		margin:0;
+		padding:0;
+	}
+	li {								
+		float:left;
+		background-color:$color_background;	
+		@include set_border(1px);			// <------
+		margin: 0px;
+		margin-right:10px;
+		padding:0px;
+	}
+	a {										
+		text-decoration:none;
+		display:block;
+		margin: 0px;
+		padding:5px;
+	}
+}
+article.article1 {
+	// Position
+    position:absolute;
+    left:$spacing;
+    top:$spacing*3;
+	
+	// Groesse
+	width:$article_1_width;
+    height:$article_1_height;
+	
+	// Inhalt
+	margin:0;
+	padding:$padding;
+	
+	// Farbe
+    background-color:$color_background;
+    
+    // Border
+    @include set_border(10px);				// <------
+}
+article.article2 {
+	// Position
+    position:absolute;
+    left:$spacing*2 + $article_1_width;
+    top:$spacing*3;
+	
+	// Groesse
+	width:$article_2_width;
+    height:$article_2_height;
+	
+	// Inhalt
+	margin:0;
+	padding:$padding;
+	
+	// Farbe	
+    background-color:$color_background;
+	
+	// Border
+    @include set_border(1px);				// <------
+}
+article.article3 {
+	// Position
+    position:absolute;
+    left:$spacing;
+    top:$spacing*5 + $article_1_height;
+	
+	// Groesse
+	width:$article_3_width;
+    height:$article_3_height;
+	
+	// Inhalt
+	margin:0;
+    padding:$padding;
+	
+	//Farbe
+    background-color:$color_background;
+    
+    // Border
+    @include set_border(10px);				// <------	
+}

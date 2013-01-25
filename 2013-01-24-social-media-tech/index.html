@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+
+<title>WBA1 - Social Media</title>
+
+<meta name="description" content="Social Media">
+<meta name="author" content="Rivo Tantely, Lisa Lang">
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+<link rel="stylesheet" href="../revealjs-template/css/reveal.css">
+<link rel="stylesheet" href="../revealjs-template/css/theme/wba.css" id="theme">
+
+<!-- For syntax highlighting -->
+<link rel="stylesheet" href="../revealjs-template/lib/css/zenburn.css">
+
+<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+<script>
+document.write( '<link rel="stylesheet" href="../revealjs-template/css/print/' + ( 
+    window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+
+<!--[if lt IE 9]>
+<script src="../revealjs-template/lib/js/html5shiv.js"></script>
+<![endif]-->
+</script>
+<style>
+.progress {
+z-index: 9999;
+}
+.fullscreen .state-background {
+width: 100%;
+height: 100%;
+}
+
+.fullscreen .reveal .slides {
+margin: 0;
+padding: 0;
+width: 100%;
+height: 100%;
+max-width: 100%;
+left: 0;
+right: 0;
+top: 0;
+bottom: 0;
+}
+
+.fullscreen .reveal .slides > section {
+position: absolute;
+width: 100%;
+height: 100%;
+min-height: 100%;
+text-align: left;
+left: 0;
+right: 0;
+top: 0;
+bottom: 0;
+margin: 0;
+background-position: center center;
+background-repeat: no-repeat;
+background-size: auto 100%;
+}
+</style>
+</head>
+
+<body>
+
+<div class="reveal">
+
+<!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+        <section>
+            <h1>WBA1 - Social Media</h1>
+            <h2>Medieninformatik</h2>
+            <p>24. Januar 2013</p>
+            <p>Studiengang Medieninformatik an der Fachhochschule Köln<br/>
+                Campus Gummersbach</p>
+            <p style="margin-top: 100px">
+                Rivo Tantely 
+                <a href="https://github.com/Madaflavour" target="_blank">Github: Madaflavour</a>
+                <br />Lisa Lang
+                <a href="https://github.com/lslang" target="_blank">Github: lslang</a><br />
+            </p>
+        </section>
+    
+        <section>
+            <h1>Aufbau der Lerneinheit <font color="#dd1166">Social Media Technik</font></h1>
+            <p style="font-size: 1em;"> 
+            <ul>
+                <li>API</li>
+                <li>Sozialer Graph</li>
+                <li>JSON</li>
+                <li>Javascript SDK</li>
+            </ul>
+            <h1 style="margin-top: 1.0em; margin-bottom: 0.5em;">Was wollen wir erreichen?</h1>
+            <ul>
+                <li>Social Plugins auf unserer Website integrieren</li>
+            </ul>
+        </section>
+
+        <section>
+            <h1> Was ist eine API?</h1>
+            <ul>
+                <li class="fragment">Application Programming Interface</li>
+                <li class="fragment">Schnittstelle zur Anwendungsprogrammierung</li>
+                <li class="fragment">Webseite --> Graph API --> Facebook</li>
+                <li class="fragment">Graph API</li>
+                <ul>
+                    <li class="fragment">erlaubt Schreib- und Lesezugriff auf die meisten Objekte und Verbindungen, die den <strong>sozialen Graphen</strong> von Facebook ausmachen</li>
+                </ul>
+            </ul>
+        </section>
+    
+        <section>
+            <h1>Sozialer Graph</h1>
+            <ul>
+                <li class="fragment">Speicherung der Objekte</li>
+                <li class="fragment">jedes Objekt besitzt Identifikationsnummer</li>
+                <li class="fragment">Basis URL: <strong>https://graph.facebook.com</strong></li>
+                <li class="fragment">Besipiel URL: <strong>https://graph.facebook.com/ObjektID</strong></li>
+            </ul>
+        </section>
+    
+        <section>  
+            <ul>
+                <h1></h1>
+                <li><a href="https://graph.facebook.com/100005051133031" target="_blank">https://graph.facebook.com/100005051133031</a></li>
+                <li><a href="https://graph.facebook.com/tomoko.alekandero" target="_blank">https://graph.facebook.com/tomoko.alekandero</a></li>
+            </ul>
+        </section>  
+    
+        <section>
+            <h1>JSON</h1>
+            <ul>
+                <li class="fragment">JavaScript Object Notation</li>
+                <li class="fragment">textbasierter Datenaustausch</li>
+                <li class="fragment">unabhängig von der Programmiersprache</li>
+                <li class="fragment">JSON wurde von Douglas Crockford</li>
+            </ul>
+        </section>
+        
+        <section>
+            <h1>Javascript SDK</h1>
+            <ul>
+                <li><a href="http://developers.facebook.com/docs/plugins/" target="_blank">Facebook Developer</a></li>
+                <li class="fragment">JavaScript Software Development Kit</li>
+                <li class="fragment">auf Graph API zugreifen</li>
+                <li class="fragment">asynchron</li>
+            </ul>
+        </section>
+
+        <section>
+<pre><code>
+&lt;div id="fb-root"&lt;/div>
+&lt;script>
+window.fbAsyncInit = function() {
+    FB.init({
+         appId : '214728715257742',  // Anwendungs-ID
+         channelUrl : '//apps.mycompany.com/channel.php',//Channel-Datei
+	    status : true, // Login-Status prüfen
+         cookie : true, // Cookies aktivieren
+         oauth : true, // OAuth 2.0 aktivieren
+         xfbml : true // XFBML parsen
+    });
+        // Weitere Initialisierungen hier vornehmen ...
+};
+// Asynchrones Laden des SDKs
+(function(d){
+var js,id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+js = d.createElement('script'); js.id = id; js.async = true;
+js.src = "//connect.facebook.net/en_US/all.js";
+d.getElementsByTagName('head')[0].appendChild(js);
+}(document));
+&lt;/script>
+		</code></pre>
+</section>
+
+        <section>
+            <h1><strong>Developer mit Twitter </strong></h1>
+            <ul>
+                <li>https://dev.twitter.com/apps/</li>
+                <li>Consumer Key</li>
+                <li>Consumer Secret Key</li>
+                <li>Access Level</li>
+            </ul>
+
+            <ul>
+                <li>Access Token/</li>
+                <li>Access Token secret</li>
+                <li>Access Level</li>
+            </ul>
+
+        </section>
+
+        <section>
+            <h1><strong>Developer mit Twitter </strong></h1>
+            <ul>
+                <li>oAuth Tool</li>
+                <li>Authorisierung</li>
+            </ul>
+        </section>
+         <section>
+            <h1><strong>Vielen Dank! </strong></h1>
+            
+        </section>
+    </div>
+</div>
+ <script src="../revealjs-template/lib/js/head.min.js"></script>
+    <script src="../revealjs-template/js/reveal.min.js"></script>
+
+    <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: '../revealjs-template/lib/js/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
+          { src: '../revealjs-template/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: '../revealjs-template/lib/js/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../revealjs-template/lib/js/data-markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../revealjs-template/plugin/zoom-js/zoom.js', condition: function() { return !!document.body.classList; } },
+          { src: '../revealjs-template/socket.io/socket.io.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
+          { src: '../revealjs-template/plugin/speakernotes/client.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } }
+        ]
+      });
+
+    </script>
+    
+</body>
+</html>
