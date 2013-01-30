@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>WBA1 - GIT Advanced</title>
+
+		<meta name="description" content="Git Advanced">
+		<meta name="author" content="Sascha Lemke, Jörn Fiege">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link rel="stylesheet" href="../revealjs-template/css/reveal.css" />
+		<link rel="stylesheet" href="../revealjs-template/css/theme/wba.css" id="theme" />
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="../revealjs-template/lib/css/zenburn.css" />
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="../revealjs-template/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print" />' );
+		</script>
+		
+		<style>
+			code {color: #CCCCCC; padding: 0px !important;}
+		</style>
+		<!--[if lt IE 9]>
+		<script src="../revealjs-template/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+					<h1>GIT Advanced</h1>
+					<h2>Medieninformatik</h2>
+					<p>January 10th, 2013</p>
+					<p>
+						Studiengang Medieninformatik an der Fachhochschule Köln<br>
+						Campus Gummersbach
+					</p>
+					<ul>
+						<li><a href="https://github.com/slemke">Sascha Lemke</a></li>
+						<li><a href="https://github.com/jfiege">Jörn Fiege</a></li>
+					</ul>
+				</section>
+				
+				<section>
+					<h1>Forks</h1>
+					<ul>
+						<li>Forks bieten eine Möglichkeit an anderen Projekten teilzunehmen</li>
+						<li>Erstellt eine Kopie des Hauptprojekts</li>
+						<li>Kann unabhängig vom Hauptprojekt agieren..</li>
+						<li>Aber auch jederzeit Updates vom Hauptprojekt mit einbeziehen</li>
+					</ul>
+				</section>
+				
+				<section>
+					<h1>Wie erstelle ich ein Fork?</h1>
+					<ol>
+						<li>ein Fork erstellen <img src="img/fork.png" alt="fork-button" /></li>
+						<li>das Fork clonen</li>
+						<ul>
+							<li><code>git clone git@github.com:username/forkname.git</code></li>
+						</ul>
+						<li>Upstream einstellen</li>
+						<ul>
+							<li><code>git remote add https://github.com/username/hautprojekt.git</code></li>
+						</ul>
+						<li> Upstream daten laden</li>
+						<ul>
+							<li><code>git fetch upstream</code></li>
+						</ul>
+					</ol>
+				</section>
+				
+				<section>
+					<h1>Übung: Forks</h1>
+					<ul>
+						<li>Projekt auf GitHub Forken</li>
+						<li>URL: <a href="http://www.github.com/slemke/git-advanced">http://www.github.com/slemke/git-advanced</a></li>
+						<li>Update abwarten</li>
+						<li>Daten vom Hauptprojekt pullen</li>
+						<li>Etwas im Projekt ändern</li>
+						<li>Warten!</li>
+					</ul>
+				</section>
+				
+				<section>
+					<h1>Pull requests</h1>
+					<p>Pull requests bieten eine Möglichkeit die Änderungen an das Hauptprojekt zurück zu geben.</p>
+					<p align="center">
+						<img src="img/pullrequest.png" alt="pullrequest" />
+					</p>
+				</section>
+				
+				<section>
+					<h1>Übung: Pull request</h1>
+					<p>Nun werden die Änderungen aus der Übung vorher an das Projekt zurück gegeben!</p>
+				</section>
+				
+				<section>
+					<h1>GitHub Pages</h1>
+					<ul>
+						<li>Es gibt zwei Arten von Pages:</li>
+						<ul>
+							<li>User- und Organisationpages</li>
+							<li>Projektpages</li>
+						</ul>
+						<li>GitHub Pages bietet eine einfache Möglichkeit zur Dokumentation/Präsentation des Codes am selben Ort</li>
+					</ul>
+				</section>
+				
+				<section>
+					<h1>User Pages</h1>
+					<ul>
+						<li>User Pages werden in einem Repository gespeichert, mit einem bestimmten Namen</li>
+						<li>Beispiel: <a href="">slemke.github.com</a></li>
+						<li>Die Daten müssen in der "<em>master</em>" branch liegen</li>
+					</ul>
+				</section>
+				
+				<section>
+					<h1>Project Pages</h1>
+					<ul>
+						<li>User pages liegen im selben Repository wie der Code</li>
+						<li>allerdings nicht in der "<em>master</em>" branch, sondern unter "<em>gh-pages</em>"</li>
+					</ul>
+				</section>
+				
+				<section>
+					<h1>Page Generator</h1>
+					<ul>
+						<li>Für die Menschen die zu faul oder zu untalentiert sind gibts auch einen Page Generator</li>
+					</ul>
+					<p align="center">
+						<img src="https://github-images.s3.amazonaws.com/help/pages-automatic-page-generator.png" alt="" />
+					</p>
+					<small>Bildquelle: github.com</small>
+				</section>
+				
+				<section>
+					<h1>Übung: User Pages</h1>
+					<ul>
+						<li>Ein Repository mit folgender Syntax anlegen</li>
+						<li><code>username.github.com</code></li>
+						<li>clonen, html datei ablegen, pushen</li>
+						<li>über <a href="">username.github.com</a> aufrufen</li>
+					</ul>
+				</section>
+				
+				<section>
+					
+					<section>
+						<h1>Saubere History mit rebase</h1>
+						<ul>
+							<li>Die History ist eine Auflistung der Commits</li>
+							<li>Manchmal möchte man Änderungen vornehmen</li>
+							<ul>
+								<li>Beispiel: saubere History für leichtere Einbindung in das Hauptprojekt</li>
+							</ul>
+						</ul>
+					</section>
+					
+					<section>
+						<h1>Struktur mit git merge</h1>
+						<p align="center">
+							<img src="http://git-scm.com/figures/18333fig0328-tn.png" alt="" />
+						</p>
+						<small>Bildquelle: git-scm.com</small>
+					</section>
+					
+					<section>
+						<h1>Struktur mit git rebase</h1>
+						<p align="center">
+							<img src="http://git-scm.com/figures/18333fig0330-tn.png" alt="" />
+						</p>
+						<small>Bildquelle: git-scm.com</small>
+					</section>
+				
+				</section>
+				
+				<section>
+					<h1>Ändern des letzten Commits</h1>
+					<ul>
+						<li>Manchmal möchte man den letzten Commit aus der History entfernen oder ändern.</li>
+						<li><code>git commit --amend</code></li>
+						<li>Ermöglicht die Bearbeitung des Commits mit einem Texteditor</li>
+					</ul>
+				</section>
+				
+				<section>
+					<h1>Änderen mehrerer Commits (Interactive rebase)</h1>
+					<code>git rebase -i HEAD~3</code>
+					<p>
+						Ändert die letzten 3 Commits
+					</p>
+					<pre>
+pick f7f3f6d changed my name a bit
+pick 310154e updated README formatting and added blame
+pick a5f4a0d added cat-file
+
+# Rebase 710f0f8..a5f4a0d onto 710f0f8
+#
+# Commands:
+#  p, pick = use commit
+#  e, edit = use commit, but stop for amending
+#  s, squash = use commit, but meld into previous commit
+#
+# If you remove a line here THAT COMMIT WILL BE LOST.
+# However, if you remove everything, the rebase will be aborted.
+#
+					</pre>
+					<small>Codequelle: git-scm.com</small>
+				</section>
+
+				<section>
+					<h1>Neusortieren von Commits</h1>
+					<p>Verhält sich wie interactive rebase nur das man die commits über
+					den Texteditor neu sortiert.</p>
+				</section>
+				
+				<section>
+					<h1>Zusammenfassen von Commits</h1>
+					<pre>
+pick f7f3f6d changed my name a bit
+squash 310154e updated README formatting and added blame
+squash a5f4a0d added cat-file
+					</pre>
+					<ul>
+						<li>Wählten den ersten Commit</li>
+						<li>Nimmt die anderen beiden Commits und fügt sie dem ersten hinzu</li>
+					</ul>
+					<small>Codequelle: git-scm.com</small>
+				</section>
+				
+				<section>
+					<h1>Splitten eines Commits</h1>
+					
+					<pre>
+pick f7f3f6d changed my name a bit
+edit 310154e updated README formatting and added blame
+pick a5f4a0d added cat-file
+					</pre>
+					<pre>
+$ git reset HEAD^
+$ git add README
+$ git commit -m 'updated README formatting'
+$ git add lib/simplegit.rb
+$ git commit -m 'added blame'
+$ git rebase --continue
+					</pre>
+					<small>Codequelle: git-scm.com</small>
+				</section>
+				
+				<section>
+					<h1>Splitten: Ergebnis</h1>
+					<pre>
+$ git log -4 --pretty=format:"%h %s"
+1c002dd added cat-file
+9b29157 added blame
+35cfb2b updated README formatting
+f3cc40e changed my name a bit
+					</pre>
+					<small>Codequelle: git-scm.com</small>
+				</section>
+				
+				<section>
+					<h1>Ende!</h1>
+					<p>
+						Danke für eure Aufmerksamkeit!
+					</p>
+				</section>
+			</div>
+		</div>
+		<script src="../revealjs-template/lib/js/head.min.js"></script>
+		<script src="../revealjs-template/js/reveal.min.js"></script>
+		<script>
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: '../revealjs-template/lib/js/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
+					{ src: '../revealjs-template/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../revealjs-template/lib/js/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs-template/lib/js/data-markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs-template/plugin/zoom-js/zoom.js', condition: function() { return !!document.body.classList; } }
+				]
+			});
+		</script>
+	</body>
+</html>
