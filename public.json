@@ -92,6 +92,12 @@
 			"authors" : ["Lars Behrens", "Lutz Schönfelder", "Alina Sinderovich", "Jorge H. F. Pereira"]
 		},
 
+		"2013-01-10-git-advanced/index.html":
+		{
+			"title" : "Git Advanced",
+			"authors" : ["Sascha Lemke", "Jörn Fiege"]
+		},
+
 		"2013-01-10-JS-Frameworks/index.html":
 		{
 			"title" : "JavaScript Frameworks",
