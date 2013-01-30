@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Lösung der Übungen zu jQuery</title>
+<link rel="stylesheet" href="uebung.css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> <!-- jQuery-Bibliothek einbinden -->
+<script type="text/javascript" language="javascript" src="jquery.roundabout.js"></script>	<!-- Übung 3 - Roundabout-Bibliothek einbinden -->
+<script type="text/javascript" language="javascript" src="reflection/reflection.js"></script>	<!-- Übung 3 - Reflection-Bibliothek einbinden -->
+<script>
+	$(document).ready(function(){	// ready-Funktion um sicher zu stellen, dass alle Elemente fertig geladen sind
+		$("#p1").click(function(){	// Füge dem Element mit der ID "p1" das Event "click" hinzu
+			$("#p1").css("background-color","#77cc00");	// Hintergundfarbe ändern
+			$("#p1").animate({width:"400px", height:"100px", marginLeft:"100px"},500);	// Höhe, Breite und Position verändern
+			$("#p1").animate({fontSize:"40px"},500);	// Schriftgröße ändern
+		});
+		
+		$("#btnUser1").click(function(){	// Füge dem Element mit der ID "btnUser1" das Event "click" hinzu
+			$("#TextWindow").append("<p class='textUser1'>User1: "+$("#textUser1").val()+"</p>");	// Füge in das Element mit der ID "TextWindow" ein neues HTML-Strukturelement hinzu. In diesem Fall ist es ein Paragraph mit der Klasse "textUser1". Es ist wichtig um mit der Clear-Funktion alle Texte dieses Users zu finden. Der Text aus den Textboxen wird mit der Funktion .val() ausgelesen.
+		});
+		
+		$("#btnUser2").click(function(){	// Füge dem Element mit der ID "btnUser2" das Event "click" hinzu
+			$("#TextWindow").append("<p class='textUser2'>User2: "+$("#textUser2").val()+"</p>");	// siehe Send-Funktion für User1
+		});
+		
+		$("#btnClearUser1").click(function(){	// Füge dem Element mit der ID "btnClearUser1" das Event "click" hinzu
+			$("p").remove(".textUser1");	// Alle Elemente mit der Klasse "textUser1" werden entfernt
+		});
+		
+		$("#btnClearUser2").click(function(){	// Füge dem Element mit der ID "btnClearUser2" das Event "click" hinzu
+			$("p").remove(".textUser2");	// Alle Elemente mit der Klasse "textUser2" werden entfernt
+		});
+	
+		$('#Task3').roundabout();	// Fügt der unordered list mit der ID "Task3" die Funktion "roundabout" zu
+	});
+</script>
+</head>
+
+<body>
+
+	<section>
+    	<h1>Übung 1</h1>
+        
+        <p id="p1">Ich bin dein Versuchsabsatz.</p>
+    </section>
+    
+    <section>
+        <h1>Übung 2</h1>
+        
+        <p>Hilfe: Du brauchst nur die Funktionen append(), remove() und val().</p>
+        
+        <div class="split">
+            User1:<br>
+            <input id="textUser1" type="text" size="20" placeholder="Nachricht" /><br>
+            <button id="btnUser1">Send</button><button id="btnClearUser1">Clear</button>
+        </div>
+        <div id="TextWindow" class="split"></div>
+        <div class="split" align="right">
+            User2:<br>
+            <input id="textUser2" type="text" size="20" placeholder="Nachricht" /><br>
+            <button id="btnUser2">Send</button><button id="btnClearUser2">Clear</button>
+            
+        </div>
+        
+    </section>
+    
+    <section style="clear:both;">
+    	<h1>Übung 3</h1>
+        
+        <ul id="Task3">
+            <li><img src="Bild1.jpg" width="100%" class="reflect"></li>		<!-- Dem Bild wird die Klasse reflect zugewiesen, was zusammen mit der Bibliothek reflection eine Spiegelung des Bildes bewirkt -->
+            <li><img src="Bild2.jpg" width="100%" class="reflect"></li>
+            <li><img src="Bild3.jpg" width="100%" class="reflect"></li>
+        </ul>
+    </section>
+
+</body>
+</html>

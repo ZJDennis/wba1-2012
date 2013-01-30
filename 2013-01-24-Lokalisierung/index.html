@@ -1,0 +1,339 @@
+﻿<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>WBA1 - Lokalisierung</title>
+
+		<meta name="description" content="WBA-Lokalisierung">
+		<meta name="author" content="Pascal Kottmann, Sandra Herhaus">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link rel="stylesheet" href="../revealjs-template/css/reveal.css">
+		<link rel="stylesheet" href="../revealjs-template/css/theme/wba.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="../revealjs-template/lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="../revealjs-template/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+        <style type="text/css">
+            .kaestchen {
+                margin: 30px 0 0 30px !important;
+            }
+            .kaestchen li {
+                background-color: #DD1166;
+                color: white;
+                display: inline-bock;
+                float: left;
+                list-style-type: none;
+                margin: 0 15px 0px 0;
+                padding: 10px;
+                text-align: center;
+                width: 230px;
+                
+            }
+            
+            blockquote {
+                width: 96% !important;
+                margin: 0 0 50px 0 !important;
+                padding: 2% !important;
+            }
+            
+            
+            section {
+                'background-color: grey !important;   
+            }
+
+            .fullscreenImage .reveal .slides {
+                height: 100%;
+                left: 0;
+                margin: 0 auto;
+                max-width: 100%;
+                padding: 0;
+                top: 0;
+                width: 100%;
+            }
+    
+            .fullscreenImage .reveal .slides > section {
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: auto 92%;
+                height: 100%;
+                left: 0;
+                margin: 0;
+                position: absolute;
+                top: 0;
+                width: 100%;
+            }
+                
+            .fullscreenImage .reveal .slides > section .bu{
+                background-color: rgba(221, 17,102, 0.8);
+                top: 100px;
+                display: inline-block;
+                color: white;
+                padding: 0 10px 0 100px;
+                position:absolute;
+                    
+            }
+
+            .fullscreenImage .reveal .slides > section .quelle{
+                bottom: 10px;
+                color: white;
+                display: inline-block;
+                font-size: 14px;
+                margin: 0 0 0 10px;
+                position:absolute;
+                    
+            }
+            
+            .fullscreenImage .reveal .slides > section p{
+                margin: 0;
+            }
+            
+            .nobackground .reveal .slides > section{
+                background-image: none;
+            }
+            
+
+    
+            .whiteBackground .state-background {
+                background-color: white;
+                
+            }
+            
+            
+        </style>
+
+		<!--[if lt IE 9]>
+		<script src="../revealjs-template/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+					<h1>WBA1 - Lokalisierung</h1>
+					<h2>Medieninformatik</h2>
+					<p>24. Januar 2013</p>
+                    <br />
+					<p>
+						Studiengang Medieninformatik an der Fachhochschule Köln<br/>
+						Campus Gummersbach
+					</p>
+                    <br />
+					<p>
+						Pascal Kottmann<br />
+						<a href="http://github.com/cnoss">http://github.com/kalle05</a><br />
+						Sandra Herhaus<br />
+						<a href="http://github.com/cnoss">http://github.com/herhausa</a><br />
+					</p>
+				</section>
+
+                <!--<section data-state="fullscreenImage"  style="background-image: url(images/TimBernersLee.jpg)">-->
+				<section>
+				<h2>Lokalisierung</h2>
+                    <ul>
+                        <li class="fragment"><strong>Anpassung von Webseiten:</strong></li>
+						<ul>
+						 <li class="fragment">verschiedene Sprachen</li>
+						 <li class="fragment">Zeit und Datumsformate</li>
+						 <li class="fragment">Einsatz von Währung</li>
+						 <li class="fragment">Tastaturgebrauch</li>
+						 <li class="fragment">Vergleichung und Sortierung</li>
+						 <li class="fragment">Texte und Grafiken</li>
+						 <li class="fragment">Abweichende gesetzliche Bestimmungen</li>
+						</ul>
+                    </ul>
+                    
+                    
+                </section>
+                
+				<section>
+					<h2>Schrift</h2><br />
+					<ul>
+					<li>Zeichen:<br /></li>
+					<ul>
+					<li class="fragment">Lateinisches Alphabet: 26<br /></li>
+					<li class="fragment">Chinesische Zeichen: ~20.000<br /></li>			
+					</ul>
+					</ul>
+					<br /><br /><br /><br /><br />Quelle: w3c (http://www.w3.org/International/questions/qa-what-is-encoding stand:23.01.2013)
+				</section>
+				<section>
+				<h2>Schrift</h2>
+				<h4>Codierung</h4>
+				Wenn der Text bspw. so aussehen sollte:<br />
+				<img class="fragment" src="mojibake1.gif"><br /><br />
+				dann kann es sein, dass er so dargestellt wird:<br />
+				<img class="fragment" src="mojibake2.gif"><br />
+				Quelle: W3C http://www.w3.org/International/questions/qa-what-is-encoding (stand: 23.01.2013)
+				</section>
+				<section>
+				<h2>Umlaute</h2>
+				Umlaute "Ä, Ö, Ü" lassen sich mit der Referenz &Xuml; darstellen<br />(X ist Variabel(a,o,u)).<br />
+				Auch alle anderen Zeichen lassen sich so bzw. ähnlich darstellen.
+				</section>
+				<section>
+				<h2>&Uuml;bung</h2>
+				Suche eine Tabelle mit Zeichenreferenzen und schreibe deinen Namen mithilfe von Referenzen auf eine Webseite.<br /> <br />
+				<p class="fragment">&#80; &#97;	&#115; &#99; &#97; &#108;</p>
+				<p class="fragment">P = &amp;#80;<br />a = &amp;#97;<br />s = &amp;#115;<br />c = &amp;#99;<br />a = &amp;#97;<br />l = &amp;#108;</p>
+				<p class="fragment">http://html5-webdesign.de/Zeichen-Referenz.html</p>
+				</section>
+				<section>				
+                    <h2>Schriftformatierung</h2>
+					<ul><li>Zeichensätze</li>
+					<ul>
+					<li>ASCII</li>
+						<ul><li>128 Codepoints</li>
+							<li>95 Darstellbare Zeichen</li></ul>
+					<li>Unicode(ISO 10646)</li>
+						<ul><li>1.114.112 CodePoints</li>
+						<li>110.182 Darstellbare Zeichen</li></ul>
+					</ul>
+					</ul>
+                </section>
+				<section>
+				<h2>Schrift</h2>
+				<strong>ASCII</strong> - 
+				<strong>A</strong>merican <strong>S</strong>tandard <strong>C</strong>ode for <strong>I</strong>nformation <strong>I</strong>nterchange<br />
+				<p>(ISO 646)</p>
+					7-Bit-Zeichencodierung (max. 128Zeichen)<br />
+					Grundlage für alle auf Bits basierende Kodierung für Zeichensätze<br /><br />
+					<ul><li>enthält:</li><ul><li>Zahlen</li><li>Lateinisches Alphabet(groß- und kleinbuchstaben)</li><li>"standard" Zeichen</li></ul></ul>
+					
+				</section>
+				<section>
+				<h2>Schrift</h2>
+				<strong>Unicode(ISO 10646)</strong><br /><br />
+							<ul>
+							<li>Ziel alle Sprachen und Zeichen abzudecken</li>
+							<li>17 Ebenen zu je 2^16(65.536 Zeichen) <br />(Insgesamt: 1.114.112 mögliche Zeichen)</li>
+							<li>Oktober 1991 - Version 1.0.0 - 7.161 Zeichen</li>
+							<li>September 2012 - Version 6.2 - 110.182 Zeichen</li>
+										
+				</section>
+				<section>
+				<h2>Schrift</h2>
+				<strong>UTF-8</strong><br />
+				<strong>U</strong>nicode <strong>T</strong>ransformation <strong>F</strong>ormat<br /><br />
+							
+							Standard Internetkodierung für Unicode <br />nach "Internet Engineering Task Force" <br /><br />
+							Die ersten 128 Zeichen entsprechen dem ASCII<br />
+							
+										
+				</section>
+				
+                <section>
+                    <h2>Mehrsprachgkeit</h2>
+			<ul>
+                        	<li class="fragment"><strong>Warum Mehrsprachigkeit?</strong></li>
+						<ul>
+						 <li class="fragment">Internationalisierung </li>
+						 <li class="fragment">...</li>
+						</ul>
+			</ul>
+			<ul>
+                        	<li class="fragment"><strong>Wie kann man Mehrsprachigkeit umsetzen?</strong></li>
+						<ul>
+						 <li class="fragment">Mehrere, sprachlich unterschiedliche Versionen der Webseite</li>
+						 <li class="fragment">Zweisprachige Gestaltung</li>
+						 <li class="fragment">CMS</li>
+						 <li class="fragment">...</li>
+						</ul>
+                    
+                    </ul>
+                </section>
+                <section>
+                    <h2>Probleme der Mehrsprachigkeit</h2>
+			<ul>
+                        	<li class="fragment"><strong>Sprachauswahl</strong></li>
+						<ul>
+						 <li class="fragment">manuell/automatisch</li>
+						 <li class="fragment">in-/transparent</li>
+						 <li class="fragment">Barrierefreiheit</li>
+						</ul>
+		    	
+                        	<li class="fragment"><strong>Leserichtung</strong></li>
+				<li class="fragment"><strong>Zeichensätze</strong></li>
+				<li class="fragment"><strong>automatische Übersetzung</strong></li>
+				<li class="fragment"><strong>meist englische Universal-Seite</strong></li>
+						
+                    
+                    	</ul>
+			
+                </section>
+                <section>
+                    <h2>Sonderfall Beispiel "Schweiz"</h2>
+			<ul>
+                        	<li class="fragment"><strong>Mehrere Amtssprachen</strong></li>
+                        	<li class="fragment"><strong>Nicht jeder spricht beide davon</strong></li><br><br>
+				<li class="fragment"><strong>Wie löst man dieses Problem???</strong></li>
+                 
+                    	</ul>
+			
+                </section>
+		<section>
+                    <h2>Beispielseiten für die Sprachauswahl</h2>
+					<a href="http://www.samsung.com/de/">Samsung</a><br />
+					<a href="http://www.apple.com/de/">Apple</a><br />
+					<a href="http://de.wikipedia.org/wiki/Wikipedia:Hauptseite">Wikipedia</a><br />
+					<a href="http://www.ghorfa.de/">Ghorfa</a><br />
+                </section>
+		<section>
+                    <h2>Übungen</h2>
+				<p>Dann wollen wir mal...</p><br>
+				<a href="http://bit.ly/WOPus3"> aktualisiertes Übungsblatt bit.ly/WOPus3 </a><br>
+				<a href="http://bit.ly/10ycYCr">Übungen</a> <br><br>
+
+				<h3><a hfref="http://bit.ly/10ycYCr">http://bit.ly/10ycYCr</a></h3>
+                </section>
+
+                
+                
+
+            
+			</div>
+
+		</div>
+
+		<script src="../revealjs-template/lib/js/head.min.js"></script>
+		<script src="../revealjs-template/js/reveal.min.js"></script>
+
+		<script>
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: '../revealjs-template/lib/js/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
+					{ src: '../revealjs-template/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../revealjs-template/lib/js/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs-template/lib/js/data-markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs-template/plugin/zoom-js/zoom.js', condition: function() { return !!document.body.classList; } },
+					{ src: '../revealjs-template/socket.io/socket.io.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
+					{ src: '../revealjs-template/plugin/speakernotes/client.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } }
+				]
+			});
+
+		</script>
+	</body>
+</html>
