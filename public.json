@@ -1,4 +1,4 @@
-﻿{
+{
 	"presentations":
 	{
 
@@ -192,6 +192,11 @@
 		{
 			"title" : "CSS Frameworks-YAML",
 			"authors" : ["Sarah Oatridge", "Christoph Czisch"]
+		}
+		"2013-01-31-film-im-web-html5/index.html":
+		{
+			"title" : "Film im Web HTML5",
+			"authors" : ["Matthias Rößler", "Duc Duy Khuong"]
 		}
 	}
 }
