@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+
+<title>WBA1 - Mobile Endgeräte</title>
+
+<meta name="description" content="Social Media">
+<meta name="author" content="Sami Fadli, Patrick Reimringer">
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+<link rel="stylesheet" href="../revealjs-template/css/reveal.css">
+<link rel="stylesheet" href="../revealjs-template/css/theme/wba.css" id="theme">
+
+<!-- For syntax highlighting -->
+<link rel="stylesheet" href="../revealjs-template/lib/css/zenburn.css">
+
+<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+<script>
+document.write( '<link rel="stylesheet" href="../revealjs-template/css/print/' + ( 
+    window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+
+<!--[if lt IE 9]>
+<script src="../revealjs-template/lib/js/html5shiv.js"></script>
+<![endif]-->
+</script>
+<style>
+.progress {
+z-index: 9999;
+}
+.fullscreen .state-background {
+width: 100%;
+height: 100%;
+}
+
+.fullscreen .reveal .slides {
+margin: 0;
+padding: 0;
+width: 100%;
+height: 100%;
+max-width: 100%;
+left: 0;
+right: 0;
+top: 0;
+bottom: 0;
+}
+
+.fullscreen .reveal .slides > section {
+position: absolute;
+width: 100%;
+height: 100%;
+min-height: 100%;
+text-align: left;
+left: 0;
+right: 0;
+top: 0;
+bottom: 0;
+margin: 0;
+background-position: center center;
+background-repeat: no-repeat;
+background-size: auto 100%;
+}
+</style>
+</head>
+
+<body>
+
+<div class="reveal">
+
+<!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+        <section>
+            <h1>WBA1 - Mobile Endgeräte</h1>
+            <h2>Medieninformatik</h2>
+            <p>31. Januar 2013</p>
+            <p>Studiengang Medieninformatik an der Fachhochschule Köln<br/>
+                Campus Gummersbach</p>
+            <p style="margin-top: 100px">
+                Sami Fadli
+                <a href="https://github.com/Jazeera92" target="_blank">Github: Jazeera92</a>
+                <br />Patrick Reimringer
+                <a href="https://github.com/preim" target="_blank">Github: Preim</a><br />
+            </p>
+        </section>
+    
+        <section>
+            <h1>Aufbau der Lerneinheit <font color="#dd1166">Mobile Endgeräte</font></h1>
+            <p style="font-size: 1em;"> 
+            <ul>
+                <li>Was ist ein mobiles Endgerät?</li>
+                <li>Welche Möglichkeiten gibt es?</li>
+                <li>Vorstellung Sencha Touch und JQuery Mobile</li>
+                <li>JQuery Mobile</li>
+            </ul>
+        </section>
+
+        <section>
+            <h1>Was ist ein mobiles Endgerät?</h1>
+            <ul>
+                <li class="fragment">Application Programming Interface</li>
+                <li class="fragment">Schnittstelle zur Anwendungsprogrammierung</li>
+                <li class="fragment">Webseite --> Graph API --> Facebook</li>
+                <li class="fragment">Graph API</li>
+                <ul>
+                    <li class="fragment">erlaubt Schreib- und Lesezugriff auf die meisten Objekte und Verbindungen, die den <strong>sozialen Graphen</strong> von Facebook ausmachen</li>
+                </ul>
+            </ul>
+        </section>
+    
+        <section>
+            <h1>Welche Möglichkeiten gibt es?</h1>
+            <ul>
+                <li class="fragment">Speicherung der Objekte</li>
+                <li class="fragment">jedes Objekt besitzt Identifikationsnummer</li>
+                <li class="fragment">Basis URL: <strong>https://graph.facebook.com</strong></li>
+                <li class="fragment">Besipiel URL: <strong>https://graph.facebook.com/ObjektID</strong></li>
+            </ul>
+        </section>
+    
+        <section>
+            <h1>Vorstellung Sencha Touch und JQuery Mobile</h1>
+            <ul>
+                <li class="fragment">Sencha Touch 2</li>
+                <li class="fragment">Sencha Touch basiert auf Javascript, CS3, HTML5</li>
+                <li class="fragment">kann auf Funktionen zugreifen die nativen Apps vorbehalten sind</li>
+                <li class="fragment">Erlaubt das aufsetzen einer MVC-Architektur (Model View Controller)</li>
+            </ul>
+        </section>
+        
+        <section>
+            <h1>Vorstellung Sencha Touch und JQuery Mobile</h1>
+            <ul>
+                <li class="fragment">JQuery Mobile 1.2.0</li>
+                <li class="fragment">basiert auf JQuery Core</li>
+                <li class="fragment">mit den meisten mobilen Plattformen kompatibel</li>
+                <li class="fragment">Theme Roller</li>
+            </ul>
+        </section>
+
+        <section>
+            <h1>JQuery Mobile</h1>
+            <ul>
+                <li class="fragment">Vorraussetzung?</li>
+                <li class="fragment">halbwegs aktuellen Browser und ein aktiviertes Javascript.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h1>Einführung</h1>
+<pre><code>
+&lt;!DOCTYPE html> 
+&lt;html> 
+&lt;head> 
+&lt;title>JQuery Mobile Demo &lt;/title> 
+&lt;meta charset="utf-8">
+&lt;meta name="viewport" content="width=device-width, initial-scale=1">
+&lt;link rel="stylesheet" href="http://code.jquery.com/mobile/1.0a1/jquery.mobile-1.0a1.min.css" />
+&lt;script src="http://code.jquery.com/jquery-1.4.3.min.js">&lt;/script>
+&lt;script src="http://code.jquery.com/mobile/1.0a1/jquery.mobile-1.0a1.min.js">&lt;/script>
+&lt;/head> 
+&lt;body> 
+&lt;/body>
+&lt;/html>
+</code></pre>
+        </section>
+
+        <section>
+            <h1>JQuery Mobile</h1>
+            <ul>
+                <li class="fragment">Jquery Mobile erlaubt das anlegen mehrerer Seiten in einer HTML-Datei</li>
+            </ul>
+<pre><code>
+&lt;div data-role="page" id="seite1"> 
+    &lt;div data-role="header">
+    &lt;h1>Willkommen auf Seite 1 &lt;/h1>
+    &lt;/div> 
+    &lt;div data-role="content"> 
+    &lt;/div> 
+    &lt;div data-role="footer">
+    &lt;/div> 
+&lt;/div> 
+&lt;div data-role="page" id="seite2"> 
+    &lt;div data-role="header">
+    &lt;h1>Willkommen auf Seite 2 &lt;/h1>
+    &lt;/div> 
+    &lt;div data-role="content"> 
+    &lt;/div> 
+    &lt;div data-role="footer">
+    &lt;/div>
+&lt;/div> 
+&lt;/div> 
+</code></pre>
+        </section>
+
+        <section>
+            <h1>JQuery Mobile</h1>
+            <ul>
+                <li class="fragment">Data-Roles = href="http://jquerymobile.com/demos/1.1.0-rc.1/docs/api/data-attributes.html" </li>
+            </ul>
+         </section>
+
+        <section>
+            <h1>JQuery Mobile - Listen</h1>
+            <ul>
+                <li class="fragment">Eine Liste basiert auf dem HTML-Listen-Tag “ul”</li>
+                <li class="fragment">data-role="listview"</li>
+            </ul>    
+<pre><code>                
+&lt;ul data-role="listview" data-inset="true">
+    &lt;li>Cat &lt;/li>
+    &lt;li>Dog &lt;/li>
+    &lt;li>Mouse &lt;/li>
+    &lt;li>Squirrel &lt;/li>
+ &lt;/ul>   
+ </code></pre>
+         </section>
+
+          <section>
+            <h1>JQuery Mobile - Themes</h1>
+            <ul>
+                <li class="fragment">bringt 5 verschiedene Themes mit</li>
+                <li class="fragment">data-theme=”a-z”</li>
+                <li class="fragment">Theme Roller erlaubt das erstellen eigener themes</li>
+            </ul>
+         </section>
+
+         <section>
+            <h1>JQuery Mobile - Übungen</h1>
+            <ul>
+                <img src="http://ompldr.org/vaDloMA/Screenshot_2013-01-28-19-33-00.png">
+                <li>Übung 1</li>
+                <li>Testapp nachbasteln</li>
+            </ul>
+         </section>
+
+          <section>
+            <h1>JQuery Mobile - Übungen</h1>
+            <ul>
+                <li>Übung 2</li>
+                <li>TelefonbuchApp</li>
+                <li>Bilder einfügen</li>
+                <li>Dialog einbauen</li>
+                <li>Theme nach belieben ändern</li>
+            </ul>
+         </section>
+
+         <section>
+            <h1>JQuery Mobile</h1>
+            <ul>
+                <li class="fragment">Vielen dank!</li>
+            </ul>
+         </section>
+         
+    
+
+
+
+ <script src="../revealjs-template/lib/js/head.min.js"></script>
+    <script src="../revealjs-template/js/reveal.min.js"></script>
+
+    <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: '../revealjs-template/lib/js/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
+          { src: '../revealjs-template/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: '../revealjs-template/lib/js/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../revealjs-template/lib/js/data-markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../revealjs-template/plugin/zoom-js/zoom.js', condition: function() { return !!document.body.classList; } },
+          { src: '../revealjs-template/socket.io/socket.io.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
+          { src: '../revealjs-template/plugin/speakernotes/client.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } }
+        ]
+      });
+
+    </script>
+    
+</body>
+</html>
