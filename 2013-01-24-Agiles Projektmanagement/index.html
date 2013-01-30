@@ -284,13 +284,13 @@
 
 				// Optional libraries used to extend on reveal.js
 				dependencies: [
-					{ src: 'revealjs-template/lib/js/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
-					{ src: 'revealjs-template/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'revealjs-template/lib/js/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'revealjs-template/lib/js/data-markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'revealjs-template/plugin/zoom-js/zoom.js', condition: function() { return !!document.body.classList; } },
-					{ src: 'revealjs-template/socket.io/socket.io.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
-					{ src: 'revealjs-template/plugin/speakernotes/client.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } }
+					{ src: '../revealjs-template/lib/js/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
+					{ src: '../revealjs-template/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../revealjs-template/lib/js/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs-template/lib/js/data-markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs-template/plugin/zoom-js/zoom.js', condition: function() { return !!document.body.classList; } },
+					{ src: '../revealjs-template/socket.io/socket.io.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
+					{ src: '../revealjs-template/plugin/speakernotes/client.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } }
 				]
 			});
 
