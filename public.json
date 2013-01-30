@@ -193,8 +193,8 @@
 			"title" : "Ajax Basic",
 			"authors" : ["Max Neidhardt", "Christian Ries"]
 		},
-        
-        "2013-01-24-film-im-web/praesent.html":
+
+		"2013-01-24-film-im-web/praesent.html":
 		{
 			"title" : "Film im Web",
 			"authors" : ["Nigel Frangenberg", "Nazan Aysune"]
@@ -205,10 +205,17 @@
 			"title" : "CSS Frameworks-YAML",
 			"authors" : ["Sarah Oatridge", "Christoph Czisch"]
 		},
+
 		"2013-01-31-film-im-web-html5/index.html":
 		{
 			"title" : "Film im Web HTML5",
 			"authors" : ["Matthias Rößler", "Duc Duy Khuong"]
+		},
+
+		"2013-01-24-agiles-projektmanagement/index.html":
+		{
+			"title" : "Agiles Projektmanagement",
+			"authors" : ["Selda Akyol", "Mathias Rothert"]
 		}
 	}
 }
