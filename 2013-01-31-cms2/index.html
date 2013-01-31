@@ -1,0 +1,339 @@
+﻿<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>WBA1 - CMS2</title>
+
+		<meta name="description" content="CMS">
+		<meta name="author" content="Jan Oliver Pietrek, Göksu Yildirim">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link rel="stylesheet" href="../revealjs-template/css/reveal.css">
+		<link rel="stylesheet" href="../revealjs-template/css/theme/wba.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="../revealjs-template/lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="../revealjs-template/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="../revealjs-template/lib/js/html5shiv.js"></script>
+		<![endif]-->
+		<style>
+		.progress {
+			z-index: 9999;
+		}
+		.fullscreen .state-background {
+			width: 100%;
+			height: 100%;
+		}
+
+		.fullscreen .reveal .slides {
+			margin: 0;
+			padding: 0;
+		 	width: 100%;
+		 	height: 100%;
+		 	max-width: 100%;
+		 	left: 0;
+		 	right: 0;
+		 	top: 0;
+		 	bottom: 0;
+		}
+
+		.fullscreen .reveal .slides > section {
+		 	position: absolute;
+		 	width: 100%;
+		 	height: 100%;
+		 	min-height: 100%;
+		 	text-align: left;
+		 	left: 0;
+		 	right: 0;
+		 	top: 0;
+		 	bottom: 0;
+		 	margin: 0;
+		 	background-position: center center;
+		 	background-repeat: no-repeat;
+		 	background-size: auto 100%;
+		}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+					<h1>WBA - CMS2</h1>
+					<h2>Medieninformatik</h2>
+					<p>30. Januar 2013</p>
+					<p>
+						Studiengang Medieninformatik an der Fachhochschule Köln<br/>
+						Campus Gummersbach
+					</p>
+
+					<p style="margin-top: 100px">
+						Jan Oliver Pietrek
+						<a href="https://github.com/Machiavelli86" target="_blank">github @Machiavelli86</a><br />
+						Göksu Yildirim
+						<a href="https://github.com/gksyldrm" target="_blank">github @gksyldrm</a>
+					</p>
+				</section>
+
+				<section>
+					<h1>Gliederung<strong> CMS</strong></h1>
+					
+					<ul>
+						<li>Was ist ein CMS?</li>
+                        <li>Front- und Backend</li>					
+						<li>Content</li>
+						<li>Notwendigkeit eines CMS</li>
+						<li>Verschiedene Arten von Systemen</li>
+						<li>Opensource VS Kostenpflichtige CMS</li>
+						<li>Arbeiten mit einem CMS</li>
+						<li>add.min</li>
+						<li>Liveübung(Fiktives Szenario)</li>
+					
+					</ul>
+
+				</section>
+                
+                <section>
+					<h1>Was ist ein CMS?</h1>
+                 
+                    <ul>
+             
+                            <li>Ist eine Software</li>
+                            <li>zur Erstellung, Bearbeitung und Organisation </li>
+                            <li>von Inhalten auf Webseiten </li>
+                            <li>...deshalb ja auch "Inhaltverwaltungsstem" =)</li>
+                        
+                   </ul>
+				</section>
+
+				<section>
+					<h1></strong>Front- Backend</h1>
+                    
+                   	<ul>
+						<li class="fragment">Frontend bezeichnet das Ende, welches "näher" am User ist</li>
+						<li class="fragment">Backend, welches z.B. im "Background" läuft</li>
+                        <li class="fragment">ist für den User nicht "sichtbar"</li>
+						<li class="fragment">Frontend hingegen schon, Stichwort GUI, Ausgabefenster und Visualisierung</li>
+                        <li class="fragment">letztlich ist das Frontend das, was der User im Endeffekt sieht :)</li>
+                    </ul>
+				</section>
+                    
+                <section>
+					<h1><strong></strong>Content</h1>
+                    
+					<ul>
+						<li class="fragment">Mit Content sind hier lediglich Inhalte gemeint :)</li>
+						<li class="fragment">diese Inhalte sind im Zusammenhang mit CMS...</li>
+                        <li class="fragment">Texte, die editiert, deleted oder gepusblished werden</li>
+						<li class="fragment">darunter fallen aber auch Bilder oder ähnliches</li>
+                        <li class="fragment">diese sollten möglichst "Barrierefrei" dargestellt werden!</li>
+                        
+                    </ul>
+                </section>    
+
+				
+                    
+               <section>
+					<h1><strong></strong>Notwendigkeit eines CMS</h1>
+                    
+					<ul>
+						<li class="fragment">Große Unternehmen brauchen klare Strukturen</li>
+						<li class="fragment">diese werden durch CMS gewährleistet</li>
+                        <li class="fragment">Komplexe Inhalte werden durch CMS übersichtlicher verwaltet</li>
+						<li class="fragment">und können so besser bearbeitet werden!</li>
+                        <li class="fragment">Eine klare "Rollenverteilung" ist unerlässlich</li>
+						<li class="fragment">CMS vergeben so z.B. Rechte an verschiedene Usergruppen</li>
+                        
+                    </ul>
+                </section>     
+                
+                <section>
+                    <h1><strong></strong>Verschieden Arten von Systemen</h1>
+					
+					<ul>
+					<li class="fragment">Dynamische CMS...</li>
+						<li class="fragment">erzeugen Dokumente bei jedem Aufruf neu!</li>
+                        <li class="fragment">Inhalte werden erst auf Abruf interpretiert ausgegeben</li>
+						<li class="fragment">eine Personalisierung ist durch den User in der Regel einfach</li>
+                        <li class="fragment">die Website ist immer aktuell!</li>
+						<li class="fragment">können u.U. zu Verzögerungen führen!</li>
+					</ul>
+				</section>		
+					   
+				<section>
+
+				<ul>				
+					   <li class="fragment">Statische CMS...</li>
+						<li class="fragment">erzeugen Inhalte immer nach dem selben Schema</li>
+                        <li class="fragment">für "einfache" Webhostingprodukte optimal</li>
+						<li class="fragment">recht schnelle Interpretation der Dokumente</li>
+                        <li class="fragment">sind eher am "Aussterben"</li>
+						<li class="fragment">für komplexe Webanwendungen nicht geeignet</li>
+					   
+				</ul>
+				</section>				
+					   
+					   <section>
+
+				<ul>				
+					   <li class="fragment">Hybride CMS...</li>
+						<li class="fragment">kombinieren die Vorteile aus dynamischen CMS u. statischen</li>
+                        <li class="fragment">das Seitengrundgerüst liegt statisch vor!</li>
+						<li class="fragment">sprich, alle Inhalte, die nicht laufend verändert werden</li>
+                        <li class="fragment">dynamisch sind hier lediglich Suchabfragen, News oder individuelle Inhalte</li>
+						
+					   
+				</ul>
+				</section>				
+   
+					   
+                </ul>
+                </section>
+                
+                <section>
+                    <h1><strong></strong>Opensource VS Kostenpflichtige CMS</h1>
+                         
+                </section>
+                
+                <section>
+                    
+                    
+                    <table border="0" width="100%">
+	                   <tr>
+		                  <td><h3>Opensource</h3></td>
+		                  <td><h3>Kostenpflichtige</h3></td>
+	                   </tr>
+	                   <tr>
+		                  <td><li class="fragment">Kostenfrei in der Anschaffung</li>
+                              <li class="fragment">Relativ "einfache" Handhabung</li>
+                              <li class="fragment">arbeiten Plattformunabhängig</li>
+                              <li class="fragment">bieten oftmals nicht den Umfang an Funktionen, wie kostenpflichtige</li>
+                              
+                          </td>
+                          <td><li class="fragment">Support aus erster Hand</li>
+                              <li class="fragment">Kostenfaktor</li>
+                              <li class="fragment">in der Regel, technisch besser</li>
+                              <li class="fragment">für den privaten Gebrauch, eher ungeeignet!</li>
+                              
+                          </td>
+	                   </tr>
+                    </table>
+                </section>
+                
+                <section>
+					<h1><strong></strong>Arbeiten mit einem CMS</h1>
+                    
+				<ul>
+             
+                            <li>Editieren erfolgt meist über ein Online-Textverarbeitungsmodul...</li>
+                            <li>hier wird dann ein gesondertes "Backend" angeboten!</li>
+                            <li>andernfalls, sind Berechtigte in der Lage, direkt im Darstellungsinterface zu arbeiten</li>
+                            <li>die Bearbeitung erfolgt nach dem "WYSIWYG" Prinzip</li>
+                        
+                   </ul>
+				
+				<ul>
+             
+                            <li>CMS vergeben Berechtigungen, dadurch wird der Workflow erhöht</li>
+                            <li>so ist jede Rolle innerhalb eines Unternehmens nur auf seinen Aufgabenbereich konzentriert</li>
+                            <li>diese "Rechtestruktur" arbeitet nach dem "Mehraugenprinzip"</li>
+                            <li>die Rechteverteilung erfolgt nach hierarchischen Prinzipien</li>
+                        
+                   </ul>
+				   
+				   <ul>
+             
+                            <li>CMS operieren i.d.R. plattformunabhängig...</li>
+                            <li>da sie in Scriptsprachen geschrieben werden</li>
+                            <li>und alle gängigen Webserver diese interpretieren können!</li>
+                            <li>CMS können bedingt Übertragungsaufgaben übernehmen, z.B. in Verbindung mit einem Webserver</li>
+							<li>oder auch Domainweiterleitungen übernehmen.
+                        
+                   </ul>
+				   
+
+				
+				</section>
+                
+				
+				
+                <section>
+					<h1><strong></strong>add.min</h1>
+                    <img style="margin-top: -1.1em; margin-bottom: 0.0em" src="http://www.cmsuebersicht.de/wp-content/uploads/2007/08/addmin_logo.jpg">
+                    
+				</section>
+                
+                <section>
+					<h1><strong></strong>Interface von add.min</h1>
+                    <img style="margin-top: -1.1em; margin-bottom: 0.0em" src="http://img836.imageshack.us/img836/5153/neuaddminstartseite.jpg">
+                    <h3><span style="color:white">WordPress 3.5 Struktur</span></h3>
+				</section>
+                
+                <section>
+					<h1><strong></strong>Reiter "Verwaltung"</h1>
+                    <img style="margin-top: -1.1em; margin-bottom: 0.0em" src="http://img832.imageshack.us/img832/4538/neuaddminverwaltung.jpg">
+                    <h3><span style="color:white">WordPress 3.5 Struktur</span></h3>
+				</section>
+
+                <section>
+					<h1><strong></strong>Admin Aktionsseite</h1>
+                    <img style="margin-top: -1.1em; margin-bottom: 0.0em" src="http://img248.imageshack.us/img248/6176/neuaddminaktionsseite.jpg">
+                    <h3><span style="color:white">WordPress 3.5 Struktur</span></h3>
+				</section>  
+
+		
+                
+                
+                <section>
+					<h1><strong></strong>Liveübung (fiktives Szenario)</h1>
+                    <br />
+                    <h3>Das wars! =)</h3>
+                    <br />
+                    Zur Übung --->: <a href="Kacke_mit_Nuss.pdf">Kacke_mit_Nuss.pdf</a>
+				</section>
+                
+		<script src="../revealjs-template/lib/js/head.min.js"></script>
+		<script src="../revealjs-template/js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: '../revealjs-template/lib/js/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
+					{ src: '../revealjs-template/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../revealjs-template/lib/js/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs-template/lib/js/data-markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs-template/plugin/zoom-js/zoom.js', condition: function() { return !!document.body.classList; } }
+					//{ src: '../revealjs-template/socket.io/socket.io.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
+					//{ src: '../revealjs-template/plugin/speakernotes/client.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
