@@ -217,11 +217,17 @@
 			"title" : "Agiles Projektmanagement",
 			"authors" : ["Selda Akyol", "Mathias Rothert"]
 		},
-		
+
 		"2013-01-31-mobile-endgeraete/index.html":
 		{
 			"title" : "Mobile Endgeräte",
 			"authors" : ["Sami Fadli", "Patrick Reimringer"]
+		},
+
+		"2013-01-31-canvas/presentation/index.html":
+		{
+			"title" : "Canvas",
+			"authors" : ["Fabian Zimmermann", "Nico Löbbert"]
 		}
 	}
 }
