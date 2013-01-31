@@ -62,10 +62,10 @@
 						<h2>HTML5</h2>
 						<p>
 							<pre>
-								<code class="fragment"><span><</span>video src="test-480.mp4" type="video/mp4"  width="400" controls></code>
+								<code class="fragment"><span><</span>video src="video.mp4" type="video/mp4" controls></code>
 							</pre>
 						</p>
-						<video class="fragment" src="test-480.mp4" type="video/mp4"  width="400" controls>
+						<video class="fragment" src="loesung/video.mp4" type="video/mp4" width="400" controls></video>
 					</section>
 				</section>
 				<section>
@@ -144,18 +144,18 @@
 						<h2>Implementierung mit Fallback</h2>
 						<p>
 							<pre>
-								<code class="fragment"><span><</span>video controls poster="hacken.png" width="400"  height="240">
-	<span><</span>source src="test-480.mp4" type="video/mp4" />
-	<span><</span>source src="test-480.webm" type="video/webm" />
-	<span><</span>img src="test-480.jpg" alt"Videostandbild" />
+								<code class="fragment"><span><</span>video controls poster="start.jpg">
+	<span><</span>source src="video.mp4" type="video/mp4" />
+	<span><</span>source src="video.webm" type="video/webm" />
+	<span><</span>img src="kein-html5.jpg" alt"Videostandbild" />
 	<span><</span>p>Ihr Browser unterstützt kein HTML5-Video<span><</span>/p>
 <span><</span>/video><span></code>
 							</pre>
 						</p>
-						<video controls poster="hacken.png" width="320" height="240" class="fragment">
-							<source src="test-480.mp4" type="video/mp4" />
-							<source src="test-480.webm" type="video/webm" />
-							<img src="test-480.jpg" alt"Videostandbild" />
+						<video controls poster="loesung/start.jpg" width="400" class="fragment">
+							<source src="loesung/video.mp4" type="video/mp4" />
+							<source src="loesung/video.webm" type="video/webm" />
+							<img src="loesung/kein-html5.jpg.jpg" alt"Videostandbild" />
 							<p>Ihr Browser unterstützt kein HTML5-Video</p>
 						</video>
 					</section>
